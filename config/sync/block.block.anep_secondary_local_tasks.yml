@@ -1,0 +1,22 @@
+uuid: bfd7b0b0-d2cc-4ba3-a4d8-fc54469a7fba
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - anep
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: anep_secondary_local_tasks
+theme: anep
+region: header
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets secondaires'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }
