@@ -7,6 +7,8 @@ url:
   source: path_prefix
   prefixes:
     fr: ''
+    ar: ar
   domains:
     fr: ''
+    ar: ''
 selected_langcode: site_default

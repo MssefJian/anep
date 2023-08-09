@@ -1,0 +1,45 @@
+uuid: 2682fa17-1938-4b17-a206-fd9f99c95dde
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home_page_caroussel.body
+    - field.field.node.home_page_caroussel.field_image
+    - image.style.medium
+    - node.type.home_page_caroussel
+  module:
+    - image
+    - text
+    - user
+id: node.home_page_caroussel.teaser
+targetEntityType: node
+bundle: home_page_caroussel
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
