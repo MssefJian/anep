@@ -72,27 +72,6 @@ body {
     border-radius: 5px;
     padding: 10px;
 }
-.carousel-item:nth-child(1)
-{
-    background: url("../Images/asset\ 1.jpeg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-.carousel-item:nth-child(2)
-{
-    background: url("../Images/asset\ 2.jpeg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-.carousel-item:nth-child(3)
-{
-    background: url("../Images/asset\ 3.jpeg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
 .articles_wrapper
 {
     background-color: var(--s3);
@@ -652,6 +631,7 @@ footer .bottom_bar h3
 
 
 
+/*slide*/
 
 
 
