@@ -1,0 +1,25 @@
+uuid: 505df53d-c3d0-4131-a964-0d307a4ab3ea
+langcode: fr
+status: true
+dependencies:
+  module:
+    - md_carousel
+    - system
+  theme:
+    - anep
+id: anep_homepageslider
+theme: anep
+region: content_front
+weight: 0
+provider: null
+plugin: md_carousel_home_page_slider
+settings:
+  id: md_carousel_home_page_slider
+  label: 'Home page slider'
+  label_display: '0'
+  provider: md_carousel
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -11,7 +11,7 @@ bundle: page
 label: 'Écrit le'
 description: "L'heure à laquelle le nœud a été créé."
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

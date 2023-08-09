@@ -1,0 +1,15 @@
+uuid: 1e04fbb0-970a-42a5-8ac4-e9cd1597bc81
+langcode: fr
+status: true
+dependencies: {  }
+name: home_slide_1905x435
+label: Home_slide-1905x435
+effects:
+  792524ec-470d-4567-8927-fae9279e237a:
+    uuid: 792524ec-470d-4567-8927-fae9279e237a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1905
+      height: 435
+      anchor: center-center
