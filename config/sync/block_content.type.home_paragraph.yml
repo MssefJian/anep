@@ -1,0 +1,8 @@
+uuid: d7b82d22-cdf9-4f45-b260-1450f56f7ae7
+langcode: en
+status: true
+dependencies: {  }
+id: home_paragraph
+label: 'Home paragraph'
+revision: 0
+description: ''

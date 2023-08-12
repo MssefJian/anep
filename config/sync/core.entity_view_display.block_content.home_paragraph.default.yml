@@ -1,0 +1,25 @@
+uuid: 80a011de-5c12-41ae-87bb-009a236afc81
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_paragraph
+    - field.field.block_content.home_paragraph.field_home_paragraph
+  module:
+    - entity_reference_revisions
+id: block_content.home_paragraph.default
+targetEntityType: block_content
+bundle: home_paragraph
+mode: default
+content:
+  field_home_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

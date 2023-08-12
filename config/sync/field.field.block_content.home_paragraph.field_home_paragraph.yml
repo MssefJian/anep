@@ -1,0 +1,31 @@
+uuid: 6f9fddcf-ab04-4b02-8343-b4e42555826e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_paragraph
+    - field.storage.block_content.field_home_paragraph
+    - paragraphs.paragraphs_type.home_paragraph
+  module:
+    - entity_reference_revisions
+id: block_content.home_paragraph.field_home_paragraph
+field_name: field_home_paragraph
+entity_type: block_content
+bundle: home_paragraph
+label: 'Home paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      home_paragraph: home_paragraph
+    negate: 0
+    target_bundles_drag_drop:
+      home_paragraph:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions
