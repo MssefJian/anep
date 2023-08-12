@@ -48,8 +48,7 @@ class HomePageSliderBlock extends BlockBase
     }
     return [
       '#theme' => 'home_slide',
-      '#slide' => $slide,
-      '#attached' => ['library' => 'anep/slide']
+      '#slide' => $slide
     ];
 
   }

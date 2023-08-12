@@ -10,19 +10,3 @@ function md_carousel_theme($existing, $type, $theme, $path)
     ],
   ];
 }
-
-function md_carousel_block_view($delta = '') {
-  $block = [];
-
-  if ($delta == 'your_block_id') { // Replace 'your_block_id' with the actual ID of your block.
-    // Create the block content.
-    $block['content'] = [
-      '#markup' => '<p>Your block content goes here.</p>',
-    ];
-
-    // Attach the library to the block.
-    $block['#attached']['library'][] = 'your_module/library-name'; // Replace 'your_module/library-name' with the actual library name.
-  }
-
-  return $block;
-}
