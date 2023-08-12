@@ -46,7 +46,7 @@
 <div class="row cards">
 
   {% for item in items %}
-    <div class="col-6 d-flex justify-content-between align-items-start  my-3">
+    <div class="col-6 d-flex align-items-start  my-3">
       {% if item.content['#paragraph'].field_icon.0 %}
         {% set image_url = file_url(item.content['#paragraph'].field_icon.0.entity.fileuri) %}
 
