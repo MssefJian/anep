@@ -636,7 +636,11 @@ footer .bottom_bar h3
   }
 }
 
-
+/* rtl css */ 
+[dir="rtl"] .owl-nav {
+  right: unset;
+  left: 10px;
+}
 
 
 
