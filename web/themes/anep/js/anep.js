@@ -27,7 +27,8 @@
       }
 
       $('.owl-carousel').owlCarousel({
-        loop:true,
+        loop:false,
+        rewind: true,
         margin:10,
         autoplay:2000,
         nav:true,

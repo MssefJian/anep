@@ -107,7 +107,8 @@ function anep_theme_suggestions_views_view_field_alter(array &$suggestions, arra
 function anep_preprocess_views_view_fields(&$variables) {
   // Add classes to media rendered entity field so it can be targeted for
   // JavaScript mouseover and click events.
-  if ($variables['view']->id() === 'project') {
+  $types = ['project', 'tenders'];
+  if (in_array($variables['view']->id(), $types)) {
   $row = $variables['row'];
   $nid = $row->_entity->id();
   $node = \Drupal\node\Entity\Node::load($nid);

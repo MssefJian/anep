@@ -1,0 +1,20 @@
+uuid: 0a3d5fae-d5f1-4eee-a490-efcd7839f311
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_deadline_discount_bids
+field_name: field_deadline_discount_bids
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

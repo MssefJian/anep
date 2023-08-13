@@ -1,0 +1,12 @@
+<div class="slider my-5">
+  <div class="owl-carousel owl-theme">
+    {% for item in axis %}
+    <div class="item">
+      <div class="card_content">
+        <img src="{{ item.icon }}" alt="">
+        <h4>{{ item.title }}</h4>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

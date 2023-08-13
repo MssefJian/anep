@@ -8,5 +8,10 @@ function md_carousel_theme($existing, $type, $theme, $path)
         'slide' => NULL
       ],
     ],
+    'home_axis' => [
+      'variables' => [
+        'axis' => NULL
+      ],
+    ],
   ];
 }

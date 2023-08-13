@@ -12,7 +12,7 @@ dependencies:
 id: anep_lagencenationaledesequipementspublicsenchiffres
 theme: anep
 region: content_front
-weight: -4
+weight: -5
 provider: null
 plugin: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
 settings:

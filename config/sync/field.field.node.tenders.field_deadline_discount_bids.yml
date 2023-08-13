@@ -1,0 +1,21 @@
+uuid: 0be38cb2-6777-4906-af79-14f7e88f593d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deadline_discount_bids
+    - node.type.tenders
+  module:
+    - datetime
+id: node.tenders.field_deadline_discount_bids
+field_name: field_deadline_discount_bids
+entity_type: node
+bundle: tenders
+label: 'Deadline Discount Bids'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,19 @@
+uuid: 95d6c6e8-0a98-4a04-8249-1abb212efcfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_id_tender
+    - node.type.tenders
+id: node.tenders.field_id_tender
+field_name: field_id_tender
+entity_type: node
+bundle: tenders
+label: 'Id tender'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

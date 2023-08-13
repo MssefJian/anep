@@ -1,0 +1,19 @@
+uuid: 5363b7f7-f5a2-4077-a77e-5890d1e6a375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estimate
+    - node.type.tenders
+id: node.tenders.field_estimate
+field_name: field_estimate
+entity_type: node
+bundle: tenders
+label: Estimate
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 948de7d4-5f0f-411a-9fad-8c2083e8de59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_the_announcement
+    - node.type.tenders
+id: node.tenders.field_the_announcement
+field_name: field_the_announcement
+entity_type: node
+bundle: tenders
+label: 'The announcement'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+uuid: 7e3d4d5f-002f-43b1-a7ed-530d7462d5e2
+langcode: en
+status: true
+dependencies: {  }
+name: taxo_thumb
+label: 'Taxo thumb'
+effects:
+  64ed47db-9ec6-4869-900a-37794f8a25d9:
+    uuid: 64ed47db-9ec6-4869-900a-37794f8a25d9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60
+      anchor: center-center

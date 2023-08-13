@@ -1,4 +1,4 @@
-uuid: 505df53d-c3d0-4131-a964-0d307a4ab3ea
+uuid: 4a12b547-b825-495b-945c-65e6e4a95685
 langcode: fr
 status: true
 dependencies:
@@ -7,16 +7,16 @@ dependencies:
     - system
   theme:
     - anep
-id: anep_homepageslider
+id: anep_homepageaxis
 theme: anep
 region: content_front
-weight: -7
+weight: -2
 provider: null
-plugin: md_carousel_home_page_slider
+plugin: md_carousel_home_page_axis
 settings:
-  id: md_carousel_home_page_slider
-  label: 'Home page slider'
-  label_display: '0'
+  id: md_carousel_home_page_axis
+  label: 'Home page axis'
+  label_display: visible
   provider: md_carousel
 visibility:
   request_path:

@@ -1,0 +1,18 @@
+uuid: e5105a97-2720-4875-a322-009ec7147993
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tenders
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.tenders
+target_entity_type_id: node
+target_bundle: tenders
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,35 @@
+uuid: e4bc2a3f-db3a-411b-a039-d283e1da93a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.axis.field_icon
+    - taxonomy.vocabulary.axis
+  module:
+    - image
+    - text
+id: taxonomy_term.axis.default
+targetEntityType: taxonomy_term
+bundle: axis
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 46b7e61e-c7fe-4698-b35f-ba5fdfded54d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_date
+    - node.type.tenders
+  module:
+    - datetime
+id: node.tenders.field_publication_date
+field_name: field_publication_date
+entity_type: node
+bundle: tenders
+label: 'Publication date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
