@@ -1,10 +1,10 @@
-uuid: a4c6b7cf-e47c-45a3-8a7d-9ac17790facc
-langcode: fr
+uuid: 059bd536-7802-4271-a41d-0aaaf78ad403
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - node.type.article
+    - node.type.project
   module:
     - content_translation
     - image
@@ -14,12 +14,10 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
-_core:
-  default_config_hash: PmVL51L3A9QGbPLoeLHw5epAPszeZRasCeC3imeeDRQ
-id: node.article.field_image
+id: node.project.field_image
 field_name: field_image
 entity_type: node
-bundle: article
+bundle: project
 label: Image
 description: ''
 required: false
@@ -35,11 +33,11 @@ settings:
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  alt_field_required: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null

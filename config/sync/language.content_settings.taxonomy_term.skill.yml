@@ -1,18 +1,18 @@
-uuid: 97309b5d-7aed-4c2d-93a0-bb4d2284a53c
+uuid: fdf060f6-f947-4aba-9bb9-d1d00ae24a32
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.home_paragraph
+    - taxonomy.vocabulary.skill
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: block_content.home_paragraph
-target_entity_type_id: block_content
-target_bundle: home_paragraph
+id: taxonomy_term.skill
+target_entity_type_id: taxonomy_term
+target_bundle: skill
 default_langcode: site_default
 language_alterable: false

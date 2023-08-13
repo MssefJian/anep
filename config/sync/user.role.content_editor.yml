@@ -5,9 +5,11 @@ dependencies:
   config:
     - node.type.article
     - node.type.page
+    - node.type.project
     - taxonomy.vocabulary.tags
   module:
     - comment
+    - content_translation
     - contextual
     - file
     - node
@@ -19,7 +21,7 @@ dependencies:
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
-label: 'Éditeur de contenu'
+label: 'Content editor'
 weight: 2
 is_admin: false
 permissions:
@@ -44,6 +46,7 @@ permissions:
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'translate project node'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

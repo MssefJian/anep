@@ -1,9 +1,9 @@
-uuid: 97309b5d-7aed-4c2d-93a0-bb4d2284a53c
+uuid: b35d9b75-67ab-45e9-8336-401a85a9ad3d
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.home_paragraph
+    - paragraphs.paragraphs_type.home_paragraph
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: block_content.home_paragraph
-target_entity_type_id: block_content
+id: paragraph.home_paragraph
+target_entity_type_id: paragraph
 target_bundle: home_paragraph
 default_langcode: site_default
 language_alterable: false

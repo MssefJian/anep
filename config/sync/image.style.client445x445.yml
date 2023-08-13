@@ -1,0 +1,15 @@
+uuid: 4f2403b1-99a2-4abb-a854-81cacb218251
+langcode: fr
+status: true
+dependencies: {  }
+name: client445x445
+label: Client445x445
+effects:
+  8eb15c82-2806-4500-af68-852956eff550:
+    uuid: 8eb15c82-2806-4500-af68-852956eff550
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 445
+      height: 445
+      anchor: center-center

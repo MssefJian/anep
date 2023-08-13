@@ -1,19 +1,17 @@
-uuid: b1263bcb-ea05-41b3-8b16-3e9fe9399546
-langcode: fr
+uuid: 0017c5fc-a641-4c80-87be-6c79b6e3a6a4
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.article
+    - node.type.project
   module:
     - text
-_core:
-  default_config_hash: 4Wxs1LseZ8JsNwD9uJVIbzZqG35yQXN8Eo1Hub6NMuI
-id: node.article.body
+id: node.project.body
 field_name: body
 entity_type: node
-bundle: article
-label: Corps
+bundle: project
+label: Body
 description: ''
 required: false
 translatable: true

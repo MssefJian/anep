@@ -1,0 +1,37 @@
+uuid: 236ac559-7468-453f-af9d-87ce307f1df9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.client.field_image
+    - field.field.node.client.field_link
+    - image.style.medium
+    - node.type.client
+  module:
+    - image
+    - user
+id: node.client.teaser
+targetEntityType: node
+bundle: client
+mode: teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_link: true
+  langcode: true

@@ -1,9 +1,9 @@
-uuid: ea76745f-f380-47c6-84e1-6cfc5788350e
+uuid: c0b9acdd-dd15-4ac7-adc2-2d9007e1b8e2
 langcode: fr
 status: true
 dependencies:
   config:
-    - node.type.article
+    - node.type.client
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: node.article
+id: node.client
 target_entity_type_id: node
-target_bundle: article
+target_bundle: client
 default_langcode: site_default
 language_alterable: true

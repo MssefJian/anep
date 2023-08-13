@@ -1,0 +1,15 @@
+uuid: 3c9bb23c-03e2-495a-828a-60d1dc566d03
+langcode: fr
+status: true
+dependencies: {  }
+name: project444x300
+label: Project444x300
+effects:
+  dd1198cc-cae9-41c9-b8ff-3782455154b3:
+    uuid: dd1198cc-cae9-41c9-b8ff-3782455154b3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 444
+      height: 300
+      anchor: center-center
