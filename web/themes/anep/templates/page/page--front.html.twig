@@ -55,36 +55,14 @@
 
 {{ page.content_front }}
 
-{{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-<main role="main">
-  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
 
-
-  {% if page.sidebar_first %}
-    <aside class="layout-sidebar-first" role="complementary">
-      {{ page.sidebar_first }}
-    </aside>
-  {% endif %}
-
-  {% if page.sidebar_second %}
-    <aside class="layout-sidebar-second" role="complementary">
-      {{ page.sidebar_second }}
-    </aside>
-  {% endif %}
-
-</main>
 
 {% if page.footer %}
   <footer role="contentinfo">
-    {{ page.footer }}
+    <div class="container-fluid p-lg-5 p-md-3 p-sm-2 pb-0">
+      {{ page.footer }}
+    </div>
   </footer>
 {% endif %}
 

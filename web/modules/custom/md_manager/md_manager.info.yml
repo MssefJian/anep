@@ -1,0 +1,5 @@
+name: 'md_manager'
+type: module
+description: 'Custom module for customisation purpose'
+package: Custom
+core_version_requirement: ^10
