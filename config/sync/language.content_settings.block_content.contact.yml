@@ -1,18 +1,16 @@
-uuid: 97309b5d-7aed-4c2d-93a0-bb4d2284a53c
+uuid: 9f8c9d36-2416-4a33-b5da-395508f5ed84
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.home_paragraph
+    - block_content.type.contact
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
-id: block_content.home_paragraph
+id: block_content.contact
 target_entity_type_id: block_content
-target_bundle: home_paragraph
+target_bundle: contact
 default_langcode: site_default
 language_alterable: false
