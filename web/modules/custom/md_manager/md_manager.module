@@ -8,5 +8,10 @@ function md_manager_theme($existing, $type, $theme, $path)
         'menu' => NULL
       ],
     ],
+    'social_links' => [
+      'variables' => [
+        'social' => NULL
+      ],
+    ],
   ];
 }

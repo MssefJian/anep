@@ -1,0 +1,16 @@
+uuid: 3f03f541-2b2e-4e3f-84d3-11d002d0cb1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.social_media
+target_entity_type_id: node
+target_bundle: social_media
+default_langcode: site_default
+language_alterable: false

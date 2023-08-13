@@ -11,7 +11,7 @@ dependencies:
 id: anep_contact
 theme: anep
 region: footer
-weight: -8
+weight: -9
 provider: null
 plugin: 'block_content:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
 settings:
