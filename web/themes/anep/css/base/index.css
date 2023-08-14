@@ -52,7 +52,7 @@ body {
 }
 .carousel
 {
-  height: 85vh;
+  height: 75vh;
 }
 .carousel-control-prev span
 {
@@ -635,7 +635,12 @@ footer .bottom_bar h3
     font-size: 12px;
   }
 }
+/* rtl css */ 
 
+[dir="rtl"] .owl-nav {
+  right: unset;
+  left: 10px;
+}
 
 
 

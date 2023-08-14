@@ -30,6 +30,7 @@
         loop:false,
         rewind: true,
         margin:10,
+        rtl: drupalSettings.lang === 'ar',
         autoplay:2000,
         nav:true,
         responsive:{

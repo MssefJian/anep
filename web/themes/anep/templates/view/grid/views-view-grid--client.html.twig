@@ -27,7 +27,8 @@
  */
 #}
 {% set classes = [
-  'owl-carousel owl-theme owl-carousel2'
+  'owl-carousel owl-theme',
+  language == 'ar' ? 'owl-carousel-rtl' : ''
 ] %}
 
 <div{{ attributes.addClass(classes) }}>

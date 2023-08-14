@@ -18,6 +18,7 @@ function anep_preprocess_html(array &$variables): void {
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
 function anep_preprocess_page(array &$variables): void {
+  $variables['#attached']['drupalSettings']['lang'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
 }
 
@@ -146,4 +147,11 @@ function anep_preprocess_views_view_fields(&$variables) {
   }
 
   }
+}
+
+/**
+ * Implements hook_preprocess_views_view_grid().
+ */
+function anep_preprocess_views_view_grid(&$variables) {
+  $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
 }
