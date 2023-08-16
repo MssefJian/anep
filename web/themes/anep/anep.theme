@@ -18,6 +18,7 @@ function anep_preprocess_html(array &$variables): void {
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
 function anep_preprocess_page(array &$variables): void {
+  $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['#attached']['drupalSettings']['lang'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
 }
@@ -126,7 +127,7 @@ function anep_theme_suggestions_views_view_field_alter(array &$suggestions, arra
 function anep_preprocess_views_view_fields(&$variables) {
   // Add classes to media rendered entity field so it can be targeted for
   // JavaScript mouseover and click events.
-  $types = ['project', 'tenders'];
+  $types = ['project', 'tenders', 'actualites'];
   if (in_array($variables['view']->id(), $types)) {
   $row = $variables['row'];
   $nid = $row->_entity->id();
@@ -155,3 +156,7 @@ function anep_preprocess_views_view_fields(&$variables) {
 function anep_preprocess_views_view_grid(&$variables) {
   $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
 }
+
+/**
+ * Implements hook_theme_suggestions_alter() for contact form container.
+ */
