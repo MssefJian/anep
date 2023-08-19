@@ -1,0 +1,24 @@
+uuid: 1a60060e-0561-4a9a-96c3-fe978567ff2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+  theme:
+    - anep
+id: anep_views_block__news_block_1_2
+theme: anep
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:news-block_1'
+settings:
+  id: 'views_block:news-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '10'
+visibility: {  }
