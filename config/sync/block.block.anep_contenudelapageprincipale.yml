@@ -1,0 +1,20 @@
+uuid: fb1aa6b0-56fd-40ff-9adf-6b3c70356c34
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - anep
+id: anep_contenudelapageprincipale
+theme: anep
+region: content_term
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: visible
+  provider: system
+visibility: {  }
