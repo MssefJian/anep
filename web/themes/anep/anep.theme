@@ -31,7 +31,9 @@ function anep_preprocess_page(array &$variables): void {
 function anep_preprocess_node(array &$variables): void {
   if (isset($variables['content']['field_image'][0]) && $variables['node']->getType() == 'news') {
     $variables['content']['field_image'][0]['#item_attributes']['class'][] = 'img-fluid my-3';
-
+  }
+  if ($variables['node']->getType() == 'article') {
+    $variables['displayBlock'] = TRUE;
   }
 }
 
