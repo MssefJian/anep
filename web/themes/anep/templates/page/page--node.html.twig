@@ -56,7 +56,9 @@
 {{ page.breadcrumb }}
 
 {{ page.content }}
-
+{% if displayBlock %}
+{{ page.featured }}
+{% endif %}
 
 {% if page.footer %}
   <footer role="contentinfo">

@@ -20,7 +20,9 @@ function anep_preprocess_html(array &$variables): void {
 function anep_preprocess_page(array &$variables): void {
   $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['#attached']['drupalSettings']['lang'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
-
+  if (isset($variables['node']) && $variables['node']->getType() == 'news') {
+    $variables['displayBlock'] = TRUE;
+  }
 }
 
 /**
