@@ -1,7 +1,0 @@
-dardev_table:
-  version: 1.x
-  css:
-    theme:
-      assets/css/styles.css: {}
-  js:
-    assets/js/script.js: {}
