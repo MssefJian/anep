@@ -133,7 +133,19 @@ function anep_theme_suggestions_views_view_fields_alter(array &$suggestions, arr
  */
 function anep_theme_suggestions_views_view_field_alter(array &$suggestions, array $variables)
 {
-  $suggestions[] = 'views_view_field__' . $variables['view']->id();
+
+  $name = '';
+  $type = '';
+  if (isset($variables['element']['#name'])) {die;
+    $name = $variables['element']['#name'];
+  }
+
+  if (isset($variables['element']['#type'])) {
+    $type = $variables['element']['#type'];
+  }
+
+
+  $suggestions[] = 'views_view_field__' . $variables['view']->id() .'_'. $variables['field']->field;
 }
 
 /**

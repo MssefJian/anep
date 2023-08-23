@@ -635,21 +635,14 @@ footer .bottom_bar h3
     font-size: 12px;
   }
 }
-/* rtl css */ 
+/* rtl css */
 
 [dir="rtl"] .owl-nav {
   right: unset;
   left: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.icon-background img.tpdfsize {
+  height: 32px;
+  width: 32px
+}

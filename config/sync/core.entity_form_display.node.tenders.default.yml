@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.tenders.body
+    - field.field.node.tenders.field_cps
     - field.field.node.tenders.field_deadline
     - field.field.node.tenders.field_deadline_discount_bids
     - field.field.node.tenders.field_estimate
     - field.field.node.tenders.field_id_tender
-    - field.field.node.tenders.field_other_documents
+    - field.field.node.tenders.field_notice
     - field.field.node.tenders.field_publication_date
+    - field.field.node.tenders.field_rc
+    - field.field.node.tenders.field_result
     - field.field.node.tenders.field_the_announcement
     - node.type.tenders
   module:
@@ -37,6 +40,13 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_cps:
+    type: file_generic
+    weight: 129
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_deadline:
     type: datetime_default
@@ -66,7 +76,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_other_documents:
+  field_notice:
     type: file_generic
     weight: 128
     region: content
@@ -78,6 +88,20 @@ content:
     weight: 124
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_rc:
+    type: file_generic
+    weight: 130
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_result:
+    type: file_generic
+    weight: 131
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_the_announcement:
     type: string_textfield
@@ -128,6 +152,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

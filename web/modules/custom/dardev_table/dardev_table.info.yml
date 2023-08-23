@@ -1,0 +1,8 @@
+name: dardev_table
+type: module
+description: 'Responsive table module developer par DARDEV pour AUNADOR.'
+package: INRA
+core_version_requirement: ^8.8.0 || ^9 || ^10
+dependencies:
+  - drupal:views
+  - views_ui

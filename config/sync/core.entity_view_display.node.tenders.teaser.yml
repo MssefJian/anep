@@ -5,12 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.tenders.body
+    - field.field.node.tenders.field_cps
     - field.field.node.tenders.field_deadline
     - field.field.node.tenders.field_deadline_discount_bids
     - field.field.node.tenders.field_estimate
     - field.field.node.tenders.field_id_tender
-    - field.field.node.tenders.field_other_documents
+    - field.field.node.tenders.field_notice
     - field.field.node.tenders.field_publication_date
+    - field.field.node.tenders.field_rc
+    - field.field.node.tenders.field_result
     - field.field.node.tenders.field_the_announcement
     - node.type.tenders
   module:
@@ -35,11 +38,14 @@ content:
     weight: 100
     region: content
 hidden:
+  field_cps: true
   field_deadline: true
   field_deadline_discount_bids: true
   field_estimate: true
   field_id_tender: true
-  field_other_documents: true
+  field_notice: true
   field_publication_date: true
+  field_rc: true
+  field_result: true
   field_the_announcement: true
   langcode: true
