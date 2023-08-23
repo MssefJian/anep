@@ -1,0 +1,5 @@
+label: 'طلبات العروض'
+display:
+  default:
+    display_options:
+      title: 'طلبات العروض'
