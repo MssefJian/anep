@@ -1,0 +1,34 @@
+uuid: ac8ed542-325f-4a05-af4d-3f166998cef7
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: competence
+label: competence
+type: 'canonical_entities:taxonomy_term'
+pattern: 'competence/[term:name]'
+selection_criteria:
+  0789bd54-2498-41ba-957d-9ce0154d2211:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 0789bd54-2498-41ba-957d-9ce0154d2211
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      skill: skill
+  3af384a5-4f86-4f3b-887e-93c8a6e3f880:
+    id: language
+    negate: false
+    uuid: 3af384a5-4f86-4f3b-887e-93c8a6e3f880
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      fr: fr
+      ar: ar
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

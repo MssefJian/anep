@@ -1,0 +1,27 @@
+uuid: 0bdeef70-c114-4951-80b6-9a02ed105a2b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_result
+    - node.type.tenders
+  module:
+    - file
+id: node.tenders.field_result
+field_name: field_result
+entity_type: node
+bundle: tenders
+label: Result
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'appel_offre/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,27 @@
+uuid: 16824369-8eac-42db-bec9-d9964e6cb4ef
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rc
+    - node.type.tenders
+  module:
+    - file
+id: node.tenders.field_rc
+field_name: field_rc
+entity_type: node
+bundle: tenders
+label: RC
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'appel_offre/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx'
+  max_filesize: ''
+  description_field: false
+field_type: file

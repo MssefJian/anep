@@ -1,0 +1,23 @@
+uuid: 71719396-7a5a-4eb0-8538-c0c6f5daabfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.social_media.field_link
+    - node.type.social_media
+  module:
+    - user
+id: node.social_media.teaser
+targetEntityType: node
+bundle: social_media
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_link: true
+  langcode: true

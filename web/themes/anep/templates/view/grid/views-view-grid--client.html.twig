@@ -27,10 +27,11 @@
  */
 #}
 {% set classes = [
-  'owl-carousel-rtl owl-theme owl-carousel2 mourad'
+  'owl-carousel owl-theme',
+  language == 'ar' ? 'owl-carousel-rtl' : ''
 ] %}
 
-<div{{ attributes.addClass(classes) }} >
+<div{{ attributes.addClass(classes) }}>
 
   {% for column in items %}
     {% for row in column.content %}

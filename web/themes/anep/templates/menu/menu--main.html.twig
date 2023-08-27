@@ -39,7 +39,7 @@ https://twig.symfony.com/doc/3.x/tags/macro.html
     {% for item in items %}
       {# Check if the current page's URL matches the menu item's URL #}
 
-      <li{{ item.attributes }} class="nav-item {{ item.below ? 'dropdown' : '' }}">
+      <li{{ item.attributes }} class="nav-item {{ item.below ? 'dropdown' : '' }}" {{ language }}>
         {% if item.below %}
           {{ link(item.title, item.url, {'class': 'nav-link data-bs-toggle has_subitems', 'role': 'button', 'data-bs-toggle': 'dropdown', 'aria-expanded': 'false'}) }}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

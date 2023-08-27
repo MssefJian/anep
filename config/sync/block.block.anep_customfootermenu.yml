@@ -1,0 +1,20 @@
+uuid: 2b00a5be-79b1-455b-9282-63e957785fa8
+langcode: en
+status: true
+dependencies:
+  module:
+    - md_manager
+  theme:
+    - anep
+id: anep_customfootermenu
+theme: anep
+region: footer
+weight: -10
+provider: null
+plugin: md_manager_custom_footer_menu
+settings:
+  id: md_manager_custom_footer_menu
+  label: 'Custom footer menu'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }
