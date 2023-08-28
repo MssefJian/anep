@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3791712750c806541148a461d849d69",
+    "content-hash": "24bb3233957d2e6c5291aab4d55ebec9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2040,6 +2040,55 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/format_bytes",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/format_bytes.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/format_bytes-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "4999e708d88d4978363f0a7b5be4b3fc3b0152e9"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1668681340",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sohail Lajevardi",
+                    "homepage": "https://www.drupal.org/user/1331334",
+                    "email": "sohail@ramsalt.com"
+                },
+                {
+                    "name": "msnassar",
+                    "homepage": "https://www.drupal.org/user/1199630"
+                }
+            ],
+            "description": "Twig extension to format raw bytes value to a readable output.",
+            "homepage": "https://www.drupal.org/project/format_bytes",
+            "support": {
+                "source": "https://git.drupalcode.org/project/format_bytes"
             }
         },
         {
