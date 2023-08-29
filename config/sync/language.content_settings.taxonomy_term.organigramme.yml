@@ -1,0 +1,16 @@
+uuid: 35adc3a6-f3b6-4cce-ba32-bc406d39f091
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organigramme
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.organigramme
+target_entity_type_id: taxonomy_term
+target_bundle: organigramme
+default_langcode: site_default
+language_alterable: true

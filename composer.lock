@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebd67d56e4f1472bcb5442e02d11a371",
+    "content-hash": "9264ac346d25bd0f34e789d644ca1327",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2089,6 +2089,56 @@
             "homepage": "https://www.drupal.org/project/format_bytes",
             "support": {
                 "source": "https://git.drupalcode.org/project/format_bytes"
+            }
+        },
+        {
+            "name": "drupal/organigrams",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/organigrams.git",
+                "reference": "8.x-2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/organigrams-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "47b76fc186502acfc8a8ecd76c29fc9552eca17a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.3",
+                    "datestamp": "1667221157",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Scheffer (PatrickScheffer)",
+                    "homepage": "https://www.drupal.org/u/patrickscheffer",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Organigrams provides the ability to easily create and manage organization charts, also knows as organigrams or organograms.",
+            "homepage": "https://drupal.org/project/organigrams",
+            "keywords": [
+                "Drupal",
+                "organigrams"
+            ],
+            "support": {
+                "source": "https://cgit.drupalcode.org/organigrams",
+                "issues": "https://drupal.org/project/issues/organigrams"
             }
         },
         {

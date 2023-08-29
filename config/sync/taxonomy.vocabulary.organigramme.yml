@@ -1,0 +1,13 @@
+uuid: 80304040-7908-409b-8833-e734bd5defb5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - organigrams
+third_party_settings:
+  organigrams:
+    is_organigram: true
+name: Organigramme
+vid: organigramme
+description: ''
+weight: 0
