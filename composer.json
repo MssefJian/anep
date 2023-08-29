@@ -24,6 +24,7 @@
         "drupal/format_bytes": "^2.0",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
+        "drupal/webform": "^6.2@beta",
         "drush/drush": "^12.1"
     },
     "conflict": {
