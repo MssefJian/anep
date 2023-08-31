@@ -1,0 +1,23 @@
+uuid: dbe7e3a5-fa10-49eb-826c-d8e0486c57b8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.organigramme
+    - field.field.block_content.organigramme.body
+  module:
+    - text
+id: block_content.organigramme.default
+targetEntityType: block_content
+bundle: organigramme
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

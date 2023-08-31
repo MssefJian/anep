@@ -17,6 +17,11 @@ function md_manager_theme($existing, $type, $theme, $path)
         'social' => NULL
       ],
     ],
+    'organigramme' => [
+      'variables' => [
+        'content' => NULL
+      ],
+    ],
   ];
 }
 

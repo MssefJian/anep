@@ -1,0 +1,7 @@
+md_manager.ogranigrame:
+  path: '/organigramme'
+  defaults:
+    _controller: '\Drupal\md_manager\Controller\OrganigramController::build'
+    _title: 'organigramme'
+  requirements:
+    _permission: 'access content'

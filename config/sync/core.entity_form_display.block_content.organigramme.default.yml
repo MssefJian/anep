@@ -1,0 +1,40 @@
+uuid: f138628c-318d-4331-a350-8710d5ffd006
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.organigramme
+    - field.field.block_content.organigramme.body
+  module:
+    - text
+id: block_content.organigramme.default
+targetEntityType: block_content
+bundle: organigramme
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

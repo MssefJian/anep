@@ -1,0 +1,16 @@
+uuid: 4cd289f6-2d3c-46c4-b105-b624b11868bd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.organigramme
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.organigramme
+target_entity_type_id: block_content
+target_bundle: organigramme
+default_langcode: site_default
+language_alterable: true

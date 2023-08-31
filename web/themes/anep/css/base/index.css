@@ -646,3 +646,328 @@ footer .bottom_bar h3
   height: 32px;
   width: 32px
 }
+
+/* Org */
+
+.c-organigramme {
+  padding: 6.25rem 0;
+  margin-top: 2.4375rem;
+  background-color: #edf2f9
+}
+
+.c-organigramme .h2 {
+  font-weight: 700;
+  text-align: center;
+  color: #035179;
+  margin: 0;
+  line-height: normal
+}
+
+.c-organigramme .h3 {
+  font-weight: 700;
+  line-height: normal;
+  color: #303030;
+  margin: 0 0 1.1875rem
+}
+
+.c-organigramme .h4 {
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0
+}
+
+.c-organigramme .card {
+  z-index: 1
+}
+
+.c-organigramme .card:last-child {
+  margin-bottom: 0
+}
+
+.c-organigramme .card-body {
+  padding: .3125rem 1.875rem
+}
+
+.c-organigramme .bg-white .card-body {
+  padding: .3125rem 1.25rem
+}
+
+.c-organigramme .text-hori {
+  margin: 9px 0 5px;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .text-hori {
+    position:relative;
+    z-index: 2;
+    background-color: #000000;
+    margin: 1.875rem 0!important
+  }
+}
+
+.c-organigramme .text-verti {
+  -webkit-transform: translateY(280px) translateX(20px) rotate(-90deg);
+  transform: translateY(280px) translateX(20px) rotate(-90deg);
+  font-weight: 600;
+  line-height: normal;
+  color: #b2bfd1;
+  text-transform: uppercase;
+  white-space: nowrap
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .text-verti {
+    position:relative;
+    z-index: 2;
+    -webkit-transform: none;
+    transform: none;
+    background-color: #edf2f9;
+    margin: 1.875rem 0!important
+  }
+}
+
+.c-organigramme .bloc-organi {
+  padding: 1.3125rem 1.25rem 1.25rem;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 1.5rem 0 #bacbe3;
+  box-shadow: inset 0 0 1.5rem 0 #bacbe3;
+  background-color: #edf2f9;
+  margin: 0 3.5625rem
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .bloc-organi {
+    margin:0 .3125rem;
+    position: relative;
+    z-index: 2
+  }
+}
+
+.c-organigramme .bloc-organi .card-body {
+  padding: .625rem
+}
+
+.c-organigramme .bloc-organi .bg-info .card-title {
+  font-weight: 700;
+  margin: 0
+}
+
+.c-organigramme .line-1 {
+  position: relative;
+  padding-top: 2.625rem
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-1 {
+    padding-top:0
+  }
+}
+
+.c-organigramme .line-1:before {
+  content: '';
+  width: 2px;
+  height: 2.75rem;
+  margin: 0 auto;
+  background-color: #b2bfd1;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0
+}
+
+.c-organigramme .line-2 {
+  position: relative;
+  margin-bottom: 2.625rem
+}
+
+.c-organigramme .line-2:after {
+  content: '';
+  width: 2px;
+  height: 7.5rem;
+  margin: 0 auto;
+  background-color: #b2bfd1;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 100%
+}
+
+.c-organigramme .line-3 {
+  position: relative;
+  padding-top: 1.75rem
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-3 {
+    padding-top:0!important
+  }
+}
+
+.c-organigramme .line-3:before {
+  content: '';
+  width: 2px;
+  height: 1.875rem;
+  margin: 0 auto;
+  background-color: #b2bfd1;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0
+}
+
+.c-organigramme .line-4 {
+  position: relative;
+  margin-bottom: 0
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-4 {
+    padding-top:1.875rem
+  }
+}
+
+.c-organigramme .line-4:after {
+  content: '';
+  height: 2px;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #b2bfd1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: inherit
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-4:after {
+    display:none
+  }
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-4.right {
+    padding-top:1.875rem!important
+  }
+}
+
+.c-organigramme .line-4.right:after {
+  left: 0;
+  right: inherit
+}
+
+.c-organigramme .line-5 {
+  position: relative;
+  margin-bottom: 0
+}
+
+.c-organigramme .line-5:after {
+  content: '';
+  height: 200%;
+  width: 2px;
+  background-color: #b2bfd1;
+  position: absolute;
+  right: inherit;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -40%;
+  left: 50%;
+  z-index: 0
+}
+
+.c-organigramme .line-6 {
+  position: relative;
+  margin-bottom: 0;
+  padding-top: 2.625rem
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-6 {
+    padding-top:0
+  }
+}
+
+.c-organigramme .line-6:before {
+  content: '';
+  height: 100%;
+  width: 50%;
+  border: 2px solid #b2bfd1;
+  position: absolute;
+  right: inherit;
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-6:before {
+    content:'';
+    height: 2px;
+    background-color: #b2bfd1;
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    right: 0
+  }
+}
+
+.c-organigramme .line-7 {
+  position: relative
+}
+
+.c-organigramme .line-7:before {
+  content: '';
+  border: 2px solid #b2bfd1;
+  border-width: 2px 0;
+  height: 50%;
+  width: 3.75rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-7:before {
+    border-width:2px 0 2px 2px;
+    left: 8%
+  }
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .line-7:after {
+    content:'';
+    height: 2px;
+    background-color: #b2bfd1;
+    position: absolute;
+    top: 50%;
+    width: 8%;
+    left: 0
+  }
+}
+
+.c-organigramme .pp {
+  padding: 0 3.9375rem
+}
+
+@media (max-width: 1440px) {
+  .c-organigramme .pp {
+    padding:0 .3125rem
+  }
+}
+
+.c-organigramme .mb-28 {
+  margin-bottom: 1.75rem
+}
+
+@media (max-width: 1023px) {
+  .c-organigramme .mb-28 {
+    margin-bottom:0
+  }
+}
