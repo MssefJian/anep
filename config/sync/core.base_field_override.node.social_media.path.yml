@@ -1,0 +1,20 @@
+uuid: 41705a6d-09f3-4fde-8646-bd367630c016
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+  module:
+    - path
+id: node.social_media.path
+field_name: path
+entity_type: node
+bundle: social_media
+label: "Alias d'URL"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,22 @@
+uuid: 76e00688-96c5-47a8-8939-251bb20f043c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+id: node.social_media.status
+field_name: status
+entity_type: node
+bundle: social_media
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

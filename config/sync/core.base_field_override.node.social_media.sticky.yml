@@ -1,0 +1,22 @@
+uuid: 9cc26f34-66e4-45c7-8165-fce1ba85492b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+id: node.social_media.sticky
+field_name: sticky
+entity_type: node
+bundle: social_media
+label: 'Epinglé en haut des listes'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

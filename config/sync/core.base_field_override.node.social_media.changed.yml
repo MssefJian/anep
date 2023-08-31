@@ -1,0 +1,18 @@
+uuid: 399e39c1-e974-4c8b-8e80-f68e1a6fd465
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+id: node.social_media.changed
+field_name: changed
+entity_type: node
+bundle: social_media
+label: Modifié
+description: 'La date à laquelle le nœud a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,18 @@
+uuid: cbc136e1-045f-43ff-8f30-5cdd24dd81ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+id: node.social_media.title
+field_name: title
+entity_type: node
+bundle: social_media
+label: Titre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

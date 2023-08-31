@@ -1,0 +1,18 @@
+uuid: 6a4b4425-b984-4caf-aa17-d4dbeb524e65
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+id: node.social_media.created
+field_name: created
+entity_type: node
+bundle: social_media
+label: 'Écrit le'
+description: "L'heure à laquelle le nœud a été créé."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
