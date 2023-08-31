@@ -36,14 +36,10 @@ class OrganigramController extends ControllerBase
   public function build() {
 
     $language = $this->languageManager->getCurrentLanguage();
-
-
-
-
-
+    $currentLang = $language->getId();
     $query = $this->entityTypeManager->getStorage('block_content')->getQuery()
       ->condition('type', 'organigramme')
-      ->condition('langcode', $language->getId())
+      ->condition('langcode', $currentLang)
       ->accessCheck(FALSE)
       ->range(0, 1);
     $block_ids = $query->execute();
@@ -54,7 +50,7 @@ class OrganigramController extends ControllerBase
       $block_id = reset($block_ids);
       $block = $this->entityTypeManager->getStorage('block_content')->load($block_id);
       if ($block->hasTranslation($language->getId())) {
-        $translatedBlock = $block->getTranslation($language->getId());
+        $translatedBlock = $block->getTranslation($currentLang);
         $content = $translatedBlock->get('body')->value;
       } else {
         $content = $block->get('body')->value;
@@ -64,6 +60,7 @@ class OrganigramController extends ControllerBase
 
     return [
       '#theme' => 'organigramme',
+      '#currentLang' => $currentLang,
       '#content' => $content ?? NULL,
     ];
   }

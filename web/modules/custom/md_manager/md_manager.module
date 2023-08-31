@@ -19,6 +19,7 @@ function md_manager_theme($existing, $type, $theme, $path)
     ],
     'organigramme' => [
       'variables' => [
+        'currentLang' => NULL,
         'content' => NULL
       ],
     ],
