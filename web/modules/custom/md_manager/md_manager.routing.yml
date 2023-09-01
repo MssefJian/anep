@@ -1,7 +1,15 @@
 md_manager.ogranigrame:
   path: '/organigramme'
   defaults:
-    _controller: '\Drupal\md_manager\Controller\OrganigramController::build'
-    _title: 'organigramme'
+    _controller: '\Drupal\md_manager\Controller\CustomPagesController::organigramme'
+    _title: 'Organigramme'
+  requirements:
+    _permission: 'access content'
+
+md_manager.timeline:
+  path: '/agence/presentation'
+  defaults:
+    _controller: '\Drupal\md_manager\Controller\CustomPagesController::presentation'
+    _title: 'Presentation'
   requirements:
     _permission: 'access content'

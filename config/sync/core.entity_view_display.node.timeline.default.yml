@@ -1,0 +1,30 @@
+uuid: aec54ec6-090e-450c-9453-093458b78675
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timeline.field_year
+    - node.type.timeline
+  module:
+    - user
+id: node.timeline.default
+targetEntityType: node
+bundle: timeline
+mode: default
+content:
+  field_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
