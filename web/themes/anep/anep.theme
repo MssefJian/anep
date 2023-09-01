@@ -12,7 +12,10 @@ use Drupal\Core\Url;
  */
 function anep_preprocess_html(array &$variables): void
 {
-
+  $current_route_name = \Drupal::routeMatch()->getRouteName();
+  if ($current_route_name === 'md_manager.timeline') {
+    $variables['html_attributes']['dir'] = '';
+  }
 }
 
 /**
