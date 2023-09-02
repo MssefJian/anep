@@ -83,6 +83,7 @@ class CustomPagesController extends ControllerBase
       ->condition('type', 'timeline')
       ->condition('langcode', $langcode, '=')
       ->condition('status', 1)
+      ->sort('field_year', 'DESC')
       ->accessCheck(FALSE)
       ->execute();
 
