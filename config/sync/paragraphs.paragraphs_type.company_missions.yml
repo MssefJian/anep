@@ -1,0 +1,10 @@
+uuid: 7bcb664e-577d-43ec-9c6b-4e696446b298
+langcode: en
+status: true
+dependencies: {  }
+id: company_missions
+label: 'Company missions'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -6,6 +6,19 @@ use Drupal\Core\Url;
  * @file
  * Functions to support theming in the anep theme.
  */
+function anep_preprocess_menu(array &$variables): void
+{
+  $languages = \Drupal::languageManager()->getLanguages();
+  $current_language = \Drupal::languageManager()->getCurrentLanguage();
+  unset($languages['en']);
+
+
+
+
+  $variables['languages'] = $languages;
+  $variables['currentLanguage'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+}
+
 
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.

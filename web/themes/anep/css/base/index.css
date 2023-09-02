@@ -50,6 +50,25 @@ body {
   background-color: var(--dark-blue);
   color: var(--white) !important;
 }
+/* begin custom lang */
+.header-right .nav-item .nav-link.active {
+  color: #a5bbd1;
+}
+
+.header-right .nav-item .nav-link {
+  font-family: Cairo;
+  font-size: .75rem;
+  font-weight: 700;
+  text-align: center;
+  color: #202020;
+  text-transform: uppercase;
+  padding: 0.625rem 0.3125rem;
+}
+
+.header-right a.nav-link[_ngcontent-eld-c58] {
+  font-size: 14px !important;
+}
+/* End custom lang */
 .carousel
 {
   height: 75vh;
