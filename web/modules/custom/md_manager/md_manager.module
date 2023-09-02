@@ -25,7 +25,8 @@ function md_manager_theme($existing, $type, $theme, $path)
     ],
     'timeline' => [
       'variables' => [
-        'timeLines' => NULL
+        'timeLines' => NULL,
+        'data' => NULL
       ],
     ],
   ];

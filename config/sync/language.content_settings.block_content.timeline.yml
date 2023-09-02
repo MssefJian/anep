@@ -1,0 +1,16 @@
+uuid: 0fc81d03-7286-45d8-af41-af9e24d562a4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.timeline
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.timeline
+target_entity_type_id: block_content
+target_bundle: timeline
+default_langcode: site_default
+language_alterable: true
