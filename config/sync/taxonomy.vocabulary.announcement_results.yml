@@ -1,0 +1,8 @@
+uuid: c1c3d07c-f29d-4c2e-a2d9-df5407701a8f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Announcement results'
+vid: announcement_results
+description: ''
+weight: 0

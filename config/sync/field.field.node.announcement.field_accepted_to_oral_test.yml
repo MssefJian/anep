@@ -1,0 +1,27 @@
+uuid: aef5e1e2-e18a-48e7-8297-366aadbaebc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accepted_to_oral_test
+    - node.type.announcement
+  module:
+    - file
+id: node.announcement.field_accepted_to_oral_test
+field_name: field_accepted_to_oral_test
+entity_type: node
+bundle: announcement
+label: 'Candidates invited to take the oral interview'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'candidats_convoques[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx'
+  max_filesize: ''
+  description_field: false
+field_type: file

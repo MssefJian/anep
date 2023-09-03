@@ -1,18 +1,16 @@
-uuid: fdf060f6-f947-4aba-9bb9-d1d00ae24a32
+uuid: ffddfbd4-506c-41a5-b1ab-6f66ac30dc60
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.skill
+    - taxonomy.vocabulary.announcement_results
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
-id: taxonomy_term.skill
+id: taxonomy_term.announcement_results
 target_entity_type_id: taxonomy_term
-target_bundle: skill
+target_bundle: announcement_results
 default_langcode: site_default
 language_alterable: true

@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      fields:
+        title:
+          label: منصب
+        field_number_post:
+          label: 'عدد المناصب'
+        field_publication_date:
+          label: 'تاريخ الإعلان'
+        field_deadline:
+          label: 'آخر موعد للتسجيل'
+        field_competition_date:
+          label: 'تاريخ المباراة'
+        field_accepted_to_written_test:
+          label: 'المرشحون لإجراء الاختبار الكتابي'
+        field_accepted_to_oral_test:
+          label: 'المرشحون المدعوون لإجراء الإختبار الشفوي'
+        field_results:
+          label: نتائج
+        field_waiting_list:
+          label: 'لائحة الإنتظار'
+        field_status:
+          label: حالة

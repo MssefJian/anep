@@ -1,0 +1,23 @@
+uuid: adeb99a7-ec67-4926-a7ab-7f91f8ca00cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_post
+    - node.type.announcement
+id: node.announcement.field_number_post
+field_name: field_number_post
+entity_type: node
+bundle: announcement
+label: 'Number of post'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

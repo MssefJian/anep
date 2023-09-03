@@ -1,0 +1,21 @@
+uuid: a88214c7-717b-4f26-80bb-49b44937b3d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_announcement_type
+    - node.type.announcement
+  module:
+    - options
+id: node.announcement.field_announcement_type
+field_name: field_announcement_type
+entity_type: node
+bundle: announcement
+label: 'Announcement type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

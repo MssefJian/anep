@@ -1,0 +1,21 @@
+uuid: 9efce9ab-b65b-498d-840a-5adeeef9a034
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deadline
+    - node.type.announcement
+  module:
+    - datetime
+id: node.announcement.field_deadline
+field_name: field_deadline
+entity_type: node
+bundle: announcement
+label: Deadline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
