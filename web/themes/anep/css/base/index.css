@@ -1043,3 +1043,9 @@ html[dir=rtl] .c-organigramme .line-7:before {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
 }
+
+.webform-submission-contact-add-form .form-control {
+  width:50%;
+  min-width: 200px;
+  max-width: 400px;
+}

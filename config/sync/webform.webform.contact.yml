@@ -17,31 +17,126 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 categories: {  }
-elements: |
+elements: |-
+  titre:
+    '#type': webform_markup
+    '#markup': '<h2>Contactez-nous</h2>'
   name:
-    '#title': 'Your Name'
     '#type': textfield
+    '#title': Nom
+    '#title_display': inline
+    '#description_display': before
     '#required': true
     '#default_value': '[current-user:display-name]'
+    '#wrapper_attributes':
+      class:
+        - mb-3
+        - row
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
+  prenom:
+    '#type': textfield
+    '#title': Prénom
+    '#title_display': inline
+    '#description_display': before
+    '#required': true
+    '#default_value': '[current-user:display-name]'
+    '#wrapper_attributes':
+      class:
+        - mb-3
+        - row
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
+  telephone_:
+    '#type': tel
+    '#title': 'Téléphone '
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
+    '#international': true
+    '#international_initial_country': MA
+  pays:
+    '#type': select
+    '#title': Pays
+    '#options': country_names
+    '#sort_options': true
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
+  ville:
+    '#type': textfield
+    '#title': Ville
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
   email:
-    '#title': 'Your Email'
     '#type': email
+    '#title': Email
     '#required': true
     '#default_value': '[current-user:mail]'
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
   subject:
-    '#title': Subject
     '#type': textfield
+    '#title': 'Objet du contact'
     '#required': true
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
     '#test': 'Testing contact webform from [site:name]'
   message:
-    '#title': Message
     '#type': textarea
+    '#title': 'Message '
     '#required': true
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - col-sm-2
+        - col-form-label
     '#test': 'Please ignore this email.'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#submit__label': Envoyer
+    '#submit__attributes':
+      class:
+        - btn
+        - btn-primary
+        - mb-3
+        - mt-5
 css: ''
 javascript: ''
 settings:
