@@ -1,0 +1,23 @@
+uuid: 8e4c2ab6-4bdc-4463-81b4-d52766097581
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.human_ressources.field_distribution
+    - node.type.human_ressources
+  module:
+    - user
+id: node.human_ressources.teaser
+targetEntityType: node
+bundle: human_ressources
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_distribution: true
+  langcode: true

@@ -1,0 +1,31 @@
+uuid: c7bc08a7-3b49-4522-a19c-30b3c7caa4d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.human_ressources.field_distribution
+    - node.type.human_ressources
+  module:
+    - entity_reference_revisions
+    - user
+id: node.human_ressources.default
+targetEntityType: node
+bundle: human_ressources
+mode: default
+content:
+  field_distribution:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

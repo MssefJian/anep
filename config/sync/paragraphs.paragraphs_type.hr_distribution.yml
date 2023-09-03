@@ -1,0 +1,10 @@
+uuid: 95dd366e-d3c3-4660-a97d-e2d7bff0ba1a
+langcode: en
+status: true
+dependencies: {  }
+id: hr_distribution
+label: 'HR distribution'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

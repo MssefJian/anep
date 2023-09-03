@@ -1,0 +1,18 @@
+uuid: 78281dd9-914d-422b-aa59-b9e49e01a662
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hr_distribution
+id: paragraph.hr_distribution.created
+field_name: created
+entity_type: paragraph
+bundle: hr_distribution
+label: 'Écrit le'
+description: 'Heure de création du paragraphe.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

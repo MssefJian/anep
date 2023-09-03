@@ -1,0 +1,33 @@
+uuid: c76ad15d-5f5d-4e9b-8584-f8885ef10d63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hr_distribution.field_description
+    - field.field.paragraph.hr_distribution.field_repartition_pourcent
+    - paragraphs.paragraphs_type.hr_distribution
+id: paragraph.hr_distribution.default
+targetEntityType: paragraph
+bundle: hr_distribution
+mode: default
+content:
+  field_description:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_repartition_pourcent:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: d0f8266d-3c7a-4800-ba0c-4b257d5d88b4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.company_missions
+id: paragraph.company_missions.status
+field_name: status
+entity_type: paragraph
+bundle: company_missions
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

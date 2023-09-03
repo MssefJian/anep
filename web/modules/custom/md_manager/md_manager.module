@@ -29,6 +29,12 @@ function md_manager_theme($existing, $type, $theme, $path)
         'data' => NULL
       ],
     ],
+    'human_resources' => [
+      'variables' => [
+        'humanResources' => NULL,
+        'data' => NULL,
+      ],
+    ],
   ];
 }
 

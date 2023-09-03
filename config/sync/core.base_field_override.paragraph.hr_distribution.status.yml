@@ -1,0 +1,22 @@
+uuid: 0811e143-06ad-4494-8fd6-729de60325d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hr_distribution
+id: paragraph.hr_distribution.status
+field_name: status
+entity_type: paragraph
+bundle: hr_distribution
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

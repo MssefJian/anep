@@ -1,0 +1,18 @@
+uuid: 501567f6-3ee1-40b6-843e-06e9ae11fe74
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.company_missions
+id: paragraph.company_missions.created
+field_name: created
+entity_type: paragraph
+bundle: company_missions
+label: 'Écrit le'
+description: 'Heure de création du paragraphe.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

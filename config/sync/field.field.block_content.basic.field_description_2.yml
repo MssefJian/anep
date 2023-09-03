@@ -1,0 +1,22 @@
+uuid: 96b7f6e4-2234-4253-8874-41fbd2a0f91c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_description_2
+  module:
+    - text
+id: block_content.basic.field_description_2
+field_name: field_description_2
+entity_type: block_content
+bundle: basic
+label: 'Description 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

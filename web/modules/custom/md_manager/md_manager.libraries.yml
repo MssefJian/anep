@@ -8,3 +8,14 @@ timeline:
   dependencies:
     - core/jquery
     - core/drupal
+
+human_resources:
+  css:
+    theme:
+      css/timeline.css: {}
+  js:
+    js/highcharts.js: {}
+    js/customChart.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

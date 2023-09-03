@@ -1,9 +1,9 @@
-uuid: 42d2fcf5-2b64-4afe-bd88-6b026f943d8a
+uuid: d21945b1-9716-42a5-a28a-9287080c4574
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.timeline
+    - node.type.human_ressources
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: node.timeline
+id: node.human_ressources
 target_entity_type_id: node
-target_bundle: timeline
+target_bundle: human_ressources
 default_langcode: site_default
 language_alterable: true

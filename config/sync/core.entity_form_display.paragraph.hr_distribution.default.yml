@@ -1,0 +1,31 @@
+uuid: a496cc63-4683-4a4b-b86f-76a3217ec5d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hr_distribution.field_description
+    - field.field.paragraph.hr_distribution.field_repartition_pourcent
+    - paragraphs.paragraphs_type.hr_distribution
+id: paragraph.hr_distribution.default
+targetEntityType: paragraph
+bundle: hr_distribution
+mode: default
+content:
+  field_description:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_repartition_pourcent:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

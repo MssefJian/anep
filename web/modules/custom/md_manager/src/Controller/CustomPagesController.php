@@ -22,6 +22,8 @@ class CustomPagesController extends ControllerBase
 
   const TYPE_TIMELINE = 'timeline';
 
+  const TYPE_BASIC = 'basic';
+
 
   public function __construct(EntityTypeManagerInterface $entityTypeManager, LanguageManagerInterface $languageManager)
   {
@@ -99,6 +101,67 @@ class CustomPagesController extends ControllerBase
   }
 
   /**
+   * Display human Resources page
+   * @return array
+   *    A render array containing data of the page.
+   */
+  public function humanResources()
+  {
+
+    $data = $this->getBlockType(self::TYPE_BASIC);
+    $langcode = $this->languageManager->getCurrentLanguage()->getId();
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'human_ressources')
+      ->condition('langcode', $langcode, '=')
+      ->condition('status', 1)
+      ->accessCheck(FALSE)
+      ->execute();
+
+
+// Load the node entities using the node IDs.
+    $nodes = Node::loadMultiple($query);
+    $humanResources = [];
+    foreach ($nodes as $key => $node) {
+      $translation = $node->hasTranslation($langcode);
+      $tmp['id'] = 'DataChart-'.$key;
+      $tmp['title'] = $translation ? $node->getTranslation($langcode)->get('title')->value : $node->getTitle();
+      //$tmp['dataChart'] = $translation ? $node->getTranslation($langcode)->get('field_year')->value : $node->get('field_year')->value;
+      $paragraph_field = $node->get('field_distribution'); // Replace 'field_paragraph_field_name' with the actual field name.
+
+      foreach ($paragraph_field as $item) {
+        // Iterate through each paragraph item.
+        $paragraph_item = $item->entity;
+
+        // Retrieve the values of the paragraph fields.
+        $tmp['dataChart'][] = [
+          'name' => $paragraph_item->get('field_description')->value,
+          'y' => intval($paragraph_item->get('field_repartition_pourcent')->value)
+        ];
+
+
+      }
+      $humanResources[] = $tmp;
+      unset($tmp);
+    }
+
+    return [
+      '#theme' => 'human_resources',
+      '#humanResources' => $humanResources,
+      '#data' => $data,
+      '#attached' => [
+        'library' => [
+          'md_manager/human_resources'
+        ],
+        'drupalSettings' => [
+          'mdManager' => [
+            'rh' => $humanResources,
+          ],
+        ],
+      ]
+    ];
+  }
+
+  /**
    * @param string $type
    * @return array
    */
@@ -113,7 +176,7 @@ class CustomPagesController extends ControllerBase
       ->range(0, 1);
     $block_ids = $query->execute();
 
-    $content = $title = '';
+    $content = $content2 = $title = '';
     if (!empty($block_ids)) {
       $block_id = reset($block_ids);
       $block = $this->entityTypeManager->getStorage('block_content')->load($block_id);
@@ -121,14 +184,17 @@ class CustomPagesController extends ControllerBase
         $translatedBlock = $block->getTranslation($currentLang);
         $title = $translatedBlock->get('info')->value;
         $content = $translatedBlock->get('body')->value;
+        $content2 = $type == 'basic' ? $translatedBlock->get('field_description_2')->value : '';
       } else {
         $title = $block->get('info')->value;
         $content = $block->get('body')->value;
+        $content2 = $type == 'basic' ? $block->get('field_description_2')->value : '';
       }
     }
     return [
       'title' => $title,
-      'content' => $content
+      'content' => $content,
+      'content2' => $content2
     ];
 
   }

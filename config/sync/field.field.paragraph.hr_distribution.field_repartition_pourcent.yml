@@ -1,0 +1,23 @@
+uuid: 3e3acd24-cf45-4ec8-9dcb-8a1e6e9541c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_repartition_pourcent
+    - paragraphs.paragraphs_type.hr_distribution
+id: paragraph.hr_distribution.field_repartition_pourcent
+field_name: field_repartition_pourcent
+entity_type: paragraph
+bundle: hr_distribution
+label: 'Repartition pourcent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

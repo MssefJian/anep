@@ -1,0 +1,19 @@
+uuid: 775aa204-5ccf-4dd2-86f3-817c8a288340
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.hr_distribution
+id: paragraph.hr_distribution.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: hr_distribution
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
