@@ -19,3 +19,10 @@ human_resources:
   dependencies:
     - core/jquery
     - core/drupal
+
+states:
+  css:
+    theme:
+      css/states.css: {}
+  js:
+    js/states.js: {}

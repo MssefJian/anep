@@ -1,0 +1,43 @@
+uuid: b0c15759-ce31-40ef-8c90-127cd427140b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.direction_regional
+    - field.storage.block_content.field_direction
+    - paragraphs.paragraphs_type.direction_regional
+  module:
+    - entity_reference_revisions
+id: block_content.direction_regional.field_direction
+field_name: field_direction
+entity_type: block_content
+bundle: direction_regional
+label: Direction
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      direction_regional: direction_regional
+    negate: 0
+    target_bundles_drag_drop:
+      company_missions:
+        weight: 7
+        enabled: false
+      direction_regional:
+        weight: 8
+        enabled: true
+      home_paragraph:
+        weight: 9
+        enabled: false
+      hr_distribution:
+        weight: 10
+        enabled: false
+      sub_states:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

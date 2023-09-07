@@ -1,0 +1,111 @@
+.map-svg {
+  position: relative;
+}
+.c-regions .bloc-map-text .badge.badge-region6 {
+  background-color: #bce4fe
+}
+
+@media (max-width: 1023px) {
+  .map-svg svg {
+    height: auto
+  }
+}
+
+.map-svg .reg1, .map-svg .reg2, .map-svg .reg3, .map-svg .reg4, .map-svg .reg5, .map-svg .reg6 {
+  cursor: pointer
+}
+
+.map-svg .reg-content1, .map-svg .reg-content2, .map-svg .reg-content3, .map-svg .reg-content4, .map-svg .reg-content5, .map-svg .reg-content6 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 20%
+}
+
+.map-svg .reg-content1 .h3, .map-svg .reg-content2 .h3, .map-svg .reg-content3 .h3, .map-svg .reg-content4 .h3, .map-svg .reg-content5 .h3, .map-svg .reg-content6 .h3 {
+  font-size: 1.125rem
+}
+
+.c-axe {
+  position: relative
+}
+
+.c-axe .card {
+  margin-bottom: 1.25rem;
+  padding: 2.25rem 2.5rem .75rem
+}
+
+.c-axe .card h3 {
+  margin-bottom: .9375rem
+}
+
+.c-axe .card h3 img {
+  max-height: 1.5rem;
+  margin-right: .625rem
+}
+
+.filter-pagination {
+  margin-bottom: 3.125rem
+}
+
+.filter-pagination .form-inline {
+  position: relative;
+  margin-left: 1.25rem
+}
+
+.st0 {
+  fill: #1176B7;
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+}
+
+.st1 {
+  fill: #57BCFD;
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+}
+
+.st2 {
+  opacity: 0.98;
+  fill: #57BCFD;
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+  enable-background: new;
+}
+
+.st3 {
+  fill: #4CA7E2;
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+}
+
+.st4 {
+  fill: #80CCFF;
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+}
+
+.st5 {
+  fill: #A2DAFF;
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+}
+
+.st6 {
+  fill: #3796D4;
+  stroke: #FFFFFF;
+  stroke-width: 0.5;
+}
+
+li, p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+section.c-axe {
+  direction: ltr;
+}
+
+.map-svg .reg1.hover, .map-svg .reg2.hover, .map-svg .reg3.hover, .map-svg .reg4.hover, .map-svg .reg5.hover, .map-svg .reg6.hover {
+  fill: #78879d;
+}

@@ -24,6 +24,8 @@ class CustomPagesController extends ControllerBase
 
   const TYPE_BASIC = 'basic';
 
+  const TYPE_STATES = 'direction_regional';
+
 
   public function __construct(EntityTypeManagerInterface $entityTypeManager, LanguageManagerInterface $languageManager)
   {
@@ -123,7 +125,7 @@ class CustomPagesController extends ControllerBase
     $humanResources = [];
     foreach ($nodes as $key => $node) {
       $translation = $node->hasTranslation($langcode);
-      $tmp['id'] = 'DataChart-'.$key;
+      $tmp['id'] = 'DataChart-' . $key;
       $tmp['title'] = $translation ? $node->getTranslation($langcode)->get('title')->value : $node->getTitle();
       //$tmp['dataChart'] = $translation ? $node->getTranslation($langcode)->get('field_year')->value : $node->get('field_year')->value;
       $paragraph_field = $node->get('field_distribution'); // Replace 'field_paragraph_field_name' with the actual field name.
@@ -162,6 +164,62 @@ class CustomPagesController extends ControllerBase
   }
 
   /**
+   * Display human Resources page
+   * @return array
+   *    A render array containing data of the page.
+   */
+  public function states()
+  {
+
+    $paragraph_field = $this->getBlockType(self::TYPE_STATES);
+
+    foreach ($paragraph_field['direction'] as $item) {
+      // Iterate through each paragraph item.
+      $paragraph_item = $item->entity;
+
+      // Retrieve the values of the paragraph fields.
+      $tmp['title'] = !empty($paragraph_item) ? $paragraph_item->get('field_title')->value : '';
+      $dr = !empty($paragraph_item) ? $paragraph_item->get('field_direction_regional') : '';
+      foreach ($dr as $subDr) {
+        $subParagraphItem = $subDr->entity;
+        $tmp['subRegion'][] = [
+          'title' => $subParagraphItem->get('field_sub_region')->getString(),
+          'path' => $subParagraphItem->get('field_path')->value
+        ];
+        //$tmp['titles'][] = $subParagraphItem->get('field_sub_region')->getValue();
+        //$tmp['path'][] = $subParagraphItem->get('field_path')->value;
+      }
+      $data[] = $tmp;
+      unset($tmp);
+    }
+    $pathArray = array_reduce($data, function ($carry, $item) {
+      if (isset($item['subRegion'])) {
+        // Extract "path" from subRegion array
+        $subRegionPaths = array_column($item['subRegion'], 'path');
+        $carry = array_merge($carry, $subRegionPaths);
+      }
+      return $carry;
+    }, []);
+
+    return [
+      '#theme' => 'states',
+      '#paths' => $pathArray,
+      '#data' => $data,
+      '#attached' => [
+        'library' => [
+          'md_manager/states'
+        ],
+      ]
+    ];
+  }
+
+   public function extractPath($item) {
+    if (isset($item['path'])) {
+      return $item['path'];
+    }
+  }
+
+  /**
    * @param string $type
    * @return array
    */
@@ -176,25 +234,31 @@ class CustomPagesController extends ControllerBase
       ->range(0, 1);
     $block_ids = $query->execute();
 
-    $content = $content2 = $title = '';
+    $content = $content2 = $title = $direction = NULL;
     if (!empty($block_ids)) {
       $block_id = reset($block_ids);
       $block = $this->entityTypeManager->getStorage('block_content')->load($block_id);
       if ($block->hasTranslation($currentLang)) {
         $translatedBlock = $block->getTranslation($currentLang);
         $title = $translatedBlock->get('info')->value;
-        $content = $translatedBlock->get('body')->value;
+        $content = $type !== 'direction_regional' ? $translatedBlock->get('body')->value : '';
         $content2 = $type == 'basic' ? $translatedBlock->get('field_description_2')->value : '';
+        $direction = $type == 'direction_regional' ? $translatedBlock->get('field_direction') : '';
       } else {
         $title = $block->get('info')->value;
-        $content = $block->get('body')->value;
+        $content = $type !== 'direction_regional' ? $block->get('body')->value : '';
         $content2 = $type == 'basic' ? $block->get('field_description_2')->value : '';
+        $direction = $type == 'direction_regional' ? $block->get('field_direction') : '';
+
       }
     }
+    /* Test */
+    $direction = $type == 'direction_regional' ? $block->get('field_direction') : '';
     return [
       'title' => $title,
       'content' => $content,
-      'content2' => $content2
+      'content2' => $content2,
+      'direction' => $direction
     ];
 
   }

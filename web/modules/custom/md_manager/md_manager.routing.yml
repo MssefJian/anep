@@ -25,3 +25,13 @@ md_manager.human_ressources:
     _permission: 'access content'
   options:
     no_cache: 'TRUE'
+
+md_manager.states:
+  path: '/agence/representations-regionales'
+  defaults:
+    _controller: '\Drupal\md_manager\Controller\CustomPagesController::states'
+    _title: 'Representation régionales'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'

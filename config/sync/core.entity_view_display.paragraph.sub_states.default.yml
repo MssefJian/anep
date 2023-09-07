@@ -1,0 +1,29 @@
+uuid: ed710a62-c41a-4dbc-8ae5-ba97646d212c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sub_states.field_path
+    - field.field.paragraph.sub_states.field_sub_region
+    - paragraphs.paragraphs_type.sub_states
+id: paragraph.sub_states.default
+targetEntityType: paragraph
+bundle: sub_states
+mode: default
+content:
+  field_path:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sub_region:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

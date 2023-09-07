@@ -35,6 +35,12 @@ function md_manager_theme($existing, $type, $theme, $path)
         'data' => NULL,
       ],
     ],
+    'states' => [
+      'variables' => [
+        'paths' => NULL,
+        'data' => NULL,
+      ],
+    ],
   ];
 }
 
