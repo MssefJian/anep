@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_2
+    - field.field.node.service.body
+    - field.field.node.service.comment
+    - field.field.node.service.field_service_icon
+    - field.field.node.service.field_service_images
+    - image.style.large
+    - node.type.service
+  module:
+    - image
+    - text
+    - user
+id: node.service.teaser_2
+targetEntityType: node
+bundle: service
+mode: teaser_2
+content:
+  body:
+    label: hidden
+    type: text_trimmed
+    weight: 1
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+    region: content
+  field_service_icon:
+    type: image
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_service_images:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: large
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment: true
+  langcode: true

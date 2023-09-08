@@ -1,0 +1,78 @@
+<header id="header" class="header-default">
+  
+  
+  {% set class_sticky = '' %}
+  {% if sticky_menu == 1 %}
+    {% set class_sticky = 'gv-sticky-menu' %}
+  {% endif %}  
+  
+  <div class="header-main {{ class_sticky }}">
+      <div class="container-fluid header-content-layout">
+         <div class="header-main-inner p-relative">
+            <div class="row">
+              <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 logo-inner">
+                {% if page.branding %}
+                <div class="branding-logo">
+                  <div class="branding">
+                    {{ page.branding }}
+                  </div>
+                </div>
+                {% endif %}
+              </div>              
+              <div class="col-xl-7 col-lg-7 col-md-6 col-md-6 col-6 content-inner">
+                <div class="header-inner clearfix">
+                  <div class="main-menu">
+                    <div class="area-main-menu">
+                      <div class="area-inner">
+                        <div class="gva-offcanvas-mobile">
+                          <div class="close-offcanvas hidden"><i class="fa fa-times"></i></div>
+                          <div class="main-menu-inner">
+                            {% if page.main_menu %}
+                              {{ page.main_menu }}
+                            {% endif %}
+                          </div>
+
+                          {% if page.offcanvas %}
+                            <div class="after-offcanvas hidden">
+                              {{ page.offcanvas }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        <div id="menu-bar" class="menu-bar d-lg-none d-xl-none">
+                          <span class="one"></span>
+                          <span class="two"></span>
+                          <span class="three"></span>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>  
+                </div> 
+              </div>
+              <div class="col-xl-3 col-lg-3 d-xl-block d-lg-block d-md-none d-sm-none d-none header-right">
+                {% if page.header_right %}
+                  {{ page.header_right }}
+                {% endif %}
+                {% if page.quick_side %}
+                  <div class="quick-side-icon d-none d-lg-block d-xl-block">
+                    <div class="icon"><a href="#"><span class="qicon fas fa-bars"></span></a></div>
+                  </div>
+                {% endif %}
+                {% if page.search %}
+                  <div class="gva-search-region search-region">
+                    <div class="gva-search-inner">
+                      <span class="icon"><i class="fas fa-search"></i></span>
+                      <div class="search-content">  
+                        {{ page.search }}
+                      </div> 
+                    </div> 
+                  </div>
+                {% endif %}
+                
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</header>
+

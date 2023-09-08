@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-second
+  module:
+    - gaviasthemer
+    - system
+  theme:
+    - linoor_subtheme
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: menusecond
+theme: linoor_subtheme
+region: sidebar_right
+weight: -13
+provider: null
+plugin: 'system_menu_block:menu-second'
+settings:
+  id: 'system_menu_block:menu-second'
+  label: 'Company Menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/partners\r\n/careers\r\n/our-awards\r\n/events\r\n/team-grid"
+    negate: false

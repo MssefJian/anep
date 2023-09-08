@@ -1,0 +1,7 @@
+type: module
+name : Gavias Linoor Themer
+description : Gavias Linoor Themer
+package: gavias
+version: '9.x'
+core_version_requirement: ^8.8 || ^9 || ^10
+project: 'gavias_hook_themer'

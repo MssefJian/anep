@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-service
+  module:
+    - ctools
+    - gaviasthemer
+    - system
+  theme:
+    - linoor_subtheme
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: menuservice
+theme: linoor_subtheme
+region: sidebar_right
+weight: -15
+provider: null
+plugin: 'system_menu_block:menu-service'
+settings:
+  id: 'system_menu_block:menu-service'
+  label: 'All Services'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      service: service
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

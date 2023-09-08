@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - gaviasthemer
+    - system
+    - views
+  theme:
+    - linoor_subtheme
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: views_block__post_other_block_1
+theme: linoor_subtheme
+region: sidebar_right
+weight: -12
+provider: null
+plugin: 'views_block:post_other-block_1'
+settings:
+  id: 'views_block:post_other-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services-2\r\n/services-3\r\n/blogs-masonry\r\n/blogs-grid\r\n/portfolio\r\n/portfolio-1\r\n/portfolio-2\r\n/portfolio-3\r\n/portfolio-4"
+    negate: true

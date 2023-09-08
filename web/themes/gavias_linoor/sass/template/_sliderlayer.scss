@@ -1,0 +1,335 @@
+
+.gavias_sliderlayer{
+   background: #fff;
+}
+.tp-parallax-wrap{
+  @include clearfix();
+  visibility: visible!important;
+  transform-style: unset!important;
+}
+.slotholder{
+  filter: unset!important;
+}
+.layer-style-image{
+  display: inline-block; 
+  text-align: center;
+  img{
+    max-width: 100%!important;
+    height: auto!important;
+  } 
+}
+.gavias_sliderlayer, #gavias_slider_single{
+  .tp-bullets{
+    -webkit-opacity: 1!important;
+    -ms-opacity: 1!important;
+    -o-opacity: 1!important; 
+    opacity: 1!important;
+    visibility: visible!important;
+    .tp-bullet{
+      @include size(10px, 10px);
+      background: #d3d3d4;
+      @include transition(background 0.35s);
+      display: inline-block;
+      margin: 0 5px;
+      margin-top: -30px;
+      padding: 0;
+      @include border-radius(50%);
+      border: 2px solid #d3d3d4;
+      &.selected{
+        background: transparent;
+        border: 2px solid $theme-color;
+      }
+    }
+  }
+  .tparrows{
+    @include size(36px, 36px);
+    background: $white!important;
+    line-height: 36px;
+    color: $black;
+    font-size: 18px;
+    @include box-shadow(0px 2px 3px 0px rgba(0, 0, 0, 0.05));
+    @include media-breakpoint-down(sm){
+      @include size(35px, 35px);
+      line-height: 35px;
+    }
+    &:hover, &:focus{
+      background: $theme-color;
+      color: $white;
+    }
+    &:before{
+      color: $black!important;
+      line-height: 36px!important;
+    }
+  }
+  
+  .tp-caption{
+    z-index: 99;
+    line-height: 28px;
+    color: $black;
+    img{
+      max-width: 100%!important;
+      height: auto!important;   
+    }
+  }
+  .tp-mask-wrap {
+    padding-bottom: 20px;
+  }
+  .slide-style-1{
+    font-weight: 800;
+    font-family: $headings-font-family; 
+  }
+
+  .slide-style-2{
+    font-family: $headings-font-family; 
+  }
+
+  .slide-style-3{
+    font-weight: 600; 
+    font-family: $headings-font-family; 
+  }
+  .slide-style-4{
+    font-weight: 400;
+  }
+  .slide-style-5{
+    font-weight: 500;
+  }
+
+  .sub-title{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: $white;
+    &:after{
+      content: "";
+      @include size(5px, 100%);
+      background: $theme-color;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      z-index: 99;
+    }
+  }
+   
+  .text-large{
+    color: $black;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: none;
+  }
+
+  .text-big{
+    color: $black;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+  } 
+
+  .text-medium{
+    color: rgba(0, 0, 0, 0.6); 
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .small-text{
+    color: rgba(255, 255, 255, 0.8); 
+    font-size: 16px;
+    color: $white;
+    line-height: 18px;
+  }
+
+  .text-black{
+    color: $black!important;
+  }
+
+  .text-theme{
+    color: $theme-color!important;
+  }
+  .text-theme-second{
+    color: $theme-color-second!important; 
+  }
+  .text-white{
+    color: $white!important;
+  }
+
+  .text-center{ 
+    text-align: center;
+  }
+
+  .text-left{
+    text-align: left;
+  }
+
+  .inner.btn-slide, .btn-slide a{
+    background: $theme-color;
+    color: $black;
+    overflow: hidden;
+    @include transition(all 0.5s ease !important);
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 19px 50px 16px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    @include border-radius(10px);
+    border: none;
+    font-family: $headings-font-family;
+    .btn-curve{
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 26px;
+      height: 100%;
+      background: $black;
+      @include opacity(0.2);
+      z-index: 0;
+      @include transform(skewX(-22deg));
+      @include transition(all 0.5s ease !important);
+    }
+    span {
+      z-index: 1;
+      position: relative;
+    }
+    &:hover, &:focus, &:active, &.active{
+      background: $black;
+      color: $white;
+      span {
+        color: $white;
+      }
+      .btn-curve{
+        @include opacity(1);
+        right: 0;
+        width: 100%;
+        @include transform(skewX(0deg));
+      }
+    }
+  }
+
+  .btn-slide-white.inner, .btn-slide-white a{
+    background: $white;
+    color: $black;
+    overflow: hidden;
+    @include transition(all 0.5s ease !important);
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 19px 50px 16px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    @include border-radius(10px);
+    border: none;    
+    .btn-curve{
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 26px;
+      height: 100%;
+      background: $white;
+      @include opacity(0.2);
+      z-index: 0;
+      @include transform(skewX(-22deg));
+      @include transition(all 0.5s ease !important);
+    }
+    span {
+      z-index: 1;
+      position: relative;
+    }
+    &:hover, &:focus, &:active, &.active{
+      background: $theme-color;      
+      span {
+        color: $white;
+      }
+      .btn-curve{
+        @include opacity(1);
+        right: 0;
+        width: 100%;
+        @include transform(skewX(0deg));
+      }
+    }
+  }
+.btn-slide-black.inner, .btn-slide-black a{
+    background: $black;
+    color: $white;
+    overflow: hidden;
+    @include transition(all 0.5s ease !important);
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 19px 50px 16px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    @include border-radius(10px);
+    border: none;    
+    .btn-curve{
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 26px;
+      height: 100%;
+      background: $white;
+      @include opacity(0.2);
+      z-index: 0;
+      @include transform(skewX(-22deg));
+      @include transition(all 0.5s ease !important);
+    }
+    span {
+      z-index: 1;
+      position: relative;
+    }
+    &:hover, &:focus, &:active, &.active{
+      background: $white;      
+      span {
+        color: $black;
+      }
+      .btn-curve{
+        @include opacity(1);
+        right: 0;
+        width: 100%;
+        @include transform(skewX(0deg));
+      }
+    }
+  }
+  .gavias-overlay{
+    &:after{
+      content: "";
+      background: url(#{$base-theme-image-path}grid-slide.png) repeat rgba(0, 0, 0, 0.3);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.rs-background-video-layer{
+  position: relative;
+    &:after{
+      content: "";
+      background: url(#{$base-theme-image-path}/grid-slide.png) repeat rgba(0, 0, 0, 0.39);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+}
+

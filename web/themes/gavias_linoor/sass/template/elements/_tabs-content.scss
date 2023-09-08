@@ -1,0 +1,102 @@
+.gsc-tabs-content{
+   .nav-tabs{
+      text-align: center;
+      margin-bottom: 0;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      > li{
+         display: inline-block;
+         -webkit-box-flex: 0;
+          -ms-flex: 0 0 33.33333%;
+          flex: 0 0 33.33333%;
+          max-width: 33.33333%;
+         @include media-breakpoint-down(sm){
+           -webkit-box-flex: 0;
+             -ms-flex: 0 0 100%;
+             flex: 0 0 100%;
+             max-width: 100%;
+            margin-bottom: 10px;
+         }
+         + li {
+            margin-left: 0;
+         }
+         > a{
+            font-size: 30px;
+            font-weight: 400;
+            padding: 30px;
+            display: inline-block;
+            width: 100%;       
+            color: $black-2;
+            background: #f4f5f8; 
+            border: 0; 
+            @include border-radius($border-radius);
+            @include media-breakpoint-down(md){
+               padding: 20px;
+               font-size: 24px;
+            }
+            @include media-breakpoint-down(sm){
+               width: 100%;
+               padding: 10px;
+            }
+            &:hover, &:focus {
+               background: $black-2;
+               color: $white;
+            }
+            &.active{
+               background: $black-2;
+               color: $white;
+            }
+         }
+      }
+   }
+   .tab-content{
+      padding-top: 60px;
+      background: $white;     
+      ul {
+         padding: 0;
+         li {
+            list-style: none;
+         }
+      }
+   }
+   .icon-tab {
+      font-size: 60px;
+      margin-bottom: 40px;
+      color: $theme-color; 
+      float: left; 
+   }
+   .images{
+      float: left;
+      width: 45%;
+      padding-right: 60px;
+      @include media-breakpoint-down(md){
+         width: 100%;
+         padding-right: 0;
+         margin-bottom: 30px;
+         text-align: center;
+      }
+      &:hover{
+         img {
+            @extend .no-grayscale;
+         }
+      }
+   }
+   img{
+       @include border-radius(8px);
+       @extend .grayscale;
+   } 
+   &.style-2{
+      background: $white;
+      @include box-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+   }
+   &.style-3{
+      background: $white;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+   }
+}

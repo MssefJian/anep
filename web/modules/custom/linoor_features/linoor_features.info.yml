@@ -1,0 +1,34 @@
+name: 'Linoor Features'
+description: 'Linoor Features - Import content type, field, view ... for Linoor theme.'
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - block
+  - block_content
+  - comment
+  - contact
+  - ctools
+  - datetime
+  - field
+  - file
+  - gavias_view
+  - gaviasthemer
+  - image
+  - imce
+  - mailchimp_signup
+  - menu_ui
+  - node
+  - options
+  - path
+  - pathauto
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_infinite_scroll
+  - webform
+  - config_update
+  - features
+  - admin_toolbar
+version: 9.x
