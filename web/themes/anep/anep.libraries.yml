@@ -1,31 +1,180 @@
-# Main theme library.
-global:
-  js:
-    js/bootstrap.bundle.js: {}
-    js/jquery-3.7.0.min.js: {}
-    js/owl.carousel.min.js: {}
-    js/anep.js: {}
+global-styling:
+  version: VERSION
+  header: true
   css:
-    base:
-      css/base/bootstrap.css: {}
-      https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css: { type: external, minified: true }
-      css/base/owl.carousel.min.css: {}
-      css/base/owl.carousel-rtl.min.css: {}
-      css/base/owl.theme.default.min.css: {}
-      css/base/index.css: {}
-    component:
-      css/component/block.css: {}
-      css/component/breadcrumb.css: {}
-      css/component/field.css: {}
-      css/component/form.css: {}
-      css/component/header.css: {}
-      css/component/menu.css: {}
-      css/component/messages.css: {}
-      css/component/node.css: {}
-      css/component/sidebar.css: {}
-      css/component/table.css: {}
-      css/component/tabs.css: {}
-    layout:
-      css/layout/layout.css: {}
     theme:
-      css/theme/print.css: { media: print }
+      //fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap: { type: external }
+      //fonts.googleapis.com/css2?family=Hind:wght@400;600;700&display=swap: { type: external }
+      css/font-awesome/css/all.min.css: {}
+      css/icon/flaticon.css: {}
+      css/animate.css: {}
+      vendor/owl-carousel/assets/owl.carousel.min.css: {}
+      vendor/owl-carousel/assets/owl.theme.default.min.css: {}
+      vendor/prettyphoto/css/prettyPhoto.css: {}
+      vendor/ytplayer/css/jquery.mb.YTPlayer.min.css: {}
+      vendor/magnific/magnific-popup.css: {}
+      vendor/slick/slick.css: {}
+      css/update.css: {}
+      css/custom.css: {}
+  js:
+    vendor/jquery-migrate.min.js: {}
+    js/bootstrap.js: {}
+    js/imagesloader.min.js: {}
+    vendor/jquery.easing.js: {}
+    vendor/jquery.appear.js: {}
+    vendor/jquery.easypiechart.min.js: {}
+    vendor/owl-carousel/owl.carousel.js: {}
+    vendor/waypoint.js: {}
+    vendor/count-to.js: {}
+    vendor/masonry.pkgd.min.js: {}
+    vendor/isotope.pkgd.min.js: {}
+    vendor/aos.js: {}
+    vendor/prettyphoto/js/jquery.prettyPhoto.js: {}
+    vendor/ytplayer/js/jquery.mb.YTPlayer.min.js: {}
+    vendor/jquery.typer/src/jquery.typer.js: {}
+    vendor/magnific/jquery.magnific-popup.min.js: {}
+    vendor/quotes_rotator/js/modernizr.custom.js: {}
+    vendor/quotes_rotator/js/jquery.cbpQTRotator.min.js: {}
+    vendor/jquery.nicescroll.min.js: {}
+    vendor/slick/slick.min.js: {}
+    js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+anep.skin.default:
+  version: VERSION
+  css:
+    theme: 
+      css/bootstrap.css: {}
+      css/template.css: {}
+
+anep.skin.blue:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/blue/bootstrap.css: {}
+      css/skins/blue/template.css: {}
+
+anep.skin.brown:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/brown/bootstrap.css: {}
+      css/skins/brown/template.css: {}
+
+anep.skin.green:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/green/bootstrap.css: {}
+      css/skins/green/template.css: {}
+
+anep.skin.lilac:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/lilac/bootstrap.css: {}
+      css/skins/lilac/template.css: {}
+
+anep.skin.lime_green:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/lime_green/bootstrap.css: {}
+      css/skins/lime_green/template.css: {}
+
+anep.skin.orange:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/orange/bootstrap.css: {}
+      css/skins/orange/template.css: {}
+
+anep.skin.pink:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/pink/bootstrap.css: {}
+      css/skins/pink/template.css: {}
+
+anep.skin.purple:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/purple/bootstrap.css: {}
+      css/skins/purple/template.css: {}
+
+anep.skin.red:
+  version: VERSION
+  css:
+    theme:  
+      css/skins/red/bootstrap.css: {}
+      css/skins/red/template.css: {}
+
+anep.skin.turquoise:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/turquoise/bootstrap.css: {}
+      css/skins/turquoise/template.css: {}
+
+anep.skin.turquoise2:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/turquoise2/bootstrap.css: {}
+      css/skins/turquoise2/template.css: {}
+
+anep.skin.violet_red:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/violet_red/bootstrap.css: {}
+      css/skins/violet_red/template.css: {}
+
+anep.skin.violet_red2:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/violet_red2/bootstrap.css: {}
+      css/skins/violet_red2/template.css: {}
+
+anep.skin.yellow:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/yellow/bootstrap.css: {}
+      css/skins/yellow/template.css: {}
+
+
+gavias-linoor-admin:
+  version: VERSION
+  css: 
+    theme: 
+      css/theme-settings.css: {}
+      vendor/colorpicker/css/colorpicker.css: {}
+      vendor/codemirror/lib/codemirror.css: {}
+      vendor/codemirror/addon/hint/show-hint.css: {}
+  js:
+      vendor/jquery-migrate.min.js: {}
+      vendor/colorpicker/js/colorpicker.js: {}
+      vendor/codemirror/lib/codemirror.js: {cope: footer}
+      vendor/codemirror/mode/css/css.js: {cope: footer}
+      js/customize.js: {}
+
+maintenance_page:
+  version: VERSION
+  css:
+    theme:
+      css/maintenance-page.css: {}
+
+views-infinite-scroll:
+  version: VERSION
+  js:
+    js/override/infinite-scroll.js : {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.debounce

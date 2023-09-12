@@ -1,0 +1,325 @@
+.area-main-menu{
+	.menu-toggle{
+		display: none;
+	}
+}
+@include media-breakpoint-up(lg){
+	//colors
+	.navigation {
+		position: relative;
+		clear: both;
+		text-align: center;
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.gva_menu {
+			position: relative; 
+			font-size: 0;
+			li {
+				position: relative;
+				a{
+					font-family: $headings-font-family;
+					text-align: left!important;
+					.icaret{
+						margin-left: 4px;
+						border: none!important;
+						font-size: 9px;
+					}
+				}
+			}
+			> li {
+				display: inline-block;
+				padding: 20px;
+				 &.gva-mega-menu{
+				 	position: static!important;
+				 	> .sub-menu{
+				 		width: 100%;
+				 	}
+				 }
+				&:hover {
+					@include media-breakpoint-up(sm){ 
+						> ul.sub-menu, div.sub-menu {
+							display: block;
+							visibility: visible;
+							@include opacity(1);
+							top: 99%;
+							-webkit-transform: rotateX(0);
+		              -moz-transform: rotateX(0);
+		              -ms-transform: rotateX(0);
+		              -o-transform: rotateX(0);
+		              transform: rotateX(0);
+						}
+						> a {
+							color: $theme-color;
+						}
+					}	
+				}
+				> a {
+					display: block;
+					position: relative;
+					font-size: 20px; 
+					font-weight: 400;
+					@include transition(all 0.35s);   
+					text-align: center; 
+					text-transform: uppercase;
+					letter-spacing: 2px;
+					color: $link-color;					
+					&.is-active{
+						color: $theme-color;
+						&:after {
+							width: 100%;
+							@include opacity(1);
+						}
+					}
+					&:after {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: 0;
+						height: 2px;
+						background: $theme-color;
+						@include opacity(0);
+						@include transition(all 0.35s);
+					}
+					> span{
+						position: relative;
+						padding-bottom: 6px;
+					}
+				} 
+				&:hover, &:focus, &:active, &.menu-item--active-trail{
+					> a{
+						color: $theme-color;
+						&:after{
+							@include opacity(1);
+							width: 100%;
+						}
+					}
+				}
+				&.megamenu{
+					&.menu-columns-2{
+						> ul.sub-menu{
+							> li{
+								width: 50%;
+								float: left;
+							}
+						}
+					}
+					&.menu-columns-3{
+						> ul.sub-menu{
+							> li{
+								width: 33.33%;
+								float: left;
+							}
+						}
+					}
+					&.menu-columns-4{
+						> ul.sub-menu{
+							> li{
+								width: 25%;
+								float: left;
+							}
+						}
+					}
+					&.menu-columns-5{
+						> ul.sub-menu{
+							> li{
+								width: 20%;
+								float: left;
+							}
+						}
+					}
+				} 
+				&.menu-list{
+					ul.sub-menu{
+						min-width: 250px;
+					 	> li{
+							border-bottom: 1px solid $border-color;
+							> a{
+								padding: 10px 15px;
+								text-transform: uppercase;
+							}
+						}	
+					}
+				}
+			}
+			.megamenu, .gva-mega-menu {
+				position: static;
+				> .sub-menu {
+					width: 100%;
+					padding: 20px;
+					.sub-menu{
+					   -webkit-transform: rotateX(0);
+	               -moz-transform: rotateX(0);
+	               -ms-transform: rotateX(0);
+	               -o-transform: rotateX(0);
+	               transform: rotateX(0);
+					}
+					> li {
+						border: none;
+						position: static;
+						padding: 0 15px;
+						> ul.sub-menu {
+							position: static;
+							border-width: 0;
+							padding: 0;
+							min-width: inherit;
+							width: 100%;
+							background-color: transparent;
+							@include opacity(1);
+							@include box-shadow(none);
+							@include media-breakpoint-up(md){
+								display: block!important;
+								visibility: visible;
+							}
+							li{
+							 	padding: 10px 0 0;
+							 	margin-bottom: 0;
+							 	border: none;
+							}
+						}
+						> a {
+							display: block;
+							font-size: 20px;
+							color: #171b27;
+							font-weight: 500;
+							text-transform: uppercase;
+							letter-spacing: 1px;
+							padding: 0 0 5px;
+							margin-bottom: 5px;
+							border-bottom: 1px solid rgba(0, 0, 0, 0.1)!important;
+							position: relative;
+							&:after{
+								display: none;
+							}
+						}
+					}
+				}
+				
+			}
+			.sub-menu {
+				top: 100%;
+				position: absolute;
+				min-width: 280px;
+				background-color: $white;
+				z-index: 999;
+				left: 0;
+				padding: 20px 25px 10px;
+				visibility: hidden;
+				@include opacity(0);
+				@include border-radius(4px);
+				@include transition(all 0.2s ease-out);
+				@include box-shadow(0px 4px 4px 1px rgba(0, 0, 0, 0.2));
+				-webkit-transform: rotateX(-90deg);
+    			-moz-transform: rotateX(-90deg);
+	          -ms-transform: rotateX(-90deg);
+	          -o-transform: rotateX(-90deg);
+	          transform: rotateX(-90deg);
+	          -webkit-transform-origin: 0 0;
+	          -moz-transform-origin: 0 0;
+	          -ms-transform-origin: 0 0;
+	          -o-transform-origin: 0 0;
+	          transform-origin: 0 0;
+	          border-top: 1px solid $border-color;
+				> li {
+					padding: 0 0 9px;
+					> a {
+						font-size: 18px;
+						display: block;
+						color: $body-color;
+						font-weight: 400;
+						text-transform: uppercase;
+						position: relative;
+						&:hover, &:focus, &:active {
+							color: $theme-color;
+						}
+					}
+				
+					&:last-child{
+						border-bottom: 0;
+					}
+					ul {
+						position: absolute;
+						top: 0;
+						right: 0;
+						min-width: 250px;
+						visibility: hidden;
+						@include opacity(0);
+						display: none;
+						z-index: 11;
+					}
+					&:hover > ul {  
+						@include media-breakpoint-up(md){
+							visibility: visible;
+							@include opacity(1);
+							display: block;
+							left: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}	
+
+body.header-absolute{
+	.navigation {
+		ul.gva_menu{
+	   	> li {
+	   		> a{
+	   			color: $white!important;
+	   		}
+	   	}
+	   }	
+	}
+}
+
+//Widget inner megamenu
+.gva-mega-menu{
+	.block-blocktabs{
+    position: relative;
+    .ui-widget{
+      font-size: $font-size-base;
+    }
+    .ui-tabs-nav{
+      padding: 0;
+      position: static;
+      width: 15%;
+      float: left;
+      > li{
+        background: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        float: none;
+        clear: both;
+      	padding-right: 20px;
+        > a{
+         font-size: 12px;
+        	border-bottom: 1px solid $border-color;
+         font-weight: 600;
+         padding-bottom: 10px;
+        	margin-bottom: 10px;
+        	width: 100%;
+        }
+        &:last-child{
+          > a{
+            padding-right: 0;
+          }
+        }
+        &.ui-tabs-active{
+           > a{
+            color: $theme-color;
+           }
+        }
+      }
+    }
+    .ui-tabs-panel{
+    	float: left;
+    	width: 85%;
+    }
+  }
+}

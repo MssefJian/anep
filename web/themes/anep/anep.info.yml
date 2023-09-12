@@ -1,26 +1,48 @@
 name: anep
 type: theme
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+package: ANEP
 base theme: false
-description: A flexible theme with a responsive, mobile-first layout.
-package: Custom
-core_version_requirement: ^9 || ^10
 libraries:
-  - core/drupal
-  - anep/plugin
-  - anep/global
+  - anep/global-styling
+  - core/jquery
+
+libraries-override:
+  views_infinite_scroll/views-infinite-scroll: anep/views-infinite-scroll
+
 regions:
-  header: 'Header'
-  primary_menu: 'Primary menu'
+  offcanvas: 'After Offcanvas'
+  topbar: 'Topbar'
+  language: 'Language'
+  quick_side: 'Quick Side'
+  search: 'Search'
+  branding: 'Branding'
+  header_right: 'Header Right'
+  breadcrumbs: 'Breadcrumbs'
+  help: 'Help'
+  main_menu: 'Main menu'
+  slideshow_content: 'Slideshow'
+  before_content: 'Before Content'
+  content_top: 'Content Top'
+  content: 'Main content'
   content_front: 'Content front page'
-  content_term: 'Content term'
-  secondary_menu: 'Secondary menu'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-  featured: 'Featured'
-  breadcrumb: 'Breadcrumb'
-  content: 'Content'
-  list: 'List'
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
-  footer: 'Footer'
-  footer_bottom: 'Footer bottom'
+  actualites: 'actualites'
+  anep_ch: 'ANEP en chiffre'
+  projet: 'projet'
+  content_bottom: 'Content Bottom'
+  sidebar_left: 'Sidebar Left'
+  sidebar_right: 'Sidebar Right'
+  after_content: 'After Content'
+  highlighted: 'Highlighted'
+  before_footer: 'Before Footer'
+  footer_first: 'Footer Fisrt'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_four: 'Footer Four'
+  after_footer: 'After Footer'
+  copyright: 'Copyright'
+  other: 'Other'
+
+version: '2.0.1'
+core_version_requirement: ^8.8 || ^9 || ^10
+project: 'drupal'

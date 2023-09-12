@@ -1,0 +1,102 @@
+.gsc-service-carousel{
+  .item{
+    .content-inner{
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      background: #fff;
+      min-height: 170px;
+      padding: 30px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+      @include transition(all 0.35s);
+      box-shadow: 6px 5px 15px 0px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      @include media-breakpoint-down(md){
+        padding: 30px 20px;
+      }
+      .icon{
+        margin: 30px 0;
+        font-size: 56px;
+        color: $theme-color;
+        line-height: 56px;
+      }
+      .title{
+        font-weight: 700;
+        font-size: 20px;
+        @include media-breakpoint-down(md){
+          font-size: 18px;
+        }
+      }
+      .desc{
+        font-size: 16px;
+        position: relative;
+        padding-top: 15px;
+        &:after{
+          content: '';
+          @include size(20px, 2px);
+          background: $black;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transition: all 0.35s;
+        }
+      }
+      .link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        @include size(100%, 100%);
+      }
+      &:hover, &:focus, &:active{
+        box-shadow: 0px 6px 21px 3px rgba(0, 0, 0, 0.1); 
+        background: $theme-color;
+        border-color: transparent;
+        .icon{
+          color: $white;
+        }
+        .title{
+          color: $white;
+          a{
+            color: $white;
+          }
+        }
+        .desc{
+          color: $white;
+          &:after{
+            background: $white;
+            width: 45px;
+          }
+        }
+      }
+    }
+  }
+  .read-more{
+    margin-top: 30px;
+  }
+  .owl-carousel{
+    .owl-item.center{
+      .content-inner{
+        box-shadow: 0px 6px 21px 3px rgba(0, 0, 0, 0.1); 
+        background: $theme-color;
+        border-color: transparent;
+        .icon{
+          color: $white;
+        }
+        .title{
+          color: $white;
+          a{
+            color: $white;
+          }
+        }
+        .desc{
+          color: $white;
+          &:after{
+            background: $white;
+            width: 45px;
+          }
+        }
+      }
+    }
+  }
+}
