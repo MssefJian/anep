@@ -20,6 +20,7 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  dropdown_language: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -28,9 +29,15 @@ module:
   file: 0
   filter: 0
   format_bytes: 0
+  gavias_hook_themer: 0
+  gavias_pagebuilder: 0
+  gavias_sliderlayer: 0
+  gavias_view: 0
+  gaviasthemer: 0
   help: 0
   history: 0
   image: 0
+  imce: 0
   lang_dropdown: 0
   language: 0
   link: 0
@@ -68,4 +75,6 @@ theme:
   olivero: 0
   claro: 0
   anep: 0
+  gavias_linoor: 0
+  linoor_subtheme: 0
 profile: standard

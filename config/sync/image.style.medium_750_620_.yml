@@ -1,0 +1,15 @@
+uuid: 5b3cdcee-c550-4f1b-872e-6a6b85807f88
+langcode: fr
+status: true
+dependencies: {  }
+name: medium_750_620_
+label: 'Medium (750×620)'
+effects:
+  04fd5ca5-70da-4c2b-b2cd-471d5354f5d1:
+    uuid: 04fd5ca5-70da-4c2b-b2cd-471d5354f5d1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 620
+      anchor: center-center

@@ -1,6 +1,6 @@
 uuid: 93d1a202-b864-47ae-a728-688ca9e80f45
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - lang_dropdown
@@ -9,7 +9,7 @@ dependencies:
     - anep
 id: anep_languagedropdownswitcher
 theme: anep
-region: primary_menu
+region: offcanvas
 weight: -11
 provider: null
 plugin: 'language_dropdown_block:language_interface'

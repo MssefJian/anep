@@ -1,0 +1,25 @@
+uuid: 0773a069-a46a-4e9c-a959-7e90c06eaa0b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - dropdown_language
+    - gaviasthemer
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_dropdownlanguage
+theme: anep
+region: language
+weight: 0
+provider: null
+plugin: 'dropdown_language:language_interface'
+settings:
+  id: 'dropdown_language:language_interface'
+  label: 'Dropdown Language'
+  label_display: '0'
+  provider: dropdown_language
+  labels: null
+visibility: {  }

@@ -8,6 +8,7 @@ dependencies:
     - image.style.news_page420x280
     - node.type.news
   module:
+    - gavias_view
     - image
     - node
     - text
@@ -402,7 +403,29 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: grid
+        type: gvaowl
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          items: '3'
+          items_lg: '3'
+          items_md: '3'
+          items_sm: '2'
+          items_xs: '1'
+          loop: 0
+          speed: '1000'
+          auto_play: 0
+          auto_play_speed: '2000'
+          auto_play_timeout: '5000'
+          auto_play_hover: 1
+          navigation: 1
+          rewind_nav: 0
+          pagination: 0
+          mouse_drag: 1
+          touch_drag: 1
+          el_class: ''
+          el_id: ''
       row:
         type: fields
         options:

@@ -1,0 +1,22 @@
+uuid: ef52d2fd-e32a-46f0-941e-8e55d3f49c05
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - linoor_subtheme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: linoor_subtheme_content
+theme: linoor_subtheme
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: '0'
+  provider: system
+visibility: {  }

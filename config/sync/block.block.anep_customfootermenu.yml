@@ -1,6 +1,6 @@
 uuid: 2b00a5be-79b1-455b-9282-63e957785fa8
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - md_manager
@@ -8,7 +8,7 @@ dependencies:
     - anep
 id: anep_customfootermenu
 theme: anep
-region: footer
+region: offcanvas
 weight: -10
 provider: null
 plugin: md_manager_custom_footer_menu

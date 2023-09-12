@@ -1,0 +1,25 @@
+uuid: a06f006a-8573-4983-ab22-52702db6e1f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - dropdown_language
+    - gaviasthemer
+  theme:
+    - linoor_subtheme
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: dropdownlanguage
+theme: linoor_subtheme
+region: language
+weight: 0
+provider: null
+plugin: 'dropdown_language:language_interface'
+settings:
+  id: 'dropdown_language:language_interface'
+  label: 'Dropdown Language'
+  label_display: '0'
+  provider: dropdown_language
+  labels: {  }
+visibility: {  }

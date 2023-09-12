@@ -1,0 +1,25 @@
+uuid: e014e3c1-b03a-47ff-bfbd-3bd6cf413004
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gavias_linoor
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: gavias_linoor_site_branding
+theme: gavias_linoor
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Identité du site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: d9c55aa3-6409-4740-8dac-acc1a8dac57d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gavias_sliderlayer
+    - gaviasthemer
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_gaviassliderlayerslidermain
+theme: anep
+region: slideshow_content
+weight: -14
+provider: null
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+settings:
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+  label: 'Gavias SliderLayer - Slider Main'
+  label_display: '0'
+  provider: gavias_sliderlayer
+visibility: {  }

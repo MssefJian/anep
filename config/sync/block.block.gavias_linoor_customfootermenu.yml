@@ -1,0 +1,20 @@
+uuid: e0787926-e718-4ba4-bcad-846d46b4f6a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - md_manager
+  theme:
+    - gavias_linoor
+id: gavias_linoor_customfootermenu
+theme: gavias_linoor
+region: offcanvas
+weight: -10
+provider: null
+plugin: md_manager_custom_footer_menu
+settings:
+  id: md_manager_custom_footer_menu
+  label: 'Custom footer menu'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

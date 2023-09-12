@@ -1,6 +1,6 @@
 uuid: fb1aa6b0-56fd-40ff-9adf-6b3c70356c34
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -8,7 +8,7 @@ dependencies:
     - anep
 id: anep_contenudelapageprincipale
 theme: anep
-region: content_term
+region: offcanvas
 weight: 0
 provider: null
 plugin: system_main_block

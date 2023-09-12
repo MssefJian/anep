@@ -1,0 +1,29 @@
+uuid: 912c8b15-adfb-4da9-b2b4-9e956d38b323
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - system
+  theme:
+    - linoor_subtheme
+id: linoor_subtheme_mainpage_content
+theme: linoor_subtheme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr
+      ar: ar

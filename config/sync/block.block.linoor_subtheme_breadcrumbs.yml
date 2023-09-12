@@ -1,0 +1,22 @@
+uuid: c73109e3-f299-4deb-96fc-d7fe76e8bdb9
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - linoor_subtheme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: linoor_subtheme_breadcrumbs
+theme: linoor_subtheme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: "Fils d'ariane"
+  label_display: '0'
+  provider: system
+visibility: {  }

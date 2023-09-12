@@ -1,6 +1,6 @@
 uuid: 1a60060e-0561-4a9a-96c3-fe978567ff2c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.news
@@ -10,7 +10,7 @@ dependencies:
     - anep
 id: anep_views_block__news_block_1_2
 theme: anep
-region: featured
+region: offcanvas
 weight: -11
 provider: null
 plugin: 'views_block:news-block_1'

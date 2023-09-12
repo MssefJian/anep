@@ -1,0 +1,22 @@
+uuid: 6475eacd-de5a-424a-89ef-4e37ebd01d64
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - gavias_linoor
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: gavias_linoor_primary_local_tasks
+theme: gavias_linoor
+region: offcanvas
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets principaux'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

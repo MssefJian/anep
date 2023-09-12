@@ -1,0 +1,24 @@
+uuid: 15440e51-ce4d-4667-a2ed-fae7a9500747
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.project
+  module:
+    - views
+  theme:
+    - gavias_linoor
+id: gavias_linoor_views_block__project_block_1_2
+theme: gavias_linoor
+region: offcanvas
+weight: 0
+provider: null
+plugin: 'views_block:project-block_1'
+settings:
+  id: 'views_block:project-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

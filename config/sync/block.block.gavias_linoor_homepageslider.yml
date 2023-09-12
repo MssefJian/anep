@@ -1,0 +1,25 @@
+uuid: cfdff900-95c4-4c72-9573-8373d03fb524
+langcode: fr
+status: true
+dependencies:
+  module:
+    - md_carousel
+    - system
+  theme:
+    - gavias_linoor
+id: gavias_linoor_homepageslider
+theme: gavias_linoor
+region: offcanvas
+weight: -7
+provider: null
+plugin: md_carousel_home_page_slider
+settings:
+  id: md_carousel_home_page_slider
+  label: 'Home page slider'
+  label_display: '0'
+  provider: md_carousel
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

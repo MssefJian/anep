@@ -1,0 +1,29 @@
+uuid: 94ee0533-9ad5-4f0a-aadf-d8516fc18fb6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.project
+  module:
+    - gaviasthemer
+    - views
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_views_block__project_block_1_3
+theme: anep
+region: content_front
+weight: -12
+provider: null
+plugin: 'views_block:project-block_1'
+settings:
+  id: 'views_block:project-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

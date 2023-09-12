@@ -1,6 +1,6 @@
 uuid: ff2fabc2-2de6-42e5-bde4-a1b90c68ef1d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.tenders
@@ -11,7 +11,7 @@ dependencies:
     - anep
 id: anep_views_block__tenders_block_1
 theme: anep
-region: content_front
+region: offcanvas
 weight: 0
 provider: null
 plugin: 'views_block:tenders-block_1'

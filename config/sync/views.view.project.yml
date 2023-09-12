@@ -3,6 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_image
     - field.storage.node.field_project_type
@@ -10,6 +11,7 @@ dependencies:
     - node.type.project
     - taxonomy.vocabulary.skill
   module:
+    - gavias_view
     - image
     - node
     - taxonomy
@@ -435,27 +437,34 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: grid
+        type: gvaowl
         options:
-          grouping: {  }
-          columns: 1
-          automatic_width: false
-          alignment: horizontal
-          row_class_custom: ''
-          row_class_default: false
-          col_class_custom: ''
-          col_class_default: false
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          items: '4'
+          items_lg: '4'
+          items_md: '4'
+          items_sm: '2'
+          items_xs: '1'
+          loop: 0
+          speed: '1000'
+          auto_play: 0
+          auto_play_speed: '2000'
+          auto_play_timeout: '5000'
+          auto_play_hover: 1
+          navigation: 1
+          rewind_nav: 0
+          pagination: 0
+          mouse_drag: 1
+          touch_drag: 1
+          el_class: ''
+          el_id: ''
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: true
-          inline:
-            title: title
-            field_image: field_image
-            field_project_type: field_project_type
-            body: body
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -482,10 +491,11 @@ display:
         - 'config:field.storage.node.field_project_type'
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Project
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1

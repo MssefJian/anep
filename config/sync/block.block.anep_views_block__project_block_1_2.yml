@@ -10,7 +10,7 @@ dependencies:
     - anep
 id: anep_views_block__project_block_1_2
 theme: anep
-region: content_term
+region: offcanvas
 weight: 0
 provider: null
 plugin: 'views_block:project-block_1'

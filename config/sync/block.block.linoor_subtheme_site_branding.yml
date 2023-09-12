@@ -1,0 +1,25 @@
+uuid: 708347bd-576a-48d7-a0e5-5091417a6940
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - linoor_subtheme
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: linoor_subtheme_site_branding
+theme: linoor_subtheme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Identité du site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

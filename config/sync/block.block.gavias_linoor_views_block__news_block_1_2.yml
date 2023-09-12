@@ -1,0 +1,24 @@
+uuid: dcde3922-379d-49f9-8406-305db4ceb613
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+  theme:
+    - gavias_linoor
+id: gavias_linoor_views_block__news_block_1_2
+theme: gavias_linoor
+region: offcanvas
+weight: -11
+provider: null
+plugin: 'views_block:news-block_1'
+settings:
+  id: 'views_block:news-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '10'
+visibility: {  }

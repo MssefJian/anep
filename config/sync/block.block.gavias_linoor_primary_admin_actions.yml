@@ -1,0 +1,20 @@
+uuid: 4ea8ca31-bf5e-4f91-9e1e-17da37b5dd03
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - gavias_linoor
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: gavias_linoor_primary_admin_actions
+theme: gavias_linoor
+region: offcanvas
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Actions d'administration principales"
+  label_display: '0'
+  provider: core
+visibility: {  }

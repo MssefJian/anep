@@ -1,6 +1,6 @@
 uuid: 4a12b547-b825-495b-945c-65e6e4a95685
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - md_carousel
@@ -9,7 +9,7 @@ dependencies:
     - anep
 id: anep_homepageaxis
 theme: anep
-region: content_front
+region: offcanvas
 weight: -2
 provider: null
 plugin: md_carousel_home_page_axis

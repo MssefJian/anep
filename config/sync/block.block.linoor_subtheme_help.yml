@@ -1,0 +1,22 @@
+uuid: b82d9a89-24f2-46f7-8aed-51829d4a7a92
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - linoor_subtheme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: linoor_subtheme_help
+theme: linoor_subtheme
+region: offcanvas
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -9,8 +9,8 @@ dependencies:
     - anep
 id: anep_homepageslider
 theme: anep
-region: content_front
-weight: -7
+region: other
+weight: -14
 provider: null
 plugin: md_carousel_home_page_slider
 settings:

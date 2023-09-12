@@ -1,7 +1,9 @@
+label: 'Blocs de contenu'
 display:
   default:
     display_title: الافتراضي
     display_options:
+      title: 'Blocs de contenu'
       fields:
         info:
           label: 'وصف الصندوق'
@@ -19,6 +21,7 @@ display:
             next: 'التالي ›'
             previous: '‹ السابق'
           expose:
+            items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- الكل -'
             offset_label: الإزاحة
       exposed_form:
@@ -40,3 +43,4 @@ display:
     display_options:
       menu:
         title: الصناديق
+        description: 'Créer et modifier les blocs de contenu.'

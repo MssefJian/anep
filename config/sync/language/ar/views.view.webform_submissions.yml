@@ -11,7 +11,11 @@ display:
           sort_desc_label: تنازلي
       pager:
         options:
+          tags:
+            first: '« Premier'
+            last: 'Dernier »'
           expose:
+            items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- الكل -'
             offset_label: الإزاحة
       fields:
@@ -28,6 +32,9 @@ display:
         view_webform_submission:
           label: عمليات
           text: عرض
+      header:
+        result:
+          content: 'Affichage de @start à @end sur @total'
       arguments:
         in_draft:
           exception:

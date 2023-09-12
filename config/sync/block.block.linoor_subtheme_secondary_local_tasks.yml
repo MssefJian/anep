@@ -1,0 +1,22 @@
+uuid: 458f894c-7184-46c1-8c34-bdeaccf28b4d
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - linoor_subtheme
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: linoor_subtheme_secondary_local_tasks
+theme: linoor_subtheme
+region: offcanvas
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets secondaires'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

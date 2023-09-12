@@ -1,0 +1,20 @@
+uuid: da507e72-32e3-4c35-b47c-e50003fd571d
+langcode: en
+status: true
+dependencies:
+  module:
+    - md_manager
+  theme:
+    - gavias_linoor
+id: gavias_linoor_sociallinks
+theme: gavias_linoor
+region: offcanvas
+weight: -9
+provider: null
+plugin: md_manager_social_media
+settings:
+  id: md_manager_social_media
+  label: 'Social links'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

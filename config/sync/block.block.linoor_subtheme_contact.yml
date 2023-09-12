@@ -1,0 +1,25 @@
+uuid: 1ef9af3e-8195-4c13-a32c-82d503c56ed3
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:contact:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
+  module:
+    - block_content
+  theme:
+    - linoor_subtheme
+id: linoor_subtheme_contact
+theme: linoor_subtheme
+region: offcanvas
+weight: -9
+provider: null
+plugin: 'block_content:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
+settings:
+  id: 'block_content:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
+  label: Contact
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

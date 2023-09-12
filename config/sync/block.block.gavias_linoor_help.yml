@@ -1,0 +1,22 @@
+uuid: 7c169ee7-88ce-42b1-ac65-44d117a118b4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gavias_linoor
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: gavias_linoor_help
+theme: gavias_linoor
+region: offcanvas
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  label_display: '0'
+  provider: help
+visibility: {  }

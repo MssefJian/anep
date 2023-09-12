@@ -1,6 +1,6 @@
 uuid: b9713b99-ecd1-4eab-847f-ac7045098ad2
 langcode: fr
-status: true
+status: false
 dependencies:
   theme:
     - anep
@@ -8,7 +8,7 @@ _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
 id: anep_primary_local_tasks
 theme: anep
-region: header
+region: offcanvas
 weight: -4
 provider: null
 plugin: local_tasks_block

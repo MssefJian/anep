@@ -1,0 +1,30 @@
+uuid: 9f1cf63e-ae20-4581-93c8-313c69a0dbcc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:home_paragraph:31f0c31f-b820-438f-8193-cdb88e8de684'
+  module:
+    - block_content
+    - system
+  theme:
+    - gavias_linoor
+id: gavias_linoor_lagencenationaledesequipementspublicsenchiffres
+theme: gavias_linoor
+region: offcanvas
+weight: -5
+provider: null
+plugin: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
+settings:
+  id: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
+  label: 'L’Agence Nationale des Équipements Publics en chiffres'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.project.body
     - field.field.node.project.field_image
     - field.field.node.project.field_project_type
-    - image.style.medium
+    - image.style.medium_750_620_
     - node.type.project
   module:
     - image
@@ -22,26 +22,33 @@ content:
     type: text_summary_or_trimmed
     label: hidden
     settings:
-      trim_length: 600
+      trim_length: 120
     third_party_settings: {  }
-    weight: 101
+    weight: 3
     region: content
   field_image:
     type: image
     label: hidden
     settings:
       image_link: content
-      image_style: medium
+      image_style: medium_750_620_
       image_loading:
-        attribute: lazy
+        attribute: eager
     third_party_settings: {  }
-    weight: -1
+    weight: 1
+    region: content
+  field_project_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
 hidden:
-  field_project_type: true
   langcode: true

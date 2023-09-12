@@ -1,6 +1,6 @@
 uuid: 39754d96-13c5-4183-a138-71e942f7c1a8
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - md_manager
@@ -8,7 +8,7 @@ dependencies:
     - anep
 id: anep_sociallinks
 theme: anep
-region: footer_bottom
+region: offcanvas
 weight: -9
 provider: null
 plugin: md_manager_social_media

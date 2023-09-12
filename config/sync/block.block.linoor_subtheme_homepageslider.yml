@@ -1,0 +1,25 @@
+uuid: fcea5efa-eda5-42c1-b912-87ab7a7cbeb8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - md_carousel
+    - system
+  theme:
+    - linoor_subtheme
+id: linoor_subtheme_homepageslider
+theme: linoor_subtheme
+region: offcanvas
+weight: -7
+provider: null
+plugin: md_carousel_home_page_slider
+settings:
+  id: md_carousel_home_page_slider
+  label: 'Home page slider'
+  label_display: '0'
+  provider: md_carousel
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

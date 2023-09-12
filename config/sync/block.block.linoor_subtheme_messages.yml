@@ -1,0 +1,22 @@
+uuid: 8fa43547-106e-4df2-a49f-7b4284536a26
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - linoor_subtheme
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: linoor_subtheme_messages
+theme: linoor_subtheme
+region: offcanvas
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Messages de statut'
+  label_display: '0'
+  provider: system
+visibility: {  }

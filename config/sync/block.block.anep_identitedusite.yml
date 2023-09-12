@@ -1,0 +1,27 @@
+uuid: 2d3807ff-dbcc-47c7-99ff-c68ffc28d086
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - system
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_identitedusite
+theme: anep
+region: branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Identité du site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

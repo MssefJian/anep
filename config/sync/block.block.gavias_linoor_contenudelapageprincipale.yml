@@ -1,0 +1,20 @@
+uuid: 5ff55c59-20f5-4122-8bb9-a9681defe4b4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gavias_linoor
+id: gavias_linoor_contenudelapageprincipale
+theme: gavias_linoor
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: visible
+  provider: system
+visibility: {  }

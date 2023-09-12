@@ -1,4 +1,5 @@
 label: التعليقات
+description: 'Trouver et gérer les commentaires.'
 display:
   default:
     display_title: الافتراضي
@@ -33,6 +34,7 @@ display:
             first: '« الأولى'
             last: 'الأخيرة »'
           expose:
+            items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- الكل -'
             offset_label: الإزاحة
       exposed_form:
@@ -49,6 +51,9 @@ display:
         subject:
           expose:
             label: الموضوع
+        combine:
+          expose:
+            label: "Nom de l'auteur"
         langcode:
           expose:
             label: اللغة
@@ -88,6 +93,9 @@ display:
         subject:
           expose:
             label: الموضوع
+        combine:
+          expose:
+            label: "Nom de l'auteur"
         langcode:
           expose:
             label: اللغة

@@ -1,6 +1,6 @@
 uuid: 92450044-4353-4c03-8acf-3591afcd8c39
 langcode: fr
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:contact:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
@@ -10,7 +10,7 @@ dependencies:
     - anep
 id: anep_contact
 theme: anep
-region: footer
+region: offcanvas
 weight: -9
 provider: null
 plugin: 'block_content:e77fbf8a-3493-4d91-a181-7d69f0851ba8'

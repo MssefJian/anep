@@ -5,6 +5,8 @@ settings:
   default_preview_next_button_label: معاينة
   default_preview_label: معاينة
   dialog_options:
+    narrow:
+      title: Étroit
     wide:
       title: واسع
 element:

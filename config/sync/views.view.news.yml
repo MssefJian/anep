@@ -3,11 +3,13 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_image
     - image.style.news_445x300
     - node.type.news
   module:
+    - gavias_view
     - image
     - node
     - text
@@ -406,13 +408,34 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: default
+        type: gvaowl
         options:
-          grouping: {  }
           row_class: ''
           default_row_class: true
+          uses_fields: false
+          items: '3'
+          items_lg: '3'
+          items_md: '3'
+          items_sm: '2'
+          items_xs: '1'
+          loop: 0
+          speed: '1000'
+          auto_play: 0
+          auto_play_speed: '2000'
+          auto_play_timeout: '5000'
+          auto_play_hover: 1
+          navigation: 1
+          rewind_nav: 0
+          pagination: 1
+          mouse_drag: 1
+          touch_drag: 1
+          el_class: ''
+          el_id: ''
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       query:
         type: views_query
         options:

@@ -5,7 +5,24 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://asset 0.png'
+  path: 'public://logo-anep.png'
 favicon:
   use_default: 0
-  path: ''
+  path: 'public://logo-anep_0.png'
+  mimetype: image/png
+theme_skin: ''
+enable_customize: '0'
+logo_width: 160px
+logo_padding_top: ''
+logo_padding_bottom: ''
+sticky_menu: '0'
+site_layout: wide
+preloader: '0'
+google_key: ''
+default_header: header
+footer_skin: ''
+footer_first_size: '3'
+footer_second_size: '3'
+footer_third_size: '3'
+footer_four_size: '3'
+customize_css: ''

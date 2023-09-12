@@ -1,6 +1,6 @@
 uuid: e3f86093-3c9d-4f14-a868-27478edd1f96
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
 id: anep_site_branding
 theme: anep
-region: header
+region: offcanvas
 weight: 0
 provider: null
 plugin: system_branding_block

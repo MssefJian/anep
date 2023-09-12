@@ -1,0 +1,29 @@
+uuid: 1f0453bb-ced9-459a-bb41-121340329606
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fdc6501f-9d46-433a-b5a1-36edf0dda71f'
+  module:
+    - block_content
+    - gaviasthemer
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_headerright
+theme: anep
+region: header_right
+weight: 0
+provider: null
+plugin: 'block_content:fdc6501f-9d46-433a-b5a1-36edf0dda71f'
+settings:
+  id: 'block_content:fdc6501f-9d46-433a-b5a1-36edf0dda71f'
+  label: 'Header right'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

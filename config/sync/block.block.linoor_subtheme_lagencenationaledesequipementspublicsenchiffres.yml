@@ -1,0 +1,30 @@
+uuid: 82b7162a-f023-48de-ad53-64a2e9bdd1fb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:home_paragraph:31f0c31f-b820-438f-8193-cdb88e8de684'
+  module:
+    - block_content
+    - system
+  theme:
+    - linoor_subtheme
+id: linoor_subtheme_lagencenationaledesequipementspublicsenchiffres
+theme: linoor_subtheme
+region: offcanvas
+weight: -5
+provider: null
+plugin: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
+settings:
+  id: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
+  label: 'L’Agence Nationale des Équipements Publics en chiffres'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

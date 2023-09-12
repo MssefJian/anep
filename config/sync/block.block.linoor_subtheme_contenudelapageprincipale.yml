@@ -1,0 +1,20 @@
+uuid: f79b8932-8b1d-49d0-ae23-abd4aed7d042
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - linoor_subtheme
+id: linoor_subtheme_contenudelapageprincipale
+theme: linoor_subtheme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: visible
+  provider: system
+visibility: {  }

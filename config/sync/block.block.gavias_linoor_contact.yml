@@ -1,0 +1,25 @@
+uuid: 1ff5adb1-de67-44aa-9ce2-874fdd5b8643
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:contact:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
+  module:
+    - block_content
+  theme:
+    - gavias_linoor
+id: gavias_linoor_contact
+theme: gavias_linoor
+region: offcanvas
+weight: -9
+provider: null
+plugin: 'block_content:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
+settings:
+  id: 'block_content:e77fbf8a-3493-4d91-a181-7d69f0851ba8'
+  label: Contact
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
