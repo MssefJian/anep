@@ -28,6 +28,7 @@ regions:
   content_front: 'Content front page'
   actualites: 'actualites'
   anep_ch: 'ANEP en chiffre'
+  anep_axes: 'Les axes'
   projet: 'projet'
   content_bottom: 'Content Bottom'
   sidebar_left: 'Sidebar Left'

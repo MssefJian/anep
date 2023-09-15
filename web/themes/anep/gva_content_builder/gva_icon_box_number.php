@@ -129,7 +129,7 @@ if(!class_exists('element_gva_icon_box_number')):
          if( $target ){
             $target = 'target="_blank"';
          } else {
-            $target = false;
+            $target = false; 
          }
          if($image) $el_class .= ' icon-image';
          $el_class .= ' ' . $text_style;
@@ -140,7 +140,7 @@ if(!class_exists('element_gva_icon_box_number')):
          ob_start();
          ?>
        
-
+ 
          <?php if($style =='style-1'){ ?>
          <div class="widget gsc-icon-box-number clearfix <?php print $el_class; ?>" <?php print gavias_content_builder_print_animate_wow('', $animate_delay) ?>>
             <div class="box-content">

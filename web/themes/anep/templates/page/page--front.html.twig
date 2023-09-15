@@ -36,8 +36,35 @@
       {% if page.anep_ch %}
 
       {{ page.anep_ch }}
+      {% endif %}
+      {% if page.anep_axes %}
+      <div class="gbb-row-wrapper section row-first-level gbb-row bg-size-cover" style="background-image:url('/sites/default/files/gbb-uploads/bg/bg-1.jpg'); background-repeat:no-repeat; background-position:center top">
+         <div class="bb-inner default">
+            <div class="bb-container container">
+               <div class="row row-wrapper">
+                  <div class="gsc-column col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                     <div class="column-inner bg-size-cover">
+                        <div class="column-content-inner">
+                           <div class="widget gsc-heading align-left style-1" style="max-width: 800px;">
+                              <div class="heading-content clearfix">
+                                 <h2 class="title text-white">
+                                    <span>{{"Axes stratégiques"|t}}</span>
+                                 </h2>
+                                 
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                        </div>
+                     </div>
+                  </div>
 
-{% endif %}
+                  {{ page.anep_axes }}
+               </div>
+            </div>
+         </div>
+      </div>
+
+      {% endif %}
      </div>
      
         <div class="clearfix"></div>

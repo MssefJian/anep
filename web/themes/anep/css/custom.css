@@ -17,6 +17,7 @@
 .p-4 {
     padding: 45px 0;
 }
+.flx-dir {flex-direction: row-reverse;}
 
 @media (min-width: 992px) {
     .navigation .gva_menu > li > a {

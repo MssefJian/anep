@@ -10498,14 +10498,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 }
 
 .gsc-icon-box-number .box-title a {
+  color:#222429;
   -webkit-transition: none;
   transition: none;
   -moz-transition: none;
   -ms-transition: none;
 }
+.gsc-icon-box-number.style-1:hover .box-title a
+{
+  color:#fff;
+}
 
 .gsc-icon-box-number.bg-black {
-  background: #1c1e22 !important;
+  background: #e3e3e3 !important;
 }
 
 .gsc-icon-box-number.bg-theme .box-number {
@@ -10573,7 +10578,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 }
 
 .gsc-icon-box-number.style-1 .box-number {
-  color: rgba(255, 255, 255, 0.05);
+  color: #11649a;
   font-size: 50px;
   line-height: 50px;
 }
@@ -10587,11 +10592,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 }
 
 .gsc-icon-box-number.style-1:hover {
-  background: #fff !important;
+  background: #151f43 !important;
 }
 
 .gsc-icon-box-number.style-1:hover .box-number, .gsc-icon-box-number.style-1:hover .box-title {
-  color: #222429;
+  color: #11649a;
 }
 
 .gsc-icon-box-number.style-1:hover:after {
@@ -10600,7 +10605,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 }
 
 .gsc-icon-box-number.style-1.bg-theme .box-number {
-  color: #222429;
+  color: #11649a;
 }
 
 .gsc-icon-box-number.style-1.bg-theme:after {

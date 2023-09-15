@@ -1,12 +1,59 @@
-<div class="slider my-5">
-  <div class="owl-carousel owl-theme">
-    {% for item in axis %}
-    <div class="item">
-      <div class="card_content">
-        <img src="{{ item.icon }}" alt="">
-        <h4>{{ item.title }}</h4>
-      </div>
-    </div>
-    {% endfor %}
+{% for key ,item in axis %}
+{% if key <= 1 %}
+<div class="gsc-column col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 pb-2">
+  <div class="column-inner bg-size-cover">
+     <div class="column-content-inner">
+        <div class="widget gsc-icon-box-number clearfix icon-image text-light style-1 bg-black">
+           <div class="box-content">
+              <div class="box-inner">
+                 <div class="box-number">
+                    <span>0{{key+1}}</span>             
+                 </div>
+                 <div class="content-inner">
+                    <div class="box-image">
+                       <span class="icon-image"><img src="{{ item.icon }}" alt="{{ item.title }}"> </span>
+                    </div>
+                 </div>
+              </div>
+              <h4 class="box-title">
+                 <a class="link">{{ item.title }}</a>   
+              </h4>
+           </div>
+        </div>
+     </div>
   </div>
+</div>
+
+{% endif %}
+{% endfor %}
+</div>
+<div class="row row-wrapper flx-dir">
+{% for key ,item in axis %}
+
+{% if key > 1 %}
+<div class="gsc-column col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 pb-2">
+  <div class="column-inner bg-size-cover">
+     <div class="column-content-inner">
+        <div class="widget gsc-icon-box-number clearfix icon-image text-light style-1 bg-black">
+           <div class="box-content">
+              <div class="box-inner">
+                 <div class="box-number">
+                    <span>0{{key+1}}</span>             
+                 </div>
+                 <div class="content-inner">
+                    <div class="box-image">
+                       <span class="icon-image"><img src="{{ item.icon }}" alt="{{ item.title }}"> </span>
+                    </div>
+                 </div>
+              </div>
+              <h4 class="box-title">
+                 <a class="link">{{ item.title }}</a>   
+              </h4>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
 </div>
