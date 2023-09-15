@@ -1,0 +1,24 @@
+uuid: 491c6522-75a8-457a-9e83-bf9ff798d025
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_carousel
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_homepageaxis_2
+theme: anep
+region: anep_axes
+weight: 0
+provider: null
+plugin: md_carousel_home_page_axis
+settings:
+  id: md_carousel_home_page_axis
+  label: 'Home page axis'
+  label_display: '0'
+  provider: md_carousel
+visibility: {  }
