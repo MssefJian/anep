@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
   module:
+    - gavias_view
     - node
     - taxonomy
     - user
@@ -303,9 +304,40 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      style:
+        type: gvaowl
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          items: '3'
+          items_lg: '3'
+          items_md: '3'
+          items_sm: '2'
+          items_xs: '1'
+          loop: 1
+          speed: '1000'
+          auto_play: 1
+          auto_play_speed: '2000'
+          auto_play_timeout: '5000'
+          auto_play_hover: 1
+          navigation: 1
+          rewind_nav: 0
+          pagination: 1
+          mouse_drag: 1
+          touch_drag: 1
+          el_class: ''
+          el_id: ''
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
       query:
         type: views_query
         options: {  }
+      defaults:
+        style: false
+        row: false
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:

@@ -5,9 +5,10 @@ dependencies:
   config:
     - field.storage.node.field_image
     - field.storage.node.field_link
-    - image.style.client445x445
+    - image.style.180_180
     - node.type.client
   module:
+    - gavias_view
     - image
     - node
     - user
@@ -25,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Client
+      title: 'Ils nous font confiance'
       fields:
         field_image:
           id: field_image
@@ -80,7 +81,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: client445x445
+            image_style: '180_180'
             image_loading:
               attribute: lazy
           group_column: ''
@@ -102,7 +103,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -261,16 +262,29 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: grid
+        type: gvaowl
         options:
-          uses_fields: false
-          columns: 1
-          automatic_width: false
-          alignment: horizontal
-          row_class_custom: ''
-          row_class_default: false
-          col_class_custom: ''
-          col_class_default: false
+          grouping: {  }
+          row_class: 'gva-carousel-5 text-center'
+          default_row_class: true
+          items: '5'
+          items_lg: '5'
+          items_md: '4'
+          items_sm: '3'
+          items_xs: '1'
+          loop: 0
+          speed: '1000'
+          auto_play: 0
+          auto_play_speed: '2000'
+          auto_play_timeout: '5000'
+          auto_play_hover: 1
+          navigation: 1
+          rewind_nav: 0
+          pagination: 0
+          mouse_drag: 1
+          touch_drag: 1
+          el_class: ''
+          el_id: ''
       row:
         type: fields
         options:

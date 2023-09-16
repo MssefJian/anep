@@ -1,0 +1,15 @@
+uuid: b352f737-a006-4ecc-9dcb-b0b2af462c24
+langcode: fr
+status: true
+dependencies: {  }
+name: '180_180'
+label: '180*180'
+effects:
+  b7ec1198-c27e-43a4-86b7-730b16dd04ac:
+    uuid: b7ec1198-c27e-43a4-86b7-730b16dd04ac
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 180
+      anchor: center-center

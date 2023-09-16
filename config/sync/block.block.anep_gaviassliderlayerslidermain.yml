@@ -5,6 +5,7 @@ dependencies:
   module:
     - gavias_sliderlayer
     - gaviasthemer
+    - system
   theme:
     - anep
 third_party_settings:
@@ -21,4 +22,8 @@ settings:
   label: 'Gavias SliderLayer - Slider Main'
   label_display: '0'
   provider: gavias_sliderlayer
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

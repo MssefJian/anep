@@ -1,6 +1,6 @@
 uuid: 6e6b6d22-d11a-4e3a-81f3-43db8777495d
 langcode: fr
-status: false
+status: true
 dependencies:
   config:
     - views.view.client
@@ -11,8 +11,8 @@ dependencies:
     - anep
 id: anep_views_block__client_block_1
 theme: anep
-region: offcanvas
-weight: -4
+region: anep_partenaire
+weight: -15
 provider: null
 plugin: 'views_block:client-block_1'
 settings:

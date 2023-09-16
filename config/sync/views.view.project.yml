@@ -31,7 +31,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Project
+      title: 'Grands projets'
       fields:
         title:
           id: title
@@ -491,7 +491,7 @@ display:
         - 'config:field.storage.node.field_project_type'
   block_1:
     id: block_1
-    display_title: Project
+    display_title: 'Grands projets'
     display_plugin: block
     position: 1
     display_options:

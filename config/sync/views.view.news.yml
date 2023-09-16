@@ -28,7 +28,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: News
+      title: Actualités
       fields:
         field_image:
           id: field_image
@@ -460,10 +460,11 @@ display:
         - 'config:field.storage.node.field_image'
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Actualités
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
