@@ -1,4 +1,4 @@
-{# /** * @file * ANEP's theme implementation to display a single Drupal page. */ #} 
+{# /** * @file * ANEP's theme implementation to display a single Drupal page. */ #}
 {% set has_breadcrumb = '' %}
 <div class="gva-body-wrapper">
    <div class="body-page gva-body-page">
@@ -13,7 +13,7 @@
          <div class="slideshow_content area">
             {{ page.slideshow_content }}
          </div>
-         {% endif %} 
+         {% endif %}
          <div class="clearfix"></div>
          {% if page.actualites %}
          <div class="bb-container container">
@@ -33,7 +33,7 @@
             </div>
          </div>
       </div>
-      {% endif %} 
+      {% endif %}
       <div class="clearfix"></div>
       <div class="ch_bg p-4">
          {% if page.anep_ch %}
@@ -42,7 +42,7 @@
       </div>
       <div class="clearfix"></div>
       {% if page.anep_axes %}
-      <div class="gbb-row-wrapper section row-first-level gbb-row bg-size-cover" style="background-image:url('/themes/anep/images/bg-1.jpg');  background-repeat:no-repeat; background-position:center top">
+      <div class="gbb-row-wrapper section row-first-level gbb-row bg-size-cover" style="background-image:url('{{ base_path ~ directory }}/images/bg-1.jpg');  background-repeat:no-repeat; background-position:center top">
          <div class="bb-inner default">
             <div class="bb-container container">
                <div class="row row-wrapper">
@@ -54,7 +54,7 @@
                                  <h2 class="title text-white">
                                     <span>{{"Axes stratégiques"|t}}</span>
                                  </h2>
-                                 
+
                               </div>
                            </div>
                            <div class="clearfix"></div>
@@ -69,10 +69,10 @@
       </div>
 
       {% endif %}
-     
-     
+
+
         <div class="clearfix"></div>
-          <div class=" py-5"" style="background-image:url('/themes/anep/images/bg-projet.jpg');  background-repeat:no-repeat; background-position:center top">
+          <div class="py-5" style="background-image:url('{{ base_path ~ directory }}/images/bg-projet.jpg'); background-position:center top; background-size: cover; background-repeat: no-repeat;">
             {% if page.projet %}
               <div class="bb-container full-container">
                 <div class="row row-wrapper">
@@ -113,8 +113,8 @@
       </div>
       {% endif %}
         
-   
-   
+
+
    {% include '@anep/page/footer.html.twig' %}
 </div>
 {% include '@anep/page/parts/quick-side.html.twig' %}
