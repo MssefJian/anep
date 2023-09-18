@@ -1,120 +1,126 @@
 {# /** * @file * ANEP's theme implementation to display a single Drupal page. */ #}
 {% set has_breadcrumb = '' %}
 <div class="gva-body-wrapper">
-   <div class="body-page gva-body-page">
-      {% include header_skin %} {% if page.breadcrumbs %} {% set has_breadcrumb = ' has-breadcrumb' %}
+  <div class="body-page gva-body-page">
+    {% include header_skin %} {% if page.breadcrumbs %} {% set has_breadcrumb = ' has-breadcrumb' %}
       <div class="breadcrumbs">
-         {{ page.breadcrumbs }}
+        {{ page.breadcrumbs }}
       </div>
-      {% endif %}
-      <div role="main" class="main main-page{{ has_breadcrumb }}">
-         <div class="clearfix"></div>
-         {% if page.slideshow_content %}
-         <div class="slideshow_content area">
-            {{ page.slideshow_content }}
-         </div>
-         {% endif %}
-         <div class="clearfix"></div>
-         {% if page.actualites %}
-         <div class="bb-container container">
-            <div class="row row-wrapper">
-               <div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                  <div class="column-inner bg-size-cover">
-                     <div class="column-content-inner">
-                        <div class="clearfix"></div>
-                        <div>
-                           <div class="">
-                              {{ page.actualites }}
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+    {% endif %}
+    <div role="main" class="main main-page{{ has_breadcrumb }}">
+      <div class="clearfix"></div>
+      {% if page.slideshow_content %}
+        <div class="slideshow_content area">
+          {{ page.slideshow_content }}
+        </div>
       {% endif %}
       <div class="clearfix"></div>
-      <div class="ch_bg p-4">
-         {% if page.anep_ch %}
-            {{ page.anep_ch }}
-         {% endif %}
-      </div>
-      <div class="clearfix"></div>
-      {% if page.anep_axes %}
-      <div class="gbb-row-wrapper section row-first-level gbb-row bg-size-cover" style="background-image:url('{{ base_path ~ directory }}/images/bg-1.jpg');  background-repeat:no-repeat; background-position:center top">
-         <div class="bb-inner default">
-            <div class="bb-container container">
-               <div class="row row-wrapper">
-                  <div class="gsc-column col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                     <div class="column-inner bg-size-cover">
-                        <div class="column-content-inner">
-                           <div class="widget gsc-heading align-left style-1" style="max-width: 800px;">
-                              <div class="heading-content clearfix">
-                                 <h2 class="title text-white">
-                                    <span>{{"Axes stratégiques"|t}}</span>
-                                 </h2>
-
-                              </div>
-                           </div>
-                           <div class="clearfix"></div>
-                        </div>
-                     </div>
-                  </div>
-
-                  {{ page.anep_axes }}
-               </div>
-            </div>
-         </div>
-      </div>
-
-      {% endif %}
-
-
-        <div class="clearfix"></div>
-          <div class="py-5" style="background-image:url('{{ base_path ~ directory }}/images/bg-projet.jpg'); background-position:center top; background-size: cover; background-repeat: no-repeat;">
-            {% if page.projet %}
-              <div class="bb-container full-container">
-                <div class="row row-wrapper">
-                  <div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="column-inner bg-size-cover">
-                      <div class="column-content-inner">
-                        <div class="clearfix"></div>
-                          <div>
-                            <div class="">
-                              {{ page.projet }}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      {% if page.actualites %}
+      <div class="bb-container container">
+        <div class="row row-wrapper">
+          <div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="column-inner bg-size-cover">
+              <div class="column-content-inner">
+                <div class="clearfix"></div>
+                <div>
+                  <div class="">
+                    {{ page.actualites }}
                   </div>
                 </div>
               </div>
-            {% endif %}
-          </div>
-        <div class="clearfix"></div>
-        {% if page.anep_partenaire %}
-        <div class="bb-container container py-5">
-         <div class="row row-wrapper">
-            <div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-               <div class="column-inner bg-size-cover">
-                  <div class="column-content-inner">
-                     <div class="clearfix"></div>
-                     <div>
-                        <div class="">
-                           {{ page.anep_partenaire }}
-                        </div>
-                     </div>
-                  </div>
-               </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
+    </div>
+    {% endif %}
+    <div class="clearfix"></div>
+    <div class="ch_bg p-4">
+      {% if page.anep_ch %}
+        {{ page.anep_ch }}
       {% endif %}
-        
+    </div>
+    <div class="clearfix"></div>
+    {% if page.anep_axes %}
+      <div class="gbb-row-wrapper section row-first-level gbb-row bg-size-cover"
+           style="background-image:url('{{ base_path ~ directory }}/images/bg-1.jpg');  background-repeat:no-repeat; background-position:center top">
+        <div class="bb-inner default">
+          <div class="bb-container container">
+            <div class="row row-wrapper">
+              <div class="gsc-column col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="column-inner bg-size-cover">
+                  <div class="column-content-inner">
+                    <div class="widget gsc-heading align-left style-1" style="max-width: 800px;">
+                      <div class="heading-content clearfix">
+                        <h2 class="title text-white">
+                          <span>{{ "Axes stratégiques"|t }}</span>
+                        </h2>
+
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+
+              {{ page.anep_axes }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
 
 
-   {% include '@anep/page/footer.html.twig' %}
+    <div class="clearfix"></div>
+    <div class="py-5"
+         style="background-image:url('{{ base_path ~ directory }}/images/bg-projet.jpg'); background-position:center top; background-size: cover; background-repeat: no-repeat;">
+      {% if page.projet %}
+      <div class="bb-container full-container">
+        <div class="row row-wrapper">
+          <div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="column-inner bg-size-cover">
+              <div class="column-content-inner">
+                <div class="clearfix"></div>
+                <div>
+                  <div class="">
+                    {{ page.projet }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div class="clearfix"></div>
+  {% if page.anep_partenaire %}
+    <div class="bb-container container py-5">
+      <div class="row row-wrapper">
+        <div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="column-inner bg-size-cover">
+            <div class="column-content-inner">
+              <div class="clearfix"></div>
+              <div>
+                <div class="">
+                  {{ page.anep_partenaire }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+
+  <div class="c-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13235.582831722992!2d-6.822267!3d33.96952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b7c65d5f98d%3A0x997659f9d15bf3a3!2sAgence%20Nationale%20des%20Equipements%20Publics!5e0!3m2!1sfr!2sma!4v1695061184743!5m2!1sfr!2sma"
+            allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  {% include '@anep/page/footer.html.twig' %}
 </div>
 {% include '@anep/page/parts/quick-side.html.twig' %}
