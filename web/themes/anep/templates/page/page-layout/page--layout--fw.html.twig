@@ -8,7 +8,7 @@
 <div class="gva-body-wrapper">
 	<div class="body-page gva-body-page">
 	   {% include header_skin %}
-		
+
 		{% if page.breadcrumbs %}
 			{% set has_breadcrumb = ' has-breadcrumb' %}
 			<div class="breadcrumbs">
@@ -17,13 +17,13 @@
 		{% endif %}
 
 		<div role="main" class="main main-page{{ has_breadcrumb }}">
-		
+
 			<div class="clearfix"></div>
 			{% if page.slideshow_content %}
 				<div class="slideshow_content area">
 					{{ page.slideshow_content }}
 				</div>
-			{% endif %}	
+			{% endif %}
 
 			{% if page.help %}
 				<div class="help gav-help-region">
@@ -34,7 +34,7 @@
 					</div>
 				</div>
 			{% endif %}
-			
+
 			<div class="clearfix"></div>
 			{% if page.before_content %}
 				<div class="before_content area">
@@ -47,9 +47,9 @@
 					</div>
 				</div>
 			{% endif %}
-			
+
 			<div class="clearfix"></div>
-			
+
 			<div id="content" class="content content-full">
 				<div class="container-full container-bg">
 					{% include '@gavias_linoor/page/main-no-sidebar.html.twig' %}
@@ -73,11 +73,16 @@
 	        		</div>
 				</div>
 			{% endif %}
-			
+
 		</div>
 	</div>
 
-	{% include '@gavias_linoor/page/footer.html.twig' %}
+  <div class="c-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13235.582831722992!2d-6.822267!3d33.96952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b7c65d5f98d%3A0x997659f9d15bf3a3!2sAgence%20Nationale%20des%20Equipements%20Publics!5e0!3m2!1sfr!2sma!4v1695061184743!5m2!1sfr!2sma"
+            allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  {% include '@anep/page/footer.html.twig' %}
 </div>
 
 {% include '@gavias_linoor/page/parts/quick-side.html.twig' %}
