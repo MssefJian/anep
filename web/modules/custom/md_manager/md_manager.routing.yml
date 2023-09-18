@@ -6,15 +6,15 @@ md_manager.ogranigrame:
   requirements:
     _permission: 'access content'
 
-md_manager.timeline:
-  path: '/agence/presentation'
-  defaults:
-    _controller: '\Drupal\md_manager\Controller\CustomPagesController::presentation'
-    _title: 'Presentation'
-  requirements:
-    _permission: 'access content'
-  options:
-    no_cache: 'TRUE'
+#md_manager.timeline:
+#  path: '/agence/presentation'
+    #  defaults:
+    #    _controller: '\Drupal\md_manager\Controller\CustomPagesController::presentation'
+  #    _title: 'Presentation'
+    #  requirements:
+  #    _permission: 'access content'
+    #  options:
+#    no_cache: 'TRUE'
 
 md_manager.human_ressources:
   path: '/agence/ressources_humaines'
