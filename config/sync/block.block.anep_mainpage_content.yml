@@ -10,7 +10,7 @@ dependencies:
 id: anep_mainpage_content
 theme: anep
 region: offcanvas
-weight: 0
+weight: -5
 provider: null
 plugin: system_main_block
 settings:

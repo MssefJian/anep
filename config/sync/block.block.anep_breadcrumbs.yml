@@ -11,7 +11,7 @@ _core:
 id: anep_breadcrumbs
 theme: anep
 region: offcanvas
-weight: 0
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:

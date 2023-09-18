@@ -12,7 +12,7 @@
 }
 .ch_bg {
     background-color: #f4f5f9;
-    
+
 }
 .p-4 {
     padding: 45px 0;
@@ -27,3 +27,23 @@
       padding: 36px 10px !important;
     }
   }
+
+#footer .socials-footer a {
+  color: #999b9f !important;
+}
+
+.copyright-inner h3 {
+  color: #999b9f;
+}
+.f-socials, .f-cp {
+  display: inline-block;
+}
+
+.f-cp {
+  float: right;
+}
+@media (max-width: 767px) {
+  .f-socials {
+    text-align: center;
+  }
+}

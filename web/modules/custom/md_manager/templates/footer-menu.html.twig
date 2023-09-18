@@ -1,9 +1,13 @@
 
     {% for item in menu %}
-      <div class="col-lg-3 p-3 col-md-6 col-sm-12">
-        <h2>{{ item.title }}</h2>
-        {% for child in item.children %}
-          <li><a href="{{ child.url }}">{{ child.title }}</a></li>
-        {% endfor %}
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 footer-column">
+        <div class="block block-block-content">
+          <h2 class="block-title"><span>{{ item.title }}</span></h2>
+          <ul class="menu">
+            {% for child in item.children %}
+              <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     {% endfor %}

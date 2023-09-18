@@ -1,3 +1,6 @@
-{% for item in social %}
-  <a href="{{ item.link }}" target="_blank"><i class="bi bi-{{ item.title }}"></i></a>
-{% endfor %}
+<div class="socials-footer">
+  {% for item in social %}
+    <a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.title }}"></i></a>
+  {% endfor %}
+</div>
+

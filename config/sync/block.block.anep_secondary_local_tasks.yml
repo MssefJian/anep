@@ -9,7 +9,7 @@ _core:
 id: anep_secondary_local_tasks
 theme: anep
 region: offcanvas
-weight: -2
+weight: -9
 provider: null
 plugin: local_tasks_block
 settings:
