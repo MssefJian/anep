@@ -10,7 +10,7 @@ dependencies:
 id: anep_languagedropdownswitcher
 theme: anep
 region: offcanvas
-weight: -15
+weight: -14
 provider: null
 plugin: 'language_dropdown_block:language_interface'
 settings:

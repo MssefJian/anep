@@ -16,7 +16,7 @@ third_party_settings:
 id: anep_lagencenationaledesequipementspublicsenchiffres
 theme: anep
 region: anep_ch
-weight: -15
+weight: -14
 provider: null
 plugin: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
 settings:

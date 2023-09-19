@@ -9,7 +9,7 @@ _core:
 id: anep_primary_admin_actions
 theme: anep
 region: offcanvas
-weight: -13
+weight: -12
 provider: null
 plugin: local_actions_block
 settings:
