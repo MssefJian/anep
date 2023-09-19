@@ -121,16 +121,11 @@
     </div> 
 
     <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-      {{ content|without('field_team_name', 'field_team_contact', 'field_team_image', 'field_team_contact', 'field_team_quote', 'field_team_social', 'field_team_education', 'field_team_position', 'field_team_email', 'field_team_description', 'comment') }}
+      {{ content|without('field_team_name', 'field_team_contact', 'field_team_image', 'field_team_contact', 'field_team_quote', 'field_team_social', 'field_team_education', 'field_team_position', 'field_team_email', 'field_team_description') }}
     </div>
 
     <div class="team-quote"> {{content.field_team_quote}} </div>
 
-    {% if content.comment %}
-      <div id="node-single-comment">
-        {{ content.comment }}
-      </div>
-    {% endif %}  
 
   </div>
 </article>

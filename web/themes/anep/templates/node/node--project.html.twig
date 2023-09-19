@@ -140,23 +140,15 @@
       </div>
 
       <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content|without('field_image','field_project_type', 'field_project_type', 'comment') }}
+        {{ content|without('field_image','field_project_type', 'field_project_type') }}
       </div>
 
-      {% if content.comment %}
-        <div id="node-single-comment">
-          {{ content.comment }}
-        </div>
-      {% endif %}
+
 
     </div>
 
   </div>
-  {% if content.comment %}
-    <div id="node-single-comment">
-      {{ content.comment }}
-    </div>
-  {% endif %}
+
 
 </article>
 

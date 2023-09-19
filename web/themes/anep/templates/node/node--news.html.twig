@@ -21,7 +21,7 @@
         <div class="post-meta">
           <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          <span class="post-comment"><i class="fas fa-comments"></i> {{ comment_count }}{{' Comments'|t}}</span>
+          
         </div>
         <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">
           {{ node.title.0.value|striptags|slice(0, 60) }}
@@ -40,7 +40,7 @@
         <div class="post-meta">
           <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          <span class="post-comment"><i class="fas fa-comments"></i> {{ comment_count }}{{' Comments'|t}}</span>
+          
         </div>
         <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>          
     </div>
@@ -68,7 +68,7 @@
       <div class="post-meta">
           <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          <span class="post-comment"><i class="fas fa-comments"></i> {{ comment_count }}{{' Comments'|t}}</span>
+         
         </div>
       {{ title_prefix }}
          <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
@@ -85,12 +85,10 @@
       {% endif %}
 
       <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content|without('field_image','field_post_format', 'field_post_type', 'field_post_embed', 'field_post_gallery', 'comment') }}
+        {{ content|without('field_image','field_post_format', 'field_post_type', 'field_post_embed', 'field_post_gallery') }}
       </div>
       
-      <div id="node-single-comment">
-        {{ content.comment }}
-      </div>
+
 
     </div>
 

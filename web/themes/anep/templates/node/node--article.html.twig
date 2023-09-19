@@ -83,12 +83,9 @@
       {% endif %}
 
       <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content|without('field_image','field_post_format', 'field_post_type', 'field_post_embed', 'field_post_gallery', 'comment') }}
+        {{ content|without('field_image','field_post_format', 'field_post_type', 'field_post_embed', 'field_post_gallery') }}
       </div>
-      
-      <div id="node-single-comment">
-        {{ content.comment }}
-      </div>
+
 
     </div>
 

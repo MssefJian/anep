@@ -37,11 +37,9 @@
       </div>
 
       <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content|without('field_gallery_image', 'comment') }}
+        {{ content|without('field_gallery_image') }}
       </div>
-      <div id="node-single-comment">
-        {{ content.comment }}
-      </div>
+
 
     </div>
 

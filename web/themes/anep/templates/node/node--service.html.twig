@@ -90,13 +90,9 @@
       {{ title_suffix }}      
 
       <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content|without('field_service_images', 'field_service_icon', 'comment') }}
+        {{ content|without('field_service_images', 'field_service_icon') }}
       </div>
-      <div id="node-single-comment">
-        <div id="comments">
-          {{ content.comment }}
-        </div>  
-      </div>
+
 
     </div>
 
