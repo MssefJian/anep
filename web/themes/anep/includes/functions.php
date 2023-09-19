@@ -34,12 +34,10 @@ function anep_preprocess_node(&$variables) {
   $date = $variables['node']->getCreatedTime();
   $variables['date'] = t(date( 'F', $date)) . ' ' . t(date( 'j', $date)) . ', ' .t(date( 'Y', $date));
   
-  if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
-    unset($variables['content']['links']['comment']['#links']['comment-add']);
-  }
+
   if ($variables['node']->getType() == 'article') {
       $node = $variables['node'];
-      $variables['comment_count'] = $node->get('comment')->comment_count;
+      
       $post_format = 'standard';
       try{
          $field_post_format = $node->get('field_post_format');
