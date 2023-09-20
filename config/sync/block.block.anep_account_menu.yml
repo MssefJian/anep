@@ -13,7 +13,7 @@ _core:
 id: anep_account_menu
 theme: anep
 region: offcanvas
-weight: -10
+weight: -11
 provider: null
 plugin: 'system_menu_block:account'
 settings:

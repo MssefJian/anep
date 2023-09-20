@@ -1,6 +1,6 @@
 uuid: 0cc1bd62-342e-4a17-b80b-9bb3c42750d9
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: anep_breadcrumbs
 theme: anep
-region: breadcrumbs
-weight: -15
+region: offcanvas
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:
