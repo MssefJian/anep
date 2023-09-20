@@ -3,10 +3,9 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_2
     - node.type.news
   module:
-    - gavias_view
     - node
     - user
 id: actus
@@ -193,33 +192,21 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: gvaowl
+        type: grid
         options:
-          row_class: ''
-          default_row_class: true
           uses_fields: false
-          items: '3'
-          items_lg: '4'
-          items_md: '3'
-          items_sm: '2'
-          items_xs: '1'
-          loop: 0
-          speed: '1000'
-          auto_play: 0
-          auto_play_speed: '2000'
-          auto_play_timeout: '5000'
-          auto_play_hover: 1
-          navigation: 1
-          rewind_nav: 0
-          pagination: 0
-          mouse_drag: 1
-          touch_drag: 1
-          el_class: ''
-          el_id: ''
+          columns: 3
+          automatic_width: true
+          alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: teaser_2
       query:
         type: views_query
         options:
@@ -249,7 +236,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: actualites
+      path: actus
     cache_metadata:
       max-age: -1
       contexts:

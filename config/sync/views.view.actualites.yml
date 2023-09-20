@@ -467,7 +467,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: actualites_old
+      path: actualites
     cache_metadata:
       max-age: -1
       contexts:
