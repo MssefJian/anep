@@ -976,10 +976,10 @@ header.header-default .stuck {
     color: #fff;
   }
   header.header-default .navigation .gva_menu > li > a:hover {
-    color: #11649a;
+    color: #d2d2d2;
   }
   header.header-default .navigation .gva_menu > li:hover > a, header.header-default .navigation .gva_menu > li:focus > a, header.header-default .navigation .gva_menu > li:active > a, header.header-default .navigation .gva_menu > li.menu-item--active-trail > a {
-    color: #11649a;
+    color: #d2d2d2;
   }
 }
 
