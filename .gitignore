@@ -62,3 +62,4 @@
 /drupal.phar
 /drupal
 /.idea
+config/sync/system.performance.yml

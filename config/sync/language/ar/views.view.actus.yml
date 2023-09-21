@@ -1,0 +1,10 @@
+label: مستجدات
+display:
+  default:
+    display_options:
+      title: مستجدات
+      pager:
+        options:
+          tags:
+            first: '« أول'
+            last: 'أخير »'

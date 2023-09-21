@@ -19,6 +19,18 @@
 }
 .flx-dir {flex-direction: row-reverse;}
 
+
+
+/* --------------- RTL ---------------------*/ 
+[dir="rtl"] .navigation .gva_menu > li > a {
+  letter-spacing: unset !important;
+}
+[dir="rtl"] .navigation .gva_menu > li:hover > a,[dir="rtl"]  .navigation .gva_menu > li:focus > a,[dir="rtl"]  .navigation .gva_menu > li:active > a,[dir="rtl"]  .navigation .gva_menu > li.menu-item--active-trail > a {
+  letter-spacing: unset !important;
+}
+
+
+
 @media (min-width: 992px) {
     .navigation .gva_menu > li > a {
         font-size: 17px !important;
