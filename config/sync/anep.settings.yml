@@ -15,11 +15,11 @@ enable_customize: '0'
 logo_width: 160px
 logo_padding_top: ''
 logo_padding_bottom: ''
-sticky_menu: '0'
+sticky_menu: '1'
 site_layout: wide
 preloader: '0'
 google_key: ''
-default_header: header
+default_header: header-1
 footer_skin: ''
 footer_first_size: '3'
 footer_second_size: '3'
