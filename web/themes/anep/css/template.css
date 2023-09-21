@@ -387,7 +387,7 @@ a.disable {
 
 .breadcrumb-content-inner .gva-block-breadcrumb .breadcrumb-links nav.breadcrumb ol li {
   float: left;
-  color: #11649a;
+  color: #fff;
   font-size: 20px;
 }
 
@@ -396,7 +396,7 @@ a.disable {
 }
 
 .breadcrumb-content-inner .gva-block-breadcrumb .breadcrumb-links nav.breadcrumb ol li a:hover {
-  color: #11649a;
+  color: #fff;
 }
 
 .breadcrumb-content-inner .gva-block-breadcrumb .breadcrumb-links nav.breadcrumb ol li span {
