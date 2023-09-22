@@ -18,3 +18,13 @@ display:
           label: نتائج
         field_status:
           label: حالة
+        view_node:
+          label: تفاصيل
+          text: تفاصيل
+      title: 'مناصب المسؤولية'
+  page_1:
+    display_title: 'مناصب المسؤولية'
+    display_options:
+      menu:
+        title: 'مناصب المسؤولية'
+label: 'مناصب المسؤولية'

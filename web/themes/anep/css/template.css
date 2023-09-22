@@ -1166,16 +1166,16 @@ header.header-2 .stuck .quick-side-icon a, header.header-2 .stuck .gva-search-re
 }
 
 #footer {
-  color: #999b9f;
-  background: url("../images/bg-footer.jpg") no-repeat center center #222429;
+  color: #fff;
+  background: url("../images/bg-footer.jpg") no-repeat center center #23367b;
 }
 
 #footer a {
-  color: #999b9f;
+  color: #fff;
 }
 
 #footer a:hover, #footer a:focus {
-  color: #11649a;
+  color: #fff;
 }
 
 #footer .footer-center {

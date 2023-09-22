@@ -22,3 +22,10 @@ display:
           label: 'لائحة الإنتظار'
         field_status:
           label: حالة
+      title: التوظيف
+  page_1:
+    display_options:
+      menu:
+        title: التوظيف
+        description: التوظيف
+label: التوظيف

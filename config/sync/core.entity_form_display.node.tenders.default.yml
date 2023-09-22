@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.tenders.body
     - field.field.node.tenders.field_cps
     - field.field.node.tenders.field_deadline
     - field.field.node.tenders.field_deadline_discount_bids
     - field.field.node.tenders.field_estimate
     - field.field.node.tenders.field_id_tender
+    - field.field.node.tenders.field_l_annonce
     - field.field.node.tenders.field_notice
     - field.field.node.tenders.field_publication_date
     - field.field.node.tenders.field_rc
@@ -18,23 +18,13 @@ dependencies:
   module:
     - datetime
     - file
+    - link
     - path
-    - text
 id: node.tenders.default
 targetEntityType: node
 bundle: tenders
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
@@ -76,6 +66,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_l_annonce:
+    type: link_default
+    weight: 132
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_notice:
     type: file_generic
     weight: 128
@@ -106,6 +104,54 @@ content:
   field_the_announcement:
     type: string_textfield
     weight: 127
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  gva_box_layout:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  gva_breadcrumb:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  gva_header:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  gva_node_class:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  gva_node_layout:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  gva_pagebuilder_content:
+    type: string_textfield
+    weight: 99
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  gva_pagebuilder_enable:
+    type: string_textfield
+    weight: 98
     region: content
     settings:
       size: 60

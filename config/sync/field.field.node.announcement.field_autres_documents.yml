@@ -1,27 +1,27 @@
-uuid: b77d944a-1b75-4f55-89e2-52d651b63493
-langcode: en
+uuid: 3eab3f27-fcff-4885-bafa-782d173275a3
+langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.field_waiting_list
+    - field.storage.node.field_autres_documents
     - node.type.announcement
   module:
     - file
-id: node.announcement.field_waiting_list
-field_name: field_waiting_list
+id: node.announcement.field_autres_documents
+field_name: field_autres_documents
 entity_type: node
 bundle: announcement
-label: 'Waiting list'
+label: "L'Annonce"
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: 'annonce/liste_attente/[date:custom:Y]-[date:custom:m]'
+  file_directory: 'annonce/autres/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'pdf docx'
   max_filesize: ''
-  description_field: false
+  description_field: true
 field_type: file

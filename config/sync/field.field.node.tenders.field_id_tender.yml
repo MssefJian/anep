@@ -9,7 +9,7 @@ id: node.tenders.field_id_tender
 field_name: field_id_tender
 entity_type: node
 bundle: tenders
-label: 'Id tender'
+label: ' Numero Appel Offre'
 description: ''
 required: false
 translatable: true

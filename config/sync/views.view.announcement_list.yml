@@ -11,6 +11,7 @@ dependencies:
     - field.storage.node.field_results
     - field.storage.node.field_status
     - node.type.announcement
+    - system.menu.main
   module:
     - dardev_table
     - datetime
@@ -32,7 +33,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Announcement list'
+      title: 'Postes de Responsabilité'
       fields:
         title:
           id: title
@@ -542,6 +543,59 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
+          label: Détails
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: Accéder
+          output_url_as_text: false
+          absolute: false
       pager:
         type: full
         options:
@@ -737,12 +791,22 @@ display:
         - 'config:field.storage.node.field_status'
   page_1:
     id: page_1
-    display_title: Page
+    display_title: 'Postes de Responsabilité'
     display_plugin: page
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
       path: publications/poste-responsabilite
+      menu:
+        type: normal
+        title: 'Postes de Responsabilité'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: 'menu_link_content:5ca93865-c2ca-48c6-a0a0-717fb5a3d042'
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

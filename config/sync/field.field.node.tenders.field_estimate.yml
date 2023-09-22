@@ -9,7 +9,7 @@ id: node.tenders.field_estimate
 field_name: field_estimate
 entity_type: node
 bundle: tenders
-label: Estimate
+label: Estimation
 description: ''
 required: false
 translatable: true

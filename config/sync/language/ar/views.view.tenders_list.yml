@@ -3,3 +3,8 @@ display:
   default:
     display_options:
       title: 'طلبات العروض'
+  page_1:
+    display_title: 'طلبات العروض'
+    display_options:
+      menu:
+        title: 'طلبات العروض'

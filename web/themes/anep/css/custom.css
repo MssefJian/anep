@@ -19,17 +19,66 @@
 }
 .flx-dir {flex-direction: row-reverse;}
 
-
-
+.node-detail .fa,.node-detail  .fas {
+  font-size: 40px;
+}
+.fa, .fas {
+  font-weight: 900;
+  color: #11649a;
+}
+.node-detail ul {
+  margin: 0;
+  padding-left: 0px;
+}
+.node-detail  ul li {
+  list-style: none;
+}
 /* --------------- RTL ---------------------*/ 
+[dir="rtl"] h1,[dir="rtl"]  h2,[dir="rtl"]  h3,[dir="rtl"]  h4,[dir="rtl"]  h5,[dir="rtl"]  h6,[dir="rtl"] .h1,[dir="rtl"]  .h2,[dir="rtl"]  .h3,[dir="rtl"]  .h4,[dir="rtl"]  .h5,[dir="rtl"]  .h6 {
+  margin-bottom: 0.5rem;
+  font-family: "caro", sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #222429;
+}
 [dir="rtl"] .navigation .gva_menu > li > a {
   letter-spacing: unset !important;
 }
 [dir="rtl"] .navigation .gva_menu > li:hover > a,[dir="rtl"]  .navigation .gva_menu > li:focus > a,[dir="rtl"]  .navigation .gva_menu > li:active > a,[dir="rtl"]  .navigation .gva_menu > li.menu-item--active-trail > a {
   letter-spacing: unset !important;
 }
-
-
+[dir="rtl"] li , [dir="rtl"] ul ,[dir="rtl"] p ,[dir="rtl"] p , [dir="rtl"] span , [dir="rtl"] table   { 
+  letter-spacing: unset !important;
+  text-align: right !important;
+}
+.navigation .gva_menu li a {
+  text-align: right !important;
+}
+[dir="rtl"] .breadcrumb-content-inner .gva-block-breadcrumb .breadcrumb-links nav.breadcrumb ol li {
+  float: right;
+}
+[dir="rtl"] .dropbutton-arrow {
+  right: auto;
+  left: 5em;
+}
+[dir="rtl"] .post-block.teaser-2 .post-content .post-title {
+  margin-bottom: 0;
+  font-size: 21px;
+  line-height: 25px;
+}
+[dir="rtl"] .gsc-heading.style-1 .title {
+  font-size: 50px;
+  line-height: 60px;
+  position: relative;
+  text-transform: uppercase;
+}
+[dir="rtl"] body {
+text-align: right;
+}
+[dir="rtl"] .scroll-to-top {
+  right:unset !important;
+  left: 40px;
+}
 
 @media (min-width: 992px) {
     .navigation .gva_menu > li > a {
@@ -41,11 +90,11 @@
   }
 
 #footer .socials-footer a {
-  color: #999b9f !important;
+  color: #fff !important;
 }
 
 .copyright-inner h3 {
-  color: #999b9f;
+  color: #fff;
 }
 .f-socials, .f-cp {
   display: inline-block;

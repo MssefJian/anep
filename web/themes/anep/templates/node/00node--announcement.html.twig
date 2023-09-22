@@ -1,0 +1,179 @@
+{%
+    set classes = [
+      'node',
+      'node-detail',
+      'node--type-' ~ node.bundle|clean_class,
+      node.isPromoted() ? 'node--promoted',
+      node.isSticky() ? 'node--sticky',
+      not node.isPublished() ? 'node--unpublished',
+      view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+      'clearfix',
+    ]
+  %}
+  
+  <!-- Start Display article for teaser page -->
+  {% if view_mode == 'teaser' %} 
+    <div class="post-block teaser-1 text-center">
+      <div class="post-image">
+        {{ content.field_image }}
+      </div>
+      <div class="post-content">
+          <div class="post-meta">
+            <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
+            <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
+            
+          </div>
+          <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3> 
+          <div class="post-body">{{ content.body }}</div>          
+          <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"><i class="fas fa-angle-right"></i></a> </div>          
+      </div>
+    </div>
+  
+  {% elseif view_mode == 'teaser_2' %} 
+    <div class="post-block teaser-2">
+      <div class="post-image">
+        {{ content.field_image }}
+      </div>
+      <div class="post-content text-center">
+          <div class="post-meta">
+            <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
+            <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
+            
+          </div>
+          <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>          
+      </div>
+    </div>
+  
+  
+  <!-- End Display article for teaser page -->
+  {% else %}
+  <!-- Start Display article for detail page -->
+  
+  <article{{ attributes.addClass(classes) }}>
+    <div class="post-block">
+        
+      
+  
+        {% if node.field_accepted_to_oral_test %}
+        <div class="row">
+          <div class="col-md-4 col-xs-12">
+            {{ node.field_accepted_to_oral_test.fieldDefinition.label }}
+          </div>
+          <div class="col-md-8 col-xs-12">
+            <a href="{{ file_url(node.field_accepted_to_oral_test.entity.uri.value) }}" target="_blank"><i class="fas fa-file-download"></i></a>
+            
+          </div>
+        </div>
+      {% endif %}
+      {% if node.field_accepted_to_written_test %}
+      <div class="row">
+        <div class="col-md-4  col-xs-12">
+          {{ node.field_accepted_to_written_test.fieldDefinition.label }}
+        </div>
+        <div class="col-md-8  col-xs-12">
+            <a href="{{ file_url(node.field_accepted_to_written_test.entity.uri.value) }}" target="_blank"><i class="fas fa-file-download"></i></a>
+        </div>
+      </div>
+    {% endif %}
+    {% if node.field_competition_date %}
+    <div class="row">
+      <div class="col-md-4  col-xs-12">
+        {{ node.field_competition_date.fieldDefinition.label }}
+      </div>
+      <div class="col-md-8  col-xs-12">
+        {{ node.field_competition_date.value|date("Y-m-d") }}
+      </div>
+    </div>
+  {% endif %}
+  {% if node.field_interview_date %}
+  <div class="row">
+    <div class="col-md-4  col-xs-12">
+        {{ node.field_interview_date.fieldDefinition.label }}
+    </div>
+    <div class="col-md-8  col-xs-12">
+      {{ node.field_interview_date.value|date("Y-m-d") }}
+    </div>
+  </div>
+{% endif %}
+
+        {% if node.field_deadline %}
+          <div class="row">
+            <div class="col-md-4">{{ node.field_deadline.fieldDefinition.label }}</div>
+            <div class="col-md-8">{{ node.field_deadline.value|date("Y-m-d") }}</div>
+          </div>
+          {% endif %}
+          {% if node.field_publication_date %}  
+          <div class="row">
+            <div class="col-md-4">{{ node.field_publication_date.fieldDefinition.label }} </div>
+            <div class="col-md-8">{{ node.field_publication_date.value|date("Y-m-d") }}</div>
+          </div>
+          {% endif %}
+          {% if node.field_waiting_list %}
+          <div class="row">
+            <div class="col-md-4  col-xs-12">
+              {{ node.field_waiting_list.fieldDefinition.label }}
+            </div>
+            <div class="col-md-8  col-xs-12">
+                <a href="{{ file_url(node.field_waiting_list.entity.uri.value) }}" target="_blank"><i class="fas fa-file-download"></i></a>
+            </div>
+          </div>
+        {% endif %}          
+
+        {% if node.field_number_post %}
+          <div class="row">
+            <div class="col-md-4">{{ node.field_number_post.fieldDefinition.label }} </div>
+            <div class="col-md-8">{{ node.field_number_post.value }}</div>
+          </div>
+          {% endif %}   
+          {% if node.field_results %}
+          <div class="row">
+            <div class="col-md-4  col-xs-12">
+              {{ node.field_results.fieldDefinition.label }}
+            </div>
+            <div class="col-md-8  col-xs-12">
+                <a href="{{ file_url(node.field_results.entity.uri.value) }}" target="_blank"><i class="fas fa-file-download"></i></a>
+            </div>
+          </div>
+        {% endif %}          
+        {% if node.field_status %}  
+          <div class="row">
+            <div class="col-md-4">{{ node.field_status.fieldDefinition.label }} </div>
+            <div class="col-md-8">{{ node.field_status.entity.label }}</div>
+          </div>
+        {% endif %}  
+        {% if node.field_announcement_type %}    
+          <div class="row">
+            <div class="col-md-4">{{ node.field_announcement_type.fieldDefinition.label }} </div>
+            <div class="col-md-8">{{ node.field_announcement_type.value }}</div>
+          </div>
+          {% endif %}    
+          {% if node.field_autres_documents|length > 0 %}
+  <div class="row">
+    <div class="col-md-4">
+      {{ node.field_autres_documents.fieldDefinition.label }}
+    </div>
+    <div class="col-md-8">
+      <ul>
+        {% for key , item in node.field_autres_documents %}
+          <li>
+            {% if node.field_autres_documents[key].description %}
+            <a href="{{ file_url(item.entity.uri.value) }}"><i class="fas fa-file-download"></i> {{ node.field_autres_documents[key].description }}</a> 
+            {% else %}
+              <a href="{{ file_url(item.entity.uri.value) }}"><i class="fas fa-file-download"></i> {{ item.entity.filename.value }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}
+
+
+        
+  
+    </div>
+  
+  </article>
+  
+  <!-- End Display article for detail page -->
+  {% endif %}

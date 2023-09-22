@@ -11,7 +11,7 @@ id: node.tenders.field_notice
 field_name: field_notice
 entity_type: node
 bundle: tenders
-label: notice
+label: Avis
 description: ''
 required: false
 translatable: false
@@ -23,5 +23,5 @@ settings:
   file_directory: 'appel_offre/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'pdf docx'
   max_filesize: ''
-  description_field: false
+  description_field: true
 field_type: file

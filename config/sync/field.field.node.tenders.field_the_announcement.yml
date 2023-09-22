@@ -9,9 +9,9 @@ id: node.tenders.field_the_announcement
 field_name: field_the_announcement
 entity_type: node
 bundle: tenders
-label: 'The announcement'
+label: Objet
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

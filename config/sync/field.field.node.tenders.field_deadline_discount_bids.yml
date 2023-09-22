@@ -11,7 +11,7 @@ id: node.tenders.field_deadline_discount_bids
 field_name: field_deadline_discount_bids
 entity_type: node
 bundle: tenders
-label: 'Deadline Discount Bids'
+label: 'Date Limite Retrait dossier'
 description: ''
 required: false
 translatable: true
