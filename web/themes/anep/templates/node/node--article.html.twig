@@ -12,7 +12,7 @@
 %}
 
 <!-- Start Display article for teaser page -->
-{% if view_mode == 'teaser' %} 
+{% if view_mode == 'teaser' %}
   <div class="post-block teaser-1 text-center">
     <div class="post-image">
       {{ content.field_image }}
@@ -21,15 +21,15 @@
         <div class="post-meta">
           <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          
+
         </div>
-        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3> 
-        <div class="post-body">{{ content.body }}</div>          
-        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"><i class="fas fa-angle-right"></i></a> </div>          
+        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>
+        <div class="post-body">{{ content.body }}</div>
+        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"><i class="fas fa-angle-right"></i></a> </div>
     </div>
   </div>
 
-{% elseif view_mode == 'teaser_2' %} 
+{% elseif view_mode == 'teaser_2' %}
   <div class="post-block teaser-2">
     <div class="post-image">
       {{ content.field_image }}
@@ -38,9 +38,9 @@
         <div class="post-meta">
           <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          
+
         </div>
-        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>          
+        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>
     </div>
   </div>
 
@@ -51,7 +51,7 @@
 
 <article{{ attributes.addClass(classes) }}>
   <div class="post-block">
-      
+
     <div class="post-thumbnail post-{{ post_format }}">
       {% if post_format == 'video' or post_format == 'audio' and gva_iframe %}
         {{ gva_iframe|raw }}
@@ -59,19 +59,19 @@
         {{ content.field_post_gallery }}
       {% else %}
         {{ content.field_image }}
-      {% endif %}  
+      {% endif %}
     </div>
 
     <div class="post-content">
-      <div class="post-meta">
+      {#<div class="post-meta">
           <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          
-        </div>
+
+        </div>#}
       {{ title_prefix }}
          <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
-      {{ title_suffix }}  
-      
+      {{ title_suffix }}
+
       {% if display_submitted %}
         <div class="node__meta hidden">
           {{ author_picture }}
