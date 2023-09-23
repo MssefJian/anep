@@ -1,0 +1,24 @@
+uuid: a2d724d6-7f45-403b-a5c4-0ec526d569d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.home_paragraph
+  module:
+    - text
+id: paragraph.home_paragraph.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: home_paragraph
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

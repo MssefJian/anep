@@ -6,10 +6,12 @@ dependencies:
     - field.field.paragraph.home_paragraph.field_description
     - field.field.paragraph.home_paragraph.field_icon
     - field.field.paragraph.home_paragraph.field_statistics
+    - field.field.paragraph.home_paragraph.field_summary
     - image.style.thumbnail
     - paragraphs.paragraphs_type.home_paragraph
   module:
     - image
+    - text
 id: paragraph.home_paragraph.default
 targetEntityType: paragraph
 bundle: home_paragraph
@@ -36,6 +38,14 @@ content:
     weight: 12
     region: content
     settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_summary:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   translation:

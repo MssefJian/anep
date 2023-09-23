@@ -1,6 +1,6 @@
 (function ($) {
   "use strict";
-    
+
     var $event = $.event,
     $special, resizeTimeout;
     $special = $event.special.debouncedresize = {
@@ -29,6 +29,16 @@
 
   //------- OWL carousle init  ---------------
   jQuery(document).ready(function(){
+
+    jQuery('.c-tab').click(function() {
+      jQuery('.sub-tab').hide();
+      // Get the corresponding data-id
+      var dataId = jQuery(this).attr('id');
+      var dataIdDiv = jQuery('[data-id="' + dataId + '"]');
+      if (!dataIdDiv.hasClass('empty')) {
+        dataIdDiv.show();
+      }
+    });
     function init_carousel_owl(){
       $('.init-carousel-owl').each(function(){
         var items = $(this).data('items') ? $(this).data('items') : 5;
@@ -56,7 +66,7 @@
             autoplayHoverPause: auto_play_hover,
             navText: [ '<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>' ],
             autoHeight: false,
-            loop: loop, 
+            loop: loop,
             dots: pagination,
             rewind: rewind_nav,
             smartSpeed: speed,
@@ -87,19 +97,19 @@
             }
         });
 
-        $(this).on('translated.owl.carousel', function (event) { 
+        $(this).on('translated.owl.carousel', function (event) {
           toggleArrows($(this));
-        }); 
+        });
 
         $(this).find('.owl-item.active').eq(1).addClass('center');
         $(this).on('translated.owl.carousel', function(e){
           $(this).find('.owl-item.center').removeClass('center');
           $(this).find('.owl-stage .active').eq(1).addClass('center');
         });
-     }); 
-    }  
+     });
+    }
 
-    function toggleArrows(elm){ 
+    function toggleArrows(elm){
       elm.find(".owl-item").removeClass('active-effect');
       elm.find(".owl-item.active").addClass('active-effect');
     }
@@ -138,10 +148,10 @@
       smartSpeed: 1000,
       autoplayTimeout: 6000,
       autoplaySpeed: 1000,
-      autoplay: true, 
+      autoplay: true,
       autoplayHoverPause: true,
       nav: false,
-      dots: false, 
+      dots: false,
       responsive : {
         0 : {
           items: 1,
@@ -178,7 +188,7 @@
 
     $('.gallery-popup').each(function(){
       $(this).magnificPopup({
-        delegate: 'a.image-popup', 
+        delegate: 'a.image-popup',
         type: 'image',
         gallery: {
           enabled: true
@@ -190,11 +200,11 @@
 
   //===== AOS ============
   var wow = new WOW({
-    boxClass:     'wow',     
-    animateClass: 'animated', 
-    offset:       0,          
-    mobile:       false,      
-    live:         false,      
+    boxClass:     'wow',
+    animateClass: 'animated',
+    offset:       0,
+    mobile:       false,
+    live:         false,
   });
   wow.init();
 
@@ -220,7 +230,7 @@
         itemSelector : '.item-masory',
         gutterWidth: 0,
         columnWidth: 1,
-      }); 
+      });
     });
 
     $('.gva-search-region .icon').on('click',function(e){
@@ -239,7 +249,7 @@
         $('.gva-offcanvas-mobile').removeClass('show-view');
       }else{
         $(this).addClass('show-view');
-        $('.gva-offcanvas-mobile').addClass('show-view'); 
+        $('.gva-offcanvas-mobile').addClass('show-view');
       }
       e.stopPropagation();
     })
@@ -306,7 +316,7 @@
                 itemSelector : '.item-masory',
                 gutterWidth: 0,
                 columnWidth: 1,
-            }); 
+            });
         });
     });
 
@@ -337,11 +347,11 @@
         setTimeout(function() { $this.animate({width: $this.attr("data-progress-animation")}, 800);}, delay);
       }, {accX: 0, accY: -50});
     });
-  
+
     /*------------Pie Charts---------------------------*/
     var pieChartClass = 'pieChart',
       pieChartLoadedClass = 'pie-chart-loaded';
-    
+
     function initPieCharts() {
       var chart = $('.' + pieChartClass);
       chart.each(function() {
@@ -412,7 +422,7 @@
   });
 
   $(document).ready(function(){
-  
+
     $('.quick-side-icon a').click(function(e){
       e.preventDefault();
       if($(this).parents('.quick-side-icon').hasClass('open')){
