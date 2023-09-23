@@ -1,5 +1,5 @@
-uuid: 5ecdda96-8568-4c21-a867-a3bada6243d4
-langcode: en
+uuid: 1f45c2ac-7701-4bcd-97e9-ed714110c1d0
+langcode: fr
 status: true
 dependencies:
   config:
@@ -11,9 +11,13 @@ entity_type: paragraph
 bundle: home_paragraph
 label: statistics
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

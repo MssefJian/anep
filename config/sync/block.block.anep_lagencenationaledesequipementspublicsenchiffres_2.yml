@@ -1,0 +1,29 @@
+uuid: b24fea71-f159-44f2-bd8f-2a0ad23aefe6
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:home_paragraph:31f0c31f-b820-438f-8193-cdb88e8de684'
+  module:
+    - block_content
+    - gaviasthemer
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_lagencenationaledesequipementspublicsenchiffres_2
+theme: anep
+region: other
+weight: 0
+provider: null
+plugin: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
+settings:
+  id: 'block_content:31f0c31f-b820-438f-8193-cdb88e8de684'
+  label: 'L’Agence Nationale des Équipements Publics en chiffres Interne'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
