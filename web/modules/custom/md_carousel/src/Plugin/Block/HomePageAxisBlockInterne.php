@@ -9,15 +9,15 @@ use Drupal\image\Entity\ImageStyle;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a home page axis block.
+ * Provides a axes stratégiques Interne block.
  *
  * @Block(
- *   id = "md_carousel_home_page_axis",
- *   admin_label = @Translation("Home page axis"),
+ *   id = "md_carousel_interne_axis",
+ *   admin_label = @Translation("les axes stratégiques Interne"),
  *   category = @Translation("Custom"),
  * )
  */
-class HomePageAxisBlock extends BlockBase implements ContainerFactoryPluginInterface
+class HomePageAxisBlockInterne extends BlockBase implements ContainerFactoryPluginInterface
 {
 
   /**
@@ -33,7 +33,7 @@ class HomePageAxisBlock extends BlockBase implements ContainerFactoryPluginInter
   protected string $vocabularyName = 'axis';
 
   /**
-   * Constructs a new HomePageAxisBlock instance.
+   * Constructs a new HomePageAxisBlockInterne instance.
    *
    * @param array $configuration
    *   A configuration array containing information about the plugin instance.
@@ -90,7 +90,7 @@ class HomePageAxisBlock extends BlockBase implements ContainerFactoryPluginInter
       $axis[] = $tmp;
     }
     return [
-      '#theme' => 'home_axis',
+      '#theme' => 'home_axis_interne',
       '#axis' => $axis
     ];
 

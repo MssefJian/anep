@@ -15,7 +15,7 @@ third_party_settings:
 id: anep_webform
 theme: anep
 region: other
-weight: 0
+weight: -15
 provider: null
 plugin: webform_block
 settings:

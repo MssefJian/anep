@@ -51,7 +51,7 @@
   letter-spacing: unset !important;
   text-align: right !important;
 }
-.navigation .gva_menu li a {
+[dir="rtl"] .navigation .gva_menu li a {
   text-align: right !important;
 }
 [dir="rtl"] .breadcrumb-content-inner .gva-block-breadcrumb .breadcrumb-links nav.breadcrumb ol li {

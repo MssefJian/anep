@@ -1,0 +1,24 @@
+uuid: c8cfb0a7-d31d-4476-b437-fb442fd511e9
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_carousel
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_lesaxesstrategiquesinterne
+theme: anep
+region: other
+weight: 0
+provider: null
+plugin: md_carousel_interne_axis
+settings:
+  id: md_carousel_interne_axis
+  label: 'les axes stratégiques Interne'
+  label_display: '0'
+  provider: md_carousel
+visibility: {  }

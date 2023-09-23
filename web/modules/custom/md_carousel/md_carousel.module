@@ -13,5 +13,10 @@ function md_carousel_theme($existing, $type, $theme, $path)
         'axis' => NULL
       ],
     ],
+    'home_axis_interne' => [
+      'variables' => [
+        'axis' => NULL
+      ],
+    ],
   ];
 }

@@ -1,4 +1,4 @@
-uuid: 491c6522-75a8-457a-9e83-bf9ff798d025
+uuid: bb5bbfa6-9198-4f27-9534-e31745266e78
 langcode: fr
 status: true
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: anep_homepageaxis_2
+id: anep_homepageaxis
 theme: anep
 region: anep_axes
 weight: 0
