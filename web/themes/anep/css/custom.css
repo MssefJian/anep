@@ -122,6 +122,10 @@ text-align: right;
     header.header-default .navigation .gva_menu > li, header.header-2 .navigation .gva_menu > li {
       padding: 36px 10px !important;
     }
+    [dir="rtl"] .navigation .gva_menu .sub-menu {
+      right: 0;
+      left:unset;
+    }
   }
 
 #footer .socials-footer a {
