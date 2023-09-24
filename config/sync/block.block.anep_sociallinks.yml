@@ -1,0 +1,24 @@
+uuid: 5735cfe7-8799-4fd9-b048-fa4c8ff48283
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_sociallinks
+theme: anep
+region: copyright
+weight: 0
+provider: null
+plugin: md_manager_social_media
+settings:
+  id: md_manager_social_media
+  label: 'Social links'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }
