@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser_2
     - node.type.news
+    - system.menu.main
   module:
     - node
     - user
@@ -237,6 +238,15 @@ display:
     display_options:
       display_extenders: {  }
       path: actualites
+      menu:
+        type: normal
+        title: Actualités
+        description: ''
+        weight: -44
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

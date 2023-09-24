@@ -4,7 +4,8 @@
     height: 350px;
 }
 .service-block:hover {
-    background: #222429;
+    background: #2C75A6;
+    color: #fff;
   }
 .ch-anep .owl-item {
     padding-left: 15px;
@@ -126,9 +127,16 @@ text-align: right;
 #footer .socials-footer a {
   color: #fff !important;
 }
-
+#footer ul.menu > li > a {
+  font-size: 16px;
+}
+#footer ul.menu > li {
+  padding: 1px 0;
+}
+#footer {font-size: 16px;}
 .copyright-inner h3 {
   color: #fff;
+  font-size: 20px;
 }
 .f-socials, .f-cp {
   display: inline-block;

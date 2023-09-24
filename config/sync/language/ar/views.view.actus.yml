@@ -8,3 +8,7 @@ display:
           tags:
             first: '« أول'
             last: 'أخير »'
+  page_1:
+    display_options:
+      menu:
+        title: مستجدات

@@ -1167,7 +1167,7 @@ header.header-2 .stuck .quick-side-icon a, header.header-2 .stuck .gva-search-re
 
 #footer {
   color: #fff;
-  background: url("../images/bg-footer.jpg") no-repeat center center #23367b;
+  background: url("../images/bg-footer.jpg") no-repeat center center #2C75A6;
 }
 
 #footer a {
@@ -1179,7 +1179,7 @@ header.header-2 .stuck .quick-side-icon a, header.header-2 .stuck .gva-search-re
 }
 
 #footer .footer-center {
-  padding: 100px 0 80px;
+  padding: 50px 0 50px;
 }
 
 @media (max-width: 1199.98px) {
@@ -1202,12 +1202,12 @@ header.header-2 .stuck .quick-side-icon a, header.header-2 .stuck .gva-search-re
 #footer .block .block-title {
   color: #fff;
   font-weight: 500;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 #footer .copyright-inner {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
-  padding: 30px 0;
+  padding: 15px 0;
 }
 
 #footer .copyright-inner a {
@@ -3753,10 +3753,10 @@ body.maintenance-page {
   background: #1c1e22;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
-  line-height: 45px;
-  width: 45px;
-  height: 45px;
+  font-size: 15px;
+  line-height: 34px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -6489,7 +6489,7 @@ div.resizable-textarea textarea {
 }
 
 .contact-info ul li i {
-  color: #11649a;
+  color: #e8e8e8;
   width: 24px;
   margin-right: 10px;
 }
@@ -16766,7 +16766,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
 }
 
 .service-block:hover {
-  background: #222429;
+  background: #2C75A6;
 }
 
 .service-block:hover:before {

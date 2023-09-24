@@ -597,7 +597,7 @@ display:
         type: normal
         title: 'Appels d’offres'
         description: ''
-        weight: 0
+        weight: -42
         expanded: false
         menu_name: main
         parent: 'menu_link_content:5ca93865-c2ca-48c6-a0a0-717fb5a3d042'

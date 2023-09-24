@@ -15,7 +15,7 @@ dependencies:
     - text
     - user
 id: news
-label: News
+label: Actualités
 module: views
 description: ''
 tag: ''
