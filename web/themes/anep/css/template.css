@@ -14635,9 +14635,9 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 }
 
 .no-grayscale, .post-block:hover img, .team-block.team-v1:hover img, .team-single-page .item-image:hover img, .widget.gsc-image:hover img, .gsc-images-parallax .image-1:hover img, .gsc-images-parallax .image-2:hover img, .gsc-video-box.style-1:hover .image img, .gsc-video-box.style-2:hover .image-layer, .gsc-tabs-content .images:hover img, .gsc-image-content:hover .image, .portfolio-v1:hover img, .portfolio-v2:hover img, .portfolio-v2:active img, .portfolio-v2:focus img, .portfolio-v4:hover img, .portfolio-v4:active img, .portfolio-v4:focus img, .portfolio-single .portfolio-images:hover img, .portfolio-single .post-thumbnail:hover img, .service-block-singe .item-image:hover img {
-  -webkit-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(50%);
+  -ms-filter: grayscale(50%);
+  -moz-filter: grayscale(50%);
 }
 
 @media (max-width: 991.98px) {

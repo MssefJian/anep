@@ -145,6 +145,9 @@ text-align: right;
 .f-cp {
   float: right;
 }
+.dirc-ini {
+  direction:initial;
+}
 @media (max-width: 767px) {
   .f-socials {
     text-align: center;

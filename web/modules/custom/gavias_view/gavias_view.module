@@ -35,6 +35,7 @@ function template_preprocess_views_view_gvaowl(&$variables) {
   $variables['attributes']['class'][] = $settings['el_class'];
   $variables['attributes']['class'][] = 'owl-carousel';
   $variables['attributes']['class'][] = 'init-carousel-owl';
+  $variables['attributes']['class'][] = 'dirc-ini';
   if($settings['el_id']){
     $variables['attributes']['id'] = $settings['el_id'];
   }
