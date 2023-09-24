@@ -66,19 +66,21 @@ class HomePageAxisBlock extends BlockBase implements ContainerFactoryPluginInter
    */
   public function build(): array
   {
+    $language = \Drupal::languageManager()->getCurrentLanguage();
     $terms = $this->entityTypeManager->getStorage('taxonomy_term')
       ->loadTree($this->vocabularyName);
 
-    $term_entities = [];
+    $termEntities = [];
     foreach ($terms as $term) {
-      $term_entity = $this->entityTypeManager->getStorage('taxonomy_term')->load($term->tid);
-      if ($term_entity) {
-        $term_entities[] = $term_entity;
+      $termEntity = $this->entityTypeManager->getStorage('taxonomy_term')->load($term->tid);
+      $termEntity = \Drupal::service('entity.repository')->getTranslationFromContext($termEntity, $language->getId());
+      if ($termEntity) {
+        $termEntities[] = $termEntity;
       }
     }
 
     $axis = [];
-    foreach ($term_entities as $term) {
+    foreach ($termEntities as $term) {
       $tmp['title'] = $term->get('name')->value;
       $tmp['description'] = $term->get('description')->value;
       $image_icon = $term->get('field_icon');
