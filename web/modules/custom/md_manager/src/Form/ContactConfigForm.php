@@ -18,14 +18,14 @@ class ContactConfigForm extends ConfigFormBase
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['contact_config_form.settings'];
+    return ['md_manager.settings'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('contact_config_form.settings');
+    $config = $this->config('md_manager.settings');
 
     $languages = \Drupal::languageManager()->getLanguages();
     foreach ($languages as $language) {
@@ -64,7 +64,7 @@ class ContactConfigForm extends ConfigFormBase
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $config = $this->configFactory->getEditable('contact_config_form.settings');
+    $config = $this->configFactory->getEditable('md_manager.settings');
 
     $languages = \Drupal::languageManager()->getLanguages();
     foreach ($languages as $language) {

@@ -62,7 +62,7 @@ class TopBarContactBlock extends BlockBase implements ContainerFactoryPluginInte
    */
   public function build(): array
   {
-    $config = $this->configFactory->getEditable('contact_config_form.settings');
+    $config = $this->configFactory->getEditable('md_manager.settings');
     $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
     $contact = [
       'address' => $config->get($lang . '.address'),
