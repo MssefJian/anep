@@ -35,3 +35,11 @@ md_manager.states:
     _permission: 'access content'
   options:
     no_cache: 'TRUE'
+
+md_manager.contact_config_form:
+  path: '/admin/config/contact-config-form'
+  defaults:
+    _form: '\Drupal\md_manager\Form\ContactConfigForm'
+    _title: 'Contact Config Form'
+  requirements:
+    _permission: 'administer site configuration'

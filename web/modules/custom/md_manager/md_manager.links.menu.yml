@@ -1,0 +1,13 @@
+md_manager.contact_link:
+  title: 'Configuration des coordonnées de contact'
+  description: 'Configuration des coordonnées de contact pour le bloc TopBar'
+  parent: system.admin_config
+  route_name: md_manager.contact_config_form
+
+
+
+
+
+
+
+

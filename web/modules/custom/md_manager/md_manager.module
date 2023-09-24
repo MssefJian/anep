@@ -41,6 +41,11 @@ function md_manager_theme($existing, $type, $theme, $path)
         'data' => NULL,
       ],
     ],
+    'top_bar' => [
+      'variables' => [
+        'contact' => NULL
+      ],
+    ],
   ];
 }
 
