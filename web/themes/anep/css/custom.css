@@ -67,7 +67,7 @@
     font-weight: normal;
     font-family: "Teko", sans-serif;
 }
-/* --------------- RTL ---------------------*/ 
+/* --------------- RTL ---------------------*/
 [dir="rtl"] h1,[dir="rtl"]  h2,[dir="rtl"]  h3,[dir="rtl"]  h4,[dir="rtl"]  h5,[dir="rtl"]  h6,[dir="rtl"] .h1,[dir="rtl"]  .h2,[dir="rtl"]  .h3,[dir="rtl"]  .h4,[dir="rtl"]  .h5,[dir="rtl"]  .h6 {
   margin-bottom: 0.5rem;
   font-family: "caro", sans-serif;
@@ -81,7 +81,7 @@
 [dir="rtl"] .navigation .gva_menu > li:hover > a,[dir="rtl"]  .navigation .gva_menu > li:focus > a,[dir="rtl"]  .navigation .gva_menu > li:active > a,[dir="rtl"]  .navigation .gva_menu > li.menu-item--active-trail > a {
   letter-spacing: unset !important;
 }
-[dir="rtl"] li , [dir="rtl"] ul ,[dir="rtl"] p ,[dir="rtl"] p , [dir="rtl"] span , [dir="rtl"] table   { 
+[dir="rtl"] li , [dir="rtl"] ul ,[dir="rtl"] p ,[dir="rtl"] p , [dir="rtl"] span , [dir="rtl"] table   {
   letter-spacing: unset !important;
   text-align: right !important;
 }
@@ -154,4 +154,11 @@ text-align: right;
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.c-tab {
+  cursor: pointer;
+}
+.c-tab:hover {
+  text-decoration: underline;
 }
