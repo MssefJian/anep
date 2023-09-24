@@ -1,9 +1,9 @@
-uuid: bdbe0a8b-c1f8-4ab8-9319-8795fa2fdb02
+uuid: 66ea9e8d-41fe-45b4-bb4e-4b0f97ec689a
 langcode: fr
 status: true
 dependencies:
   content:
-    - 'block_content:basic:01c36273-ece7-40a9-b5bc-dff9447523d8'
+    - 'block_content:basic:d4c97249-6464-446d-b6f3-bd388f843b42'
   module:
     - block_content
     - gaviasthemer
@@ -17,10 +17,10 @@ theme: anep
 region: topbar
 weight: 0
 provider: null
-plugin: 'block_content:01c36273-ece7-40a9-b5bc-dff9447523d8'
+plugin: 'block_content:d4c97249-6464-446d-b6f3-bd388f843b42'
 settings:
-  id: 'block_content:01c36273-ece7-40a9-b5bc-dff9447523d8'
-  label: Topbar
+  id: 'block_content:d4c97249-6464-446d-b6f3-bd388f843b42'
+  label: topbar
   label_display: '0'
   provider: block_content
   status: true
