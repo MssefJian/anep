@@ -1,0 +1,10 @@
+uuid: 3502ada9-5cb0-415e-843b-aa5ffa77a9ca
+langcode: fr
+status: true
+dependencies: {  }
+id: chiffres_cles
+label: 'Chiffres clés'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

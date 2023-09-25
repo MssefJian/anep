@@ -1,0 +1,26 @@
+uuid: c261e598-a396-4ba6-90cc-ace062a437e0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_2
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.chiffres_cles
+  module:
+    - text
+id: paragraph.chiffres_cles.field_description_2
+field_name: field_description_2
+entity_type: paragraph
+bundle: chiffres_cles
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+field_type: text_long

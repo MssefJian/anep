@@ -1,0 +1,20 @@
+uuid: 23e91ad7-b7cb-440d-beab-58ff944d9cb6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+id: node.social_media.gva_pagebuilder_enable
+field_name: gva_pagebuilder_enable
+entity_type: node
+bundle: social_media
+label: 'Enable/Display Page Builder'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: enable
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: 11b83379-af36-4b09-98b7-520a9b56358b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.chiffres_cles
+    - field.field.block_content.chiffres_cles.field_chiffres_cles
+  module:
+    - entity_reference_revisions
+id: block_content.chiffres_cles.default
+targetEntityType: block_content
+bundle: chiffres_cles
+mode: default
+content:
+  field_chiffres_cles:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

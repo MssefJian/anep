@@ -1,0 +1,18 @@
+uuid: 841fe4ff-2edf-4237-b746-868d301f589b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.social_media
+id: node.social_media.gva_pagebuilder_content
+field_name: gva_pagebuilder_content
+entity_type: node
+bundle: social_media
+label: 'Page Builder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
