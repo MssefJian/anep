@@ -68,6 +68,15 @@
     font-weight: normal;
     font-family: "Teko", sans-serif;
 }
+.socials-footer {
+  display: none;
+}
+.gav-help-region {
+  display: none !important;
+}
+.path-taxonomy .feed-icon {
+  display: none !important;
+}
 /* --------------- RTL ---------------------*/
 [dir="rtl"] h1,[dir="rtl"]  h2,[dir="rtl"]  h3,[dir="rtl"]  h4,[dir="rtl"]  h5,[dir="rtl"]  h6,[dir="rtl"] .h1,[dir="rtl"]  .h2,[dir="rtl"]  .h3,[dir="rtl"]  .h4,[dir="rtl"]  .h5,[dir="rtl"]  .h6 {
   margin-bottom: 0.5rem;
