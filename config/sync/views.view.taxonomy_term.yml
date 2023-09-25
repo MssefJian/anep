@@ -27,23 +27,9 @@ display:
     display_options:
       fields: {  }
       pager:
-        type: mini
+        type: none
         options:
           offset: 0
-          items_per_page: 10
-          total_pages: 0
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Éléments par page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- Tout -'
-            offset: false
-            offset_label: Décalage
       exposed_form:
         type: basic
         options:
@@ -256,7 +242,6 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -315,7 +300,7 @@ display:
           items_md: '3'
           items_sm: '2'
           items_xs: '1'
-          loop: 1
+          loop: 0
           speed: '1000'
           auto_play: 1
           auto_play_speed: '2000'
@@ -345,7 +330,6 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

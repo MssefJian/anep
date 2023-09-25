@@ -4,12 +4,6 @@ display:
   default:
     display_title: الافتراضي
     display_options:
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Éléments par page'
-            items_per_page_options_all_label: '- الكل -'
-            offset_label: الإزاحة
       exposed_form:
         options:
           submit_button: تطبيق
