@@ -1,0 +1,19 @@
+uuid: e4d5c4ec-f421-46c9-86f8-59356237dde4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titre
+    - paragraphs.paragraphs_type.chiffres_cles
+id: paragraph.chiffres_cles.field_titre
+field_name: field_titre
+entity_type: paragraph
+bundle: chiffres_cles
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

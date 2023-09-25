@@ -1,0 +1,40 @@
+uuid: 24d6d2f8-95b7-4556-836d-85c5b5908cdf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.chiffres_cles
+    - field.storage.block_content.field_chiffres_cles
+    - paragraphs.paragraphs_type.chiffres_cles
+  module:
+    - entity_reference_revisions
+id: block_content.chiffres_cles.field_chiffres_cles
+field_name: field_chiffres_cles
+entity_type: block_content
+bundle: chiffres_cles
+label: chiffres_cles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      chiffres_cles: chiffres_cles
+    negate: 0
+    target_bundles_drag_drop:
+      chiffres_cles:
+        weight: 5
+        enabled: true
+      company_missions:
+        weight: 6
+        enabled: false
+      home_paragraph:
+        weight: 7
+        enabled: false
+      hr_distribution:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

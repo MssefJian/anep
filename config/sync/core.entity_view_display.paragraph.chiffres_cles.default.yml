@@ -1,0 +1,39 @@
+uuid: bc567487-2e2c-4a55-bc5f-4ed7ff6173a4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.chiffres_cles.field_description_2
+    - field.field.paragraph.chiffres_cles.field_path
+    - field.field.paragraph.chiffres_cles.field_titre
+    - paragraphs.paragraphs_type.chiffres_cles
+  module:
+    - text
+id: paragraph.chiffres_cles.default
+targetEntityType: paragraph
+bundle: chiffres_cles
+mode: default
+content:
+  field_description_2:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_path:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titre:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

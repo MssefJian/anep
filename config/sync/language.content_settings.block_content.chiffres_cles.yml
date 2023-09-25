@@ -1,9 +1,9 @@
-uuid: a203d498-e202-4332-b24e-375069d8336e
+uuid: 2b31e705-88c5-4f2c-91df-97bf6330f4fd
 langcode: fr
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.hr_distribution
+    - block_content.type.chiffres_cles
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: paragraph.hr_distribution
-target_entity_type_id: paragraph
-target_bundle: hr_distribution
+id: block_content.chiffres_cles
+target_entity_type_id: block_content
+target_bundle: chiffres_cles
 default_langcode: site_default
 language_alterable: true

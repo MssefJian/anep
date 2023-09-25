@@ -1,0 +1,8 @@
+uuid: 82d1d791-a9fa-4fff-9545-b43bd7c873f7
+langcode: fr
+status: true
+dependencies: {  }
+id: chiffres_cles
+label: 'Chiffres clés'
+revision: 0
+description: ''

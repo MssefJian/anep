@@ -1,0 +1,21 @@
+uuid: c662efc6-243b-4ee3-a89c-41bd0fc5e098
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_chiffres_cles
+field_name: field_chiffres_cles
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 12
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

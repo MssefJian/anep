@@ -9,10 +9,10 @@ id: paragraph.hr_distribution.field_repartition_pourcent
 field_name: field_repartition_pourcent
 entity_type: paragraph
 bundle: hr_distribution
-label: 'Repartition pourcent'
+label: Pourcentage
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
