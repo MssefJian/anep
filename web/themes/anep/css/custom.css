@@ -130,6 +130,15 @@ text-align: right;
   right:unset !important;
   left: 40px;
 }
+[dir="rtl"] header.header-1 .header-main-inner .header-inner {
+  padding-right: 210px;
+  padding-left: 70px;
+}
+[dir="rtl"] header.header-1 .header-main-inner .branding {
+  width: 240px;
+  float: right;
+  max-height: 95px;
+}
 
 @media (min-width: 992px) {
     .navigation .gva_menu > li > a {

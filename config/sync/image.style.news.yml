@@ -1,0 +1,15 @@
+uuid: 026193b0-86d3-4236-9567-ab723b0c7205
+langcode: fr
+status: true
+dependencies: {  }
+name: news
+label: news
+effects:
+  62e549b0-0428-4560-aa0a-220ecce8d641:
+    uuid: 62e549b0-0428-4560-aa0a-220ecce8d641
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1170
+      height: 549
+      anchor: center-center
