@@ -13173,11 +13173,6 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   }
 }
 
-.gsc-heading.style-1 .title:after {
-  content: "\.";
-  color: #11649a;
-}
-
 .gsc-heading.style-1 .title-desc {
   margin-top: 25px;
 }
@@ -16751,6 +16746,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
 .service-block .title a {
   max-width: 150px;
   display: block;
+  color: #11649a;
 }
 
 .service-block .readmore {
@@ -16766,7 +16762,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
 }
 
 .service-block:hover {
-  background: #2C75A6;
+  background: #042e4a;
 }
 
 .service-block:hover:before {
