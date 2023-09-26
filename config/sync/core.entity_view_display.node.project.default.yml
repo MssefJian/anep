@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.project.body
     - field.field.node.project.field_image
     - field.field.node.project.field_project_type
-    - image.style.wide
+    - image.style.news
     - node.type.project
   module:
     - image
@@ -29,7 +29,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: wide
+      image_style: news
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -37,7 +37,7 @@ content:
     region: content
   field_project_type:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
