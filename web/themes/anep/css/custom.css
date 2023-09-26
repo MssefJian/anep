@@ -31,7 +31,7 @@
   margin: 0;
   padding-left: 0px;
 }
-.node-detail  ul li {
+.node-detail  ul li.anep-li {
   list-style: none;
 }
 .anep-chiffre {
