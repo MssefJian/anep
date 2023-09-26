@@ -37,7 +37,7 @@ content:
     region: content
   field_project_type:
     type: entity_reference_label
-    label: hidden
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
