@@ -4,6 +4,7 @@ namespace Drupal\md_manager\Controller;
 
 use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
@@ -52,12 +53,48 @@ class CustomPagesController extends ControllerBase
 
     $language = $this->languageManager->getCurrentLanguage();
     $currentLang = $language->getId();
+
+    //Format org
+
+    $terms = $this->entityTypeManager->getStorage('taxonomy_term')
+      ->loadTree('organigramme');
+
+    $termEntities = $orgChartData = $orgChartNodes = [];
+    foreach ($terms as $term) {
+      $termEntity = $this->entityTypeManager->getStorage('taxonomy_term')->load($term->tid);
+      $parentId = $termEntity->get('parent')->target_id;
+      $orgChartNodes[] = [
+        'id' => $termEntity->id(),
+        'title' => $termEntity->id(),
+        'name' => $termEntity->get('name')->value
+      ];
+      if ($parentId != '0') {
+        // Construct the "from" and "to" entries.
+        $parentEntity = $this->entityTypeManager->getStorage('taxonomy_term')->load($parentId);
+        $orgChartData[] = [$parentEntity->id(), $term->tid];
+      }
+    }
+
+    //END Format org
+
     $data = $this->getBlockType(self::TYPE_ORGANIGRAMME);
 
     return [
       '#theme' => 'organigramme',
       '#currentLang' => $currentLang,
       '#content' => $data['content'] ?? NULL,
+      '#attached' => [
+        'library' => [
+          'md_manager/libs',
+          'md_manager/organigramme'
+        ],
+        'drupalSettings' => [
+          'mdManager' => [
+            'orgChartData' => Json::encode($orgChartData),
+            'orgChartNodes' => Json::encode($orgChartNodes),
+          ],
+        ],
+      ]
     ];
   }
 

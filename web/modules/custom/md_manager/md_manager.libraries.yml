@@ -26,3 +26,20 @@ states:
       css/states.css: {}
   js:
     js/states.js: {}
+
+libs:
+  header: true
+  js:
+    https://code.highcharts.com/highcharts.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/sankey.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/organization.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/exporting.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/accessibility.js: { type: external, minified: true }
+
+
+organigramme:
+  js:
+    js/orgChart.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
