@@ -59,16 +59,26 @@ class CustomPagesController extends ControllerBase
     $terms = $this->entityTypeManager->getStorage('taxonomy_term')
       ->loadTree('organigramme');
 
-    $termEntities = $orgChartData = $orgChartNodes = [];
+    $orgChartData = $orgChartNodes = [];
     foreach ($terms as $term) {
       $termEntity = $this->entityTypeManager->getStorage('taxonomy_term')->load($term->tid);
       $parentId = $termEntity->get('parent')->target_id;
       $orgChartNodes[] = [
         'id' => $termEntity->id(),
-        'title' => $termEntity->id(),
-        'name' => $termEntity->get('name')->value
+        'title' => '',
+        'name' => $termEntity->get('name')->value,
+        'image' => 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2022/06/30081411/portrett-sorthvitt.jpg',
+        'height' => 70,
+        'width' => 260,
+        /*'dataLabels' => [
+        'enabled' => true,
+        'style' => [
+          'fontSize' => '15px'
+        ]
+      ]*/
       ];
       if ($parentId != '0') {
+        $levels[] = $parentId;
         // Construct the "from" and "to" entries.
         $parentEntity = $this->entityTypeManager->getStorage('taxonomy_term')->load($parentId);
         $orgChartData[] = [$parentEntity->id(), $term->tid];
@@ -90,8 +100,9 @@ class CustomPagesController extends ControllerBase
         ],
         'drupalSettings' => [
           'mdManager' => [
-            'orgChartData' => Json::encode($orgChartData),
-            'orgChartNodes' => Json::encode($orgChartNodes),
+            'orgChartData' => $orgChartData,
+            'orgChartNodes' => $orgChartNodes,
+            'levels' => count(array_unique($levels))
           ],
         ],
       ]
