@@ -78,7 +78,7 @@ class HomePageAxisBlockInterne extends BlockBase implements ContainerFactoryPlug
         $term_entities[] = $term_entity;
       }
     }
-
+ 
     $axis = [];
     foreach ($term_entities as $term) {
       $tmp['title'] = $term->get('name')->value;
