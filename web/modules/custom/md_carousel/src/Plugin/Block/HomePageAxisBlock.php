@@ -48,7 +48,7 @@ class HomePageAxisBlock extends BlockBase implements ContainerFactoryPluginInter
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->entityTypeManager = $entity_type_manager;
   }
-
+ 
   /**
    * {@inheritdoc}
    */

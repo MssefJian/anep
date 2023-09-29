@@ -10597,6 +10597,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 
 .gsc-icon-box-number.style-1:hover .box-number, .gsc-icon-box-number.style-1:hover .box-title {
   color: #11649a;
+  font-family: "Teko", sans-serif;
 }
 
 .gsc-icon-box-number.style-1:hover:after {

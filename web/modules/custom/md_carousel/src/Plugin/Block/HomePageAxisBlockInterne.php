@@ -66,12 +66,14 @@ class HomePageAxisBlockInterne extends BlockBase implements ContainerFactoryPlug
    */
   public function build(): array
   {
+    $language = \Drupal::languageManager()->getCurrentLanguage();
     $terms = $this->entityTypeManager->getStorage('taxonomy_term')
       ->loadTree($this->vocabularyName);
 
     $term_entities = [];
     foreach ($terms as $term) {
       $term_entity = $this->entityTypeManager->getStorage('taxonomy_term')->load($term->tid);
+      $term_entity = \Drupal::service('entity.repository')->getTranslationFromContext($term_entity, $language->getId());
       if ($term_entity) {
         $term_entities[] = $term_entity;
       }
