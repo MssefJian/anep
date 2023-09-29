@@ -551,7 +551,7 @@ body.bg-dark .gva-body-page {
 }
 
 .topbar {
-  background: #222429;
+  background: #0d6faf;
   padding: 12px 0;
   font-size: 14px;
   position: relative;
@@ -6705,7 +6705,7 @@ div.resizable-textarea textarea {
 .topbar-information ul li i {
   margin-right: 6px;
   font-size: 18px;
-  color: #11649a !important;
+  color: #004f83 !important;
 }
 
 .block-dropdown-language {
@@ -10581,6 +10581,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   color: #11649a;
   font-size: 50px;
   line-height: 50px;
+  font-family: "Teko", sans-serif;
 }
 
 .gsc-icon-box-number.style-1 .box-title {

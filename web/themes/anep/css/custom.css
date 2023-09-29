@@ -206,8 +206,11 @@ text-align: right;
   font-size: 15px;
 }
 .ch-anep .service-icon  {
-  text-align: center;
+
 }
 .ch-anep .service-icon > img {
+  max-height: 67px;
+}
+.count-interne img {
   max-height: 67px;
 }
