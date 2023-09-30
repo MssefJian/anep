@@ -22,6 +22,9 @@ display:
           label: 'لائحة الإنتظار'
         field_status:
           label: حالة
+        view_node:
+          label: تفاصيل
+          text: تفاصيل
       title: التوظيف
   page_1:
     display_options:

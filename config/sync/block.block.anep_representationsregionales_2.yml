@@ -1,24 +1,27 @@
-uuid: 911e416b-d76c-490d-9c13-f66b197317b7
+uuid: f309c010-2885-4a5d-bb67-80621fb070d9
 langcode: fr
 status: true
 dependencies:
+  content:
+    - 'block_content:chiffres_cles:ab0b0188-e271-4738-adc5-6334146f5788'
   module:
+    - block_content
     - gaviasthemer
   theme:
     - anep
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: anep_representationsregionales
+id: anep_representationsregionales_2
 theme: anep
 region: other
 weight: 0
 provider: null
-plugin: 'block_content:1725b625-f438-43c9-9238-c4fdb13a6873'
+plugin: 'block_content:ab0b0188-e271-4738-adc5-6334146f5788'
 settings:
-  id: 'block_content:1725b625-f438-43c9-9238-c4fdb13a6873'
+  id: 'block_content:ab0b0188-e271-4738-adc5-6334146f5788'
   label: 'Représentations régionales'
-  label_display: '0'
+  label_display: visible
   provider: block_content
   status: true
   info: ''

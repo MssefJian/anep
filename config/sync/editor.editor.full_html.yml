@@ -19,7 +19,17 @@ settings:
       - superscript
       - subscript
       - removeFormat
+      - underline
+      - indent
+      - alignment
+      - outdent
+      - redo
+      - undo
       - '|'
+      - textPartLanguage
+      - specialCharacters
+      - code
+      - imce_link
       - link
       - '|'
       - bulletedList
@@ -34,7 +44,14 @@ settings:
       - codeBlock
       - '|'
       - sourceEditing
+      - imce_image
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_codeBlock:
       languages:
         -
@@ -81,6 +98,7 @@ settings:
           language: xml
     ckeditor5_heading:
       enabled_headings:
+        - heading1
         - heading2
         - heading3
         - heading4
@@ -88,6 +106,8 @@ settings:
         - heading6
     ckeditor5_imageResize:
       allow_resize: true
+    ckeditor5_language:
+      language_list: un
     ckeditor5_list:
       reversed: true
       startIndex: true

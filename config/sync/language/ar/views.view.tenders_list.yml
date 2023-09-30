@@ -3,6 +3,16 @@ display:
   default:
     display_options:
       title: 'طلبات العروض'
+      fields:
+        field_publication_date:
+          label: 'تاريخ '
+        title:
+          label: 'الموضوع '
+        field_notice:
+          label: بلاغ
+        view_node:
+          label: تفاصيل
+          text: تفاصيل
   page_1:
     display_title: 'طلبات العروض'
     display_options:

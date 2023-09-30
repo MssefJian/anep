@@ -1,4 +1,4 @@
-# Custom library for general purposes.
+# Custom library for general purposes.carousel
 carousel:
   css:
     theme:
@@ -32,3 +32,11 @@ example_3:
     gpl-compatible: true
   js:
     https://cdnjs.cloudflare.com/ajax/libs/example/1.0.0/example-3.min.js: {type: external, minified: true}
+
+
+# Custom library for general purposes.
+axes_interne:
+  version: 1.x
+  css:
+    theme:
+      assets/css/axe.css: {}
