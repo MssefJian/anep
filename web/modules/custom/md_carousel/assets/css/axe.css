@@ -18,6 +18,7 @@
    -o-transform: skewX(-15deg);
    /* Standard syntax */
    -moz-transform: skewX(-15deg);
+   object-fit: scale-down;
  }
  
  .pane-warp {
