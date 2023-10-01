@@ -1,0 +1,24 @@
+<?php
+use Drupal\Core\File\FileSystemInterface;
+/**
+ * @file
+ * Install, update and uninstall functions for the md_manager module.
+ */
+
+
+/**
+ * Implements hook_update_N().
+ */
+function md_manager_update_10100(&$sandbox = NULL) {
+  $config_factory = \Drupal::configFactory();
+  $field_my_logo = $config_factory->getEditable('field.field.taxonomy_term.organigramme.field_o_image');
+  $default_image = $field_my_logo->get('settings.default_image');
+
+  $data = file_get_contents(__DIR__. '/pr.jpg');
+  $file_info = \Drupal::service('file.repository')->writeData($data, 'public://pr.jpg', FileSystemInterface::EXISTS_REPLACE);
+
+  $default_image['uuid'] = $file_info->uuid();
+  $default_image['alt'] = 'Profile';
+
+  $field_my_logo->set('settings.default_image', $default_image)->save(TRUE);
+}
