@@ -1,0 +1,23 @@
+uuid: 2a7a462c-8923-4a12-a675-87bd03f755d5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_level
+    - taxonomy.vocabulary.organigramme
+id: taxonomy_term.organigramme.field_level
+field_name: field_level
+entity_type: taxonomy_term
+bundle: organigramme
+label: Level
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

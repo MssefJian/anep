@@ -1,0 +1,19 @@
+uuid: 9aa29e05-6c1e-4bf6-806a-001d591f8aeb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_offset
+    - taxonomy.vocabulary.organigramme
+id: taxonomy_term.organigramme.field_offset
+field_name: field_offset
+entity_type: taxonomy_term
+bundle: organigramme
+label: offset
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

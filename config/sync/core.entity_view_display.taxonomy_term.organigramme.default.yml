@@ -1,0 +1,49 @@
+uuid: 88125f2b-bf9d-4c34-8fdb-f9c799aa5021
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.organigramme.field_level
+    - field.field.taxonomy_term.organigramme.field_o_css_classes
+    - field.field.taxonomy_term.organigramme.field_o_image
+    - field.field.taxonomy_term.organigramme.field_o_position
+    - field.field.taxonomy_term.organigramme.field_o_url
+    - field.field.taxonomy_term.organigramme.field_offset
+    - taxonomy.vocabulary.organigramme
+  module:
+    - text
+id: taxonomy_term.organigramme.default
+targetEntityType: taxonomy_term
+bundle: organigramme
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_level:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_offset:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_o_css_classes: true
+  field_o_image: true
+  field_o_position: true
+  field_o_url: true
+  langcode: true
