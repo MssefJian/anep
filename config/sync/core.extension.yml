@@ -11,6 +11,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  color_pickr: 0
   config: 0
   config_translation: 0
   contact: 0
@@ -49,7 +50,6 @@ module:
   mysql: 0
   node: 0
   options: 0
-  organigrams: 0
   page_cache: 0
   path: 0
   path_alias: 0

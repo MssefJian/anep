@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9919e6882cc1831205cf6e00854ae1c",
+    "content-hash": "7090d1277c380083fbfcac3da573161e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1568,6 +1568,50 @@
             }
         },
         {
+            "name": "drupal/color_pickr",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/color_pickr.git",
+                "reference": "1.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/color_pickr-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "cdea58e9eaa1676be01d468aceab475cec1f743d"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.1",
+                    "datestamp": "1682444737",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "sujan shrestha",
+                    "homepage": "https://www.drupal.org/user/3475737"
+                }
+            ],
+            "description": "Provides color pickr types, widgets, and formatters for drupal 9/10",
+            "homepage": "https://www.drupal.org/project/color_pickr",
+            "support": {
+                "source": "https://git.drupalcode.org/project/color_pickr"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "10.1.3",
             "source": {
@@ -2337,56 +2381,6 @@
             "homepage": "https://www.drupal.org/project/lang_dropdown",
             "support": {
                 "source": "https://git.drupalcode.org/project/lang_dropdown"
-            }
-        },
-        {
-            "name": "drupal/organigrams",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/organigrams.git",
-                "reference": "8.x-2.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/organigrams-8.x-2.3.zip",
-                "reference": "8.x-2.3",
-                "shasum": "47b76fc186502acfc8a8ecd76c29fc9552eca17a"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.3",
-                    "datestamp": "1667221157",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Patrick Scheffer (PatrickScheffer)",
-                    "homepage": "https://www.drupal.org/u/patrickscheffer",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Organigrams provides the ability to easily create and manage organization charts, also knows as organigrams or organograms.",
-            "homepage": "https://drupal.org/project/organigrams",
-            "keywords": [
-                "Drupal",
-                "organigrams"
-            ],
-            "support": {
-                "source": "https://cgit.drupalcode.org/organigrams",
-                "issues": "https://drupal.org/project/issues/organigrams"
             }
         },
         {

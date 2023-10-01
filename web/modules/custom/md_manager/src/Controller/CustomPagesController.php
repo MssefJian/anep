@@ -2,12 +2,15 @@
 
 namespace Drupal\md_manager\Controller;
 
+use Drupal;
 use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -20,6 +23,11 @@ class CustomPagesController extends ControllerBase
   protected $languageManager;
 
   const TYPE_ORGANIGRAMME = 'organigramme';
+  const TAXONOMY_TERM = 'taxonomy_term';
+
+  const FIELD_IMAGE = 'field_o_image';
+
+  const IMAGE_STYLE = 'organigramme90x90';
 
   const TYPE_TIMELINE = 'timeline';
 
@@ -56,18 +64,17 @@ class CustomPagesController extends ControllerBase
 
     //Format org
 
-    $terms = $this->entityTypeManager->getStorage('taxonomy_term')
-      ->loadTree('organigramme');
+    $terms = $this->entityTypeManager->getStorage(self::TAXONOMY_TERM)
+      ->loadTree(self::TYPE_ORGANIGRAMME);
 
     $orgChartData = $orgChartNodes = [];
     foreach ($terms as $key => $term) {
-      $termEntity = $this->entityTypeManager->getStorage('taxonomy_term')->load($term->tid);
+      $termEntity = $this->entityTypeManager->getStorage(self::TAXONOMY_TERM)->load($term->tid);
       $parentId = $termEntity->get('parent')->target_id;
       $orgChartNodes[] = [
         'id' => $termEntity->id(),
         'title' => '',
         'name' => $termEntity->get('name')->value,
-        'image' => 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2022/06/30081411/portrett-sorthvitt.jpg',
         'height' => 80,
         'width' => 300,
         /*'dataLabels' => [
@@ -77,6 +84,20 @@ class CustomPagesController extends ControllerBase
         ]
       ]*/
       ];
+      $imageField = $termEntity->get(self::FIELD_IMAGE);
+
+      $styledImageUrl = NULL;
+      // Check if the image field has a value.
+      if (!$imageField->isEmpty()) {
+        $styledImageUrl = ImageStyle::load(self::IMAGE_STYLE)->buildUrl($imageField->entity->getFileUri());
+      }
+      $orgChartNodes[$key]['image'] = $styledImageUrl ?? $this->getDefaultFieldValue(
+        self::TAXONOMY_TERM, self::TYPE_ORGANIGRAMME, self::FIELD_IMAGE, self::IMAGE_STYLE
+      );
+
+      if (!$termEntity->get('field_color')->isEmpty()) {
+        $orgChartNodes[$key]['color'] = $termEntity->get('field_color')->color_pickr;
+      }
       if (!$termEntity->get('field_level')->isEmpty()) {
         $orgChartNodes[$key]['level'] = intval($termEntity->get('field_level')->value);
       }
@@ -114,6 +135,24 @@ class CustomPagesController extends ControllerBase
         ],
       ]
     ];
+  }
+
+  /**
+   * Get default field value
+   *
+   * @param $entityTypeId
+   * @param $bundle
+   * @param $field
+   * @param $imageStyle
+   * @return Drupal\Core\GeneratedUrl|string
+   */
+  private function getDefaultFieldValue($entityTypeId, $bundle, $field, $imageStyle): Drupal\Core\GeneratedUrl|string
+  {
+    $field_info = FieldConfig::loadByName($entityTypeId, $bundle, $field);
+    $image_uuid = $field_info->getSetting('default_image')['uuid'];
+    $image = Drupal::service('entity.repository')->loadEntityByUuid('file', $image_uuid);
+    $imageUri = $image->getFileUri();
+    return ImageStyle::load($imageStyle)->buildUrl($imageUri);
   }
 
   /**
@@ -268,7 +307,8 @@ class CustomPagesController extends ControllerBase
     ];
   }
 
-   public function extractPath($item) {
+  public function extractPath($item)
+  {
     if (isset($item['path'])) {
       return $item['path'];
     }

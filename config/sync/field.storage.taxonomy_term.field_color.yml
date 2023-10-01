@@ -1,0 +1,19 @@
+uuid: 1c5d42be-431a-4e4d-81a2-c49c0a626b32
+langcode: fr
+status: true
+dependencies:
+  module:
+    - color_pickr
+    - taxonomy
+id: taxonomy_term.field_color
+field_name: field_color
+entity_type: taxonomy_term
+type: color_pickr_code
+settings: {  }
+module: color_pickr
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
