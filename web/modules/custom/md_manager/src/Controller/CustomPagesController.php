@@ -70,6 +70,7 @@ class CustomPagesController extends ControllerBase
     $orgChartData = $orgChartNodes = [];
     foreach ($terms as $key => $term) {
       $termEntity = $this->entityTypeManager->getStorage(self::TAXONOMY_TERM)->load($term->tid);
+      $termEntity = \Drupal::service('entity.repository')->getTranslationFromContext($termEntity, $language->getId());
       $parentId = $termEntity->get('parent')->target_id;
       $orgChartNodes[] = [
         'id' => $termEntity->id(),
