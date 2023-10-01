@@ -60,7 +60,7 @@ class CustomPagesController extends ControllerBase
       ->loadTree('organigramme');
 
     $orgChartData = $orgChartNodes = [];
-    foreach ($terms as $term) {
+    foreach ($terms as $key => $term) {
       $termEntity = $this->entityTypeManager->getStorage('taxonomy_term')->load($term->tid);
       $parentId = $termEntity->get('parent')->target_id;
       $orgChartNodes[] = [
@@ -68,8 +68,8 @@ class CustomPagesController extends ControllerBase
         'title' => '',
         'name' => $termEntity->get('name')->value,
         'image' => 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2022/06/30081411/portrett-sorthvitt.jpg',
-        'height' => 70,
-        'width' => 260,
+        'height' => 80,
+        'width' => 300,
         /*'dataLabels' => [
         'enabled' => true,
         'style' => [
@@ -77,6 +77,13 @@ class CustomPagesController extends ControllerBase
         ]
       ]*/
       ];
+      if (!$termEntity->get('field_level')->isEmpty()) {
+        $orgChartNodes[$key]['level'] = intval($termEntity->get('field_level')->value);
+      }
+      if (!$termEntity->get('field_offset')->isEmpty()) {
+        $orgChartNodes[$key]['offset'] = $termEntity->get('field_offset')->value.'%';
+      }
+
       if ($parentId != '0') {
         $levels[] = $parentId;
         // Construct the "from" and "to" entries.
