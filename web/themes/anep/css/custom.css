@@ -147,9 +147,15 @@ text-align: right;
     header.header-default .navigation .gva_menu > li, header.header-2 .navigation .gva_menu > li {
       padding: 36px 10px !important;
     }
+<<<<<<< Updated upstream
     [dir="rtl"] .navigation .gva_menu .sub-menu {
       right: 0;
       left:unset;
+=======
+    [dir="rtl"] .navigation .gva_menu .sub-menu  {
+      left:unset;
+      right: 0;
+>>>>>>> Stashed changes
     }
   }
 
