@@ -1,4 +1,4 @@
-uuid: d9c55aa3-6409-4740-8dac-acc1a8dac57d
+uuid: 21b724df-7817-4903-a6e0-c490d2c532af
 langcode: fr
 status: true
 dependencies:
@@ -12,26 +12,26 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: anep_gaviassliderlayerslidermain
+id: anep_gaviassliderlayerslidermainar
 theme: anep
 region: slideshow_content
-weight: -14
+weight: 0
 provider: null
-plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____4'
 settings:
-  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
-  label: 'Gavias SliderLayer - Slider Main'
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____4'
+  label: 'Gavias SliderLayer - Slider Main AR'
   label_display: '0'
   provider: gavias_sliderlayer
 visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '<front>'
   language:
     id: language
     negate: false
     context_mapping:
       language: '@language.current_language_context:language_interface'
     langcodes:
-      fr: fr
+      ar: ar
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
