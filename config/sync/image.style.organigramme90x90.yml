@@ -1,0 +1,15 @@
+uuid: 9e8d150f-032a-4e08-9009-6ca0202b33b2
+langcode: fr
+status: true
+dependencies: {  }
+name: organigramme90x90
+label: Organigramme70x70
+effects:
+  5e688005-8eb7-4dd4-9a98-c00323ca3a6a:
+    uuid: 5e688005-8eb7-4dd4-9a98-c00323ca3a6a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 70
+      height: 70
+      anchor: center-center
