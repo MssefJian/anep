@@ -141,23 +141,18 @@ text-align: right;
 }
 
 @media (min-width: 992px) {
-    .navigation .gva_menu > li > a {
-        font-size: 17px !important;
-    }
-    header.header-default .navigation .gva_menu > li, header.header-2 .navigation .gva_menu > li {
-      padding: 36px 10px !important;
-    }
-<<<<<<< Updated upstream
-    [dir="rtl"] .navigation .gva_menu .sub-menu {
-      right: 0;
-      left:unset;
-=======
-    [dir="rtl"] .navigation .gva_menu .sub-menu  {
-      left:unset;
-      right: 0;
->>>>>>> Stashed changes
-    }
+  .navigation .gva_menu > li > a {
+      font-size: 17px !important;
   }
+  header.header-default .navigation .gva_menu > li, header.header-2 .navigation .gva_menu > li {
+    padding: 36px 10px !important;
+  }
+
+  [dir="rtl"] .navigation .gva_menu .sub-menu {
+    right: 0;
+    left:unset;
+  }
+}
 
 #footer .socials-footer a {
   color: #fff !important;
