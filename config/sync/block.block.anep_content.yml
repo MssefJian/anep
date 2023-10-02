@@ -1,0 +1,22 @@
+uuid: a141dad0-bfc2-4746-934f-0e267aaae782
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - anep
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: anep_content
+theme: anep
+region: content
+weight: -17
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: '0'
+  provider: system
+visibility: {  }
