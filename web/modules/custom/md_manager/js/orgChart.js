@@ -58,8 +58,8 @@
         },
         exporting: {
           allowHTML: true,
-          sourceWidth: 800,
-          sourceHeight: 600
+          sourceWidth: 1300,
+          sourceHeight: 1100
         }
 
       });

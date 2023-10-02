@@ -60,7 +60,7 @@
   {% for key, value in content.field_home_paragraph %}
     {% set summary =value['#paragraph'].field_summary.getValue() %}
     {% if key >= '0' %}
-    <div data-id="para-{{ key }}" class="sub-tab {{ summary.0.value is empty ? 'empty'}} gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center" style="display: none">
+    <div data-id="para-{{ key }}" class="sub-tab {{ summary.0.value is empty ? 'empty'}} gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 " style="display: none">
       <div class="card">
         <div class="card-body">
           {{ summary.0.value|raw }}
