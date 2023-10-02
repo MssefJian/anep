@@ -23,6 +23,13 @@ function md_manager_theme($existing, $type, $theme, $path)
         'content' => NULL
       ],
     ],
+    'organigramme_block' => [
+      'variables' => [
+        'currentLang' => NULL,
+        'content' => NULL
+      ],
+    ],
+    
     'timeline' => [
       'variables' => [
         'timeLines' => NULL,

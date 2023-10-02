@@ -96,7 +96,7 @@ class HomePageAxisBlockInterne extends BlockBase implements ContainerFactoryPlug
       '#axis' => $axis,
       '#attached' => [
         'library' => [
-          'md_carousel/axes_interne', // Replace 'your_module' with your module's name.
+          'md_carousel/axes_interne', 
         ],
       ],
     ];
