@@ -8,8 +8,8 @@ _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
 id: anep_primary_local_tasks
 theme: anep
-region: help
-weight: -14
+region: content
+weight: -18
 provider: null
 plugin: local_tasks_block
 settings:
