@@ -1,0 +1,24 @@
+uuid: 966a73fa-670f-4b8c-839b-7271514b9e3c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_customorganigrammeblock022
+theme: anep
+region: other
+weight: 0
+provider: null
+plugin: custom_organigramme_bloc01
+settings:
+  id: custom_organigramme_bloc01
+  label: 'Custom Organigramme Block 022'
+  label_display: visible
+  provider: md_manager
+visibility: {  }
