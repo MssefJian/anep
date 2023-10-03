@@ -232,7 +232,8 @@ class CustomPagesController extends ControllerBase
         // Retrieve the values of the paragraph fields.
         $tmp['dataChart'][] = [
           'name' => $paragraph_item->get('field_description')->value,
-          'y' => intval($paragraph_item->get('field_repartition_pourcent')->value)
+          'y' => intval($paragraph_item->get('field_repartition_pourcent')->value),
+          'color' => $paragraph_item->get('field_color')->color_pickr
         ];
 
 
