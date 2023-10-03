@@ -7,7 +7,6 @@
     attach: function (context, settings) {
       var dataCharts = drupalSettings.mdManager.rh;
       dataCharts.forEach(function (dataChart) {
-        console.log(JSON.stringify(dataChart.dataChart));
         Highcharts.chart(dataChart.id, {
           credits: {
             enabled: false
