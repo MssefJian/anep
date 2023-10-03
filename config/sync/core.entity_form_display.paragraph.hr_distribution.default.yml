@@ -3,14 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hr_distribution.field_color
     - field.field.paragraph.hr_distribution.field_description
     - field.field.paragraph.hr_distribution.field_repartition_pourcent
     - paragraphs.paragraphs_type.hr_distribution
+  module:
+    - color_pickr
 id: paragraph.hr_distribution.default
 targetEntityType: paragraph
 bundle: hr_distribution
 mode: default
 content:
+  field_color:
+    type: color_pickr_default
+    weight: 11
+    region: content
+    settings:
+      theme: classic
+    third_party_settings: {  }
   field_description:
     type: string_textfield
     weight: 0
@@ -25,6 +35,11 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

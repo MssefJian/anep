@@ -1,0 +1,21 @@
+uuid: 7a672919-d4cd-4695-ab6f-d235adcc3bc0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.hr_distribution
+  module:
+    - color_pickr
+id: paragraph.hr_distribution.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: hr_distribution
+label: color
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: color_pickr_code
