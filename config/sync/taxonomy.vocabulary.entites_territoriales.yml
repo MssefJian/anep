@@ -1,0 +1,8 @@
+uuid: a3ba94ac-6eee-4fb1-9625-99a40acd8207
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Entités territoriales'
+vid: entites_territoriales
+description: ''
+weight: 0

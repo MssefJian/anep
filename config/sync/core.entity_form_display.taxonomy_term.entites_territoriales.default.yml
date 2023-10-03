@@ -1,0 +1,93 @@
+uuid: 43527fe2-477f-479f-b2cf-dd810cef30f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.entites_territoriales.field_color
+    - field.field.taxonomy_term.entites_territoriales.field_level
+    - field.field.taxonomy_term.entites_territoriales.field_o_image
+    - field.field.taxonomy_term.entites_territoriales.field_offset
+    - image.style.thumbnail
+    - taxonomy.vocabulary.entites_territoriales
+  module:
+    - color_pickr
+    - image
+    - path
+    - text
+id: taxonomy_term.entites_territoriales.default
+targetEntityType: taxonomy_term
+bundle: entites_territoriales
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_color:
+    type: color_pickr_default
+    weight: 7
+    region: content
+    settings:
+      theme: classic
+    third_party_settings: {  }
+  field_level:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_o_image:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_offset:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

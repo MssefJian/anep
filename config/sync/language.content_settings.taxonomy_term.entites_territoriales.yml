@@ -1,0 +1,16 @@
+uuid: 9563ad0f-ce5b-4cc8-ae7c-493e6bc9b552
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.entites_territoriales
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.entites_territoriales
+target_entity_type_id: taxonomy_term
+target_bundle: entites_territoriales
+default_langcode: site_default
+language_alterable: true

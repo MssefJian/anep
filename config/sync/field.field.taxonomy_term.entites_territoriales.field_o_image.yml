@@ -1,0 +1,38 @@
+uuid: 35d7a02a-ec02-4904-af81-2b7bd415aa80
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_o_image
+    - taxonomy.vocabulary.entites_territoriales
+  module:
+    - image
+id: taxonomy_term.entites_territoriales.field_o_image
+field_name: field_o_image
+entity_type: taxonomy_term
+bundle: entites_territoriales
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: organigrams
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: b103ddac-eee0-4a1e-a20d-dcc1878f090b
+    alt: Profile
+    title: ''
+    width: 1920
+    height: 1920
+field_type: image

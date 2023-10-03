@@ -1,0 +1,19 @@
+uuid: b95d9c75-94c3-4c4a-8b91-8a35f4a7bac4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_offset
+    - taxonomy.vocabulary.entites_territoriales
+id: taxonomy_term.entites_territoriales.field_offset
+field_name: field_offset
+entity_type: taxonomy_term
+bundle: entites_territoriales
+label: offset
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

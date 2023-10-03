@@ -21,4 +21,5 @@ settings:
   label: 'Custom Organigramme Block 022'
   label_display: visible
   provider: md_manager
+  vocabulary_name: entites_territoriales
 visibility: {  }
