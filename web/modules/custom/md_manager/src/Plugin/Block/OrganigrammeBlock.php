@@ -1,15 +1,18 @@
-<?php declare(strict_types=1);
+<?php 
+
+declare(strict_types=1);
+
 namespace Drupal\md_manager\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\field\Entity\FieldConfig;
-use Drupal\node\Entity\Node;
 use Drupal;
+
 /**
  * Provides a 'CustomOrganigrammeBlock' block.
  *
@@ -23,9 +26,9 @@ class OrganigrammeBlock extends BlockBase implements ContainerFactoryPluginInter
   const TYPE_ORGANIGRAMME = 'organigramme';
   const TAXONOMY_TERM = 'taxonomy_term';
   const FIELD_IMAGE = 'field_o_image';
-
   const IMAGE_STYLE = 'organigramme90x90';
-      /**
+
+  /**
    * The entity type manager.
    *
    * @var EntityTypeManagerInterface
@@ -33,28 +36,14 @@ class OrganigrammeBlock extends BlockBase implements ContainerFactoryPluginInter
   protected EntityTypeManagerInterface $entityTypeManager;
 
   /**
-   * The vocabulary name
-   */
-  protected string $vocabularyName = 'organigramme';
-
-  /**
-   * Constructs a new HomePageAxisBlockInterne instance.
-   *
-   * @param array $configuration
-   *   A configuration array containing information about the plugin instance.
-   * @param string $plugin_id
-   *   The plugin_id for the plugin instance.
-   * @param mixed $plugin_definition
-   *   The plugin implementation definition.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager service.
+   * Constructs a new OrganigrammeBlock instance.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->entityTypeManager = $entity_type_manager;
   }
 
-    /**
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
@@ -66,14 +55,54 @@ class OrganigrammeBlock extends BlockBase implements ContainerFactoryPluginInter
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function defaultConfiguration() {
+    return [
+      'vocabulary_name' => 'organigramme',
+    ] + parent::defaultConfiguration();
+  }
+
+/**
+ * {@inheritdoc}
+ */
+public function blockForm($form, FormStateInterface $form_state) {
+  // Load all vocabularies.
+  $vocabularies = \Drupal\taxonomy\Entity\Vocabulary::loadMultiple();
+
+  // Create an options array.
+  $options = [];
+  foreach ($vocabularies as $vocabulary) {
+      $options[$vocabulary->id()] = $vocabulary->label();
+  }
+
+  $form['vocabulary_name'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Vocabulary Name'),
+      '#options' => $options,
+      '#default_value' => $this->configuration['vocabulary_name'],
+      '#required' => TRUE,
+  ];
+
+  return $form;
+}
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockSubmit($form, FormStateInterface $form_state) {
+    $this->configuration['vocabulary_name'] = $form_state->getValue('vocabulary_name');
+  }
+
   public function build() {
     $language = \Drupal::languageManager()->getCurrentLanguage();
     $currentLang = $language->getId();
 
     //Format org
 
-    $terms = $this->entityTypeManager->getStorage(self::TAXONOMY_TERM)
-      ->loadTree(self::TYPE_ORGANIGRAMME);
+    $vocabularyName = $this->configuration['vocabulary_name'];
+    $terms = $this->entityTypeManager->getStorage(self::TAXONOMY_TERM)->loadTree($vocabularyName);
 
     $orgChartData = $orgChartNodes = [];
     foreach ($terms as $key => $term) {

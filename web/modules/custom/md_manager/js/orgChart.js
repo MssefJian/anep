@@ -42,7 +42,7 @@
 
         series: [{
           type: 'organization',
-          "name": 'Highsoft',
+          "name": ' ',
           keys: ['from', 'to'],
           data: orgChartData,
           nodes: orgChartNodes,
