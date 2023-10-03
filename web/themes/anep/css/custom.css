@@ -145,6 +145,16 @@ text-align: right;
 [dir="rtl"] .topbar-information ul li.phone {
   direction: initial;
 }
+[dir="rtl"]  .cnt-ttl {
+  height: 35px;
+}
+[dir="rtl"]  .cnt-tel {
+  float: right;
+}
+[dir="rtl"]  .flt {
+  float: right;
+    direction: initial;
+}
 @media (min-width: 992px) {
   .navigation .gva_menu > li > a {
       font-size: 17px !important;
