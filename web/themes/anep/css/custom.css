@@ -139,7 +139,12 @@ text-align: right;
   float: right;
   max-height: 95px;
 }
-
+[dir="rtl"] .topbar-information ul li i.fa-phone-alt {
+  float: right;
+}
+[dir="rtl"] .topbar-information ul li.phone {
+  direction: initial;
+}
 @media (min-width: 992px) {
   .navigation .gva_menu > li > a {
       font-size: 17px !important;
