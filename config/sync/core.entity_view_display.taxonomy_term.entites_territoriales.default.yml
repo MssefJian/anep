@@ -1,0 +1,60 @@
+uuid: 886654fe-a74b-4cd3-acb4-fa3c5d0d8fea
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.entites_territoriales.field_color
+    - field.field.taxonomy_term.entites_territoriales.field_level
+    - field.field.taxonomy_term.entites_territoriales.field_o_image
+    - field.field.taxonomy_term.entites_territoriales.field_offset
+    - taxonomy.vocabulary.entites_territoriales
+  module:
+    - color_pickr
+    - image
+    - text
+id: taxonomy_term.entites_territoriales.default
+targetEntityType: taxonomy_term
+bundle: entites_territoriales
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_color:
+    type: color_pickr_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_level:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_o_image:
+    type: image_url
+    label: above
+    settings:
+      image_style: organigramme90x90
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_offset:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

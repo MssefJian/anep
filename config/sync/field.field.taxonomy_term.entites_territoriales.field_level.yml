@@ -1,0 +1,23 @@
+uuid: b39f3d0f-4d7d-425e-b0df-7b77d726fbc7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_level
+    - taxonomy.vocabulary.entites_territoriales
+id: taxonomy_term.entites_territoriales.field_level
+field_name: field_level
+entity_type: taxonomy_term
+bundle: entites_territoriales
+label: Level
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

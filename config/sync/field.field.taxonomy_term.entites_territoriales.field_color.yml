@@ -1,0 +1,21 @@
+uuid: 67ecb790-e0a2-4633-b83a-4fc752ef1d6e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_color
+    - taxonomy.vocabulary.entites_territoriales
+  module:
+    - color_pickr
+id: taxonomy_term.entites_territoriales.field_color
+field_name: field_color
+entity_type: taxonomy_term
+bundle: entites_territoriales
+label: Color
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: color_pickr_code
