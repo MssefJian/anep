@@ -1,0 +1,24 @@
+uuid: f8dcc439-5987-4527-82c1-a20d735dad1d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - anep
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: anep_footercontact
+theme: anep
+region: footer_third
+weight: 0
+provider: null
+plugin: md_manager_footer_contact
+settings:
+  id: md_manager_footer_contact
+  label: 'Footer contact'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

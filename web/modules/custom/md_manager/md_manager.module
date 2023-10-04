@@ -29,7 +29,7 @@ function md_manager_theme($existing, $type, $theme, $path)
         'content' => NULL
       ],
     ],
-    
+
     'timeline' => [
       'variables' => [
         'timeLines' => NULL,
@@ -49,6 +49,11 @@ function md_manager_theme($existing, $type, $theme, $path)
       ],
     ],
     'top_bar' => [
+      'variables' => [
+        'contact' => NULL
+      ],
+    ],
+    'footer_contact' => [
       'variables' => [
         'contact' => NULL
       ],

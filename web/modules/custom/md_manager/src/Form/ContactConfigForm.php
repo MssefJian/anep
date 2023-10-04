@@ -49,6 +49,12 @@ class ContactConfigForm extends ConfigFormBase
           '#default_value' => $config->get($langcode . '.phone'),
         ];
 
+        $form[$langcode]['fax_'.$langcode] = [
+          '#type' => 'tel',
+          '#title' => $this->t('Fax'),
+          '#default_value' => $config->get($langcode . '.fax'),
+        ];
+
         $form[$langcode]['email_'.$langcode] = [
           '#type' => 'email',
           '#title' => $this->t('Email'),
@@ -72,6 +78,7 @@ class ContactConfigForm extends ConfigFormBase
 
       $config->set($langcode . '.address', $form_state->getValue('address_'.$langcode))
         ->set($langcode . '.phone', $form_state->getValue('phone_'.$langcode))
+        ->set($langcode . '.fax', $form_state->getValue('fax_'.$langcode))
         ->set($langcode . '.email', $form_state->getValue('email_'.$langcode));
     }
 
