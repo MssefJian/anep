@@ -989,14 +989,14 @@ header.header-1 .topbar {
 }
 
 header.header-1 .header-main-inner .branding {
-  width: 240px;
+  width: auto;
   float: left;
   max-height: 95px;
 }
 
 @media (max-width: 991.98px) {
   header.header-1 .header-main-inner .branding {
-    width: 190px;
+    width: auto;
   }
 }
 
