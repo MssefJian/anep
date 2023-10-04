@@ -66,7 +66,7 @@
     line-height: 80px;
     color: #11649a;
     font-weight: normal;
-    font-family: "Teko", sans-serif;
+    font-family: "Cairo", sans-serif;
 }
 .socials-footer {
   display: none;
@@ -157,7 +157,8 @@ text-align: right;
 }
 @media (min-width: 992px) {
   .navigation .gva_menu > li > a {
-      font-size: 17px !important;
+      font-size: 13px !important;
+      font-weight: 600;
   }
   header.header-default .navigation .gva_menu > li, header.header-2 .navigation .gva_menu > li {
     padding: 36px 10px !important;

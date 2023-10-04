@@ -134,7 +134,7 @@ ul.menu > li > a {
   position: relative;
   font-size: 20px;
   font-weight: 300;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 ul.menu > li > a:hover, ul.menu > li > a:active, ul.menu > li > a:focus {
@@ -217,7 +217,7 @@ a.disable {
   list-style-type: none;
   float: left;
   margin-right: 10px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-size: 18px;
 }
 
@@ -333,31 +333,32 @@ a.disable {
 }
 
 .breadcrumb-content-inner .gva-block-breadcrumb .page-title {
-  font-size: 60px;
-  line-height: 68px;
+  font-size: 36px;
+  line-height: 36px;
   font-weight: 500;
   margin: 0 0 -20px;
   text-transform: uppercase;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 1199.98px) {
   .breadcrumb-content-inner .gva-block-breadcrumb .page-title {
-    font-size: 50px;
-    line-height: 55px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
 @media (max-width: 991.98px) {
   .breadcrumb-content-inner .gva-block-breadcrumb .page-title {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 28px;
+    line-height: 28px;
   }
 }
 
 @media (max-width: 767.98px) {
   .breadcrumb-content-inner .gva-block-breadcrumb .page-title {
-    font-size: 35px;
-    line-height: 38px;
+    font-size: 25px;
+    line-height: 25px;
   }
 }
 
@@ -675,7 +676,7 @@ header .header-info .content-inner .title {
   font-weight: 700;
   color: #000;
   line-height: 20px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 header .header-info .content-inner .desc {
@@ -1509,7 +1510,7 @@ body.maintenance-page {
   text-transform: uppercase;
   letter-spacing: 1.6px;
   margin-bottom: 20px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 575.98px) {
@@ -1829,7 +1830,7 @@ body.maintenance-page {
 .node-detail .post-block .post-categories {
   float: right;
   margin: 20px 0;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .node-detail .post-block .node__content {
@@ -1838,7 +1839,7 @@ body.maintenance-page {
 }
 
 .field--name-field-tags {
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .field--name-field-tags .field__label {
@@ -2129,7 +2130,7 @@ body.maintenance-page {
   color: #686a6f;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .team-block.team-v1:hover .socials-team {
@@ -2217,7 +2218,7 @@ body.maintenance-page {
   font-size: 14px;
   font-weight: 400;
   margin-top: 5px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .team-carousel .team-block, .team-carousel .team-v2 {
@@ -3515,7 +3516,7 @@ body.maintenance-page {
 .text-medium {
   font-size: 26px;
   line-height: 34px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .text-medium a {
@@ -3813,7 +3814,7 @@ body.maintenance-page {
   text-transform: uppercase;
   background: transparent;
   border-top: 2px solid #11649a;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .nav-tabs > li > a i {
@@ -4237,7 +4238,7 @@ div.error {
   position: relative;
   display: inline-block;
   z-index: 1;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -4336,7 +4337,7 @@ div.error {
   font-weight: 400;
   text-transform: uppercase;
   border-bottom: 2px solid #11649a;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .btn-inline:hover {
@@ -4370,7 +4371,7 @@ div.error {
   text-transform: uppercase;
   margin-bottom: 10px;
   text-align: left;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .progress {
@@ -4699,7 +4700,7 @@ div.error {
   font-size: 50px;
   font-weight: 400;
   color: #222429;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .pricing-vertical .col-heading {
@@ -4713,7 +4714,7 @@ div.error {
   height: 90px;
   font-size: 20px;
   line-height: 22px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .panel {
@@ -5587,7 +5588,7 @@ form.search-form .form-actions .form-submit {
   font-weight: 700;
   color: #000;
   margin-bottom: 0;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 #user-login-form .form-item input {
@@ -6266,7 +6267,7 @@ div.resizable-textarea textarea {
   font-size: 16px;
   padding: 10px;
   border: 0;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .nav-tabs.drupal-tabs > li > a:hover, .nav-tabs.drupal-tabs > li > a:focus, .nav-tabs.drupal-tabs > li > a:active {
@@ -8090,7 +8091,7 @@ div.resizable-textarea textarea {
     position: relative;
   }
   .navigation .gva_menu li a {
-    font-family: "Teko", sans-serif;
+    font-family: "Cairo", sans-serif;
     text-align: left !important;
   }
   .navigation .gva_menu li a .icaret {
@@ -8129,14 +8130,14 @@ div.resizable-textarea textarea {
   .navigation .gva_menu > li > a {
     display: block;
     position: relative;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 600;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
     -moz-transition: all 0.35s;
     -ms-transition: all 0.35s;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: initial;
     letter-spacing: 2px;
     color: #222429;
   }
@@ -8291,11 +8292,11 @@ div.resizable-textarea textarea {
     padding: 0 0 9px;
   }
   .navigation .gva_menu .sub-menu > li > a {
-    font-size: 18px;
+    font-size: 14px;
     display: block;
     color: #686a6f;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-weight: 500;
+    text-transform: initial;
     position: relative;
   }
   .navigation .gva_menu .sub-menu > li > a:hover, .navigation .gva_menu .sub-menu > li > a:focus, .navigation .gva_menu .sub-menu > li > a:active {
@@ -8496,7 +8497,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   -ms-transition: all 0.35s;
   position: relative;
   color: #686a6f;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-size: 20px;
 }
 
@@ -8791,7 +8792,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 
 .tags-list .item-list > ul > li a {
   color: #686a6f;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   background: #fff;
   padding: 4px 18px 0px;
   display: inline-block;
@@ -10581,7 +10582,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   color: #11649a;
   font-size: 50px;
   line-height: 50px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-icon-box-number.style-1 .box-title {
@@ -10598,7 +10599,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 
 .gsc-icon-box-number.style-1:hover .box-number, .gsc-icon-box-number.style-1:hover .box-title {
   color: #11649a;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-icon-box-number.style-1:hover:after {
@@ -10847,7 +10848,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   margin-top: 13px;
   color: #11649a;
   display: inline-block;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-icon-box-new.style-2 .content-inner .desc .link:hover {
@@ -10883,7 +10884,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   padding-left: 50px;
   text-transform: uppercase;
   color: #222429;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-weight: 500;
   font-size: 12px;
   letter-spacing: 1px;
@@ -10946,7 +10947,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   text-transform: uppercase;
   color: #222429;
   letter-spacing: 2px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-weight: 500;
   font-size: 12px;
 }
@@ -11111,7 +11112,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   color: #222429;
   margin-bottom: 10px;
   display: block;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .milestone-block.position-style-top .milestone-text {
@@ -11190,7 +11191,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   font-size: 50px;
   line-height: 1;
   padding-top: 20px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .milestone-block.position-style-left .milestone-right .milestone-text {
@@ -11257,7 +11258,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   line-height: 80px;
   color: #11649a;
   font-weight: normal;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 991.98px) {
@@ -11292,7 +11293,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   line-height: 80px;
   color: #11649a;
   font-weight: normal;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 991.98px) {
@@ -12186,7 +12187,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   padding: 0 0 15px;
   position: relative;
   margin: 0;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 991.98px) {
@@ -12360,7 +12361,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 .gsc-team.team-vertical .team-name {
   padding: 0;
   color: #fff;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-team.team-vertical .team-position {
@@ -12496,7 +12497,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 .gsc-team.team-circle .team-name {
   padding: 0;
   color: #222429;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-team.team-circle .team-position {
@@ -12590,7 +12591,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   margin-bottom: 15px;
   color: #222429;
   text-transform: uppercase;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 767.98px) {
@@ -12838,7 +12839,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-weight: 24px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-box-hover.style-1 .backend .box-title:after {
@@ -12894,7 +12895,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   line-height: 1.2;
   padding-bottom: 12px;
   text-transform: uppercase;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-box-hover.style-1:hover .frontend, .gsc-box-hover.style-1:hover .backend, .gsc-box-hover.style-1:active .frontend, .gsc-box-hover.style-1:active .backend, .gsc-box-hover.style-1:focus .frontend, .gsc-box-hover.style-1:focus .backend, .gsc-box-hover.style-1.active .frontend, .gsc-box-hover.style-1.active .backend {
@@ -12940,7 +12941,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #222429;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-box-hover.style-2 p {
@@ -12963,7 +12964,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
 .gsc-text-rotate .rotate-text .primary-text {
   font-size: 42px;
   color: #000;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -13050,7 +13051,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 5px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 991.98px) {
@@ -13366,7 +13367,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   line-height: 36px;
   font-size: 26px;
   color: #000;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-quote-text.has-border {
@@ -14124,12 +14125,12 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   -webkit-text-emphasis: uppercase;
   text-emphasis: uppercase;
   margin: 35px 0;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-progress-box .heading-box {
   line-height: 1;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gsc-progress-box .heading-box .step-number {
@@ -14371,7 +14372,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
   margin-bottom: 15px;
   padding-bottom: 15px;
   position: relative;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .service-timeline > li .hentry .title:after {
@@ -14741,7 +14742,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager {
     font-weight: 500;
     text-transform: uppercase;
     color: #222429 !important;
-    font-family: "Teko", sans-serif;
+    font-family: "Cairo", sans-serif;
   }
   .gva-offcanvas-mobile .gva-navigation .gva_menu > li > a:after, .gva-offcanvas-mobile .gva-navigation .gva_menu > li > a:before {
     content: none;
@@ -15303,7 +15304,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   padding: 0;
   border: 0;
   background: transparent;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .portfolio-filter ul.nav-tabs > li > a:hover {
@@ -15421,7 +15422,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   font-weight: 400;
   color: #fff;
   position: relative;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .portfolio-v1 .category a:after {
@@ -15617,7 +15618,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   letter-spacing: 1.6px;
   font-weight: 400;
   color: #fff;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .portfolio-v2 .content-inner .category a:hover, .portfolio-v2 .content-inner .category a:focus, .portfolio-v2 .content-inner .category a:active {
@@ -15799,7 +15800,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.5px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .portfolio-v3 .portfolio-content .content-inner .category a:hover, .portfolio-v3 .portfolio-content .content-inner .category a:focus, .portfolio-v3 .portfolio-content .content-inner .category a:active {
@@ -15971,7 +15972,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   font-weight: 400;
   color: #686a6f;
   letter-spacing: 1px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .portfolio-v4 .content-inner .category a:hover, .portfolio-v4 .content-inner .category a:focus, .portfolio-v4 .content-inner .category a:active {
@@ -16054,7 +16055,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
 .portfolio-single .portfolio-meta {
   margin: 10px 0 30px;
   color: #11649a;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
   text-transform: uppercase;
 }
 
@@ -16088,7 +16089,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   color: #222429;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .portfolio-single .post-content ul {
@@ -16486,7 +16487,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   line-height: 50px;
   letter-spacing: 2px;
   margin-bottom: 40px;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 991.98px) {
@@ -16549,7 +16550,7 @@ body.toolbar-horizontal.toolbar-tray-open .header-default .stuck {
   position: relative;
   padding-top: 10px;
   color: #fff;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 @media (max-width: 1199.98px) {
@@ -17353,7 +17354,7 @@ body.path-services .body-page {
   padding: 10px !important;
   font-weight: 600;
   color: #222429;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 #customize-gavias-preivew .card .card-header a:after {
@@ -17578,16 +17579,16 @@ body.path-services .body-page {
 
 .gavias_sliderlayer .slide-style-1, #gavias_slider_single .slide-style-1 {
   font-weight: 800;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gavias_sliderlayer .slide-style-2, #gavias_slider_single .slide-style-2 {
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gavias_sliderlayer .slide-style-3, #gavias_slider_single .slide-style-3 {
   font-weight: 600;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gavias_sliderlayer .slide-style-4, #gavias_slider_single .slide-style-4 {
@@ -17700,7 +17701,7 @@ body.path-services .body-page {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border: none;
-  font-family: "Teko", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .gavias_sliderlayer .inner.btn-slide .btn-curve, .gavias_sliderlayer .btn-slide a .btn-curve, #gavias_slider_single .inner.btn-slide .btn-curve, #gavias_slider_single .btn-slide a .btn-curve {
