@@ -51,7 +51,7 @@
           <div class="breadcrumb-content-main"> 
             <h2 class="page-title"><span>{{ breadcrumb_title }} </span></h2>           
             {% block content %}
-              <div class="{{ custom_classes }}">
+              <div class="{{ custom_classes }}" style="display:none;">
                 <div{{ content_attributes.addClass('content block-content') }}>{{ content }}</div>
               </div>  
             {% endblock %}            
