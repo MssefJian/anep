@@ -24,7 +24,7 @@
 
       Highcharts.chart('Orgcontainer', {
         chart: {
-          height: 1100,
+          height: 2000,
           inverted: true
         },
 
@@ -59,7 +59,7 @@
         exporting: {
           allowHTML: true,
           sourceWidth: 1300,
-          sourceHeight: 1100
+          sourceHeight: 2000
         }
 
       });
