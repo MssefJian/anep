@@ -1,0 +1,19 @@
+uuid: b44976d9-08e6-4977-87c6-6443484ddf0a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_region
+    - paragraphs.paragraphs_type.region
+id: paragraph.region.field_region
+field_name: field_region
+entity_type: paragraph
+bundle: region
+label: Region
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

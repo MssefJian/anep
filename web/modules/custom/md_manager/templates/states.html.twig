@@ -1,22 +1,27 @@
+<div class="container">
+  <div class="col-12 d-flex justify-content-between align-items-center">
+    <h2>{{ title }}</h2>
+  </div>
+  {{ body|raw }}
+</div>
+
 <div class="col-md-12 map-svg">
-  <svg id="Calque_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-       y="0px" viewBox="0 0 1366 718" style="enable-background:new 0 0 1366 718;" xml:space="preserve" width="100%"
+  <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+       y="0px"
+       viewBox="0 0 313.2 311.5" style="enable-background:new 0 0 313.2 311.5;" xml:space="preserve" width="100%"
        height="718">
 
-                <g>
-                  <g>
-                    <g>
-                      {% for path in paths %}
-                      {{ path|raw }}
+
+                      {% for path in data %}
+                        {{ path['data-coor']|raw }}
                       {% endfor %}
-                    </g>
-                  </g>
-                </g>
+
               </svg>
 
 
+  {#
   {% for item in data %}
-    <div class="reg-content{{ loop.index }} regcontent"  style="display: none;">
+    <div class="reg-content{{ loop.index }} regcontent" style="display: none;">
       <div class="card">
         <div class="card-body">
           <div class="h4"><span class="badge badge-pill badge-region1">{{ item.title }}</span></div>
@@ -29,4 +34,6 @@
       </div>
     </div>
   {% endfor %}
+  #}
+
 </div>
