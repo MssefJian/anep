@@ -1,0 +1,29 @@
+uuid: 01b43e7d-096f-4110-bd44-b81583481366
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.region.field_region
+    - field.field.paragraph.region.field_titre
+    - paragraphs.paragraphs_type.region
+id: paragraph.region.default
+targetEntityType: paragraph
+bundle: region
+mode: default
+content:
+  field_region:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_titre:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
