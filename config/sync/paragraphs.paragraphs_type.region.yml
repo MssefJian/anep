@@ -1,0 +1,10 @@
+uuid: 6b721865-59d4-48af-8432-579b22f6354d
+langcode: fr
+status: true
+dependencies: {  }
+id: region
+label: Region
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

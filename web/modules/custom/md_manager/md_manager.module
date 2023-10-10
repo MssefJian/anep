@@ -46,6 +46,8 @@ function md_manager_theme($existing, $type, $theme, $path)
       'variables' => [
         'paths' => NULL,
         'data' => NULL,
+        'title' => NULL,
+        'body' => NULL,
       ],
     ],
     'top_bar' => [

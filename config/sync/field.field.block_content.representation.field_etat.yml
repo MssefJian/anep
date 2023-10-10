@@ -1,0 +1,43 @@
+uuid: 534a58e9-04d9-4ffe-a5c6-46b53e74afb0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.representation
+    - field.storage.block_content.field_etat
+    - paragraphs.paragraphs_type.region
+  module:
+    - entity_reference_revisions
+id: block_content.representation.field_etat
+field_name: field_etat
+entity_type: block_content
+bundle: representation
+label: Etat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      region: region
+    negate: 0
+    target_bundles_drag_drop:
+      chiffres_cles:
+        weight: 6
+        enabled: false
+      company_missions:
+        weight: 7
+        enabled: false
+      home_paragraph:
+        weight: 8
+        enabled: false
+      hr_distribution:
+        weight: 9
+        enabled: false
+      region:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

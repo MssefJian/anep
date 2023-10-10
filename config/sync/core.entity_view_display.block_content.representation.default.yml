@@ -1,0 +1,34 @@
+uuid: 6998a2fc-c45c-4382-8368-b53a4043b41c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.representation
+    - field.field.block_content.representation.body
+    - field.field.block_content.representation.field_etat
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.representation.default
+targetEntityType: block_content
+bundle: representation
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_etat:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

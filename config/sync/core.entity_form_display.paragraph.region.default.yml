@@ -1,0 +1,37 @@
+uuid: 8ad75f62-3b91-43f8-a7d9-1962a71ef9ed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.region.field_region
+    - field.field.paragraph.region.field_titre
+    - paragraphs.paragraphs_type.region
+id: paragraph.region.default
+targetEntityType: paragraph
+bundle: region
+mode: default
+content:
+  field_region:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_titre:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
