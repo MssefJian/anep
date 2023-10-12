@@ -3,14 +3,24 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - field.field.paragraph.region.field_description_2
     - field.field.paragraph.region.field_region
     - field.field.paragraph.region.field_titre
     - paragraphs.paragraphs_type.region
+  module:
+    - text
 id: paragraph.region.default
 targetEntityType: paragraph
 bundle: region
 mode: default
 content:
+  field_description_2:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_region:
     type: basic_string
     label: above
