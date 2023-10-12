@@ -5,35 +5,44 @@
   {{ body|raw }}
 </div>
 
-<div class="col-md-12 map-svg">
-  <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-       y="0px"
-       viewBox="0 0 313.2 311.5" style="enable-background:new 0 0 313.2 311.5;" xml:space="preserve" width="100%"
-       height="718">
 
 
-                      {% for path in data %}
-                        {{ path['data-coor']|raw }}
-                      {% endfor %}
-
-              </svg>
+<div class="row chiffres-cles-maps">
 
 
-  {#
-  {% for item in data %}
-    <div class="reg-content{{ loop.index }} regcontent" style="display: none;">
-      <div class="card">
-        <div class="card-body">
-          <div class="h4"><span class="badge badge-pill badge-region1">{{ item.title }}</span></div>
-          <div>
-            {% for subItem in item.subRegion %}
-              <li>{{ subItem.title }}</li>
-            {% endfor %}
-          </div>
-        </div>
+  <div class="col-md-12 col-xs-12">
+  <div class="div_carte map-svg" >
+  
+  
+               
+
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 366 800" style="enable-background:new 0 0 313.2 311.5;" xml:space="preserve">
+
+{% for path in data %}
+{{ path['data-coor']|raw }}
+{% endfor %}
+</svg>
+
+  
+
+  
+{% for key ,item in data %}
+<div class="reg-content{{key+1}} regcontent">
+  <div class="card">
+    <div class="card-body">
+      <div class="h4"><span class="badge badge-pill badge-region{{key+1}}">{{ item.title }}</span></div>
+      <div>
+        {{ item.description|raw }}
       </div>
     </div>
-  {% endfor %}
-  #}
-
+  </div>
 </div>
+{% endfor %}
+  </div>
+  </div>
+  </div>
+  
+
+
+
