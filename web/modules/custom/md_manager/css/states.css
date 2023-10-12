@@ -85,3 +85,6 @@ section.c-axe {
 .map-svg .reg1.hover, .map-svg .reg2.hover, .map-svg .reg3.hover, .map-svg .reg4.hover, .map-svg .reg5.hover, .map-svg .reg6.hover, .map-svg .reg7.hover, .map-svg .reg8.hover {
   fill: #78879d;
 }
+#Layer_1 {
+  margin: 0 15%;
+}
