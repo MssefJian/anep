@@ -277,6 +277,7 @@ class CustomPagesController extends ControllerBase
       // Retrieve the values of the paragraph fields.
       $tmp['title'] = !empty($paragraph_item) ? $paragraph_item->get('field_titre')->value : '';
       $tmp['data-coor'] = !empty($paragraph_item) ? $paragraph_item->get('field_region')->value : '';
+      $tmp['description'] = !empty($paragraph_item) ? $paragraph_item->get('field_description_2')->value : '';
       /*foreach ($dr as $subDr) {
         $subParagraphItem = $subDr->entity;
         $tmp['subRegion'][] = [
@@ -305,6 +306,7 @@ class CustomPagesController extends ControllerBase
       '#data' => $data,
       '#title' => $paragraph_field['title'],
       '#body' => $paragraph_field['content'],
+      '#description' => $paragraph_field['content'],
       '#attached' => [
         'library' => [
           'md_manager/states'

@@ -11,18 +11,18 @@
   }
 }
 
-.map-svg .reg1, .map-svg .reg2, .map-svg .reg3, .map-svg .reg4, .map-svg .reg5, .map-svg .reg6 {
+.map-svg .reg1, .map-svg .reg2, .map-svg .reg3, .map-svg .reg4, .map-svg .reg5, .map-svg .reg6, .map-svg .reg7, .map-svg .reg8 {
   cursor: pointer
 }
 
-.map-svg .reg-content1, .map-svg .reg-content2, .map-svg .reg-content3, .map-svg .reg-content4, .map-svg .reg-content5, .map-svg .reg-content6 {
+.map-svg .reg-content1, .map-svg .reg-content2, .map-svg .reg-content3, .map-svg .reg-content4, .map-svg .reg-content5, .map-svg .reg-content6, .map-svg .reg-content7 , .map-svg .reg-content8{
   display: none;
   position: absolute;
   top: 0;
   left: 20%
 }
 
-.map-svg .reg-content1 .h3, .map-svg .reg-content2 .h3, .map-svg .reg-content3 .h3, .map-svg .reg-content4 .h3, .map-svg .reg-content5 .h3, .map-svg .reg-content6 .h3 {
+.map-svg .reg-content1 .h3, .map-svg .reg-content2 .h3, .map-svg .reg-content3 .h3, .map-svg .reg-content4 .h3, .map-svg .reg-content5 .h3, .map-svg .reg-content6 .h3, .map-svg .reg-content7 .h3, .map-svg .reg-content8 .h3 {
   font-size: 1.125rem
 }
 
@@ -53,49 +53,25 @@
   margin-left: 1.25rem
 }
 
-.st0 {
-  fill: #1176B7;
-  stroke: #FFFFFF;
-  stroke-width: 0.5;
-}
 
-.st1 {
-  fill: #57BCFD;
-  stroke: #FFFFFF;
-  stroke-width: 0.5;
-}
+.st0{fill:#1569B5;}
+.st1{fill:#7ABAEA;}
+.st2{fill:#3E89CA;}
+.st3{fill:#66AADF;}
+.st4{fill:#8FCAF4;}
+.st5{fill:#A3DAFF;}
+.st6{fill:#2979C0;}
+.st7{fill:#5299D5;}
 
-.st2 {
-  opacity: 0.98;
-  fill: #57BCFD;
-  stroke: #FFFFFF;
-  stroke-width: 0.5;
-  enable-background: new;
-}
+.st0:hover{fill:#1f7ad0;}
+.st1:hover{fill:#61a9e1;}
+.st2:hover{fill:#2e6ca2;}
+.st3:hover{fill:#437eab;}
+.st4:hover{fill:#78b1db;}
+.st5:hover{fill:#9ccae8;}
+.st6:hover{fill:#76aad7;}
+.st7:hover{fill:#4287c0;}
 
-.st3 {
-  fill: #4CA7E2;
-  stroke: #FFFFFF;
-  stroke-width: 0.5;
-}
-
-.st4 {
-  fill: #80CCFF;
-  stroke: #FFFFFF;
-  stroke-width: 0.5;
-}
-
-.st5 {
-  fill: #A2DAFF;
-  stroke: #FFFFFF;
-  stroke-width: 0.5;
-}
-
-.st6 {
-  fill: #3796D4;
-  stroke: #FFFFFF;
-  stroke-width: 0.5;
-}
 
 li, p {
   text-align: justify;
@@ -106,6 +82,6 @@ section.c-axe {
   direction: ltr;
 }
 
-.map-svg .reg1.hover, .map-svg .reg2.hover, .map-svg .reg3.hover, .map-svg .reg4.hover, .map-svg .reg5.hover, .map-svg .reg6.hover {
+.map-svg .reg1.hover, .map-svg .reg2.hover, .map-svg .reg3.hover, .map-svg .reg4.hover, .map-svg .reg5.hover, .map-svg .reg6.hover, .map-svg .reg7.hover, .map-svg .reg8.hover {
   fill: #78879d;
 }

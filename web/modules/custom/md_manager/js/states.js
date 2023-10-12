@@ -23,6 +23,12 @@
       $('.reg6').on('tap', function () {
         $('.reg-content6').show();
       })
+      $('.reg7').on('tap', function () {
+        $('.reg-content7').show();
+      })
+      $('.reg8').on('tap', function () {
+        $('.reg-content8').show();
+      })
       $('.regcontent').on('tap', function () {
         $('.regcontent').hide();
       })
@@ -73,6 +79,22 @@
       $('.reg6').on('mouseout', function () {
         $('.reg-content6').hide();
         $('.reg6').removeClass('hover')
+      })
+      $('.reg7').on('mouseover', function () {
+        $('.reg-content7').show();
+        $('.reg7').addClass('hover')
+      })
+      $('.reg7').on('mouseout', function () {
+        $('.reg-content7').hide();
+        $('.reg7').removeClass('hover')
+      })
+      $('.reg8').on('mouseover', function () {
+        $('.reg-content8').show();
+        $('.reg8').addClass('hover')
+      })
+      $('.reg8').on('mouseout', function () {
+        $('.reg-content8').hide();
+        $('.reg8').removeClass('hover')
       })
     }
   };
