@@ -1,0 +1,26 @@
+uuid: 8d6e369c-a5c8-4c2b-9735-84c1d9464646
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_2
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.region
+  module:
+    - text
+id: paragraph.region.field_description_2
+field_name: field_description_2
+entity_type: paragraph
+bundle: region
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+field_type: text_long
