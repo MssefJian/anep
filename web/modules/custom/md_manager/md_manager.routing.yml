@@ -27,7 +27,7 @@ md_manager.human_ressources:
     no_cache: 'TRUE'
 
 md_manager.states:
-  path: '/agence/representations-regionales'
+  path: '/agence/representations-regionales-3'
   defaults:
     _controller: '\Drupal\md_manager\Controller\CustomPagesController::states'
     _title: 'Representation régionales'
