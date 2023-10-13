@@ -14,6 +14,7 @@ global-styling:
       vendor/ytplayer/css/jquery.mb.YTPlayer.min.css: {}
       vendor/magnific/magnific-popup.css: {}
       vendor/slick/slick.css: {}
+      css/states.css: {}
       css/update.css: {}
       css/custom.css: {}
   js:
@@ -37,7 +38,9 @@ global-styling:
     vendor/quotes_rotator/js/jquery.cbpQTRotator.min.js: {}
     vendor/jquery.nicescroll.min.js: {}
     vendor/slick/slick.min.js: {}
+    js/states.js: {}
     js/main.js: {}
+    
   dependencies:
     - core/jquery
     - core/drupal

@@ -1,287 +1,58 @@
-<style type="text/css">
-    .c-regions .bloc-map-text .badge.badge-region6 {
-      background-color: #bce4fe
-    }
-  
-    @media (max-width: 1023px) {
-      .map-svg svg {
-        height: auto
-      }
-    }
-  
-    .map-svg .reg1, .map-svg .reg2, .map-svg .reg3, .map-svg .reg4, .map-svg .reg5, .map-svg .reg6 {
-      cursor: pointer
-    }
-  
-    .map-svg .reg-content1, .map-svg .reg-content2, .map-svg .reg-content3, .map-svg .reg-content4, .map-svg .reg-content5, .map-svg .reg-content6 {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 20%
-    }
-  
-    .map-svg .reg-content1 .h3, .map-svg .reg-content2 .h3, .map-svg .reg-content3 .h3, .map-svg .reg-content4 .h3, .map-svg .reg-content5 .h3, .map-svg .reg-content6 .h3 {
-      font-size: 1.125rem
-    }
-  
-    .c-axe {
-      position: relative
-    }
-  
-    .c-axe .card {
-      margin-bottom: 1.25rem;
-      padding: 2.25rem 2.5rem .75rem
-    }
-  
-    .c-axe .card h3 {
-      margin-bottom: .9375rem
-    }
-  
-    .c-axe .card h3 img {
-      max-height: 1.5rem;
-      margin-right: .625rem
-    }
-  
-    .filter-pagination {
-      margin-bottom: 3.125rem
-    }
-  
-    .filter-pagination .form-inline {
-      position: relative;
-      margin-left: 1.25rem
-    }
-  
-    .st0 {
-      fill: #1176B7;
-      stroke: #FFFFFF;
-      stroke-width: 0.5;
-    }
-  
-    .st1 {
-      fill: #57BCFD;
-      stroke: #FFFFFF;
-      stroke-width: 0.5;
-    }
-  
-    .st2 {
-      opacity: 0.98;
-      fill: #57BCFD;
-      stroke: #FFFFFF;
-      stroke-width: 0.5;
-      enable-background: new;
-    }
-  
-    .st3 {
-      fill: #4CA7E2;
-      stroke: #FFFFFF;
-      stroke-width: 0.5;
-    }
-  
-    .st4 {
-      fill: #80CCFF;
-      stroke: #FFFFFF;
-      stroke-width: 0.5;
-    }
-  
-    .st5 {
-      fill: #A2DAFF;
-      stroke: #FFFFFF;
-      stroke-width: 0.5;
-    }
-  
-    .st6 {
-      fill: #3796D4;
-      stroke: #FFFFFF;
-      stroke-width: 0.5;
-    }
-  
-    li, p {
-      text-align: justify;
-      text-justify: inter-word;
-    }
-  
-    section.c-axe {
-      direction: ltr;
-    }
-  
-    .map-svg .reg1.hover, .map-svg .reg2.hover, .map-svg .reg3.hover, .map-svg .reg4.hover, .map-svg .reg5.hover, .map-svg .reg6.hover {
-      fill: #78879d;
-    }
-  </style>
-  <script src="https://www.anep.ma/fr/assets/js/vendor/jquery.min.js"></script>
-  <div class="col-md-12 map-svg">
-    <svg id="Calque_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 718" style="enable-background:new 0 0 1366 718;" xml:space="preserve" width="100%" height="718">
-                
-        <g>
-          <g>
-            <g>
-              <path class="reg1 st0" d="M840.5,6l-3.2,11l-2.6,8.8l-4.5,12.5l-3,7.6L831,47l3.2-0.8h2.4l3.2,2.4l4.6,0.3l2.8,0.1l-0.7,4l0.2,3.1                                    l0.2,3l2.8,2l1.9-2.7l8.8,6.8l0.1,3.6l4.6,1.8l3-1.4l3-1.5l-0.6-5.7l0.8-5.5h7.5l6.9-2.6l1.7,5.7l12.4,2.5l4.7-1.6l3.2-4.7                                    l1.3,2.9l4.2,0.3l2.8-4.5l4.8,0.1l5-3.3l9.2,1.6l-0.5,5.5l-1.8,4.9l4.3-2.8l2.6,3l10.4-5.9l5.2,3.6l4.4-1.6l6.1,1.5l6.1-6                                    l4.2-7.2l7.8-2.8l2.8-6.7l-4.9-2.2l-3.8,4.3l-3.9,0.4l-3.1-1.4l-3.8-3.4l-1.5-0.4l2.3,3.5l-3.5,0.2l-4.5-5.3l1.1-4.1l-3-6.2                                    l-2.8,7h-2.8l-1.7,3.1l-2.8,2l-7.2-0.3l-9.8-4.7l-2.3,1.1l-3.4,4.2l-4.3-4.2L906,37.6l-7.4-0.4l-14.9-4.8l-6.5-6.7l-4.6-5.1                                    l-5.3-6.4l-1.8-2.3l-0.8-5.1l1.1-2.4l2-3.2l-2.1,0.6l-1.6-1.2L858.2,1l-3.5,4l-4.2-0.7l-2.8,3.2L840.5,6z"></path>
-              <path class="st1 reg3" d="M803.6,131.5l-3.2,0.8l-1.4,11.2h-2.6l-3.4,13.2l2.2,3.5l0.2,5.1l-2.4,8.3l-2.4,2.2l1,6.9l-1,6.1l3.4,4.3                                    l-1.2,3.7l3.2,2.2l-2.2,4.1l-5.3,1.2l-3.6-2.6l-4.3,5.3l3.4,1l2.6,4.5h3.7l-2.6,7.1l2.2,3.7l3.6-2.6l1.6,3.3l11-1.2l0.2-7.9                                    l5.1,1.6l4.7-2.8l2.4,0.6l4.7-4.5l10.5-3l6.1-7.1l3,0.4l2.6-4.3l-1.4-3.2l-2.6-0.6l2.2-5.5l5.3-0.2l2.2-5.3l4.3-0.8l4.9,1.8                                    l-2.5-3.2l1.5-3.3l-4.1-1l1.8-4.4l4.3-0.3l-0.2-4.7l3,1.4l2.4-5.3l-0.8-8.7l2.6-4.5l-3.2-4.1l-0.6-3.9l2-3.9l-4.9,1.2l-4.9-6.3                                    l1.2-3.7l-3.9-2.8l-5.5-1.2l-5.1-3.5l2.2,8.7l-5.9-0.8l-5.5,1.8l-2.6-3.3l-3.6,0.8l2-5.1l-7.3-2l-0.8,4.3l-2.6,4.3l3.4,2.6                                    l-6.7,5.3l-5.1-3.7L803.6,131.5z"></path>
-              <path class="st1 reg3" d="M789.8,103.1l-3.9,0l-4.2,4.7l-2.9,2.1l-5.3,3.5l-4.9-1l-18.4,10.6l-6.6,0.4l-7,7.4l-4.5-2.8l-3.3,4.6                                    l-1.5,5.7l-4.9,4.7l-4,4l-3.2,2.2l-4,3.8l3.3,4.3v1.3l-2.2,0.6l-0.4,2.1l5.3,4.7l9.5-1.8l3.2,3.6l-0.6,3.5l2.1,3.9h2.2l4.9-1                                    l1-3.6l3.3-0.6l9.5-6.7l-3.2-4.6l2.7-2.1l0.4-3.9l1.3-3.6l3.1,4.9l2,4.6l6.8,1.3l2.4,6l1,1.7l2.9,2.9l8.9-2.1l1.1,3.8l6,3.1                                    l3.2,0.5l2.4-2.2l2.4-8.3l-0.2-5.1l-2.2-3.5l3.4-13.2h2.6l1.4-11.2l0,0l3.2-0.8V126l1.8-3.9l-1.6-2.4l2.6-3.2l-4.7-1l-1.2-2                                    l-4.3,1.6l-2.2-10.4l-3.6-0.6L789.8,103.1z"></path>
-              <path class="st2 reg3" d="M711.1,153.1l-4.7,6.8l-5.3,1.7l2.8,4.5l-4.2,6.7l2.8,1.9l-2,3.3l1.4,2.5l-3.1,3.3l-1.4,4.7l-14.2,14.5                                    l0.6,5.8l-10,8.9l4.2,3.3l-2.8,9.5l0.3,10l2,2.2l1.1,6.1l4.5-0.6l1.7-3.6l2.2-2l2.8,3.9l6.7-3.6l3.1,5.9l1.7-0.8l0.3-1.9l1.4,0.8                                    l7,1.1l1.1-4.2l6.4-5l2.8,3.9l-0.8,5l4.5-3.1l9.2,0.6l3.3,1.7l8.6-5.3l6.1,3.6l1.7-1.4l2-5.8l7-6.1l2.8,0.6l6.4-4.2l4.7-0.3                                    l1.7-2.5h3.1l5.6-2.2L785,219l2.8,0.7l2.6-7.1h-3.7l-2.6-4.5l-3.4-1l4.3-5.3l3.6,2.6l5.3-1.2l2.2-4.1l-3.2-2.2l1.2-3.7l-3.4-4.3                                    l1-6.1l-1-6.9l-3.2-0.5l-6-3.1l-1.1-3.8l-8.9,2.1l-2.9-2.9l-1-1.7l-2.4-6l-6.8-1.3l-2-4.6l-3.1-4.9l-1.3,3.6l-0.4,3.9l-2.7,2.1                                    l3.2,4.6l-9.5,6.7l-3.3,0.6l-1,3.6l-4.9,1h-2.2l-2.1-3.9l0.6-3.5l-3.2-3.6l-9.5,1.8l-5.3-4.7l0.4-2.1l2.2-0.6v-1.3L711.1,153.1z"></path>
-              <path class="st3 reg6" d="M925.7,51l-5,3.3l-4.8-0.1l-2.8,4.5l-4.2-0.3l-1.3-2.9l-3.2,4.7l-4.7,1.6l-12.4-2.5l-1.7-5.7l-6.9,2.6h-7.5                                    l-0.8,5.5l0.6,5.7l-6,3l-1.2,3.2l-8.7,2.4l5.7,6.5l-1.2,4.5l-4.9,3.2l-4.7-0.2l-1.2-1l0.8-3l-4.9-2.4l-4.3,5.1l4.5,4.7l5.1,2.8                                    l-4.7,5.5l4.1,3l-3.6,6.3v2.6l1.4,3l-3.9,3.2l5.1,3.5l5.5,1.2l3.9,2.8l-1.2,3.7l4.9,6.3l4.9-1.2l-2,3.9l0.6,3.9l3.2,4.1l2.4-3                                    l3.6,1.5l2.5-7.1l3.8,0.4l2.8-2.2l4.7,3.9l0.1,2.9l-1.3,4.2l7.3,1.4l4.2-2.1l5.7,6.1l3.3,5.2l2.2,4.2l4.6,0.1l2.8-4l0.6,3.3                                    l1.3-0.4l1.3-1.1v-2.2l3.2-3.1l1.5-4.7l5.9-7.1l1-2.6l5.3-5l5.6,2.1l6-0.3l5.7-2.5l6.1,0.4l0.3-2.4l5.7-0.6l-8-11.6l-4.9-3.3                                    l-4.6-0.1l-0.6-2.6l3.2-1.7l6.8-7.7l-0.7-2.2l-12.6-1.4l-2-2.5l-2.1-1.1l-2.4-1.3l-12,13.5l-0.8,2l4.2,1.3l-4.7,5.3l-2.1-5.3                                    l-2.9,4.5l-1.8-2.8l-3.9-0.4l0.8-5.8l5.6-3.6l-1.7-2.9l3.5-2.9l2.7-6.4l0.6-9.2l-3.6-3.3l-1-2.9l3.5-0.3l-0.6-6.5l4.2-1.1                                    l0.1-7.5l3.6-0.3l2-5.3l0.4-5.2L925.7,51z"></path>
-              <polygon class="st3 reg6" points="1036.6,177.6 1040.1,184.1 1036.2,187.8 1024.3,184.3 1010.3,185.4 1002.3,183.1 998.7,185.3                                     998.5,188.2 993.2,186.8 992.2,190.6 986.7,184.7 982.1,185.3 978.8,188.2 972.3,187 966.5,191 969.7,192.9 967.5,196.9                                     969.7,201 965,204.4 952.1,206.7 939.7,238.7 937.5,243.7 927.2,256.4 908.9,262.9 885.9,279.8 877.9,264.1 877.8,257.7                                     886.8,255.5 895.3,245.5 900.8,226.6 911.5,220.1 910.8,214.9 903.4,216.6 895.8,216.8 890.3,215.7 884.9,210.4 880.2,201.4                                     878.4,192 889.8,184.8 894.3,179.6 886.8,173.7 891.4,172 895.3,172 899.2,182.2 903.4,180.2 910.8,177.3 914.4,179.9                                     922.5,181.5 928.7,181.1 934.6,181.9 933.6,186.4 938.9,181.7 945,185.6 954.5,182.5 951,186 950.8,192.1 954.1,198.8                                     957.3,200.4 950.2,204.2 957.3,200.4 954.1,198.8 950.8,192.1 951,186 954.5,182.5 945,185.6 938.9,181.7 933.6,186.4                                     934.6,181.9 928.7,181.1 928.9,177.2 927.5,172.8 921.2,168.1 922.9,165.7 919,162.6 920.2,161.5 920.2,159.3 923.4,156.2                                     925,151.5 930.8,144.4 931.8,141.7 937.1,136.7 942.7,138.8 948.7,138.5 954.4,136 960.5,136.4 960.8,134.1 966.5,133.5                                     958.6,121.9 953.7,118.6 949.1,118.5 948.5,115.8 951.7,114.1 958.6,106.5 957.9,104.3 945.3,102.9 943.4,100.4 938.9,98                                     926.9,111.5 926.1,113.4 930.3,114.7 925.5,120 923.4,114.7 920.5,119.2 918.7,116.4 914.8,116 915.6,110.1 921.2,106.5                                     919.5,103.6 923,100.6 925.7,94.2 926.2,85 922.6,81.7 921.6,78.8 925.1,78.5 924.5,71.9 928.7,70.8 928.9,63.3 932.5,63                                     936.8,60.2 939.4,63.2 949.8,57.4 955,60.9 959.4,59.3 965.5,60.8 971.6,54.8 975.8,47.6 983.6,44.8 986.4,38.1 989.2,39.4                                     990.8,42 996.9,47 1000.9,46 1000.5,49.1 1003.2,50.7 1003.8,53.1 1010.3,55.4 1006.4,61.5 1009.7,67.1 1012.5,67.6 1009,73.2                                     1011.9,76.7 1011.3,81 1014.3,89.5 1012.7,99.8 1013.9,103.9 1012.3,107.4 1015.9,113.5 1016.7,120.2 1014.7,126.7 1017.8,133.4                                     1022.4,138.2 1023.4,142.7 1021,145.5 1024.9,152.9 1029.5,152.7 1043.3,163.4 1037.4,173      "></polygon>
-              <path class="st4 reg4" d="M864.4,167.1l-3-1.4l0.2,4.7l-4.3,0.3l-1.8,4.4l4.1,1l-1.5,3.3l2.5,3.2l-4.9-1.8l-4.3,0.8l-2.2,5.3l-5.3,0.2                                    l-2.2,5.5l2.6,0.6l1.4,3.2l-2.6,4.3l-3-0.4l-6.1,7.1l-10.5,3l-4.7,4.5l-2.4-0.6l-4.7,2.8l-5.1-1.6l-0.2,7.9l-11,1.2l-1.6-3.3                                    l-3.6,2.6l-2.2-3.7l-2.8-0.7l0.8,4.5l-5.6,2.2h-3.1l-1.7,2.5l-4.7,0.3l-6.4,4.2l-2.2,3.1l-0.2,2.3l3.6,0.2l-2,1.8l-0.1,7.4                                    l5.2-0.1l-2,1l-3.3,5.4l5.9,0.1l-0.2,3.6l4.3,5.5l-3.6,0.4l-1.1,2.4l-4.3,0.9l0.6,4.1l0.3,0.7l1.7-1.5l2.8,5.6l-2.9,3.6l6.5-0.1                                    l1.5,2l1.3,0.3l2-1l3.8,3.4l0.1-1.3l-1.3-3.9l2-1.5l2.1-3.8l1.5-4l6.2,5.4l5.1-3l1.8,1.6l0.3-6.3l2.2,1.9l6.2-3.4l0.9,4.5                                    l3.9,0.3l2.9,3.6l-4.1,3.8l-0.1,2.5l3.4,2.6l-0.3,1.4l-2.2,2.6l1.5,2.2l3.1-1.7l3.2,0.9l-5.4,6l2.2,3.9l-2.9,3.6l2.9,2.6l-1,7.7                                    l0.5,0.8l7,0.8l2.6,2.3l6.8,0.2l10.2-2l0.6-2.4l3,0.2l-1.3,3.3l4.7-0.6l-0.5,3.3l3.5,0.2l0.6-2.8l0.1-1.6l4-8.4l5-4.2l2.5-4.2                                    l3.8-1.3l0.6-3.6l5.9-3.2l3.3-4.3l7-4.7l-8-15.7l-0.2-6.4l9.1-2.3l8.4-10L901,227l10.7-6.5l-0.6-5.2l-7.6,1.8l-7.6,0.3l-5.6-1.6                                    l-5.4-5.4l-4.7-9l-1.8-9.4l11.4-7.2l4.5-5.2l-7.7-5.6l-5.9,6.8l-25.6,9.4l-5.8-3.2"></path>
-              <path class="st4 reg4" d="M764.4,232.7l-2.2,3.1L762,238l3.6,0.2l-2,1.8l-0.1,7.4l5.2-0.1l-2,1l-3.3,5.4l5.9,0.1l-0.2,3.6l4.3,5.5                                    l-3.6,0.4l-1.1,2.4l-4.3,0.9l0.6,4.1l0.3,0.7l1.7-1.5l2.8,5.6l-2.9,3.6l6.5-0.1l1.5,2l1.3,0.3l2-1l3.8,3.4l0.1-1.3l-1.3-3.9                                    l2-1.5l2.1-3.8l1.5-4l6.2,5.4l5.1-3l1.8,1.6l0.3-6.3l2.2,1.9l6.2-3.4l0.9,4.5l3.9,0.3l2.9,3.6l-4.1,3.8l-0.1,2.5l3.4,2.6                                    l-0.3,1.4l-2.2,2.6l1.5,2.2l3.1-1.7l3.2,0.9l-5.4,6l2.2,3.9l-2.9,3.6l2.9,2.6l-1,7.7l-5.2,0.5l-2.9,2.8l-7.1-0.5l-12.4-2.2                                    l-10.4,4.9l-7.3,1.3l-14.3,8.8l-27.7,21.2l-7.8,4.2l-0.7,18.6L709.8,358l-0.3-4.1l-4.8-1.6v-4l-2.8,0.9l-1.5-3.1l2.6-5.4                                    l-4.1,0.6l0.8-3.1l-2.2-1.5l-0.2-3.1l4.6-1.5l-0.1-2.7l2-0.3V325l-2.2-2.4l-0.3-3.5l-0.6-2.4l-3.9-5l-4.8-0.5l-2.2,4.2l-1.7-2.3                                    l-1.2,2.6l-2-3.9l-4.1,3.7l-2.5-3l-5,2.9l-2.9-1.9l-0.6-6.5l-3.6,3.2l-2-6.2l8-7.4l7.5-13.8l3.7-14.6l-0.2-1.7l-7.2-8.1l-3.6-2.1                                    l1.2-2.9l1-3.1l1.5-3.7l-0.7-5.6l2,2.2l1.1,6.1l4.5-0.6l1.7-3.6l2.2-2l2.8,3.9l6.7-3.6l3.1,5.9l1.7-0.8l0.3-1.9l8.4,1.9l1.1-4.2                                    l6.4-5l2.8,3.9l-0.8,5l4.5-3.1l9.2,0.6l3.3,1.7l8.6-5.3l6.1,3.6l1.7-1.4l2-5.8l7-6.1L764.4,232.7z"></path>
-              <path class="st4 reg4" d="M664.2,303.9l2,6.2l3.6-3.2l0.6,6.5l2.9,1.9l5-2.9l2.5,3l4.1-3.7l2,3.9l1.2-2.6l1.7,2.3l2.2-4.2l4.8,0.5                                    l3.9,5l0.6,2.4l0.3,3.5l2.2,2.4v3.8l-2,0.3l0.1,2.7l-4.6,1.5l0.2,3.1l2.2,1.5l-0.8,3.1l4.1-0.6l-2.6,5.4l1.5,3.1l2.8-0.9v4                                    l4.8,1.6l0.3,4.1l10.5,13.7l-1.6,65.7l-4.9-0.8l-6.7-3l-13.2-21.3l-2.8-0.8l-2.8,3l-5.9,0.2l-8.7-2.8l-6.3-10.6l-7.3,1.8                                    l-3.7-2.6l-4.1-5.5l-1-0.6l-5.7-1l-5.9,1.7l-2.6-1.5l-21.3-0.5l-4,2.5l-7-3.7l-9.1-0.4l-4.3-11.3l-3.7-4l-1.5-6.6l13.9-4.4                                    l3.1-6.1l7.2-7.4l5.1-2.2l2.5-4.6l12.5-4.7l3.3-1.5l9.6-5.8l6.7-9.7l6.2-2.6l0.5-3.6l2.9-2.3l2-3L664.2,303.9z"></path>
-              <path class="st5 reg5" d="M718.8,437.4l-2.2,46.9l-145.2-6.7l-3.9,73.7l-8.7-2.8l-15,3.5l-17.4-6.3h-12.6l-8.7-2.4l-10.3,5.5                                    l-23.3-7.9l-3.9,2.4l-4.7-1.2l-2,3l-3.4-2.8l-6.1,3.9l-2.6-3l-1.6-4.9l-2.6-2.4l-3.7,1.4l-2.8-3.3l0.2-5.9l3-5.9l1.4-5.9                                    l-2.4-5.5l2.6-3.7l-0.4-2.8l3-6.5l3.7-3.9l1.4-6.5l1.8-1.8l0.2-4.9l4.3-3.2l3.7-6.6l-0.8-6.3l2.3-4.8l4.3-1.9l2.5,1.1l5.5-4.1                                    l0.8-3.5l4.8,0.9l13.6-6.6l4.5-3.9l3.7-2.8l4.1-9.7l3.9-6.2l0.5-5.6l6.8-5.9l5-18.8l5.6-1.6l5.9-10.4l24.3-3l4.1-1l11.8-3.1                                    l11.8-4.2l1.5,6.6l3.7,4l4.3,11.3l9.1,0.4l7,3.7l4-2.5l21.3,0.5l2.6,1.5l5.9-1.7l5.7,1l1,0.6l4.1,5.5l3.7,2.6l7.3-1.8l6.3,10.6                                    l8.7,2.8l5.9-0.2l2.8-3l2.8,0.8l13.2,21.3l6.7,3L718.8,437.4z"></path>
-              <path class="st5 reg5" d="M567.4,551.2l-3.1,50l-7.3,0.6l-9.5,5.3l-8.9,0.8l-9.8,6.7l-12.6,5.3l-6.1,12.8l2.8,10.9l1.1,58.5l-181.1-12                                    l-3.1,11.4l-3.6,5.6l0.3,9.5l-1.7-0.3l-1.7-2l0.8-1.7l-0.6-4.5l0.8-3.1l3.1-5.8l1.7-10.6l1.1-4.7l2.8-8.6l-1.5-4.5l2.9-1.2                                    l-0.9-3l2.6-3l4.8-12.1l3-1.6l1.3-3.5l3.9-3l2.7,2l3.8-0.5l3.6-4.8l1.2-5.9l3.8-1.4l0.6-10.2l3.3-2.6l-0.7-2.5l1.5-2.5l5.2-0.5                                    l2.6-4.6l-3.2-3.6l3.6-4.3l3.7-5.9l5.6-5.1l-1.2-3.8l7.2-6.9l3.1-3.4l2.9-4.8l-0.8-2.8l-3.2,1l-6.1,9.4L385,581v-2.3l3.4-4                                    l2.6-4.5l4.1-4l10.3-1.7l0.1-3.8l8.3-7.3l4.9-1.4l0.2-3l6.7-6.1l6.6-2.4l1.7-4.2l4.3-2.2l2.8,3.3l3.7-1.4l2.6,2.4l1.6,4.9l2.6,3                                    l6.1-3.9l3.4,2.8l2-3l4.7,1.2l3.9-2.4l23.3,7.9l10.3-5.5l8.7,2.4h12.6l17.4,6.3l15-3.5L567.4,551.2z"></path>
-              <path class="st6 reg2" d="M827.3,45.9l-5.5,13.9l-3.7,7.3l-7.5,13.6l-5.1,8.9l-1.8,3.2l-0.8,1.4l-7.1,5.1l-5.9,3.9l0.6,1l3.6,0.6                                    l2.2,10.4l4.3-1.6l1.2,2l4.7,1l-2.6,3.2l1.6,2.4l-1.8,3.9v5.5l7.1,1.2l5.1,3.7l6.7-5.3l-3.4-2.6l2.6-4.3l0.8-4.3l7.3,2l-2,5.1                                    l3.6-0.8l2.6,3.3l5.5-1.8l5.9,0.8l-2.2-8.7l3.9-3.2l-1.4-3v-2.6l3.6-6.3l-4.1-3l4.7-5.5l-5.1-2.8l-4.5-4.7l4.3-5.1l4.9,2.4                                    l-0.8,3l1.2,1l4.7,0.2l4.9-3.2l1.2-4.5l-5.7-6.5l8.7-2.4l1.2-3.2l-4.6-1.8l-0.1-3.6l-8.8-6.8l-1.9,2.7l-2.8-2l-0.4-6l0.7-4                                    l-7.4-0.4l-3.2-2.4h-2.4L831,47L827.3,45.9z"></path>
-            </g>
-            <line class="st3 reg6" x1="952.1" y1="206.7" x2="950.2" y2="204.2"></line>
-          </g>
-          <polygon class="st3 reg6" points="880.6,180.8 886.6,174 891.1,172.3 895,172.3 898.9,182.4 910.6,177.6 914.1,180.2 922.2,181.8                             928.4,181.4 928.6,177.4 927.2,173.1 920.9,168.4 922.7,166 918.7,162.9 916.9,160 915.1,162.5 909.5,163.9 903.9,154.5                             898.2,148.4 894,150.5 886.7,149.1 888,144.9 887.8,142 883.1,138.1 880.3,140.3 876.5,139.9 874,147 870.4,145.5 868,148.5                             866,152 865.4,153 866.2,161.7 863.9,167 860.9,165.6 861.1,170.3 856.8,170.6 855,175 859,176.1 857.6,179.4 860.1,182.6                             855.2,180.8 850.8,181.6 848.7,186.9 855,190.2 "></polygon>
-        </g>
-      </svg>                
-    
-                               
-                         
-                
-                            
-                           
-    
-      <div class="reg-content1 regcontent">
-        <div class="card">
-          <div class="card-body">
-            <div class="h4"><span class="badge badge-pill badge-region1">{{"Direction Régionale du Nord"|t}}</span></div>
-            <div>
-              <li>{{"Région Tanger-Tétouan-Al Houceima"|t}} </li>
-              <li>{{"Nador"|t}}</li>
-              <li>{{"Driouach"|t}}</li>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reg-content2 regcontent" style="display: none;">
-        <div class="card">
-          <div class="card-body">
-            <div class="h4"><span class="badge badge-pill badge-region2">{{"Direction Régionale de Rabat"|t}}</span></div>
-            <div>
-              <li>{{"Région Rabat-Salé-Kenitra"|t}}</li>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reg-content3 regcontent" style="display: none;">
-        <div class="card">
-          <div class="card-body">
-            <div class="h4"><span class="badge badge-pill badge-region3">{{"Direction Régionale Centre-Ouest"|t}}</span></div>
-            <div>
-              <li>{{"Région Casablanca-Settat"|t}}</li>
-              <li>{{"Région Beni-Mellal-Khenifra"|t}}</li>
-              <li>{{"Région Marrakech-Safi"|t}}</li>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reg-content4 regcontent" style="display: none;">
-        <div class="card">
-          <div class="card-body">
-            <div class="h4"><span class="badge badge-pill badge-region4">{{"Direction Régionale Sud"|t}}</span></div>
-            <div>
-              <li>{{"Région Darâa-Tafilalt (Ouarzazate, Tinguir, Zagora)"|t}}</li>
-              <li>{{"Région Souss-Massa"|t}}</li>
-              <li>{{"Région Guelmim-Ouad Noun"|t}}</li>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reg-content5 regcontent" style="display: none;">
-        <div class="card">
-          <div class="card-body">
-            <div class="h4"><span class="badge badge-pill badge-region5">{{"Direction Régionale de Laayoune"|t}}</span></div>
-            <div>
-              <li>{{"Région Laâyoune-Sakia El Hamra"|t}}</li>
-              <li>{{"Région Dakhla-Oued Dahab"|t}}</li>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reg-content6 regcontent" style="display: none;">
-        <div class="card">
-          <div class="card-body">
-            <div class="h4"><span class="badge badge-pill badge-region6">{{"Direction Régionale Centre-Est"|t}}</span></div>
-            <div>
-              <li>{{"Région de l'Oriental"|t}}</li>
-              <li>{{"Région Fès-Meknès"|t}}</li>
-              <li>{{"Région Darâa-Tafilalt (Errachidia, Midelt)"|t}}</li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <div class="col-12 d-flex justify-content-between align-items-center">
+    <h2>{{ title }}</h2>
+  </div>
+  {{ body|raw }}
+</div>
 
 
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.reg1').on('tap', function () {
-      $('.reg-content1').show();
-    })
-    $('.reg2').on('tap', function () {
-      $('.reg-content2').show();
-    })
-    $('.reg3').on('tap', function () {
-      $('.reg-content3').show();
-    })
-    $('.reg4').on('tap', function () {
-      $('.reg-content4').show();
-    })
-    $('.reg5').on('tap', function () {
-      $('.reg-content5').show();
-    })
-    $('.reg6').on('tap', function () {
-      $('.reg-content6').show();
-    })
-    $('.regcontent').on('tap', function () {
-      $('.regcontent').hide();
-    })
-    $('.reg1').on('mouseover', function () {
-      $('.reg-content1').show();
-      $('.reg1').addClass('hover')
-    })
-    $('.reg1').on('mouseout', function () {
-      $('.reg-content1').hide();
-      $('.reg1').removeClass('hover')
-    })
-    $('.reg2').on('mouseover', function () {
-      $('.reg-content2').show();
-      $('.reg2').addClass('hover')
-    })
-    $('.reg2').on('mouseout', function () {
-      $('.reg-content2').hide();
-      $('.reg2').removeClass('hover')
-    })
-    $('.reg3').on('mouseover', function () {
-      $('.reg-content3').show();
-      $('.reg3').addClass('hover')
-    })
-    $('.reg3').on('mouseout', function () {
-      $('.reg-content3').hide();
-      $('.reg3').removeClass('hover')
-    })
-    $('.reg4').on('mouseover', function () {
-      $('.reg-content4').show();
-      $('.reg4').addClass('hover')
-    })
-    $('.reg4').on('mouseout', function () {
-      $('.reg-content4').hide();
-      $('.reg4').removeClass('hover')
-    })
-    $('.reg5').on('mouseover', function () {
-      $('.reg-content5').show();
-      $('.reg5').addClass('hover')
-    })
-    $('.reg5').on('mouseout', function () {
-      $('.reg-content5').hide();
-      $('.reg5').removeClass('hover')
-    })
-    $('.reg6').on('mouseover', function () {
-      $('.reg-content6').show();
-      $('.reg6').addClass('hover')
-    })
-    $('.reg6').on('mouseout', function () {
-      $('.reg-content6').hide();
-      $('.reg6').removeClass('hover')
-    })
-  });
-</script>      
+
+<div class="row chiffres-cles-maps">
+
+
+  <div class="col-md-12 col-xs-12">
+  <div class="div_carte map-svg" >
+  
+  
+               
+
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 366 350" style="enable-background:new 0 0 313.2 311.5;" xml:space="preserve">
+
+     {% for key, value in content.field_etat %} 
+                    {% set path_c = value['#paragraph'].field_region.getValue() %} 
+                      {% if key >= '0' %}
+                      {% set cde = path_c.0.value %}
+                      {{ cde|raw }}
+                       
+                {% endif %} {% endfor %}
+</svg>
+
+  
+
+  
+{% for key, value in content.field_etat %} 
+{% set description = value['#paragraph'].field_description_2 %} 
+{% set titre = value['#paragraph'].field_titre.getValue() %}
+                      {% if key >= '0' %}
+                      {% set desc = description.0.value|render|striptags %}
+                      <div class="reg-content{{key+1}} regcontent">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="h4"><span class="badge badge-pill badge-region{{key+1}}">{{titre.0.value|render|striptags}}</span></div>
+                              <div>
+                                  {{ desc|raw }}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                {% endif %} {% endfor %}
+
+  </div>
+  </div>
+  </div>
+  
+
+
+
