@@ -35,13 +35,13 @@
 {% set description = value['#paragraph'].field_description_2 %} 
 {% set titre = value['#paragraph'].field_titre.getValue() %}
                       {% if key >= '0' %}
-                      {% set desc = description.0.value|render|striptags %}
+                      {% set desc = description.0.value %}
                       <div class="reg-content{{key+1}} regcontent">
                           <div class="card">
                             <div class="card-body">
                               <div class="h4"><span class="badge badge-pill badge-region{{key+1}}">{{titre.0.value|render|striptags}}</span></div>
                               <div>
-                                  {{ desc|raw }}
+                                  {{ desc|raw  }}
                               </div>
                             </div>
                           </div>

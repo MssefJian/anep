@@ -4,26 +4,14 @@ status: true
 dependencies:
   config:
     - block_content.type.representation
-    - field.field.block_content.representation.body
     - field.field.block_content.representation.field_etat
   module:
     - paragraphs
-    - text
 id: block_content.representation.default
 targetEntityType: block_content
 bundle: representation
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 26
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   field_etat:
     type: paragraphs
     weight: 27
