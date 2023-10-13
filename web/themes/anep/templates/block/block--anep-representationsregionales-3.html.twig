@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <h2>{{ title }}</h2>
+    </div>
+    {{ body|raw }}
+  </div>
+  
+  
+  
+  <div class="row chiffres-cles-maps">
+  
+  
+    <div class="col-md-12 col-xs-12">
+    <div class="div_carte map-svg" >
+    
+    
+                 
+  
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 366 350" style="enable-background:new 0 0 313.2 311.5;" xml:space="preserve">
+  
+       {% for key, value in content.field_etat %} 
+                      {% set path_c = value['#paragraph'].field_region.getValue() %} 
+                        {% if key >= '0' %}
+                        {% set cde = path_c.0.value %}
+                        {{ cde|raw }}
+                         
+                  {% endif %} {% endfor %}
+  </svg>
+  
+    
+  
+    
+  {% for key, value in content.field_etat %} 
+  {% set description = value['#paragraph'].field_description_2 %} 
+  {% set titre = value['#paragraph'].field_titre.getValue() %}
+                        {% if key >= '0' %}
+                        {% set desc = description.0.value|render|striptags %}
+                        <div class="reg-content{{key+1}} regcontent">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="h4"><span class="badge badge-pill badge-region{{key+1}}">{{titre.0.value|render|striptags}}</span></div>
+                                <div>
+                                    {{ desc|raw }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                         
+                  {% endif %} {% endfor %}
+
+    </div>
+    </div>
+    </div>
+    
+  
+  
+  
+  
