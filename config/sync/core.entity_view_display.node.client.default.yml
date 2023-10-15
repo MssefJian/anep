@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.client.field_image
     - field.field.node.client.field_link
+    - field.field.node.client.field_position
     - image.style.wide
     - node.type.client
   module:
@@ -33,6 +34,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_position:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }
