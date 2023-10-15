@@ -1,0 +1,23 @@
+uuid: 078bb64e-ebff-488b-865a-2224e614e17e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.client
+id: node.client.field_position
+field_name: field_position
+entity_type: node
+bundle: client
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
