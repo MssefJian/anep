@@ -52,7 +52,6 @@
             color: 'white'
           },
           borderColor: 'white',
-          borderRadius:10,
         }],
         tooltip: {
           outside: true
