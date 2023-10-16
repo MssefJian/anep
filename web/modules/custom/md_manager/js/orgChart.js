@@ -24,7 +24,7 @@
 
       Highcharts.chart('Orgcontainer', {
         chart: {
-          height: 2000,
+          height: 1200,
           inverted: true
         },
 
@@ -48,6 +48,7 @@
           nodes: orgChartNodes,
           colorByPoint: false,
           color: '#007ad0',
+          borderRadius:15,
           dataLabels: {
             color: 'white'
           },
