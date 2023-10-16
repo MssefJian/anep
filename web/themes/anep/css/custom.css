@@ -275,3 +275,7 @@ body {
   letter-spacing: 1px !important;
 
 }
+.gsc-icon-box .highlight_content .desc p {
+  text-transform: none !important;
+  text-align: left !important;
+}
