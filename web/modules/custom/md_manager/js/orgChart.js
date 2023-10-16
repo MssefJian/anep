@@ -48,11 +48,11 @@
           nodes: orgChartNodes,
           colorByPoint: false,
           color: '#007ad0',
-          borderRadius:15,
           dataLabels: {
             color: 'white'
           },
           borderColor: 'white',
+          borderRadius:10,
         }],
         tooltip: {
           outside: true
