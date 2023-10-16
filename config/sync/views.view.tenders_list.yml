@@ -3,6 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.field_cps
     - field.storage.node.field_notice
     - field.storage.node.field_publication_date
@@ -13,10 +14,11 @@ dependencies:
     - dardev_table
     - datetime
     - file
+    - gavias_view
     - node
     - user
 id: tenders_list
-label: Tenders
+label: 'Appels d’offres'
 module: views
 description: ''
 tag: ''
@@ -577,6 +579,64 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_cps'
+        - 'config:field.storage.node.field_notice'
+        - 'config:field.storage.node.field_publication_date'
+        - 'config:field.storage.node.field_rc'
+  block_1:
+    id: block_1
+    display_title: "HP appel d'offre"
+    display_plugin: block
+    position: 1
+    display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: gvaowl
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          items: '3'
+          items_lg: '3'
+          items_md: '3'
+          items_sm: '2'
+          items_xs: '2'
+          loop: 0
+          speed: '1000'
+          auto_play: 0
+          auto_play_speed: '2000'
+          auto_play_timeout: '5000'
+          auto_play_hover: 1
+          navigation: 1
+          rewind_nav: 0
+          pagination: 0
+          mouse_drag: 1
+          touch_drag: 1
+          el_class: ''
+          el_id: ''
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        pager: false
+        style: false
+        row: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: "HP appel d'offre"
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags:

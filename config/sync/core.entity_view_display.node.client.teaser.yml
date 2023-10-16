@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.client.field_image
     - field.field.node.client.field_link
     - field.field.node.client.field_position
-    - image.style.medium
     - node.type.client
   module:
     - image
@@ -18,22 +17,26 @@ bundle: client
 mode: teaser
 content:
   field_image:
-    type: image
+    type: image_url
     label: hidden
     settings:
-      image_link: content
-      image_style: medium
-      image_loading:
-        attribute: lazy
+      image_style: '180_180'
     third_party_settings: {  }
-    weight: -1
+    weight: 0
+    region: content
+  field_link:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
 hidden:
-  field_link: true
   field_position: true
   langcode: true
