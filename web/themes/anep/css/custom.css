@@ -276,3 +276,6 @@ body {
   text-transform: none !important;
   text-align: left !important;
 }
+h3, .h3 {
+  font-size: 1.5rem;
+}
