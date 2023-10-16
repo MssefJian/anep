@@ -23,21 +23,35 @@ targetEntityType: node
 bundle: tenders
 mode: teaser
 content:
+  field_id_tender:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_the_announcement:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
 hidden:
   field_cps: true
   field_deadline: true
   field_deadline_discount_bids: true
   field_estimate: true
-  field_id_tender: true
   field_l_annonce: true
   field_notice: true
   field_publication_date: true
   field_rc: true
   field_result: true
-  field_the_announcement: true
   langcode: true
