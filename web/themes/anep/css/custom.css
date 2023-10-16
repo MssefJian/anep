@@ -174,7 +174,7 @@ text-align: right;
   color: #fff !important;
 }
 #footer ul.menu > li > a {
-  font-size: 16px;
+  font-size: 14px;
 }
 #footer ul.menu > li {
   padding: 1px 0;
@@ -236,4 +236,42 @@ text-align: right;
   line-height: 1;
   font-family: 'Cairo';
   font-weight: bold;
+}
+.post-block .post-title {
+  margin-bottom: 10px !important;
+  line-height: 21px !important;
+  text-transform: unset !important;
+  font-size: 21px !important;
+
+}
+.block-views-blocknews-block-1 .post-body {
+  font-size: 15px !important;
+}
+.gsc-heading.style-1 .title {
+  font-size: 50px !important;
+  line-height: 50px !important;
+  position: relative;
+  text-transform: unset !important;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+
+  font-family: "Cairo", sans-serif  !important;
+
+}
+.block .block-title {
+  font-size: 20px !important;
+  text-transform: unset !important; 
+}
+body {
+  font-family: "cairo", sans-serif !important;
+  line-height: 1.1 !important;
+
+}
+.gsc-icon-box.left-2 .highlight_content .desc {
+  font-size: 15px  !important;
+}
+.gsc-icon-box-number.style-1 .box-title {
+  max-width: 170px !important;
+  letter-spacing: 1px !important;
+
 }

@@ -1,0 +1,63 @@
+{%
+    set classes = [
+      'node',
+      'node-detail',
+      'node--type-' ~ node.bundle|clean_class,
+      node.isPromoted() ? 'node--promoted',
+      node.isSticky() ? 'node--sticky',
+      not node.isPublished() ? 'node--unpublished',
+      view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+      'clearfix',
+    ]
+  %}
+  
+  <!-- Start Display article for teaser page -->
+  {% if view_mode == 'teaser' %}
+ 
+  
+
+    
+        <div class="column-inner bg-size-cover">
+           <div class="column-content-inner">
+              <div class="widget gsc-icon-box top-center box-margin-small icon-image border-1 box-background" style="background-color:#fff;">
+                 <div class="highlight-icon verticle-align-top">
+                    <span class="icon-inner ">   
+                    <span class="icon-container width-full">
+                        <span class="icon">
+                            <a href="{{ node.field_link.0.value|raw  }}" target="_blank" >
+                                <img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" alt=""/> 
+                            </a>
+                        </span> 
+                    </span>
+                    </span>
+                 </div>
+                 <div class="highlight_content verticle-align-top">
+                    <h3 class="title text-dark">{{ label }}</h3>
+                    
+                 </div>
+              </div>
+           </div>
+        </div>
+    
+     
+  
+  {% elseif view_mode == 'teaser_2' %}
+    <div class="post-block teaser-2">
+      <div class="post-image">
+        {{ content.field_image }}
+      </div>
+      <div class="post-content text-center">
+          <div class="post-meta">
+            <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|format_date('custom', 'd-m-Y') }}  </span>
+            {#<span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>#}
+  
+          </div>
+          <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>
+      </div>
+    </div>
+  
+  
+ 
+    
+  {% endif %}
+  

@@ -30,6 +30,7 @@ regions:
   anep_ch: 'ANEP en chiffre'
   anep_axes: 'Les axes'
   anep_partenaire: 'Les partenaire'
+  anep_apple_offre: 'anep_apple_offre'
   projet: 'projet'
   content_bottom: 'Content Bottom'
   sidebar_left: 'Sidebar Left'
