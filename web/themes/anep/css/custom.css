@@ -282,3 +282,6 @@ h2, .h2 {
   font-size: 1.8rem !important;
   line-height: 1.4 !important;
 }
+.portfolio-v1 .title {
+  font-size: 22px !important;
+}
