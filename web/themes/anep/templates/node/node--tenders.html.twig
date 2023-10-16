@@ -15,14 +15,20 @@
 
     <div class="column-inner bg-size-cover">
        <div class="column-content-inner">
-          <div class="widget gsc-icon-box left-2 box-margin-small icon-image border-1 box-background" style="background-color:#fff;">
+        <a href="{{ path('entity.node.canonical', {'node': node.id}) }}" target="_blank" >  
+        <div class="widget gsc-icon-box left-2 box-margin-small icon-image border-1 box-background" style="background-color:#fff;">
              <div class="highlight_content verticle-align-top">
                 <h3 class="title text-black">{{ node.field_id_tender.0.value|raw  }}</h3>
                 <div class="desc text-gray ">
-                   <p>{{ node.field_the_announcement.0.value|raw  }}</p>
+                   <p> 
+                        
+                            {{ node.field_the_announcement.0.value|raw  }}
+                        
+                    </p>
                 </div>
              </div>
           </div>
+        </a>
        </div>
     </div>
  
