@@ -26,7 +26,7 @@
         <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">
           {{ node.title.0.value|striptags|slice(0, 150) }}
         </a> </h3>
-        <div class="post-body" style="display:none">{{ node.body.value|striptags|slice(0, 140) }}</div>
+        <div class="post-body" >{{ node.body.value|striptags|slice(0, 140) }}</div>
         {# <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"><i class="fas fa-angle-right"></i></a> </div>#}
     </div>
   </div>
