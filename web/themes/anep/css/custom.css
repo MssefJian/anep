@@ -320,3 +320,8 @@ element.style {
     text-transform: uppercase;
     color: #005ea3;
 }
+@media (min-width: 992px) {
+header.header-1 .navigation .gva_menu > li {
+    padding: 30px 8px !important;
+}
+}
