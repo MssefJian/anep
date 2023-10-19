@@ -241,7 +241,7 @@ text-align: right;
   font-size: 15px !important;
   font-weight: bolder !important;
   text-align: left;
- text-transform: unset;
+ text-transform: unset !important;
 
 }
 .block-views-blocknews-block-1 .post-body {
@@ -252,6 +252,9 @@ text-align: right;
 .ch-anep .desc {
   font-size: 18px;
     line-height: 1.5;
+}
+.ch-anep .service-block .title {
+  font-weight: 600;
 }
 .gsc-heading.style-1 .title {
 
@@ -296,6 +299,7 @@ h2, .h2 {
 }
 .portfolio-v1 .title {
   font-size: 16px !important;
+  text-transform: unset !important;
 }
 
 element.style {
