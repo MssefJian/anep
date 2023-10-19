@@ -237,13 +237,16 @@ text-align: right;
 }
 .post-block .post-title {
   margin-bottom: 10px !important;
-  line-height: 21px !important;
-  text-transform: unset !important;
-  font-size: 21px !important;
+  line-height: 17px !important;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  text-align: left;
+
 
 }
 .block-views-blocknews-block-1 .post-body {
   font-size: 15px !important;
+    color: black;
 }
 .gsc-heading.style-1 .title {
 
@@ -284,4 +287,17 @@ h2, .h2 {
 }
 .portfolio-v1 .title {
   font-size: 22px !important;
+}
+
+element.style {
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.post-block .post-meta {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    color: #005ea3;
 }
