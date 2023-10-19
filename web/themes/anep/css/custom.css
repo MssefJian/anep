@@ -241,12 +241,13 @@ text-align: right;
   font-size: 15px !important;
   font-weight: bolder !important;
   text-align: left;
-
+ text-transform: unset;
 
 }
 .block-views-blocknews-block-1 .post-body {
   font-size: 15px !important;
     color: black;
+    line-height: 1.3;
 }
 .gsc-heading.style-1 .title {
 
