@@ -248,6 +248,15 @@ function anep_preprocess_block(&$variables) {
     $tmp_logo = theme_get_setting('logo');
     $variables['setting_logo'] = $tmp_logo['use_default'];
   }
+
+  if ($variables['plugin_id'] == 'views_block:client-block_1') {
+    $url = Url::fromRoute('view.clients.page_1')->toString();
+    $variables['link'] = $url;
+  }
+  if ($variables['plugin_id'] == 'views_block:tenders_list-block_1') {
+    $url = Url::fromRoute('view.tenders_list.page_1')->toString();
+    $variables['link'] = $url;
+  }
 }
 
 function anep_preprocess_block__system_breadcrumb_block(&$variables){
