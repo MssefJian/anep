@@ -47,11 +47,13 @@
   <div class="widget gsc-heading  align-center style-1 ">
     <div class="heading-content clearfix">
        <h2 class="title text-black" {{ title_attributes }}>
-          <span>{{ label }}</span>
+          {% if link %}<a href="{{ link }}">{% endif %}
+            <span>{{ label }}</span>
+          {% if link %}</a>{% endif %}
        </h2>
     </div>
- </div>  
-  
+ </div>
+
   {% endif %}
   {{ title_suffix }}
   {% block content %}
