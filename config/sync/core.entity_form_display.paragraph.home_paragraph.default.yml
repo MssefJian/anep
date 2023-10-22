@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.home_paragraph.field_description
     - field.field.paragraph.home_paragraph.field_icon
+    - field.field.paragraph.home_paragraph.field_link
     - field.field.paragraph.home_paragraph.field_statistics
     - field.field.paragraph.home_paragraph.field_summary
     - image.style.thumbnail
@@ -32,6 +33,14 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_statistics:
     type: number
