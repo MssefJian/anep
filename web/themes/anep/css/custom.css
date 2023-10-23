@@ -235,6 +235,12 @@ text-align: right;
   font-family: 'Cairo';
   font-weight: bold;
 }
+#Orgcontainer img {
+  margin-left: -80px;
+}
+#Orgcontainer .highcharts-label > span {
+  overflow: unset !important;
+}
 .post-block .post-title {
   margin-bottom: 10px !important;
   line-height: 17px !important;

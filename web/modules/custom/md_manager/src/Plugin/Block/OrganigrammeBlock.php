@@ -130,9 +130,11 @@ public function blockForm($form, FormStateInterface $form_state) {
       if (!$imageField->isEmpty()) {
         $styledImageUrl = ImageStyle::load(self::IMAGE_STYLE)->buildUrl($imageField->entity->getFileUri());
       }
+      /*  code pour use default image 
       $orgChartNodes[$key]['image'] = $styledImageUrl ?? $this->getDefaultFieldValue(
         self::TAXONOMY_TERM, self::TYPE_ORGANIGRAMME, self::FIELD_IMAGE, self::IMAGE_STYLE
-      );
+      ); */
+      $orgChartNodes[$key]['image'] = $styledImageUrl;
 
       if (!$termEntity->get('field_color')->isEmpty()) {
         $orgChartNodes[$key]['color'] = $termEntity->get('field_color')->color_pickr;

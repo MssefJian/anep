@@ -24,7 +24,7 @@
 
       Highcharts.chart('Orgcontainer', {
         chart: {
-          height: 1300,
+          height: 1000,
           inverted: true
         },
 
@@ -52,7 +52,8 @@
             color: 'white'
           },
           borderColor: 'white',
-          borderRadius:10,
+          borderRadius:30,
+          class:"cvvg",
         }],
         tooltip: {
           outside: true
