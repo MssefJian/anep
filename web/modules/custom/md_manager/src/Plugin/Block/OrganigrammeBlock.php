@@ -113,7 +113,7 @@ public function blockForm($form, FormStateInterface $form_state) {
         'id' => $termEntity->id(),
         'title' => '',
         'name' => $termEntity->get('name')->value,
-        'height' => 60,
+        'height' => 50,
         'width' => 250,
 		'font-size' => 14,
         /*'dataLabels' => [
