@@ -12,6 +12,7 @@ dependencies:
   module:
     - color_pickr
     - image
+    - imce
     - path
     - text
 id: taxonomy_term.organigramme.default
@@ -48,7 +49,9 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      imce:
+        enabled: true
   field_offset:
     type: string_textfield
     weight: 5
