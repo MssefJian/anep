@@ -1,3 +1,109 @@
 title: اتصل
+description: 'Basic email contact webform.'
+elements: |-
+  container:
+    '#type': container
+    '#attributes':
+      class:
+        - row
+    name:
+      '#type': textfield
+      '#title': 'Nom Complet'
+      '#title_display': invisible
+      '#placeholder': 'Nom Complet'
+      '#required': true
+      '#default_value': '[current-user:display-name]'
+      '#wrapper_attributes':
+        class:
+          - 'col-md-6 col-sm-6 col-xs-12'
+    email:
+      '#type': email
+      '#title': Email
+      '#title_display': invisible
+      '#placeholder': Email
+      '#required': true
+      '#default_value': '[current-user:mail]'
+      '#wrapper_attributes':
+        class:
+          - 'col-md-6 col-sm-6 col-xs-12'
+  container_01:
+    '#type': container
+    '#attributes':
+      class:
+        - row
+    phone_number:
+      '#type': tel
+      '#title': Téléphone
+      '#title_display': invisible
+      '#placeholder': Téléphone
+      '#wrapper_attributes':
+        class:
+          - 'col-md-6 col-sm-6 col-xs-12'
+    subject:
+      '#type': textfield
+      '#title': 'Objet du contact'
+      '#title_display': invisible
+      '#placeholder': 'Objet du contact'
+      '#wrapper_attributes':
+        class:
+          - 'col-md-6 col-sm-6 col-xs-12'
+      '#test': 'Testing contact webform from [site:name]'
+  container_02:
+    '#type': container
+    '#attributes':
+      class:
+        - row
+    pays:
+      '#type': select
+      '#title': Pays
+      '#title_display': invisible
+      '#options': country_names
+      '#sort_options': true
+      '#wrapper_attributes':
+        class:
+          - 'col-md-6 col-sm-6 col-xs-12'
+    ville:
+      '#type': textfield
+      '#title': ville
+      '#title_display': invisible
+      '#placeholder': ville
+      '#wrapper_attributes':
+        class:
+          - 'col-md-6 col-sm-6 col-xs-12'
+      '#test': 'Testing contact webform from [site:name]'
+  container_03:
+    '#type': container
+    '#attributes':
+      class:
+        - row
+    message:
+      '#type': textarea
+      '#title': Message
+      '#title_display': invisible
+      '#rows': 6
+      '#placeholder': 'Message '
+      '#wrapper_attributes':
+        class:
+          - 'col-md-12 col-sm-12 col-xs-12'
+      '#test': 'Please ignore this email.'
+  container_04:
+    '#type': container
+    '#attributes':
+      class:
+        - row
+    actions:
+      '#type': webform_actions
+      '#title': 'Submit button(s)'
+      '#attributes':
+        class:
+          - 'col-md-12 col-sm-12 col-xs-12'
+      '#submit__label': 'Send message'
 settings:
   confirmation_message: 'أُرسلت رسالتك.'
+handlers:
+  email_confirmation:
+    settings:
+      body: '[webform_submission:values:message:value]'
+  email_notification:
+    settings:
+      body: '[webform_submission:values:message:value]'
