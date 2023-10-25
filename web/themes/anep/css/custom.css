@@ -238,6 +238,21 @@ text-align: right;
 #Orgcontainer img {
   margin-left: -80px;
 }
+.post-block .post-readmore a {
+  width:  unset !important;
+  height:  unset !important;
+  line-height:  unset !important;
+  border-radius:  unset !important;
+  background: unset !important;
+  color: #11649a   !important;
+  display: inline-block   !important;
+  text-align: right   !important;
+  font-size: 16px  !important;
+}
+.post-block:hover .post-readmore a {
+  background: unset !important;
+  color: #222429;
+}
 #Orgcontainer svg  rect {fill:transparent};
 
 #Orgcontainer > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(22)  h4 ,
