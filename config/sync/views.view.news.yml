@@ -10,8 +10,8 @@ dependencies:
     - node.type.news
   module:
     - gavias_view
-    - image
     - node
+    - svg_image
     - text
     - user
 id: news
@@ -420,9 +420,9 @@ display:
           items_xs: '1'
           loop: 0
           speed: '1000'
-          auto_play: 0
+          auto_play: 1
           auto_play_speed: '2000'
-          auto_play_timeout: '5000'
+          auto_play_timeout: '3000'
           auto_play_hover: 1
           navigation: 1
           rewind_nav: 0

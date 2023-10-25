@@ -227,7 +227,7 @@ text-align: right;
 .count-interne img {
   max-height: 67px;
 }
-
+[dir="rtl"] h4 {text-align: right;}
 #Orgcontainer h4 {
   font-size: 13px;
   color: #fff;
