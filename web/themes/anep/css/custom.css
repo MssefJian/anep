@@ -363,7 +363,11 @@ h2, .h2 {
   text-transform: unset !important;
 }
 
-element.style {
+.dropbutton-toggle {
+  width: 106px;
+}
+.dropbutton-arrow {
+  right: 10px;
 }
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
