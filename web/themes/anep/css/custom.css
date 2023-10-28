@@ -366,6 +366,9 @@ h2, .h2 {
 .dropbutton-toggle {
   width: 106px;
 }
+.dropbutton-wrapper.open .dropbutton-toggle {
+  width: 2em;
+}
 .dropbutton-arrow {
   right: 10px;
 }
