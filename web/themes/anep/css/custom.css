@@ -304,6 +304,10 @@ text-align: right;
   .text-bleu {
     color: #11649a !important;
 }
+.bg-color-appel .gsc-icon-box.box-background {
+padding: 15px 20px !important;
+}
+
 .bg-color-appel .text-black > a {
   color: #fff !important;
 }
