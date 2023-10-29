@@ -295,7 +295,15 @@ text-align: right;
  text-transform: unset !important;
 
 }
-.bg-color-appel {background-color: #206ca0;}
+.bg-color-appel {
+  background-color: #206ca0;
+  background-image: url('../images/bg-2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+  .text-bleu {
+    color: #11649a !important;
+}
 .bg-color-appel .text-black > a {
   color: #fff !important;
 }
