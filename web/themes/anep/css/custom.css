@@ -303,10 +303,13 @@ text-align: right;
   background-size: cover;}
   .text-bleu {
     color: #11649a !important;
+    font-size: 20px !important
 }
 .bg-color-appel .gsc-icon-box.box-background {
 padding: 15px 20px !important;
+min-height: 180px;
 }
+
 
 .bg-color-appel .text-black > a {
   color: #fff !important;
