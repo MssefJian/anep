@@ -307,9 +307,11 @@ text-align: right;
 }
 .bg-color-appel .gsc-icon-box.box-background {
 padding: 15px 20px !important;
-min-height: 180px;
+min-height: 160px;
 }
-
+.bg-color-appel p {
+  line-height: 21px;
+}
 
 .bg-color-appel .text-black > a {
   color: #fff !important;

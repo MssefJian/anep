@@ -76,6 +76,22 @@
    font-size:14px;
    line-height: 1.3;
  }
+ @media (max-width: 1680px) {
+  .inverted-pane-warp { margin-left: 16%;}
+  #process h3, #process .h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+}
+ }
+ @media (max-width: 1367px) {
+  .inverted-pane-warp { 
+    -webkit-transform: skewX(341deg);
+  }
+  #process h3, #process .h3 {
+    font-size: 0.9rem !important;
+    line-height: 1.3 !important;
+}
+ }
  
  @media(min-width: 900px) {
    .steps-timeline {
