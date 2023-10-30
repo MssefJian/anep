@@ -28,6 +28,7 @@ settings:
       - code
       - '|'
       - sourceEditing
+      - imce_image
   plugins:
     ckeditor5_heading:
       enabled_headings:
