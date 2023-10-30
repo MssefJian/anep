@@ -442,9 +442,9 @@ display:
           row_class: ''
           default_row_class: false
           uses_fields: false
-          items: '4'
-          items_lg: '4'
-          items_md: '4'
+          items: '3'
+          items_lg: '3'
+          items_md: '3'
           items_sm: '2'
           items_xs: '1'
           loop: 1
