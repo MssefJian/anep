@@ -1,0 +1,32 @@
+uuid: 9959ebda-2083-4bbf-a703-967e619174cc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.announcement
+  module:
+    - block_content
+    - content_translation
+    - contextual
+    - node
+    - system
+    - toolbar
+id: rh
+label: RH
+weight: 4
+is_admin: null
+permissions:
+  - 'access block library'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'create announcement content'
+  - 'delete any announcement content'
+  - 'delete own announcement content'
+  - 'edit any announcement content'
+  - 'edit own announcement content'
+  - 'revert announcement revisions'
+  - 'translate announcement node'
+  - 'view announcement revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
