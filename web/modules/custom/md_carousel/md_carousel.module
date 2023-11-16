@@ -24,15 +24,18 @@ function md_carousel_theme($existing, $type, $theme, $path)
 /**
  * Implements hook_form_FORM_ID_alter() for node_form.
  */
+
+ 
 function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   \Drupal::logger('md_carousel')->notice('Form alter hook called for form ID: @form_id', ['@form_id' => $form_id]);
 
-  if (($form_id == 'node_announcement_form' )|| ($form_id == 'node_announcement_edit_form' )) {
+  if ($form_id == 'node_announcement_form') { // Replace with your actual form ID
     $form['field_status']['#ajax'] = [
-      'callback' => 'md_carousel_status_ajax_callback',
-      'wrapper' => 'edit-field-status-wrapper',
-      'event' => 'change',
-  ];
+        'callback' => 'md_carousel_status_ajax_callback', // Your AJAX callback function
+        'wrapper' => 'edit-field-status-wrapper', // The ID of the wrapper element
+        'event' => 'change', // Event to trigger AJAX, usually 'change' for select fields
+    ];
+}
 
     $form['field_number_post']['#prefix'] = '<div id="field-number-post-wrapper">';
     $form['field_number_post']['#suffix'] = '</div>';
