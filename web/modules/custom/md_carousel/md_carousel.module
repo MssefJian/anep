@@ -42,7 +42,7 @@ function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInt
 
     _md_carousel_toggle_field_visibility($form, $form_state);
   }
-}
+
 
 function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $entity = $form_state->getFormObject()->getEntity();
