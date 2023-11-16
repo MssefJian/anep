@@ -30,11 +30,39 @@ function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInt
     // Get the current value of the "field_status" field.
     $status_value = $form_state->getFormObject()->getEntity()->get('field_status')->value;
 
-    // Check if the status is not equal to "open."
+    // Check if the status is not equal to "Ouvert."
     if ($status_value !== 'Ouvert') {
       // Hide the "message" field.
       $form['field_number_post']['#access'] = FALSE;
+
+      // Add an Ajax callback to update the form when "field_status" changes.
+      $form['field_status']['#ajax'] = [
+        'callback' => 'md_carousel_status_field_ajax_callback',
+        'wrapper' => 'edit-field-number-post-wrapper', // Replace with the actual wrapper ID of the "message" field.
+        'event' => 'change', // Trigger the Ajax callback on change.
+      ];
     }
   }
 }
+
+/**
+ * Ajax callback to update the "message" field's visibility.
+ */
+function md_carousel_status_field_ajax_callback(array &$form, FormStateInterface $form_state) {
+  // Get the new value of the "field_status" field.
+  $new_status_value = $form_state->getValue('field_status')[0]['value'];
+
+  // Check if the new status is not equal to "Ouvert."
+  if ($new_status_value !== 'Ouvert') {
+    // Hide the "message" field.
+    $form['field_number_post']['#access'] = FALSE;
+  } else {
+    // Show the "message" field.
+    $form['field_number_post']['#access'] = TRUE;
+  }
+
+  // Return the updated "message" field for rendering.
+  return $form['field_number_post'];
+}
+
 
