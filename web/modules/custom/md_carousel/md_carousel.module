@@ -33,7 +33,7 @@ function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInt
     // Check if the status is not equal to "open."
     if ($status_value !== 'Ouvert') {
       // Hide the "message" field.
-      $form['field_message']['#access'] = FALSE;
+      $form['field_number_post']['#access'] = FALSE;
     }
   }
 }
