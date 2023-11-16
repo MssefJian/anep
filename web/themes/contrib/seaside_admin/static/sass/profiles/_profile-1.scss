@@ -1,0 +1,343 @@
+ $open-color: darken($brighton-pier, 20%);
+.js body, body {
+  &.profile-brighton {
+    &.path-login, &.install-page {
+      .login-overlay {
+        // sass-lint:disable-block no-url-domains, no-url-protocols
+        background: url('https://images.unsplash.com/photo-1500745969016-713838b0bf55?ixlib=rb-0.3.5&s=820d9f1eff8886112488e849a32042d0&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+        background-size: cover;
+      }
+      .login-bg {
+        @include gradient(transparentize($brighton-pier, .7), transparentize($i360, .7));
+      }
+      .content.column.card .tabs ul li a {
+        color: $brighton-pier;
+
+        &:hover {
+          color: darken($brighton-pier, 20%);
+        }
+      }
+      ol li.is-active {
+        background-image: linear-gradient(0.35turn, $i360 0%, $brighton-pier 100%);
+      }
+    }
+    a {
+      color: $brighton-pier;
+
+      &:hover {
+        color: $i360;
+      }
+    }
+    div.alert a {
+      color: $white!important;
+    }
+
+    nav.breadcrumb ol li a {
+      color: $cool-grey;
+      :hover {
+        color: darken($cool-grey, 20%);
+      }
+    }
+
+    button:not(.tabledrag-toggle-weight):not(.trigger):not(.link),
+    input[type='submit'],
+    input[type='button'],
+    form label[type='submit'].select.prettify,
+    form label[type='button'].select.prettify,
+    a.button-action {
+      @include gradient($i360, $brighton-pier);
+      @include drop-shadow($brighton-pier, .5);
+      color: $white;
+
+      &:hover {
+        @include gradient(darken($i360, 3%), darken($brighton-pier, 3%));
+        @include drop-shadow-large($brighton-pier, .2);
+        color: $white;
+      }
+    }
+
+    button.link {
+      background-color: transparent;
+      color: $brighton-pier;
+      &:hover {
+        color: $i360;
+      }
+    }
+
+    button.trigger{
+      @include drop-shadow($brighton-pier, .5);
+    }
+
+    .button--small {
+      @include button($brighton-pier, $brighton-pier);
+      @include drop-shadow($brighton-pier, .5);
+      padding: 0 8px;
+    }
+
+    // Actions buttons
+    .form-actions {
+      .button {
+        background-color: $brighton-pier;
+
+        // Delete button
+        &.button--danger {
+          background: $tomato;
+          border: 1px solid $white;
+          color: $white;
+
+          &:hover {
+            background: $white;
+            border-color: $tomato;
+            color: $tomato;
+          }
+        }
+      }
+    }
+    details summary[aria-expanded='true'],
+    form.system-modules > details > summary, form.system-modules-uninstall > details > summary {
+      @include gradient($i360, $brighton-pier);
+    }
+
+    .vertical-tabs__menu-item.is-selected a {
+      @include gradient($i360, $brighton-pier);
+      @include drop-shadow($brighton-pier, .5);
+    }
+
+    form {
+      // RADIO BUTTONS AND CHECKBOXES
+      input[type='checkbox'] {
+        background-color: $white;
+
+        &:checked {
+          background-color: $brighton-pier;
+          border-color: $brighton-pier;
+
+          &:before {
+            color: $white;
+          }
+        }
+      }
+
+      input[type='radio'] {
+        background: $white;
+
+        &:checked {
+          background-color: $golden-gate;
+          border-color: $golden-gate;
+
+          &:before {
+            background-color: $white;
+          }
+        }
+      }
+
+      input[type='checkbox'][disabled],
+      input[type='radio'][disabled] {
+        border-color: $pinkish-grey;
+
+        &:checked {
+          background-color: $pinkish-grey;
+
+          &:before {
+            color: $dark-blue-grey;
+          }
+        }
+      }
+
+      .password-strength {
+        .password-strength__meter {
+          background-color: $pinkish-grey;
+
+          .password-strength__indicator {
+            &.is-weak {
+              background-color: $message-error;
+            }
+
+            &.is-fair {
+              background-color: $message-warning;
+            }
+
+            &.is-good {
+              background-color: $golden-gate;
+            }
+
+            &.is-strong {
+              background-color: $message-status;
+            }
+          }
+        }
+      }
+    }
+
+    .progress {
+      .progress__track {
+        .progress__bar {
+          background-color: $brighton-pier;
+        }
+      }
+    }
+
+    .ui-autocomplete {
+      .ui-menu-item {
+        &.ui-state-focus {
+          a {
+            color: $peachy-pink;
+          }
+        }
+      }
+    }
+
+    .views-admin {
+      .views-displays {
+        .views-display-top {
+          .tabs.secondary {
+            > li {
+              a {
+                @include button($white, $brighton-pier, $brighton-pier, $white, $brighton-pier);
+
+                &:visited {
+                  color: $brighton-pier;
+                }
+
+                &:hover {
+                  color: $white;
+                }
+              }
+
+              &.is-active a {
+                @include button($brighton-pier, $white, $white, $brighton-pier, $brighton-pier);
+              }
+
+              &.add {
+                &.open {
+                  a {
+                    background-color: $open-color;
+                    border-color: $open-color;
+                    color: $white;
+                  }
+
+                  .action-list {
+                    background-color: $open-color;
+                    border-top: 1px solid $white;
+
+                    li {
+                      border-bottom: 1px solid $white;
+
+                      input[type='submit'] {
+                        background-color: $open-color;
+                        color: $white;
+
+                        &:hover {
+                          background-color: $brighton-pier;
+                          color: $white;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    table.permissions {
+      input[type='checkbox'],
+      label[type='checkbox'].select.prettify,
+      label[type='checkbox'].select.prettify:checked,
+      input[type='checkbox']:checked {
+        background-color: transparent;
+      }
+
+      input[type='checkbox']:checked {
+        &:before {
+          color: $brighton-pier;
+        }
+      }
+    }
+
+    .messages__item {
+      a {
+        color: $white;
+      }
+    }
+
+    .dropbutton-wrapper .dropbutton-widget {
+      .dropbutton-toggle {
+        button {
+          background-color: $brighton-pier;
+
+          &:hover {
+            background-color: $open-color;
+          }
+        }
+      }
+
+      .dropbutton .dropbutton-action {
+        > input,
+        > a,
+        > button {
+          background-color: $brighton-pier;
+
+          &:hover {
+            background-color: $open-color;
+          }
+        }
+      }
+    }
+
+
+
+    #seaside-admin-secondary-local-tasks .tabs ul li {
+      a {
+        color: $brighton-pier;
+
+        &:hover {
+          color: darken($brighton-pier, 15%);
+        }
+      }
+      &.is-active {
+        background: $brighton-pier;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    footer {
+      #seaside-admin-primary-local-tasks {
+        .tabs {
+          ul {
+            @include gradient($i360, $brighton-pier);
+            @include drop-shadow($brighton-pier, .2);
+
+            li {
+              &.is-active {
+                a {
+                  border-bottom: 4px darken($brighton-pier, 30%) solid;
+                }
+              }
+
+              a {
+                color: $white;
+                &:hover {
+                  background: darken($brighton-pier, 30%);
+                  border-bottom: 4px darken($brighton-pier, 30%) solid;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .system-status-general-info .items .item .description .cron-description__run-cron a {
+    @include gradient($i360, $brighton-pier);
+    @include drop-shadow($brighton-pier, .5);
+    color: $white;
+  }
+}

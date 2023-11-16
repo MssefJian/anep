@@ -1,0 +1,27 @@
+// sass-lint:disable no-duplicate-properties, property-sort-order
+
+// Icomoon
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot');
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff') format('application/font-woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Custom icons
+@font-face {
+  font-family: 'linea';
+  src: url('../fonts/linea.eot');
+  src: url('../fonts/linea.eot?#iefix') format('embedded-opentype'), url('../fonts/linea.woff') format('application/font-woff'), url('../fonts/linea.ttf') format('truetype'), url('../fonts/linea.svg#linea') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'linea-arrows';
+  src: url('../fonts/linea-arrows.eot');
+  src: url('../fonts/linea-arrows.eot?#iefix') format('embedded-opentype'), url('../fonts/linea-arrows.woff') format('application/font-woff'), url('../fonts/linea-arrows.ttf') format('truetype'), url('../fonts/linea-arrows.svg#linea') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,62 @@
+.path-login {
+  .login-bg {
+    // sass-lint:disable-block no-url-domains, no-url-protocols
+    background: url('https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7402cc297bdfbb4a4856e764971dc013&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .login-overlay {
+    @include gradient(transparentize($golden-gate, .7), transparentize($presidio, .7));
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .content {
+    &.column {
+      &.card {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 60px 40px 40px;
+        text-align: center;
+
+        .site-branding.block {
+          padding-bottom: 40px;
+
+          img {
+            margin: 0 auto;
+          }
+        }
+
+        .hint{
+
+          img {
+            margin: 0 auto;
+            border-radius: 100%;
+            max-height: 80px;
+            max-width: 80px;
+          }
+        }
+
+        .tabs ul li a {
+          color: $presidio;
+          font-size: 14px;
+          line-height: 1em;
+          padding: 0;
+
+          &.is-active {
+            display: none;
+          }
+
+          &:hover {
+            color: darken($presidio, 20%);
+          }
+        }
+      }
+    }
+  }
+
+}

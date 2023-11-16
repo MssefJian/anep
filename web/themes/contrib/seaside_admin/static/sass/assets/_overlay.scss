@@ -1,0 +1,87 @@
+.ui-widget-overlay {
+  $ui-widget-bg-color: rgba($dark-three, 0.85);
+  background-color: $ui-widget-bg-color;
+  z-index: 600;
+}
+
+.ui-dialog {
+  $ui-dialog-shadow: rgba($dark-three, 0.65);
+  background: $white;
+  box-shadow: 0 0 12px 0 $ui-dialog-shadow;
+
+  .action-links {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .ui-dialog-titlebar {
+    background-color: $pale-grey;
+    padding: 20px 30px;
+    position: relative;
+
+    .ui-dialog-title {
+      display: block;
+      font: {
+        family: $default-font;
+        size: pxtoem(18px);
+        weight: 500;
+      };
+    }
+
+    .ui-button {
+      background-color: $pale-grey;
+      border: 1px solid $brownish-grey;
+      border-radius: 0;
+      height: 26px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      right: 30px;
+      top: 18px;
+      width: 26px;
+
+      .ui-button-text {
+        font-size: 0;
+
+        &:after {
+          @include icomoon('arrows_remove', 'linea');
+
+          color: $brownish-grey;
+          font: {
+            size: 32px;
+            weight: 500;
+          };
+          height: 26px;
+          left: -4px;
+          position: absolute;
+          top: -3px;
+          width: 26px;
+        }
+      }
+
+      &:hover {
+        background-color: $brownish-grey;
+
+        .ui-button-text:after {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    overflow: auto;
+    padding: 30px 30px 0;
+  }
+
+  .ui-dialog-buttonpane {
+    padding: 30px;
+  }
+}
+
+.views-ui-dialog .scroll {
+  padding: 0;
+}

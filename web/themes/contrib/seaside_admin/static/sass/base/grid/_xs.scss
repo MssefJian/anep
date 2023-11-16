@@ -1,0 +1,65 @@
+// MOBILE PORTRAIT
+
+$grid-columns: 8;
+$grid-column-width: 27;
+$grid-gutter-width: 12;
+
+@media #{$xs} {
+  body {
+    //background-color: $orange;
+
+    nav,
+    header,
+
+    div.wrapper {
+      min-width: calc-grid() + px;
+      width: calc-fluid-grid($grid-columns * 2);
+    }
+
+    .content.column {
+      @include span-fluid-columns(8, false);
+    }
+
+    .system-status-report-counters {
+      display: block;
+
+      > div {
+        @include span-fluid-columns(8, false);
+        margin-bottom: 20px;
+
+        &:last-child {
+          @include span-fluid-columns(8, false);
+        }
+      }
+    }
+
+    .system-status-general-info {
+      .items {
+        display: block;
+
+        .item {
+          @include span-fluid-columns(8, false);
+
+          .item-details {
+            .description .cron-description__run-cron {
+              position: inherit;
+            }
+          }
+        }
+      }
+    }
+
+    div.system-status-report {
+      .requirements-group {
+        .entry {
+          display: block;
+        }
+      }
+    }
+
+    .tabs ul li a {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+}

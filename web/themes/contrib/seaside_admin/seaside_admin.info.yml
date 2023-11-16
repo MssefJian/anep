@@ -1,0 +1,40 @@
+name: Seaside
+type: theme
+description: Seaside - Administration theme based on FortyTwo Admin
+package: Core
+core_version_requirement: ^9 || ^10
+base theme: stable
+
+libraries:
+  - seaside_admin/base
+  - seaside_admin/prettify
+
+dependencies:
+  - drupal:stable
+
+stylesheets-remove:
+  - 'core/themes/stable/css/update/update.admin.theme.css'
+  - 'core/themes/stable/css/views_ui/views_ui.admin.theme.css'
+  - 'core/themes/stable/css/core/vertical-tabs.css'
+  - 'core/themes/stable/css/system/components/container-inline.module.css'
+  - 'core/assets/vendor/jquery.ui/themes/base/theme.css'
+  - 'core/assets/vendor/jquery.ui/themes/base/dialog.css'
+  - 'core/assets/vendor/jquery.ui/themes/base/button.css'
+  - 'core/themes/stable/css/system/components/system-status-counter.css'
+  - 'core/themes/stable/css/system/components/system-status-report-counters.css'
+  - 'core/themes/stable/css/system/components/system-status-report-general-info.css'
+
+regions:
+  header: 'Header'
+  page_top: 'Page top'
+  highlighted: 'Highlighted area'
+  navigation: 'Navigation'
+  content: 'Content'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  page_bottom: 'Page bottom'
+  footer: 'Footer'
+# Information added by Drupal.org packaging script on 2022-09-27
+version: '2.0.3'
+project: 'seaside_admin'
+datestamp: 1664271980

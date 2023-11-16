@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Theme override to display status report.
+ *
+ * - grouped_requirements: Contains grouped requirements.
+ *   Each group contains:
+ *   - title: The title of the group.
+ *   - type: The severity of the group.
+ *   - items: The requirement instances.
+ *     Each requirement item contains:
+ *     - title: The title of the requirement.
+ *     - value: (optional) The requirement's status.
+ *     - description: (optional) The requirement's description.
+ *     - severity_title: The title of the severity.
+ *     - severity_status: Indicates the severity status.
+ */
+#}
+
+<div class="system-status-report">
+  {% for group in grouped_requirements %}
+    <div class="requirements-group">
+      <h2>{{ group.title }}</h2>
+      {% for requirement in group.items %}
+        <div class="entry entry--{{ group.type }} color-{{ group.type }}">
+          {%
+          set title_classes = [
+          'title',
+          group.type in ['warning', 'error'] ? 'status-icon status-icon--' ~ group.type
+          ]
+          %}
+
+          <div{{ create_attribute({'class': title_classes}) }}>
+            {% if requirement.severity_title  %}
+              <span class="visually-hidden">{{ requirement.severity_title }}</span>
+            {% endif %}
+            {{ requirement.title }}
+          </div>
+          <div class="entry__value">
+            {{ requirement.value }}
+            {% if requirement.description %}
+              <div class="description">{{ requirement.description }}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

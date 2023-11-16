@@ -1,0 +1,75 @@
+.seaside-admin .horizontal-tabs {
+  border: solid 1px $pale-grey;
+  margin: 0 0 10px;
+  overflow: hidden;
+  position: relative;
+
+  .horizontal-tabs-list {
+    background-color: $white;
+    border: 0;
+    clear: both;
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    .horizontal-tab-button {
+      border: 0;
+      list-style: none outside;
+
+      a {
+        background-color: $white;
+        border-right: solid 1px $pale-grey;
+        display: block;
+        font-weight: 400;
+        padding: 20px 20px 20px 25px;
+        text-decoration: none;
+
+        strong {
+          color: $dark-blue-grey;
+          font-weight: 400;
+          line-height: pxtoem($default-line-height);
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $pale-grey;
+          color: $dark-blue-grey;
+          font-weight: 400;
+          outline: none;
+          text-decoration: none;
+
+          strong {
+            color: $dark-blue-grey;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &.selected a {
+        background-color: $pale-grey;
+        color: $dark-blue-grey;
+        font-weight: 400;
+        outline: none;
+        text-decoration: none;
+
+        strong {
+          color: $dark-blue-grey;
+          font-weight: 500;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  details.form-wrapper {
+    border-top: 0;
+    margin-top: 0;
+
+    .details-description {
+      margin-bottom: 30px;
+      padding: 0;
+    }
+  }
+}

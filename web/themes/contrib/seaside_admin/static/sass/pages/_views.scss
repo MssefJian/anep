@@ -1,0 +1,245 @@
+.views-admin {
+  .links {
+    list-style: none outside none;
+    margin: 0;
+  }
+
+  .views-displays {
+    border: 0;
+
+    .views-display-top {
+      background-color: $white;
+      border-bottom: 1px solid $pale-grey;
+      padding: 10px 0;
+      position: relative;
+
+      .tabs.secondary {
+        list-style: none outside none;
+        overflow: visible;
+
+        > li {
+          list-style-type: none;
+          margin: 0 20px 0 0;
+
+          a {
+            @include button($white, $golden-gate, $golden-gate, $white, $golden-gate);
+
+            &:visited {
+              color: $golden-gate;
+            }
+
+            &:hover {
+              color: $white;
+            }
+          }
+
+          &.is-active a {
+            @include button;
+          }
+
+          &.add {
+            &.open {
+              $open-color: darken($golden-gate, 20%);
+
+              a {
+                background-color: $open-color;
+                border-color: $open-color;
+                border-radius: 30px 30px 0 0;
+                color: $white;
+                width: 300px;
+              }
+
+              .action-list {
+                background-color: $open-color;
+                border-radius: 0 0 30px 30px;
+                border-top: 1px solid $white;
+                font-size: 1em;
+                left: 0;
+                top: 42px;
+                width: 300px;
+
+                li {
+                  border-bottom: 1px solid $white;
+                  margin-right: 0;
+
+                  &:last-child {
+                    border-bottom: 0;
+                    margin-bottom: 30px;
+                  }
+
+                  input[type='submit'] {
+                    background-color: $open-color;
+                    border-radius: 0;
+                    color: $white;
+                    text-align: left;
+                    width: 100%;
+
+                    &:hover {
+                      background-color: $golden-gate;
+                      color: $white;
+                    }
+                  }
+                }
+              }
+            }
+
+            a {
+              &:before {
+                content: '+ ';
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #edit-display-settings-top {
+      border-bottom: 1px solid $pale-grey;
+      margin-bottom: 15px;
+      padding: 10px 0;
+      position: relative;
+
+      .views-display-setting {
+        line-height: 42px;
+        margin-left: 8px;
+      }
+    }
+
+    .dropbutton-wrapper {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: auto;
+    }
+
+    .views-display-setting {
+      span.label {
+        margin-right: 5px;
+      }
+    }
+
+    #edit-display-settings-main {
+      @include flex;
+
+      .views-display-column {
+        border: 1px solid $pale-grey;
+        float: none;
+        margin: 0 10px 0 0;
+        width: 33%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .views-ui-display-tab-bucket {
+          border-bottom: 1px solid $pale-grey;
+          padding: 10px;
+          position: relative;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          .dropbutton-wrapper {
+            right: 10px;
+          }
+
+          h3 {
+            line-height: 42px;
+            padding: 0 0 10px;
+          }
+        }
+      }
+
+      details.form-wrapper {
+        .details-wrapper {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .form-actions {
+    margin-bottom: 30px;
+  }
+
+  .views-live-preview {
+    .views-query-info {
+      margin-bottom: 30px;
+    }
+
+    > .view {
+      > div {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .view-preview-form {
+    border-top: 1px solid $pale-grey;
+    padding-top: 18px;
+    position: relative;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .form-item-live-preview {
+      position: absolute;
+      right: 0;
+      top: 18px;
+    }
+
+    .form-item-view-args {
+      label {
+        float: left;
+        font-size: 1em;
+      }
+
+      //input, //why?
+      //.description
+      //  margin-left: 260px
+
+    }
+
+    .preview-submit-wrapper {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+#views-entity-list {
+  .views-list-section {
+    margin-bottom: 30px;
+
+    &.disabled {
+      .dropbutton-wrapper {
+        margin-right: 2em;
+      }
+    }
+  }
+
+  // Views table
+  table.views-listing-table {
+    th {
+      &.views-ui-name {
+        width: 300px;
+      }
+
+      &.views-ui-path {
+        width: 400px;
+      }
+
+      &.views-ui-operations {
+        width: 100px;
+      }
+    }
+
+    td {
+      &:first-child {
+        padding: pxtoem(20px);
+      }
+    }
+  }
+}

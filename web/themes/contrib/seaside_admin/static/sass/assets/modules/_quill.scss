@@ -1,0 +1,39 @@
+.ql-wrapper {
+  position: relative;
+  border-radius: 5px!important;
+  border: none!important;
+  border: 2px solid $med-grey!important;
+  background: $white;
+
+  .ql-toolbar.ql-snow {
+    box-sizing: border-box;
+    font-family: $default-font;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+    border: none!important;
+    border-top: 2px solid $med-grey!important;
+    padding: 5px;
+    button {
+      background: transparent!important;
+      box-shadow: none!important;
+      &:hover .ql-stroke {
+        stroke: $med-grey;
+      }
+    }
+    .ql-picker-label:hover {
+      color:  $med-grey;
+
+      .ql-stroke {
+        stroke: $med-grey;
+      }
+    }
+  }
+  .ql-container.ql-snow {
+    border: none!important;
+    min-height: 215px;
+    margin-bottom: 36px;
+    font-family: $default-font;
+  }
+}

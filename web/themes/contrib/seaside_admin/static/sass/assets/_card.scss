@@ -1,0 +1,17 @@
+.card {
+
+
+  @include border-radius;
+  @include drop-shadow(rgb(136, 136, 136), 0.7);
+  background: $white;
+  padding: 40px;
+  transition: all 0.25s ease-in;
+
+  &:hover {
+    @include drop-shadow-large(rgb(136, 136, 136), 0.7);
+  }
+}
+
+form .form-wrapper + .card.form-wrapper {
+  margin: 40px 0;
+}

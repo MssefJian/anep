@@ -1,0 +1,21 @@
+#seaside-admin-local-actions {
+  li {
+    list-style: none;
+  }
+
+  nav {
+    margin: pxtoem(20px) 0;
+
+    a {
+      padding-left: pxtoem(52px);
+      position: relative;
+
+      &:before {
+        @include icomoon('arrows_circle_plus', 'linea');
+        font-size: 170%;
+        left: pxtoem(10px);
+        position: absolute;
+      }
+    }
+  }
+}

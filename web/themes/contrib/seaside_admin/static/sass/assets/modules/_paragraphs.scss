@@ -1,0 +1,248 @@
+.js .field--widget-entity-reference-paragraphs {
+  &.expanded {
+    background: $white;
+    height: 100%;
+    left: 0;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .paragraph-type-title {
+    display: none;
+  }
+
+  .expand-button {
+    float: right;
+    clear:both
+  }
+
+  .link.tabledrag-toggle-weight {
+    padding: 10px 0;
+    clear: both;
+    float: right;
+  }
+
+  table.card {
+    border-collapse: separate;
+    padding: 0 20px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+  }
+
+  .paragraph-type-top {
+    @include flex-align('center');
+    float: right;
+  }
+
+  .form-item {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    &.form-type-textarea {
+      padding: 20px 0 0;
+    }
+  }
+
+  .paragraphs-dropbutton-wrapper.center {
+    input[type='submit']:not([data-drupal-selector*="remove-button"]) {
+      background: $med-grey;
+      //border: pxtoem(2px) solid $med-grey;
+      border-radius: $border-radius;
+      @include drop-shadow($med-grey, .5);
+      box-sizing: border-box;
+      color: $dark-three;
+      min-width: 100px;
+      min-height: 40px;
+      outline: 0;
+      padding: 7px 15px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+    }
+    input[type='submit'] {
+      margin: 10px;
+    }
+  }
+
+  .paragraphs-dropbutton-wrapper {
+    input[data-drupal-selector='edit-field-row-add-more-add-more-button-row'] {
+      margin-left: 40px;
+      content: "+";
+    }
+  }
+
+  .button--danger {
+    background-image: none!important;
+    background: $tomato;
+    border: 1px $tomato solid!important;
+    color: $white!important;
+    box-shadow: none !important;
+    margin: 0 10px 5px 10px;
+
+    &:hover {
+      background: $tomato;
+      color: $white!important;
+      @include drop-shadow($tomato, .5);
+    }
+  }
+
+
+  a.tabledrag-handle .handle {
+    margin: 0 10px 10px;
+  }
+
+  .image-widget {
+    @include flex('nowrap');
+
+    .image-widget-data {
+      margin-left: 0;
+    }
+
+    .image-preview {
+      margin-left: 0;
+
+      img {
+        height: auto;
+        margin: 13px 10px 0 0;
+        width: 75px;
+      }
+    }
+  }
+
+  .drag-previous {
+    background-color: transparent;
+    & td:nth-child(2) {
+      background-color: $status-warning-bg
+    }
+  }
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 20px;
+    &:nth-child(even) {
+      background: none;
+    }
+
+    td {
+      padding: 10px 0;
+      &:nth-child(2) {
+        margin: 5px;
+        border: pxtoem(3px) dashed darken($med-grey, 10%);
+        border-radius: $border-radius;
+        display: block;
+        padding: 10px;
+        min-height: 65px;
+        &.card {
+          padding: 20px;
+        }
+        tr  {
+          width: 100%;
+          float: left;
+          display: table;
+          td {
+            &:nth-child(2) {
+              background: $pale-grey;
+            }
+            img {
+              max-width: 100%;
+              height: 100%;
+            }
+          }
+          tr {
+            td {
+              border: none;
+              &:nth-child(2) {
+                background: $white;
+              }
+            }
+          }
+        }
+      }
+
+      &.field-multiple-drag {
+        vertical-align: middle;
+        width: 30px;
+      }
+    }
+  }
+
+  th.field-label {
+    display: none;
+  }
+
+  .tabledrag-toggle-weight-wrapper {
+    float: right;
+  }
+
+  .tabledrag-changed {
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+
+  .paragraphs-subform {
+    margin-top: 0;
+  }
+
+  details {
+    .draggable {
+      &:only-child {
+        a.tabledrag-handle {
+          display: none;
+        }
+      }
+
+      a.tabledrag-handle {
+        float: left;
+
+        .handle {
+          margin: 0 10px 10px 0;
+        }
+      }
+
+      td {
+        padding: 15px 10px 20px;
+        vertical-align: bottom;
+      }
+    }
+
+    &.form-wrapper .details-wrapper {
+      margin: 0;
+      padding: 10px;
+
+      .form-wrapper {
+        position: relative;
+      }
+
+      .ajax-progress-throbber {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .entities-list .item-container > input {
+        display: inline-block;
+      }
+
+      .js-form-type-managed-file {
+        border-top: 3px solid $pale-grey;
+        padding-left: 10px;
+        padding-top: 15px;
+      }
+
+      .tabledrag-toggle-weight-wrapper {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.js .draggable .paragraphs-collapsed-description:after,
+.js .draggable:hover .paragraphs-collapsed-description:after {
+  display: none;
+}

@@ -1,0 +1,119 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Seaside theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+require_once dirname(__FILE__) . '/includes/seaside_admin.inc';
+include_once dirname(__FILE__) . '/includes/bootstrap.inc';
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ *
+ * Changes vertical tabs to container and adds meta information.
+ */
+function seaside_admin_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_state->getFormObject()->getEntity();
+
+  $form['#theme'] = array('node_edit_form');
+  $form['#attached']['library'][] = 'node/form';
+
+  $form['advanced']['#type'] = 'container';
+  $is_new = !$node->isNew() ? \Drupal::service('date.formatter')->format($node->getChangedTime(), 'short') : t('Not saved yet');
+  $form['meta'] = array(
+    '#attributes' => array('class' => array('entity-meta__header')),
+    '#type' => 'container',
+    '#group' => 'advanced',
+    '#weight' => -100,
+    'published' => array(
+      '#type' => 'html_tag',
+      '#tag' => 'h3',
+      '#value' => $node->isPublished() ? t('Published') : t('Not published'),
+      '#access' => !$node->isNew(),
+      '#attributes' => array(
+        'class' => 'entity-meta__title',
+      ),
+    ),
+    'changed' => array(
+      '#type' => 'item',
+      '#wrapper_attributes' => array('class' => array('entity-meta__last-saved', 'container-inline')),
+      '#markup' => '<h4 class="label inline">' . t('Last saved: ') . '</h4>' . $is_new,
+    ),
+    'author' => array(
+      '#type' => 'item',
+      '#wrapper_attributes' => array('class' => array('author', 'container-inline')),
+      '#markup' => '<h4 class="label inline">' . t('Author: ') . '</h4>' . $node->getOwner()->getAccountName(),
+    ),
+  );
+
+  $form['advanced']['#type'] = 'details';
+  $form['advanced']['#title'] = t('Advanced options');
+  $form['meta']['#type'] = 'details';
+  $form['meta']['#title'] = t('Revisions');
+
+  $form['revision_information']['#type'] = 'container';
+  $form['revision_information']['#group'] = 'meta';
+  $form['status']['#group'] = 'meta';
+
+  $form['path_settings']['#open'] = $form['author']['#open'] = $form['options']['#open'] = TRUE;
+
+
+  // Attach paragraph expansion JS
+  $form['#attached']['library'][] = 'seaside_admin/paragraphs';
+}
+
+/* Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ *
+ * Changes vertical tabs to container of modules.
+ */
+function seaside_admin_form_system_modules_alter(&$form, FormStateInterface $form_state) {
+  foreach($form['modules'] as $module_key => $module_value) {
+    if(isset($module_value['#type'])) {
+      $form['modules'][$module_key]['#group'] = 'modules';
+    }
+  }
+
+  $form['modules'][] = array(
+    '#type' => 'vertical_tabs',
+    '#default_tab' => 'Core',
+  );
+
+}
+
+function seaside_admin_preprocess_file_widget_multiple(&$variables) {
+  // Add a class.
+  $variables['attributes']['class'][] = 'multiple-file-widget';
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ *
+ * Disable prettify if chosen is enabled to prevent the two from conflicting
+ * with each other.
+ *
+ * @see https://www.drupal.org/node/2864235
+ */
+function seaside_admin_preprocess_select(&$variables) {
+  $libraries = [];
+  if (isset($variables['element']['#attached']['library'])) {
+    $libraries = $variables['element']['#attached']['library'];
+  }
+
+  if (in_array('chosen/drupal.chosen', $libraries)) {
+    $variables['attributes']['class'][] = 'no-prettify';
+  }
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ */
+
+function seaside_admin_preprocess_user(&$variables) {
+  if(!isset($variables['content']['user_picture'][0])) {
+    $variables['content']['#markup'] = '<img src="https://www.gravatar.com/avatar/' . md5(strtolower(trim($variables['user']->get('mail')->value))) . '?s=600&r=pg&d=mp" />';
+  }
+}

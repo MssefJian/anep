@@ -1,0 +1,26 @@
+$debug-mode: false;
+
+// Vendor prefixes
+$default-prefixes: webkit, khtml, moz, ms, o;
+
+$border-radius: 5px;
+
+// Inputs
+$input-focus-border-color: #4169E1;
+$input-border-radius: $border-radius;
+$webkit-autofill-color: #F0FEFF;
+
+// Buttons
+$button-border-color: #C0C0C0;
+$button-border-hover-color: #FF4500;
+$button-font-color: darken($button-border-hover-color, 10%);
+$button-border-radius: $border-radius;
+$button-font-size: $default-font-size;
+$button-background-color: #F5F5F5;
+
+// Fieldset
+$fieldset-border-color: $button-border-color;
+
+// radio & checkboxes
+$checked-color: $input-focus-border-color;
+$check-icon-color: #808080;

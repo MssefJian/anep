@@ -1,0 +1,70 @@
+.user-admin-permissions {
+  table {
+    th.checkbox {
+      padding: pxtoem(10px);
+      width: 160px;
+    }
+
+    td.module {
+      padding-top: pxtoem(20px);
+    }
+
+    td {
+      padding: pxtoem(10px);
+
+      .permission {
+        .title {
+          font-weight: 500;
+        }
+      }
+    }
+
+    input.form-checkbox,
+    input.dummy-checkbox {
+      background: transparent;
+      border: 0;
+      height: 25px;
+      width: 25px;
+
+      &:before {
+        @include icomoon('basic_lock', 'linea');
+
+        font-size: 24px;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &.real-checkbox {
+        &:before {
+          @include icomoon('basic_lock', 'linea');
+
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+
+      &:checked {
+        background-color: transparent;
+
+        &:before {
+          @include icomoon('basic_lock_open', 'linea');
+
+          color: $golden-gate;
+          font-size: 24px;
+          font-weight: 600;
+          position: static;
+        }
+      }
+
+      &.dummy-checkbox {
+        &:before {
+          color: $golden-gate;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,63 @@
+// Does imports from the base seaside theme.
+@import 'lib/basicimports';
+
+// Import icomoon array.
+@import 'lib/icomoon';
+@import 'lib/linea';
+
+// Import assets.
+@import 'assets/pageelements';
+@import 'assets/dropbuttons';
+@import 'assets/buttons';
+@import 'assets/form-elements';
+@import 'assets/horizontal-tabs';
+@import 'assets/vertical-tabs';
+@import 'assets/node-edit';
+@import 'assets/ckeditor';
+@import 'assets/fields';
+@import 'assets/progressbar';
+@import 'assets/pager';
+@import 'assets/overlay';
+@import 'assets/ajax-progress';
+@import 'assets/card';
+
+// Specific module assets.
+@import 'assets/modules/color';
+@import 'assets/modules/paragraphs';
+@import 'assets/modules/restui';
+@import 'assets/modules/webform';
+@import 'assets/modules/token';
+@import 'assets/modules/metatag';
+@import 'assets/modules/devel';
+@import 'assets/modules/inline-entity-form';
+@import 'assets/modules/entity_browser';
+@import 'assets/modules/quill';
+@import 'assets/modules/media-library';
+
+// Basic layout styling
+@import 'base/layout';
+@import 'base/header';
+@import 'base/navigation';
+@import 'base/sidebars';
+@import 'base/footer';
+@import 'base/tabs';
+
+// Specific page styling
+@import 'pages/basic';
+@import 'pages/configuration';
+@import 'pages/content-list';
+@import 'pages/status';
+@import 'pages/permissions';
+@import 'pages/account';
+@import 'pages/modules';
+@import 'pages/block-layout';
+@import 'pages/views';
+@import 'pages/updates';
+@import 'pages/dblog';
+@import 'pages/format';
+@import 'pages/user-login';
+@import 'pages/install';
+@import 'pages/appearance';
+
+@import 'profiles/profile-1';
+@import 'profiles/profile-2';

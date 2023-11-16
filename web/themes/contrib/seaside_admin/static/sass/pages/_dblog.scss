@@ -1,0 +1,53 @@
+form.dblog-filter-form {
+  .form-actions {
+    margin-top: 40px;
+    padding: 0;
+  }
+}
+
+table#admin-dblog {
+  table-layout: auto;
+
+  tr {
+    &.dblog-warning {
+      background-color: $status-warning-bg;
+      color: $status-warning-text;
+
+      .icon {
+        background-image: none;
+
+        &:before {
+          @include icomoon('warning');
+
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &.dblog-error,
+    &.dblog-critical,
+    &.dblog-alert,
+    &.dblog-emergency {
+      background-color: $status-error-bg;
+      color: $status-error-text;
+
+      .icon {
+        background-image: none;
+
+        &:before {
+          @include icomoon('error');
+
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  td {
+    border-bottom: 3px solid $white;
+
+    &.icon {
+      width: 74px;
+    }
+  }
+}

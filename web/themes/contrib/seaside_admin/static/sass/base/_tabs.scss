@@ -1,0 +1,102 @@
+.tabs {
+  margin: 20px 0 0;
+
+  ul {
+    @extend %clearfix;
+    font-size: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+
+      a {
+        color: $white;
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 50px;
+        padding: 0 40px;
+      }
+    }
+  }
+}
+
+#seaside-admin-secondary-local-tasks {
+  margin: 0;
+  float: left;
+  clear: both;
+
+  .tabs {
+    margin: 0;
+    margin-bottom: 20px;
+    ul {
+      background: $white;
+      border-radius: 60px;
+
+      li {
+        margin: 0;
+
+        &.is-active {
+          background: $golden-gate;
+          border-radius: 60px;
+
+          a {
+            color: $white;
+          }
+        }
+        a {
+          color: $presidio;
+          font-size: 14px;
+          line-height: 34px;
+          padding: 0 20px;
+        }
+        &:not(.is-active) {
+          a {
+
+            &:hover {
+              color: $golden-gate;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  #seaside-admin-primary-local-tasks {
+
+    .tabs {
+      ul {
+        @include gradient($golden-gate, $presidio);
+        @include drop-shadow($golden-gate, .6);
+        font-size: 0;
+        margin: 0;
+        text-align: center;
+
+        li {
+          margin: 0;
+
+          &.is-active {
+            a {
+              border-bottom: 4px darken($golden-gate, 15%) solid;
+              font-weight: 600;
+            }
+          }
+
+          a {
+            line-height: 35px;
+            padding: 0 30px;
+
+            &:hover {
+              background: darken($golden-gate, 15%);
+              border-bottom: 4px darken($golden-gate, 15%) solid;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

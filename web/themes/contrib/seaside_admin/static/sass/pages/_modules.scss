@@ -1,0 +1,75 @@
+form.system-modules,
+form.system-modules-uninstall {
+  td {
+    details {
+      height: auto;
+    }
+  }
+
+  tr.even {
+    details.form-wrapper {
+      border: 1px solid $white;
+    }
+
+    .details-description {
+      background-color: $white;
+    }
+  }
+
+  > details {
+    margin-top: 30px;
+
+    > summary {
+      background-image: linear-gradient(0.35turn, $golden-gate 0%, $presidio 100%);
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      color: $white;
+      font: {
+        size: pxtoem(18px);
+        weight: 500;
+      };
+      padding: 10px 0 10px 50px;
+    }
+
+    .details-wrapper {
+      padding: 0;
+    }
+  }
+
+  .requirements {
+    padding: 0 0 5px;
+  }
+
+  table {
+    table-layout: auto;
+
+    td {
+      vertical-align: middle;
+
+      &:nth-child(1),
+      &.checkbox {
+        min-width: 100px;
+        padding: 0;
+        width: 100px;
+      }
+
+      &:nth-child(2),
+      &.module {
+        width: 300px;
+
+        label {
+          font-size: 1em;
+        }
+      }
+
+      details {
+        border: 1px solid $pale-grey;
+
+        summary {
+          cursor: pointer;
+          padding: 12px 32px;
+        }
+      }
+    }
+  }
+}

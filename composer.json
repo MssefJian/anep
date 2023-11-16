@@ -18,6 +18,7 @@
         "composer/installers": "^2.0",
         "defuse/php-encryption": "^2.4",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/adminimal_theme": "^1.7",
         "drupal/backup_migrate": "^5.0",
         "drupal/color_pickr": "^1.1",
         "drupal/core-composer-scaffold": "^10.1",
@@ -30,6 +31,7 @@
         "drupal/lang_dropdown": "^2.1",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
+        "drupal/seaside_admin": "^2.0",
         "drupal/svg_image": "^3.0",
         "drupal/webform": "^6.2@beta",
         "drush/drush": "^12.1"

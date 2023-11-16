@@ -1,0 +1,54 @@
+.seaside-admin-config-page {
+  .content.column.admin-config-page {
+    background: $page-background-color;
+    padding: 0;
+
+    .admin-page {
+      .columns {
+        @include flex;
+
+        .column {
+          padding-right: 20px;
+          width: 50%;
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          .config-panel {
+            background: $white;
+            margin-bottom: 20px;
+            padding: 20px;
+
+            dl {
+              dt {
+                margin-bottom: 10px;
+
+                a {
+                  &:after {
+                    @include icomoon('arrows_circle_left', 'linea');
+
+                    font-size: 18px;
+                    margin-left: 12px;
+                    position: relative;
+                    top: 3px;
+                  }
+                }
+              }
+
+              dd {
+                border-bottom: 1px solid $pale-grey;
+                margin: 0 0 16px;
+                padding-bottom: 16px;
+
+                &:last-child {
+                  border-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+// DESKTOP
+$grid-columns: 12;
+$grid-column-width: 109;
+$grid-gutter-width: 30;
+
+
+html {
+  &.entity-browser .entity-browser-form .view .view-content .views-row {
+    @include span-fluid-columns(4, true);
+
+    &:nth-child(3n) {
+      @include span-fluid-columns(4, false);
+    }
+  }
+}
+
+body {
+  .navigation nav,
+  header,
+
+  div.wrapper {
+    max-width: 100%;
+    width: calc-grid() + px;
+  }
+
+  #toolbar-administration nav {
+    width: 100%;
+  }
+
+  .site-branding .logo {
+    img {
+      height: auto;
+      width: 50%;
+    }
+  }
+
+  .content.column {
+    @include span-fluid-columns(12, false);
+  }
+
+  .system-status-report-counters > div {
+    @include span-fluid-columns(4);
+    @include flex-child(1 0 32%);
+
+    &:last-child {
+      @include span-fluid-columns(4, false);
+    }
+  }
+
+  .system-status-general-info {
+    .items {
+      .item {
+        @include flex-child(0 0 32%);
+        @include span-fluid-columns(4, true);
+
+        &:nth-child(2) {
+          @include flex-child(1 0 66%);
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  div.system-status-report {
+    .requirements-group {
+      .entry {
+        .title {
+          @include flex-child(0 0 30%);
+        }
+      }
+    }
+  }
+}

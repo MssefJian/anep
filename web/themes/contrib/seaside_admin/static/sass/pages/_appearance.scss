@@ -1,0 +1,13 @@
+.theme-selector .screenshot, .theme-selector .no-screenshot {
+  @include border-radius;
+  border: 1px solid $pale-grey;
+  padding: 0;
+}
+
+.system-themes-list-uninstalled {
+  border-top: 3px solid $pale-grey;
+
+  .theme-info {
+    margin-top: 20px;
+  }
+}

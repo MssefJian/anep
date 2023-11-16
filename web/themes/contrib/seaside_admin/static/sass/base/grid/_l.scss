@@ -1,0 +1,43 @@
+// TABLET LANDSCAPE
+
+$grid-columns: 12;
+$grid-column-width: 54;
+$grid-gutter-width: 30;
+
+@media #{$l} {
+  body {
+    //background-color: $belizehole;
+
+    header,
+
+    div.wrapper {
+      width: calc-fluid-grid($grid-columns * 2);
+    }
+
+    .content.column {
+      @include span-fluid-columns(12, false);
+    }
+
+    .tabs ul li a {
+      padding: 0 30px;
+    }
+
+    .system-status-general-info {
+      .items {
+        .item {
+          @include flex-child(0 1 auto);
+          @include span-fluid-columns(6, true);
+
+          &:nth-child(even) {
+            @include span-fluid-columns(6, false);
+          }
+
+          &:nth-child(2) {
+            @include flex-child(0 1 auto);
+          }
+        }
+      }
+    }
+
+  }
+}

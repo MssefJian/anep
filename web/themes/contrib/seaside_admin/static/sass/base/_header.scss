@@ -1,0 +1,23 @@
+header {
+  overflow: hidden;
+
+  #seaside-admin-breadcrumbs {
+    position: relative;
+    z-index: 1;
+  }
+
+  #seaside-admin-page-title {
+    float: left;
+    clear: both;
+  }
+
+  #sitebranding {
+    float: left;
+    margin-right: 30px;
+
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+  }
+}

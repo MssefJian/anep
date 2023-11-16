@@ -1,0 +1,27 @@
+.container-inline {
+  div,
+  label {
+    display: inline-block;
+  }
+
+  label:after,
+  .label:after {
+    content: ':';
+  }
+}
+
+.form-type-radios .container-inline {
+  label:after {
+    content: '';
+  }
+
+  .form-type-radio {
+    margin: 0 1em;
+  }
+
+  .form-actions,
+  &.form-actions {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
