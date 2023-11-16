@@ -29,16 +29,20 @@ function md_carousel_theme($existing, $type, $theme, $path)
 function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   \Drupal::logger('md_carousel')->notice('Form alter hook called for form ID: @form_id', ['@form_id' => $form_id]);
 
-  if ($form_id == 'node_announcement_form') { // Replace with your actual form ID
-    $form['field_status']['#ajax'] = [
-        'callback' => 'md_carousel_status_ajax_callback', // Your AJAX callback function
-        'wrapper' => 'edit-field-status-wrapper', // The ID of the wrapper element
-        'event' => 'change', // Event to trigger AJAX, usually 'change' for select fields
-    ];
-}
+  $form['field_status']['#ajax'] = [
+    'callback' => 'md_carousel_status_ajax_callback', // Your AJAX callback function
+    'wrapper' => 'field-number-post-wrapper', // The ID of the wrapper element to be updated
+    'event' => 'change', // Event to trigger AJAX, usually 'change' for select fields
+    'progress' => [
+      'type' => 'throbber',
+      'message' => t('Updating...'),
+    ],
+  ];
 
-    $form['field_number_post']['#prefix'] = '<div id="field-number-post-wrapper">';
-    $form['field_number_post']['#suffix'] = '</div>';
+  // Set up wrapper for the field to be dynamically updated.
+  $form['field_number_post']['#prefix'] = '<div id="field-number-post-wrapper">';
+  $form['field_number_post']['#suffix'] = '</div>';
+
 
     _md_carousel_toggle_field_visibility($form, $form_state);
   }
@@ -60,6 +64,7 @@ function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStat
   \Drupal::logger('md_carousel')->notice('Toggle visibility function called. Status: @status', ['@status' => $status_log]);
 
   $form['field_number_post']['#access'] = ($status_value === 'Ouvert');
+  
 }
 
 
