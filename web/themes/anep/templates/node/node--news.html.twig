@@ -27,7 +27,7 @@
           {{ node.title.0.value|striptags|slice(0, 90) }}
         </a> </h3>
         <div class="post-body" >{{ node.body.value|striptags|slice(0, 140) }} ...</div>
-        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"> {{"Read more"|t}}  <i class="fas fa-long-arrow-alt-right"></i></a> </div>
+        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"> {{"Read more"|t}}  <i class="{% if cur_language == "ar" %}fas fa-long-arrow-alt-left{% else %}fas fa-long-arrow-alt-right{% endif %}"></i></a> </div>
     </div>
   </div>
 
