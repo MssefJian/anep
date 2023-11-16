@@ -20,3 +20,21 @@ function md_carousel_theme($existing, $type, $theme, $path)
     ],
   ];
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter() for node_form.
+ */
+function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Check if the content type is "announcement."
+  if ($form_state->getFormObject()->getEntity()->getType() == 'announcement') {
+    // Get the current value of the "field_status" field.
+    $status_value = $form_state->getFormObject()->getEntity()->get('field_status')->value;
+
+    // Check if the status is not equal to "open."
+    if ($status_value !== 'Ouvert') {
+      // Hide the "message" field.
+      $form['field_message']['#access'] = FALSE;
+    }
+  }
+}
+
