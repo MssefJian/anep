@@ -46,7 +46,6 @@ function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStat
   if (!empty($status_entities)) {
       // Assuming single value, take the first item.
       $status_value = reset($status_entities)->getName();
-      \Drupal::logger('md_carousel')->notice('status_entities Toggle visibility function called. Status: @status', ['@status' => $status_value]);
 
   } else {
       $status_value = NULL;
