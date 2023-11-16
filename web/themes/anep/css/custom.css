@@ -153,6 +153,12 @@ text-align: right;
   float: right;
     direction: initial;
 }
+[dir="rtl"] i.fa-long-arrow-alt-left {
+  float: inline-start;
+  padding-top: 7px;
+  padding-left: 13px;
+  padding-right: 6px;
+}
 @media (min-width: 992px) {
   .navigation .gva_menu > li > a {
       font-size: 13px !important;
