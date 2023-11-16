@@ -42,11 +42,13 @@ function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInt
 }
 
 function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  $status_entities = $form_state->getFormObject()->getEntity()->get('field_status')->referencedEntities();
-  if (!empty($status_entities)) {
-      // Assuming single value, take the first item.
-      $status_value = reset($status_entities)->getName();
+  $entity = $form_state->getFormObject()->getEntity();
+  \Drupal::logger('md_carousel')->notice('Entity dump: @entity', ['@entity' => print_r($entity->toArray(), TRUE)]);
 
+  $status_entities = $entity->get('field_status')->referencedEntities();
+
+  if (!empty($status_entities)) {
+      $status_value = reset($status_entities)->getName();
   } else {
       $status_value = NULL;
   }
@@ -56,6 +58,7 @@ function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStat
 
   $form['field_number_post']['#access'] = ($status_value === 'Ouvert');
 }
+
 
 
 
