@@ -1,0 +1,271 @@
+.js .dropbutton-wrapper {
+  .dropbutton-widget {
+    .dropbutton {
+      overflow: visible;
+
+      .dropbutton-action {
+        position: relative;
+
+        .ajax-progress {
+          left: -60px;
+          position: absolute;
+          top: 0;
+        }
+
+        a {
+          white-space: nowrap;
+        }
+
+        a, input, button {
+          border-radius: $border-radius 0 0 $border-radius;
+          display: block;
+          padding: 8px 1.5em;
+          text-align: left;
+          width: 100%;
+
+          &:hover, &:focus {
+            z-index: 3;
+          }
+
+          &:active {
+            background-color: darken($pale-grey, 10%);
+            text-decoration: none;
+          }
+          &.plus {
+            padding-left: pxtoem(52px);
+            position: relative;
+            &:before{
+              @include icomoon('arrows_circle_plus', 'linea');
+              font-size: 170%;
+              left: pxtoem(10px);
+              position: absolute;
+            }
+          }
+        }
+
+        > input, > a, > button {
+          @include button;
+          transition: background-color 0.4s ease-in-out;
+          transition: box-shadow 0.4s ease-in-out;
+        }
+
+        &:first-child {
+          > input, > a, > button {
+            border-radius: $border-radius 0 0 $border-radius;
+          }
+        }
+      }
+    }
+
+    .secondary-action {
+      border-top: 1px solid darken($pale-grey, 10%);
+    }
+
+    .dropbutton-toggle {
+      button {
+        background-color: $golden-gate;
+        border-radius: 0 $border-radius $border-radius 0;
+        outline: none;
+        position: relative;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+          background-color: darken($golden-gate, 20%);
+        }
+
+        &:after {
+          @include icomoon('arrows_down', 'linea');
+          color: $white;
+          font-weight: bold;
+          left: 5px;
+          position: absolute;
+          top: 12px;
+        }
+
+        .dropbutton-arrow {
+          border: 0;
+        }
+      }
+    }
+  }
+
+  &.dropbutton-multiple {
+    &.open {
+      .dropbutton-widget {
+        border-radius: $border-radius;
+        @include gradient(darken($med-grey, 20%), darken($med-grey, 20%));
+
+        .dropbutton {
+          .dropbutton-action {
+            a, .button {
+              border-radius: 0;
+            }
+
+            &:first-child {
+              a, .button {
+                border-radius: $border-radius 0 0;
+                @include gradient(darken($med-grey, 20%), darken($med-grey, 20%));
+              }
+            }
+
+            &:last-child {
+              a, .button {
+                border-radius: 0 0 0 $border-radius;
+              }
+            }
+          }
+
+          .dropbutton-toggle {
+            button {
+              border-radius: 0 $border-radius $border-radius 0;
+
+              &:after {
+                @include icomoon('arrows_up', 'linea');
+
+                font-weight: bold;
+              }
+
+              &:hover {
+                @include gradient(darken($med-grey, 20%), darken($med-grey, 20%));
+                color: $dark-three;
+              }
+
+              .dropbutton-arrow {
+                border-bottom: 0.3333em solid $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.dropbutton-single {
+    .dropbutton-widget {
+      border: 0;
+      display: inline-block;
+      position: static;
+
+      .dropbutton .dropbutton-action {
+        a {
+          border-radius: $border-radius;
+          padding: 4px 1.5em;
+          text-decoration: none;
+          text-shadow: none;
+          transition: all 0.4s ease-in-out;
+          width: auto;
+
+          &:hover, &:focus {
+            outline: none;
+            text-decoration: none;
+          }
+
+          &:active {
+            background-color: darken($pale-grey, 10%);
+            transition: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.js table tr {
+  td {
+    .dropbutton-wrapper {
+      margin-right: 0;
+      min-height: 40px;
+      padding-right: 8em;
+
+      .dropbutton-widget {
+        .dropbutton {
+          .dropbutton-toggle {
+            button {
+              background-color: $med-grey;
+              &:after {
+                color: $dark-three;
+                font-weight: normal;
+              }
+            }
+          }
+
+          .dropbutton-action, .dropbutton-toggle {
+            a, input, button {
+              @include gradient($med-grey, $med-grey);
+              @include drop-shadow($white, 1);
+              color: $dark-three;
+
+              &:hover {
+                @include gradient(darken($med-grey, 20%), darken($med-grey, 20%));
+                color: $dark-three;
+              }
+
+              &:visited {
+                color: $dark-three;
+              }
+            }
+          }
+        }
+      }
+
+      &.dropbutton-multiple {
+        &.open {
+          .dropbutton-widget {
+            .dropbutton {
+              .dropbutton-action {
+                > a, > input, > button {
+                  border-left: 1px solid darken($med-grey, 10%);
+                }
+
+                &:first-child {
+                  > a, > input, > button {
+                    border-top: 1px solid darken($med-grey, 10%);
+                  }
+                }
+
+                &:last-child {
+                  > a, > input, > button {
+                    border-bottom: 1px solid darken($med-grey, 10%);
+                  }
+                }
+              }
+
+              .dropbutton-toggle {
+                button {
+                  @include gradient(darken($med-grey, 20%), darken($med-grey, 20%));
+                  &:after {
+                    font-weight: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.js .views-display-tab {
+  .dropbutton-widget {
+    .dropbutton {
+      .dropbutton-action {
+        > input, > a, > button {
+          padding: pxtoem(4px, 15px);
+        }
+      }
+
+      .dropbutton-toggle {
+        button {
+          &:after {
+            top: 8px;
+          }
+          &:hover {
+            @include gradient(darken($med-grey, 20%), darken($med-grey, 20%));
+            color: $dark-three;
+          }
+        }
+      }
+    }
+  }
+}

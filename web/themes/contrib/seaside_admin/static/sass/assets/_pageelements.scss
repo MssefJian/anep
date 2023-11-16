@@ -1,0 +1,255 @@
+input, a, button, textarea, :focus {
+  &:focus {
+    @extend %elementfocus;
+  }
+}
+
+label[for*='disabled'] {
+  color: darken($silver, 15%);
+}
+
+span.form-required {
+  color: $error-red;
+  font-weight: bold;
+}
+
+// TEXT INPUTS
+
+input[type='file'] {
+  padding: pxtoem(1px, 0, 1px, 1px);
+}
+
+input[disabled] {
+  background-color: lighten($silver, 15%);
+  border: pxtoem(1px) solid $silver;
+}
+
+fieldset {
+  margin-top: pxtoem(10px);
+  padding: pxtoem(3px, 10px, 12px, 10px);
+
+  legend {
+    padding: pxtoem(0, 5px);
+    white-space: nowrap;
+  }
+
+  html.js & {
+    &.collapsible {
+      .fieldset-legend {
+        background-image: none;
+        padding-left: 0;
+
+        &:before {
+          @include arrow('down');
+          display: inline-block;
+          font-size: perc(12px);
+          height: 14px;
+          width: 14px;
+        }
+      }
+
+      &.collapsed {
+        border-left: pxtoem(1px) solid transparent;
+
+        .fieldset-legend {
+          &:before {
+            transform: rotate(-90deg);
+            vertical-align: 3px;
+          }
+        }
+      }
+
+      a.fieldset-title {
+        padding-left: pxtoem(3px);
+      }
+    }
+  }
+}
+
+.password-confirm > span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.password-indicator {
+  border-radius: pxtoem(2px);
+
+  div {
+    background-color: $message-status;
+    border-radius: pxtoem(2px);
+  }
+}
+
+body {
+  div.alert,
+  div.messages {
+    background-image: none;
+    border: 0;
+    color: $white;
+    margin-bottom: 50px;
+    padding: pxtoem(10px);
+
+    a {
+      border-bottom: 1px solid $white;
+      color: $white;
+      cursor: pointer;
+      transition: border-bottom 0.3s ease-in-out;
+
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+
+    .krumo-root {
+      color: $black;
+    }
+
+    > ul {
+      display: inline-block;
+      margin: 0;
+    }
+
+    &:before {
+      float: left;
+      margin-top: pxtoem(5px);
+      padding-right: pxtoem(10px);
+    }
+
+    &.alert-warning,
+    &.messages--warning {
+      @include gradient(darken($message-warning, 10%) , $message-warning);
+      @include drop-shadow($message-warning, .7);
+      @include border-radius;
+
+      &:before {
+        @include icomoon('warning');
+      }
+    }
+
+    &.alert-info,
+    &.messages--status {
+      @include gradient(darken($message-status, 10%) , $message-status);
+      @include drop-shadow($message-status, .7);
+      @include border-radius;
+
+      &:before {
+        @include icomoon('status');
+      }
+    }
+
+    &.alert-danger,
+    &.messages--error {
+      @include gradient(darken($message-error, 10%) , $message-error);
+      @include drop-shadow($message-error, .7);
+      @include border-radius;
+
+      &:before {
+        @include icomoon('error');
+      }
+    }
+  }
+}
+
+// FILE INPUT BOXES
+label.fileinput.prettify {
+  border-radius: pxtoem(2px);
+  display: inline-block;
+  font-weight: normal;
+  height: pxtoem(30px);
+  min-width: 280px;
+  position: relative;
+
+  input[type='file'] {
+    max-height: 1px;
+    max-width: 280px;
+  }
+
+  &.error {
+    border: pxtoem(1px) solid $error-red;
+  }
+
+  &.focus {
+    @extend %elementfocus;
+  }
+
+  &.disabled {
+    background-color: lighten($silver, 20%);
+    border: pxtoem(1px) solid $silver;
+    color: darken($silver, 15%);
+    pointer-events: none;
+
+    a.button {
+      $shadow-color: rgba(0, 0, 0, 0.3);
+      background-color: lighten($silver, 15%);
+      box-shadow: inset 0 pxtoem(-1px) $shadow-color;
+      color: darken($silver, 15%);
+      pointer-events: none;
+    }
+  }
+
+  > div {
+    display: table;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+
+    span.filetext {
+      color: darken($silver, 15%);
+      max-width: 100px;
+      overflow: hidden;
+      padding: pxtoem(0, 8px);
+      text-overflow: ellipsis;
+      width: 100%;
+
+      &.selected {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: 0;
+}
+
+a {
+  color: normal-color($bodycopy-link-colors);
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
+
+  &:hover {
+    color: hover-color($bodycopy-link-colors);
+    text-decoration: underline;
+  }
+
+  &:focus {
+    @extend %elementfocus;
+  }
+}
+
+ol {
+  counter-reset: olcounter;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+
+    &:before {
+      @extend %fonticon;
+      content: counter(olcounter) '.';
+      counter-increment: olcounter;
+      font-family: $default-font;
+      font-size: $default-font-size;
+      font-weight: 500;
+      padding: 0 10px;
+    }
+  }
+}
+
+abbr[title] {
+  border: 0;
+}

@@ -1,0 +1,64 @@
+.update-report {
+  .project-type {
+    margin-bottom: 50px;
+
+    table.update {
+      tr {
+        > td {
+          border-bottom: 3px solid $white;
+          padding: 20px;
+          position: relative;
+
+          .project-status {
+            padding-right: 40px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+            &.not-current:after {
+              @include icomoon('arrows_info', 'linea');
+              font-size: 24px;
+            }
+
+            &.current:after {
+              @include icomoon('arrows_circle_check', 'linea');
+              font-size: 24px;
+            }
+
+            &:after {
+              @include icomoon('arrows_exclamation', 'linea');
+
+              font-size: 24px;
+              margin-left: 10px;
+              position: absolute;
+              top: 0;
+            }
+          }
+
+          .project-version {
+            @include flex;
+            margin-top: 20px;
+
+            .version-title,
+            .version-details {
+              width: 25%;
+            }
+
+            .version-links {
+              text-align: right;
+              width: 50%;
+
+              li:before {
+                display: none;
+              }
+            }
+          }
+
+          .project-details {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

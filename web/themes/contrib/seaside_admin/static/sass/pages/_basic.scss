@@ -1,0 +1,248 @@
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+
+  //table-layout: fixed
+
+  caption {
+    background: $pale-grey;
+    font: {
+      size: pxtoem(16px);
+      weight: 600;
+    };
+    margin-top: 30px;
+    padding: 10px;
+  }
+
+  th {
+    border-bottom: 3px solid $pale-grey;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: left;
+
+    &.select-all {
+      width: 50px;
+    }
+  }
+
+  tr:nth-child(even) {
+    background: $pale-grey;
+
+    summary,
+    .details-wrapper {
+      background-color: $white;
+    }
+  }
+
+  th,
+  td {
+    padding: pxtoem(20px) pxtoem(20px) pxtoem(20px) 0;
+
+    &.checkbox {
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .form-item {
+      margin: 0;
+    }
+  }
+
+  th:first-child, td:first-child {
+    padding: 0 10px;
+  }
+
+  tr.color-info,
+  tr.color-success,
+  .color-ok {
+    background-color: $status-info-bg;
+    color: $status-info-text;
+  }
+
+  tr.color-warning {
+    background-color: $status-warning-bg;
+    color: $status-warning-text;
+  }
+
+  tr.color-error {
+    background-color: $status-error-bg;
+    color: $status-error-text;
+  }
+
+  tr.draggable {
+    a.tabledrag-handle {
+      color: $page-font-color;
+      height: auto;
+      padding-top: 2px;
+
+      &:hover {
+        color: $peachy-pink;
+      }
+
+      .handle {
+        background: none;
+        height: 20px;
+        margin: 0 22px;
+        padding: 0;
+        width: 20px;
+
+        &:before {
+          @include icomoon('arrows_move', 'linea');
+
+          font-size: pxtoem(20px);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  span.tablesort {
+    background-image: none;
+
+    &:after {
+      color: $cool-grey;
+      vertical-align: middle;
+    }
+  }
+
+  span.tablesort--asc {
+    &:after {
+      @include icomoon('arrows_down', 'linea');
+    }
+  }
+
+  span.tablesort--desc {
+    &:after {
+      @include icomoon('arrows_up', 'linea');
+    }
+  }
+
+  span.tablesort--desc, span.tablesort--asc {
+    &:after {
+      font-size: 170%;
+    }
+  }
+}
+
+.tabledrag-changed-warning {
+  background-color: $message-warning;
+  background-image: none;
+  border: 0;
+  color: $white;
+  margin: 22px 0;
+  padding: pxtoem(10px);
+
+  &:before {
+    @include icomoon('warning');
+
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+blockquote {
+  background: $pale-grey;
+  border-left: 3px solid $golden-gate;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: '“' '”' '‘' '’';
+
+  &:before {
+    color: $golden-gate;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.3em;
+  }
+
+  p {
+    display: inline;
+  }
+}
+
+cite {
+  &:before,
+  &:after {
+    content: ' \' ';
+  }
+}
+
+dl {
+  margin: 0;
+
+  dt {
+    font-weight: 500;
+  }
+}
+
+hr {
+  background-color: $dark-three;
+  border-color: $dark-three;
+  color: $dark-three;
+}
+
+nav.breadcrumb {
+  color: $cool-grey;
+  float: right;
+
+  ol {
+    li {
+      display: inline-block;
+      margin-right: 0;
+
+      a {
+        color: $cool-grey;
+        :hover {
+          color: darken($cool-grey, 20%);
+        }
+      }
+
+      &:after {
+        content: '/';
+        margin-left: 0;
+      }
+
+      &:before,
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.drag {
+  border-left: solid 1px $dark-three;
+  filter: brightness(0.9);
+}
+
+body.drag {
+  filter: none;
+}
+
+.drag-previous {
+  background-color: $status-warning-bg;
+}
+
+.field-ui-overview {
+  .field-plugin-settings-editing {
+    td {
+      vertical-align: inherit;
+    }
+  }
+}
+
+@media #{$mobile, $tablet} {
+  nav.breadcrumb {
+    float: left;
+    margin-bottom: 30px;
+  }
+}

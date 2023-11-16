@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for status report counter.
+ *
+ * Available variables:
+ * - amount: The number shown on counter.
+ * - text: The text shown on counter.
+ * - severity: The severity of the counter.
+ *
+ * @ingroup themable
+ */
+#}
+{%
+  set classes = [
+    'system-status-counter',
+    'system-status-counter--' ~ severity,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="status-icon"></div>
+  <div class="status-title">
+    <div class="title-count">{{ amount }} {{ text }}</div>
+    <div class="details"><a href="#{{ severity }}" ><span class="visually-hidden">{{ text }} </span>Details</a></div>
+  </div>
+</div>

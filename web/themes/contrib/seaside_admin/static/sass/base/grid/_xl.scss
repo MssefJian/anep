@@ -1,0 +1,26 @@
+// DESKTOP
+$grid-columns: $default-grid-columns;
+$grid-column-width: $default-grid-column-width;
+$grid-gutter-width: $default-grid-gutter-width;
+
+
+@media #{$xl} {
+  body {
+    //background-color: $sunflower;
+
+    .navigation nav,
+    header,
+
+    div.wrapper {
+      width: calc-fluid-grid($grid-columns * 2);
+    }
+
+    #toolbar-administration nav {
+      width: 100%;
+    }
+
+    .content.column {
+      @include span-fluid-columns(16, false);
+    }
+  }
+}

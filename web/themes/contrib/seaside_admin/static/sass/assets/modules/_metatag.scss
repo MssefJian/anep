@@ -1,0 +1,27 @@
+.path-metatag {
+  table {
+    th, td {
+      &:first-child {
+        padding: 10px;
+      }
+
+      &:last-child {
+        width: 200px;
+      }
+
+      details.form-wrapper {
+        background: $white;
+
+        .details-wrapper {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+form.metatag-defaults-add-form {
+  .token-dialog {
+    display: block;
+  }
+}

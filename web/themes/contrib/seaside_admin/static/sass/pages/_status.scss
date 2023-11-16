@@ -1,0 +1,189 @@
+table.system-status-report {
+  th,
+  th:first-child,
+  td {
+    border-bottom: 3px solid $white;
+    font-size: 1em;
+    padding: 20px;
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  .system-status-report__status-icon {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+
+.system-status-report-counters {
+  @include flex;
+  margin-bottom: 30px;
+
+  .system-status-report-counters__item {
+    background-color: $pale-grey;
+    padding: 20px;
+
+    .system-status-counter {
+      @include flex;
+      @include flex-align('center');
+
+      .status-icon {
+        margin-right: 20px;
+      }
+
+      .status-title {
+        .title-count {
+          font-size: pxtoem(20px);
+          font-weight: 600;
+        }
+      }
+
+      &.system-status-counter--error .status-icon:before {
+        @include icomoon('error');
+        color: $status-error-text;
+        font-size: 64px;
+      }
+
+      &.system-status-counter--warning .status-icon:before {
+        @include icomoon('warning');
+        color: $status-warning-text;
+        font-size: 64px;
+      }
+
+      &.system-status-counter--checked .status-icon:before {
+        @include icomoon('checked');
+        color: $message-status;
+        font-size: 64px;
+      }
+    }
+  }
+}
+
+.system-status-general-info {
+  margin-bottom: 30px;
+
+  .items {
+    @include flex('wrap', 'flex-start', 'stretch');
+
+    .item {
+      @include flex;
+      background-color: $pale-grey;
+      margin-bottom: 20px;
+      padding: 20px;
+
+      &:nth-child(2) {
+        @include flex-child(1 0 auto);
+        position: relative;
+      }
+
+      .item-details {
+        h4 {
+          margin-top: 12px;
+        }
+      }
+
+      .item-icon {
+        margin-right: 20px;
+
+        &.item-icon--d8 {
+          &:before {
+            @include icomoon('drupal', 'linea');
+            color: $drupal-blue;
+            font-size: 64px;
+          }
+        }
+
+        &.item-icon--clock {
+          &:before {
+            @include icomoon('basic_alarm', 'linea');
+            color: $brownish-grey;
+            font-size: 64px;
+          }
+        }
+
+        &.item-icon--server {
+          &:before {
+            @include icomoon('software_layers2', 'linea');
+            color: $brownish-grey;
+            font-size: 64px;
+          }
+        }
+
+        &.item-icon--php {
+          &:before {
+            @include icomoon('gear', 'linea');
+            color: $brownish-grey;
+            font-size: 64px;
+          }
+        }
+
+        &.item-icon--database {
+          &:before {
+            @include icomoon('basic_accelerator', 'linea');
+            color: $brownish-grey;
+            font-size: 64px;
+          }
+        }
+      }
+
+      .description {
+        .cron-description__run-cron {
+          display: block;
+          margin-top: 20px;
+          position: absolute;
+          right: 20px;
+          top: 0;
+
+          a {
+            @include button;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.system-status-report {
+  .requirements-group {
+    margin-bottom: 30px;
+
+    .entry {
+      @include flex;
+      padding: 10px 0;
+
+      &:nth-child(odd) {
+        background-color: $pale-grey;
+      }
+
+      &.color-error {
+        background-color: $status-error-bg;
+        color: $status-error-text;
+      }
+
+      &.color-warning {
+        background-color: $status-warning-bg;
+        color: $status-warning-text;
+      }
+
+      .title {
+        font-weight: 600;
+      }
+
+      .title,
+      .entry__value {
+        padding: 0 10px;
+      }
+
+      .description {
+        color: $page-font-color;
+        font-size: pxtoem(11px);
+        line-height: pxtoem(17px);
+        margin-top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+table#filter-order {
+  th, td {
+    &:first-child {
+      padding: pxtoem(20px) pxtoem(20px) pxtoem(20px) 0;
+    }
+  }
+}

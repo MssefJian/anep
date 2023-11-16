@@ -1,0 +1,80 @@
+// CKeditor
+.seaside-admin {
+  .cke_chrome {
+    box-shadow: none;
+
+    .cke_top {
+      background-color: $pale-grey;
+      background-image: none;
+      border-bottom: 0;
+      border-color: $cool-grey;
+      padding: 16px 16px 10px;
+    }
+
+    .cke_bottom {
+      background-color: transparent;
+      background-image: none;
+      border: 0;
+      padding: 10px;
+    }
+  }
+
+  .cke_1.cke_chrome {
+    border-color: $cool-grey;
+  }
+
+  .ckeditor-buttons {
+    li  a {
+      color: $page-font-color;
+
+      &.cke-icon-only {
+        width: 30px;
+      }
+    }
+  }
+
+  .ckeditor-row {
+    list-style: none;
+  }
+
+  .ckeditor-toolbar-available {
+    margin-right: 10px;
+  }
+
+  .ckeditor-toolbar-available,
+  .ckeditor-toolbar-dividers {
+    background: $pale-grey;
+    float: none;
+    padding: 10px;
+
+    label {
+      display: block;
+    }
+  }
+
+  .ckeditor-multiple-buttons {
+    li {
+      list-style: none;
+    }
+  }
+
+  .ckeditor-toolbar-disabled {
+    @include flex;
+
+    align-items: stretch;
+
+    .ckeditor-buttons {
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  .ckeditor-toolbar-active {
+    .ckeditor-toolbar-groups {
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

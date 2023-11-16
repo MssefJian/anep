@@ -1,0 +1,90 @@
+html,
+body {
+  font-family: $default-font;
+  font-weight: 500;
+  height: 100%;
+  line-height: pxtoem($default-line-height);
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: $golden-gate;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    color: $peachy-pink;
+    text-decoration: none;
+  }
+}
+
+.outer-wrapper {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  .content.column {
+    padding: 40px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $default-font;
+  margin: 30px 0 5px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1 {
+  font-size: pxtoem(20px);
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0 0 40px;
+}
+
+h2,
+h3 {
+  font: {
+    size: pxtoem(18px);
+    weight: 500;
+  };
+}
+
+h4,
+h5,
+h6 {
+  font: {
+    size: pxtoem(16px);
+    weight: 500;
+  };
+}
+
+h6 {
+  font-style: italic;
+}
+
+ul {
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+dd {
+  margin-left: 0;
+
+  &:not(:last-child) {
+    border-bottom: 3px solid $pale-grey;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}

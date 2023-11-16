@@ -1,0 +1,15 @@
+seaside_admin_cleartype : 1
+seaside_admin_viewport : 1
+seaside_admin_viewport_initial_scale : '1.0'
+seaside_admin_viewport_user_scaleable : 1
+seaside_admin_viewport_minimum_scale : '1.0'
+seaside_admin_viewport_maximum_scale : '1.0'
+seaside_admin_placeholder_js : 1
+seaside_admin_enquire_js : 1
+seaside_admin_lodash_js : 1
+seaside_admin_show_window_size : 0
+seaside_admin_breadcrumb_home : 1
+seaside_admin_breadcrumb_trailing : 0
+seaside_admin_breadcrumb_title : 0
+seaside_admin_layout_login : 1
+seaside_admin_color_profile : 'brighton'

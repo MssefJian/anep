@@ -1,0 +1,33 @@
+.token-tree-dialog {
+  border: 0;
+  min-width: 60%;
+
+  table.treetable {
+    tr {
+      &.branch {
+        background: $pale-grey;
+
+        &.token-group {
+          background: $white;
+
+          > td {
+            border-bottom: 1px solid $pale-grey;
+
+            &:first-child {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+
+      td {
+        padding: 10px;
+      }
+
+      span.indenter {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}

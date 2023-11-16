@@ -1,0 +1,592 @@
+form {
+  // TEXT INPUTS
+  input, textarea {
+    @include border-radius;
+    border: pxtoem(2px) solid $med-grey;
+    display: block;
+    padding: pxtoem(5px, 8px, 5px, 8px);
+    width: 100%;
+    &:focus {
+      @include drop-shadow($black, 0.8);
+    }
+
+    &.form-submit,
+    &.form-number,
+    &.form-autocomplete {
+      width: auto;
+      display: inline;
+    }
+
+    &.error {
+      background-color: lighten($error-red, 40%);
+      border: pxtoem(1px) solid $error-red;
+      color: $error-red;
+      @include drop-shadow($error-red, 0.8);
+    }
+
+    .form-item & {
+      &.error {
+        border: pxtoem(1px) solid $error-red;
+      }
+    }
+
+    &[disabled] {
+      border-color: $form-disabled;
+
+      &::before {
+        color: $form-disabled;
+      }
+    }
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  // RADIO BUTTONS AND CHECKBOXES
+  input {
+    &.form-text {
+      min-height: 40px;
+    }
+
+    &[type='checkbox'] {
+      -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+      background: $white;
+      cursor: pointer;
+      display: inline-block;
+      height: 18px;
+      margin-right: .25em;
+      padding: 0;
+      position: relative;
+      top: 3px;
+      width: 18px;
+
+      &:checked {
+        background-color: $golden-gate;
+        border-color: $golden-gate;
+
+        &::before {
+          @include icomoon('check');
+
+          color: $white;
+          font-size: pxtoem(16px);
+          left: -1px;
+          position: absolute;
+          top: -1px;
+        }
+      }
+    }
+
+    &[type='radio'] {
+      background: $white;
+      border-radius: 16px;
+      cursor: pointer;
+      display: inline-block;
+      height: 16px;
+      margin-right: .25em;
+      padding: 0;
+      position: relative;
+      top: 3px;
+      width: 16px;
+
+      &:checked {
+        background-color: $golden-gate;
+        border-color: $golden-gate;
+
+        &::before {
+          background-color: $white;
+          border-radius: 6px;
+          content: ' ';
+          height: 6px;
+          left: 4px;
+          position: absolute;
+          top: 6px;
+          width: 6px;
+        }
+      }
+    }
+  }
+
+  input[type='checkbox'][disabled],
+  input[type='radio'][disabled] {
+    border-color: $pinkish-grey;
+
+    &:checked {
+      background-color: $pinkish-grey;
+
+      &::before {
+        color: $dark-blue-grey;
+      }
+    }
+  }
+
+  .form-checkboxes,
+  .form-radios {
+    .form-item {
+      margin-bottom: 10px;
+    }
+  }
+
+  .form-type-textfield {
+    label {
+      font-weight: 500;
+      line-height: 2.5em;
+    }
+  }
+
+  // SELECT BOXES
+  .form-type-select {
+    display: inline-table;
+    margin-right: 20px;
+
+    label {
+      font-weight: 500;
+      line-height: 1em;
+    }
+  }
+
+  label.select.prettify {
+    @include border-radius;
+    background: white;
+    border: pxtoem(2px) solid $med-grey;
+    display: block;
+    font-size: 100%;
+    line-height: normal;
+    margin-right: 0;
+    min-height: 30px;
+    padding: pxtoem(5px, 8px, 5px, 8px);
+    position: relative;
+    width: 100%;
+
+    &.focus {
+      @extend %elementfocus;
+    }
+
+    &.error {
+      &:after {
+        border: pxtoem(1px) solid $error-red;
+        border-radius: pxtoem(2px);
+        bottom: -2px;
+        content: '';
+        left: -2px;
+        position: absolute;
+        right: -2px;
+        top: -2px;
+      }
+
+      &.focus {
+        outline-offset: 4px;
+      }
+    }
+
+    select {
+      border: 1px solid transparent;
+      bottom: 0;
+      cursor: pointer;
+      height: 100%;
+      left: 0;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 3;
+    }
+
+    span {
+      display: block;
+      min-height: 23px;
+      overflow: hidden;
+      padding-right: pxtoem(35px);
+      position: relative;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:after {
+        @include icomoon('arrows_down', 'linea');
+
+        color: $cool-grey;
+        font-size: 250%;
+        margin-top: pxtoem(-2px);
+        position: absolute;
+        right: pxtoem(-2px);
+      }
+    }
+
+    option {
+      html.lt-ie9 & {
+        width: 100%;
+      }
+    }
+
+    &.prettify-multiple {
+      select {
+        border: 1px solid transparent;
+        cursor: pointer;
+        height: 100%;
+        padding: 0;
+        position: static;
+        width: 100%;
+        z-index: 3;
+      }
+    }
+  }
+
+  .form-actions {
+    margin-top: 50px;
+  }
+
+  // EXPOSED FORMS
+  .views-exposed-form {
+    margin-bottom: pxtoem(40px);
+
+    .form-actions {
+      display: inline-table;
+      vertical-align: bottom;
+    }
+  }
+
+  fieldset {
+    border: 1px solid $pale-grey;
+    padding: 0;
+    position: relative;
+
+    legend {
+      font-size: pxtoem(16px);
+      font-weight: 500;
+      left: 20px;
+      line-height: inherit;
+      padding: 0;
+      position: absolute;
+      top: 24px;
+
+      span {
+
+        &.form-required {
+          color: $dark-blue-grey;
+          display: block;
+
+          &::after {
+            content: '*';
+          }
+        }
+      }
+    }
+
+    .fieldset-wrapper,
+    > .description {
+      padding: 70px 32px 30px;
+    }
+  }
+
+  .form-wrapper + .form-wrapper {
+    margin: 0;
+  }
+
+  .fieldgroup {
+    border-width: 1px;
+  }
+
+  // Inline containers
+  .container-inline {
+    .details-wrapper,
+    &.form-wrapper {
+      @include flex;
+
+      align-items: flex-end;
+
+      .form-item {
+        margin-bottom: 0;
+        margin-right: 20px;
+
+        input {
+          display: inline-block;
+        }
+
+        .field-suffix {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  // Form item
+  .form-item {
+    margin-bottom: 30px;
+
+    .filter-wrapper {
+      border: 0;
+      padding: 0;
+    }
+
+    .description {
+      color: $brownish-grey;
+      margin: 10px 0 0;
+    }
+
+    label {
+      font-size: pxtoem(14px);
+      font-weight: 500;
+      line-height: 2em;
+      display: block;
+    }
+
+    &.form-type-checkbox {
+      label {
+        display: inline-flex;
+      }
+    }
+
+    &.form-type-textarea {
+      padding-top: 20px;
+    }
+
+    // Cardinality elements
+    &.form-item-cardinality, &.form-item-cardinality-number {
+      display: inline-table;
+      vertical-align: top;
+    }
+
+    &.form-item-files-project-upload,
+    &.form-item-files-import-tarball {
+      @include flex('wrap');
+
+      label {
+        width: 50%;
+      }
+
+      .description {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &.form-type-vertical-tabs {
+      > label {
+        display: block;
+        margin: 30px 0 10px;
+      }
+    }
+  }
+
+  .password-strength {
+    width: 32em;
+
+    .password-strength__meter {
+      background-color: $pinkish-grey;
+      height: 8px;
+      border-radius: 10px;
+
+      .password-strength__indicator {
+        height: 8px;
+        border-radius: 10px;
+
+        &.is-weak {
+          background-color: $message-error;
+        }
+
+        &.is-fair {
+          background-color: $message-warning;
+        }
+
+        &.is-good {
+          background-color: $golden-gate;
+        }
+
+        &.is-strong {
+          background-color: $message-status;
+        }
+      }
+    }
+  }
+
+  .password-confirm {
+    .error {
+      color: $message-error;
+    }
+
+    .ok {
+      color: $message-status;
+    }
+  }
+
+  .form--inline {
+    .form-item {
+      float: left;
+      margin-right: 0.5em;
+    }
+
+    .form-item-separator {
+      margin-left: 0.5em;
+      margin-right: 1em;
+      margin-top: 3.3em;
+    }
+  }
+}
+
+// DETAILS
+details {
+  &.card, &summary{
+    &:not([open]) {
+      background: $med-grey;
+      @include drop-shadow(transparent);
+    }
+  }
+  &.form-wrapper {
+    margin: 0 0 30px;
+    padding: 0;
+
+    summary {
+      cursor: pointer;
+      font-size: pxtoem(14px);
+      font-weight: 500;
+      line-height: pxtoem(21px);
+      padding: 12px 32px;
+      position: relative;
+      transition: all 300ms 0s ease-in-out;
+      white-space: normal;
+
+      &::-webkit-details-marker { // sass-lint:disable-line no-vendor-prefixes
+        display: none;
+      }
+
+      &:before {
+        @include icomoon('arrows_right', 'linea');
+
+        font-size: 20px;
+        left: 7px;
+        line-height: inherit;
+        position: absolute;
+      }
+
+      a {
+        color: $page-font-color;
+      }
+    }
+
+    .details-wrapper {
+      #bundles {
+        td {
+          padding: 10px;
+
+          abbr {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .details-wrapper,
+    > .description {
+      padding: 30px;
+    }
+
+    .details-description {
+      padding: 15px;
+    }
+  }
+
+  summary::before {
+    @include icomoon('arrows_right', 'linea');
+
+    display: inline-block;
+    float: left;
+    font-size: pxtoem(24);
+    transition: all 300ms 0s ease-in-out;
+  }
+
+  summary[aria-expanded='true'] {
+    background-image: linear-gradient(0.35turn, $golden-gate 0%, $presidio 100%);
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    color: $white;
+
+    &:before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// VIEWS FORM
+.view-filters {
+  margin-bottom: 0;
+
+  label {
+    font-weight: 500;
+    line-height: 2.5em;
+  }
+}
+
+.views-form {
+
+  // Edit header (bulk operations)
+  .form-actions {
+    display: none;
+  }
+
+  #edit-header {
+    height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    .form-actions {
+      display: block;
+    }
+
+    &.edit-header-visible {
+      height: 110px;
+      margin-top: 40px;
+    }
+  }
+}
+
+.views-exposed-form,
+#edit-header .form-wrapper {
+  @include flex('wrap', 'flex-start', 'flex-end');
+
+  .form-item,
+  .form-actions {
+    margin-bottom: 1em;
+    padding-right: 15px;
+
+    .button {
+      margin: 0;
+    }
+  }
+
+  .form-actions {
+    margin-top: 0;
+  }
+}
+
+.form-type-search {
+  margin-bottom: 30px;
+
+  .form-search {
+    border: 2px solid $med-grey;
+    display: block;
+    padding: pxtoem(5px, 8px, 5px, 8px);
+    width: 100%;
+  }
+}
+
+.ui-autocomplete {
+  background-color: $white;
+  border: 1px solid $cool-grey;
+  border-top: 0;
+
+  .ui-menu-item {
+    margin: 0;
+    padding: 10px;
+
+    &.ui-state-focus {
+      margin: 0;
+      padding: 10px 10px 10px 12px;
+
+      a {
+        color: $peachy-pink;
+      }
+    }
+  }
+}

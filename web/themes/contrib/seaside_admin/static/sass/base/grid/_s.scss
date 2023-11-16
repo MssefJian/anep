@@ -1,0 +1,67 @@
+// MOBILE LANDSCAPE
+
+$grid-columns: 8;
+$grid-column-width: 47;
+$grid-gutter-width: 12;
+
+@media #{$s} {
+  body {
+    //background-color: $deeppink;
+
+    header,
+
+    div.wrapper {
+      width: calc-fluid-grid($grid-columns * 2);
+    }
+
+    .tabs ul li a {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+
+    .system-status-report-counters {
+      display: block;
+
+      > div {
+        @include span-fluid-columns(8, false);
+        margin-bottom: 20px;
+
+        &:last-child {
+          @include span-fluid-columns(8, false);
+        }
+      }
+    }
+
+    .system-status-general-info {
+      .items {
+        display: block;
+
+        .item {
+          @include span-fluid-columns(8, false);
+        }
+      }
+    }
+
+    div.system-status-report {
+      .requirements-group {
+        .entry {
+          display: block;
+        }
+      }
+    }
+
+    .layout-region-node-secondary .entity-meta {
+      > details, > div {
+        @include span-fluid-columns(8, false);
+
+        &:nth-child(even) {
+          @include span-fluid-columns(8, false);
+        }
+
+        &:nth-child(3) {
+          @include span-fluid-columns(8, false);
+        }
+      }
+    }
+  }
+}

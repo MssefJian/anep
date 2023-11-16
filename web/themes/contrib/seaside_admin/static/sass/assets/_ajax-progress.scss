@@ -1,0 +1,48 @@
+.ajax-progress-throbber {
+  background: white;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 499;
+  transition: 0.3s;
+
+  .throbber,
+  .throbber:after {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+
+  .throbber {
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    $rgba-br: rgba($dark-three, 0.4);
+    $rgba-tl: rgba($dark-three, 0.1);
+    animation: load8 1.1s infinite linear;
+    background: transparent none;
+    border-bottom: 1.1em solid $rgba-br;
+    border-left: 1.1em solid $rgba-tl;
+    border-right: 1.1em solid $rgba-br;
+    border-top: 1.1em solid $rgba-tl;
+    display: block;
+    position: relative;
+    transform: translateZ(0);
+  }
+
+  .message {
+    display: none;
+  }
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

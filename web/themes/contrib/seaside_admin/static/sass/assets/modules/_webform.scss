@@ -1,0 +1,28 @@
+body.path-yamlform,
+body.path-webform {
+  .button--small {
+    color: $brownish-grey;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  form {
+    #edit-filter {
+      .details-wrapper {
+        display: table;
+
+        .form-item,
+        .form-submit {
+          display: table-cell;
+        }
+
+        .form-item {
+          padding-right: 15px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// Import config.
+@import '../config/colors';
+@import '../config/grid';
+@import '../config/font';
+@import '../config/media';
+
+// Import settings.
+@import '../settings';
+
+// Import some other stuff.
+@import '../seaside/theme/lib/mixins';
+@import '../seaside/theme/lib/reset';
+@import '../lib/fonts';
+
+// Put your own mixins in this file
+@import '../lib/mixins';
+
+// Import the grid files.
+@import '../base/grid/xxl';
+@import '../base/grid/xl';
+@import '../base/grid/l';
+@import '../base/grid/m';
+@import '../base/grid/s';
+@import '../base/grid/xs';
+
+// Import the base layout.
+@import '../seaside/theme/base/layout';

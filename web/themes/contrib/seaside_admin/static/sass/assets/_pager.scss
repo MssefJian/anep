@@ -1,0 +1,26 @@
+nav.pager {
+  margin: 30px 0 0;
+
+  ul.pager__items {
+    li.pager__item {
+      margin-right: 10px;
+      padding: 0 10px;
+
+      a {
+        color: $brownish-grey;
+
+        &:hover {
+          color: $golden-gate;
+        }
+      }
+
+      &.is-active {
+        font-weight: bold;
+      }
+
+      &.pager__item--last {
+        margin-right: 0;
+      }
+    }
+  }
+}

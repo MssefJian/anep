@@ -1,0 +1,182 @@
+@mixin gradient($color-start, $color-end) {
+  background-image: linear-gradient(0.35turn, $color-start 0%, $color-end 100%);
+}
+
+@mixin drop-shadow($color, $opacity: 1) {
+  box-shadow: 0 0 20px transparentize($color, $opacity);
+}
+
+@mixin drop-shadow-large($color, $opacity: 1) {
+  box-shadow: 0 0 30px transparentize($color, $opacity);
+}
+
+
+@mixin border-radius {
+  border-radius: $border-radius;
+}
+
+@mixin button($bg-color: $golden-gate, $hover-bg-color: $presidio, $text-color: $white, $hover-text-color: $white, $border: false) {
+  @include gradient($bg-color, $hover-bg-color);
+  @include drop-shadow($golden-gate, .8);
+  @include border-radius;
+  border: 0;
+  color: $text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $default-font;
+  font-weight: 500;
+  line-height: pxtoem($default-line-height);
+  padding: pxtoem(8px, 30px, 8px, 30px);
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  vertical-align: baseline;
+
+  @if $border {
+    border: 1px solid $border;
+  }
+
+  &:hover {
+    @include gradient(darken($bg-color, 2%), darken($hover-bg-color, 2%));
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $white;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    &,
+    &:hover {
+      $shadow-color: rgba(0, 0, 0, 0.3);
+      background-color: lighten($silver, 15%);
+      //box-shadow: inset 0 pxtoem(-1px) $shadow-color;
+      color: darken($silver, 15%);
+      pointer-events: none;
+    }
+  }
+}
+
+@mixin button-small {
+  @include button($presidio, $presidio);
+
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+%elementfocus {
+  outline: none;
+
+  &.hide-outline {
+    outline: none;
+  }
+}
+
+@mixin icomoon($name, $family: 'icomoon') {
+  @include fonticon;
+
+  @if $family == 'linea' {
+    font-family: $family;
+    font-size: 16px;
+
+    @each $icon in $linea {
+      $itemname: nth($icon, 1);
+      $char: nth($icon, 2);
+
+      @if $name == $itemname {
+        content: $char;
+      }
+    }
+  } @else {
+    @each $icon in $fonticons {
+      $itemname: nth($icon, 1);
+      $char: nth($icon, 2);
+
+      @if $name == $itemname {
+        content: $char;
+      }
+    }
+  }
+}
+
+//This mixin replaces @extend %fonticon from the 42-theme because SASS doesn't
+//allow extends in media queries (anymore). See http://thesassway.com/intermediate/understanding-placeholder-selectors
+//for more solutions
+@mixin fonticon {
+  font-family: 'icomoon';
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+@mixin flex-order($number) {
+  order: #{$number};
+}
+
+@mixin flex-align($align) {
+  @if $align == 'start' or $align == 'end' {
+    align-items: flex-#{$align};
+  } @else {
+    align-items: #{$align};
+  }
+}
+
+@mixin flex-flow($direction: none, $wrap: none) {
+  @if $wrap != none {
+    flex-wrap: #{$wrap};
+  }
+
+  @if $direction != none {
+    flex-direction: #{$direction};
+  }
+}
+
+@mixin flex-grow($value) {
+  flex-grow: #{$value};
+}
+
+@mixin flex-shrink($value) {
+  flex-shrink: #{$value};
+}
+
+@mixin flex-child($value) {
+  flex: #{$value};
+}
+
+@mixin flex($wrap: none, $justify: none, $align: none, $direction: none, $inline: none) {
+  @if $inline != none {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  @if $direction != none {
+    flex-direction: #{$direction};
+  }
+
+  @if $wrap != none {
+    flex-wrap: #{$wrap};
+  }
+
+  @if $align != none {
+    align-items: #{$align};
+  }
+
+  @if $justify != none {
+    justify-content: #{$justify};
+  }
+}
