@@ -42,11 +42,20 @@ function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInt
 }
 
 function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  $status_value = $form_state->getFormObject()->getEntity()->get('field_status')->value;
-  \Drupal::logger('md_carousel')->notice('Toggle visibility function called. Status: @status', ['@status' => $status_value]);
+  $status_term = $form_state->getFormObject()->getEntity()->get('field_status')->entity;
+
+  if ($status_term) {
+    $status_value = $status_term->getName();
+  } else {
+    $status_value = NULL;
+  }
+
+  $status_log = isset($status_value) ? $status_value : 'NULL or Empty';
+  \Drupal::logger('md_carousel')->notice('Toggle visibility function called. Status: @status', ['@status' => $status_log]);
 
   $form['field_number_post']['#access'] = ($status_value === 'Ouvert');
 }
+
 
 function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   \Drupal::logger('md_carousel')->notice('AJAX callback called.');
