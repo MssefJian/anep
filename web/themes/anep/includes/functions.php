@@ -67,6 +67,8 @@ function anep_preprocess_node(&$variables) {
       $variables['gva_iframe'] = $iframe;
       $variables['post_format'] = $post_format;
   }
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['cur_language'] = $language;
 }
 
 function anep_preprocess_node__portfolio(&$variables){
