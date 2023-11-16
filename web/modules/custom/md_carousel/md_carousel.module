@@ -25,42 +25,33 @@ function md_carousel_theme($existing, $type, $theme, $path)
  * Implements hook_form_FORM_ID_alter() for node_form.
  */
 function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  // Check if the content type is "announcement."
-  if ($form_state->getFormObject()->getEntity()->getType() == 'announcement') {
+  \Drupal::logger('md_carousel')->notice('Form alter hook called for form ID: @form_id', ['@form_id' => $form_id]);
 
-    // Add AJAX properties to 'field_status'.
+  if ($form_state->getFormObject()->getEntity()->getType() == 'announcement') {
     $form['field_status']['#ajax'] = [
-      'callback' => 'md_carousel_status_ajax_callback', // Name of your AJAX callback function.
-      'wrapper' => 'field-number-post-wrapper', // The HTML ID of the wrapper to be replaced.
+      'callback' => 'md_carousel_status_ajax_callback',
+      'wrapper' => 'field-number-post-wrapper',
       'event' => 'change',
     ];
 
-    // Add a wrapper around 'field_number_post' for AJAX.
     $form['field_number_post']['#prefix'] = '<div id="field-number-post-wrapper">';
     $form['field_number_post']['#suffix'] = '</div>';
 
-    // Call a function to toggle the visibility initially.
     _md_carousel_toggle_field_visibility($form, $form_state);
   }
 }
 
-/**
- * Custom function to toggle the visibility of 'field_number_post'.
- */
 function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $status_value = $form_state->getFormObject()->getEntity()->get('field_status')->value;
+  \Drupal::logger('md_carousel')->notice('Toggle visibility function called. Status: @status', ['@status' => $status_value]);
+
   $form['field_number_post']['#access'] = ($status_value === 'Ouvert');
 }
 
-/**
- * AJAX callback function for 'field_status'.
- */
 function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  // Toggle visibility based on the current selection.
+  \Drupal::logger('md_carousel')->notice('AJAX callback called.');
+
   _md_carousel_toggle_field_visibility($form, $form_state);
 
-  // Return the part of the form to be updated.
   return $form['field_number_post'];
 }
-
-
