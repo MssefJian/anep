@@ -40,14 +40,15 @@ table tbody tr:hover a {
 
 table th,
 table td {
-    padding: .625em;
+    padding: 0.4em;
     text-align: center;
+    font-size: 0.9em;
 }
 
 table th {
-    font-size: .8em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    font-size: .75em;
+    letter-spacing: unset;
+    text-transform: unset;
     color: white;
 }
 .field--name-price .field__label {
