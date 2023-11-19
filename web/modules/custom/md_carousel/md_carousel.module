@@ -58,10 +58,7 @@ function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInt
   $renderer = \Drupal::service('renderer');
   $response = new AjaxResponse();
 
-  $node = $form_state->getFormObject()->getEntity();
 
-  // Check if the field_status field is set and not empty.
-  if ($node->hasField('field_status') && !$node->get('field_status')->isEmpty()) {
     $user_input = $form_state->getUserInput();
     $selected_value = $user_input['field_status'];
 
@@ -77,7 +74,7 @@ function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInt
       // Re-render the 'field_number_post' element.
       $number_post_html = $renderer->renderRoot($form['field_number_post']);
       $response->addCommand(new HtmlCommand('#edit-field-number-post-wrapper', $number_post_html));
-  }
+  
 
   return $response;
 }
