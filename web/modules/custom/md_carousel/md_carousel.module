@@ -1,5 +1,11 @@
 <?php
 
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\HtmlCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Render\RendererInterface;
+use Drupal\taxonomy\Entity\Term;
+
 function md_carousel_theme($existing, $type, $theme, $path)
 {
   return [
@@ -24,57 +30,54 @@ function md_carousel_theme($existing, $type, $theme, $path)
 /**
  * Implements hook_form_FORM_ID_alter() for node_form.
  */
+function md_carousel_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 
  
-function md_carousel_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  \Drupal::logger('md_carousel')->notice('Form alter hook called for form ID: @form_id', ['@form_id' => $form_id]);
+  if (($form_id == 'node_announcement_form') || ($form_id == 'node_announcement_edit_form')) {
+      // Adding AJAX properties to 'field_status'.
+       
+      $form['field_status']['widget']['#ajax'] = [
+          'callback' => 'md_carousel_status_ajax_callback',
+          'wrapper' => 'edit-field-number-post-wrapper',
+          'event' => 'change',
+          'progress' => [
+              'type' => 'throbber',
+              'message' => t('Updating...'),
+          ],
+      ];
+      
+      // Wrapper for 'field_number_post' to be updated by AJAX.
 
-  $form['field_status']['#ajax'] = [
-    'callback' => 'md_carousel_status_ajax_callback', // Your AJAX callback function
-    'wrapper' => 'field-number-post-wrapper', // The ID of the wrapper element to be updated
-    'event' => 'change', // Event to trigger AJAX, usually 'change' for select fields
-    'progress' => [
-      'type' => 'throbber',
-      'message' => t('Updating...'),
-    ],
-  ];
-
-  // Set up wrapper for the field to be dynamically updated.
-  $form['field_number_post']['#prefix'] = '<div id="field-number-post-wrapper">';
-  $form['field_number_post']['#suffix'] = '</div>';
-
-
-    _md_carousel_toggle_field_visibility($form, $form_state);
+      $form['field_number_post']['#prefix'] = '<div id="edit-field-number-post-wrapper">';
+      $form['field_number_post']['#suffix'] = '</div>';
+      
   }
-
-
-function _md_carousel_toggle_field_visibility(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  $entity = $form_state->getFormObject()->getEntity();
-  \Drupal::logger('md_carousel')->notice('Entity dump: @entity', ['@entity' => print_r($entity->toArray(), TRUE)]);
-
-  $status_entities = $entity->get('field_status')->referencedEntities();
-
-  if (!empty($status_entities)) {
-      $status_value = reset($status_entities)->getName();
-  } else {
-      $status_value = NULL;
-  }
-
-  $status_log = isset($status_value) ? $status_value : 'NULL or Empty';
-  \Drupal::logger('md_carousel')->notice('Toggle visibility function called. Status: @status', ['@status' => $status_log]);
-
-  $form['field_number_post']['#access'] = ($status_value === 'Ouvert');
-  
 }
-
-
-
 
 function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  \Drupal::logger('md_carousel')->notice('AJAX callback called.');
+  $renderer = \Drupal::service('renderer');
+  $response = new AjaxResponse();
 
-  _md_carousel_toggle_field_visibility($form, $form_state);
+  $node = $form_state->getFormObject()->getEntity();
 
-  return $form['field_number_post'];
+  // Check if the field_status field is set and not empty.
+  if ($node->hasField('field_status') && !$node->get('field_status')->isEmpty()) {
+    $user_input = $form_state->getUserInput();
+    $selected_value = $user_input['field_status'];
+
+      // Update the 'field_number_post' access and default value based on 'field_status'.
+      if ($selected_value === '35') {
+          $form['field_number_post']['#access'] = true;
+
+      } else {
+          $form['field_number_post']['#access'] = false;
+
+      }
+
+      // Re-render the 'field_number_post' element.
+      $number_post_html = $renderer->renderRoot($form['field_number_post']);
+      $response->addCommand(new HtmlCommand('#edit-field-number-post-wrapper', $number_post_html));
+  }
+
+  return $response;
 }
-
