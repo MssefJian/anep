@@ -13,8 +13,8 @@ entity_type: node
 bundle: announcement
 label: "L'Annonce"
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

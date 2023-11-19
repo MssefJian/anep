@@ -27,109 +27,109 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_accepted_to_oral_test:
     type: file_generic
-    weight: 17
+    weight: 22
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   field_accepted_to_written_test:
     type: file_generic
-    weight: 16
+    weight: 21
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   field_announcement_type:
     type: options_select
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_autres_documents:
     type: file_generic
-    weight: 100
+    weight: 20
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   field_competition_date:
     type: datetime_default
-    weight: 15
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   field_deadline:
     type: datetime_default
-    weight: 14
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   field_interview_date:
     type: datetime_default
-    weight: 13
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_number_post:
     type: number
-    weight: 11
+    weight: 12
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_publication_date:
     type: datetime_default
-    weight: 12
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   field_results:
     type: file_generic
-    weight: 18
+    weight: 23
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   field_status:
     type: options_select
-    weight: 20
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_waiting_list:
     type: file_generic
-    weight: 19
+    weight: 24
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   gva_box_layout:
     type: options_select
-    weight: 5
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   gva_breadcrumb:
     type: options_select
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   gva_header:
     type: options_select
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   gva_node_class:
     type: string_textfield
-    weight: 4
+    weight: 7
     region: content
     settings:
       size: 60
@@ -137,76 +137,69 @@ content:
     third_party_settings: {  }
   gva_node_layout:
     type: options_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   gva_pagebuilder_content:
-    type: string_textfield
-    weight: 99
+    type: string_textarea
+    weight: 26
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   gva_pagebuilder_enable:
     type: string_textfield
-    weight: 98
+    weight: 25
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 6
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 7
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -214,4 +207,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
