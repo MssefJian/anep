@@ -8,8 +8,10 @@ dependencies:
     - field.field.node.announcement.field_announcement_type
     - field.field.node.announcement.field_autres_documents
     - field.field.node.announcement.field_competition_date
+    - field.field.node.announcement.field_date_de_prolongation
     - field.field.node.announcement.field_deadline
     - field.field.node.announcement.field_interview_date
+    - field.field.node.announcement.field_motif
     - field.field.node.announcement.field_number_post
     - field.field.node.announcement.field_publication_date
     - field.field.node.announcement.field_results
@@ -64,6 +66,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_date_de_prolongation:
+    type: datetime_default
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_deadline:
     type: datetime_default
     weight: 17
@@ -75,6 +83,14 @@ content:
     weight: 18
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_motif:
+    type: string_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_number_post:
     type: number
