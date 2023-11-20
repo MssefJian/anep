@@ -30,12 +30,12 @@ function md_carousel_theme($existing, $type, $theme, $path)
 /**
  * Implements hook_form_FORM_ID_alter() for node_form.
  */
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function md_carousel_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-
- 
-  if (($form_id == 'node_announcement_form') || ($form_id == 'node_announcement_edit_form')) {
+  if ($form_id == 'node_announcement_form' || $form_id == 'node_announcement_edit_form') {
       // Adding AJAX properties to 'field_status'.
-       
       $form['field_status']['widget']['#ajax'] = [
           'callback' => 'md_carousel_status_ajax_callback',
           'wrapper' => 'edit-field-number-post-wrapper',
@@ -45,50 +45,40 @@ function md_carousel_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
               'message' => t('Updating...'),
           ],
       ];
-      
-      // Wrapper for 'field_number_post' to be updated by AJAX.
 
+      // Wrapper for 'field_number_post'.
       $form['field_number_post']['#prefix'] = '<div id="edit-field-number-post-wrapper">';
       $form['field_number_post']['#suffix'] = '</div>';
-      
+
+      // Wrapper for 'field_date_de_prolongation'.
+      $form['field_date_de_prolongation']['#prefix'] = '<div id="edit-field-date-de-prolongation-wrapper">';
+      $form['field_date_de_prolongation']['#suffix'] = '</div>';
+
+      // Wrapper for 'field_motif'.
+      $form['field_motif']['#prefix'] = '<div id="edit-field-motif-wrapper">';
+      $form['field_motif']['#suffix'] = '</div>';
   }
 }
 
+/**
+* AJAX callback for the 'field_status' field.
+*/
 function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $renderer = \Drupal::service('renderer');
   $response = new AjaxResponse();
 
+  $user_input = $form_state->getUserInput();
+  $selected_value = $user_input['field_status'];
 
-    $user_input = $form_state->getUserInput();
-    $selected_value = $user_input['field_status'];
+  // Update access based on 'field_status'.
+  $form['field_number_post']['#access'] = in_array($selected_value, ['35', '36', '107']);
+  $form['field_date_de_prolongation']['#access'] = ($selected_value === '107');
+  $form['field_motif']['#access'] = in_array($selected_value, ['106', '108']);
 
-      // Update the 'field_number_post' access and default value based on 'field_status'.
-      if (($selected_value === '35')|| ($selected_value === '36'|| ($selected_value === '107') )) {
-          $form['field_number_post']['#access'] = true;
-
-      } else {
-          $form['field_number_post']['#access'] = false;
-
-      }
-      if ($selected_value === '107') {
-        $form['field_date_de_prolongation']['#access'] = true;
-
-    } else {
-        $form['field_date_de_prolongation']['#access'] = false;
-
-    }
-    if (($selected_value === '106')||  ($selected_value === '108') ) {
-      $form['field_motif']['#access'] = true;
-
-  } else {
-      $form['field_motif']['#access'] = false;
-
-  }
-
-      // Re-render the 'field_number_post' element.
-      $number_post_html = $renderer->renderRoot($form['field_number_post']);
-      $response->addCommand(new HtmlCommand('#edit-field-number-post-wrapper', $number_post_html));
-  
+  // Re-render elements and update the HTML.
+  $response->addCommand(new HtmlCommand('#edit-field-number-post-wrapper', $renderer->renderRoot($form['field_number_post'])));
+  $response->addCommand(new HtmlCommand('#edit-field-date-de-prolongation-wrapper', $renderer->renderRoot($form['field_date_de_prolongation'])));
+  $response->addCommand(new HtmlCommand('#edit-field-motif-wrapper', $renderer->renderRoot($form['field_motif'])));
 
   return $response;
 }
