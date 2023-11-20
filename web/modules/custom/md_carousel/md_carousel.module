@@ -63,7 +63,7 @@ function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInt
     $selected_value = $user_input['field_status'];
 
       // Update the 'field_number_post' access and default value based on 'field_status'.
-      if ($selected_value === '35') {
+      if (($selected_value === '35')|| ($selected_value === '36'|| ($selected_value === '107') )) {
           $form['field_number_post']['#access'] = true;
 
       } else {
