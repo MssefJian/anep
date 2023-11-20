@@ -9,8 +9,10 @@ dependencies:
     - field.field.node.announcement.field_announcement_type
     - field.field.node.announcement.field_autres_documents
     - field.field.node.announcement.field_competition_date
+    - field.field.node.announcement.field_date_de_prolongation
     - field.field.node.announcement.field_deadline
     - field.field.node.announcement.field_interview_date
+    - field.field.node.announcement.field_motif
     - field.field.node.announcement.field_number_post
     - field.field.node.announcement.field_publication_date
     - field.field.node.announcement.field_results
@@ -35,8 +37,10 @@ hidden:
   field_announcement_type: true
   field_autres_documents: true
   field_competition_date: true
+  field_date_de_prolongation: true
   field_deadline: true
   field_interview_date: true
+  field_motif: true
   field_number_post: true
   field_publication_date: true
   field_results: true
