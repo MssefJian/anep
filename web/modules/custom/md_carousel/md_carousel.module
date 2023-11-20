@@ -70,6 +70,20 @@ function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInt
           $form['field_number_post']['#access'] = false;
 
       }
+      if ($selected_value === '107') {
+        $form['field_date_de_prolongation']['#access'] = true;
+
+    } else {
+        $form['field_date_de_prolongation']['#access'] = false;
+
+    }
+    if (($selected_value === '106')||  ($selected_value === '108') ) {
+      $form['field_motif']['#access'] = true;
+
+  } else {
+      $form['field_motif']['#access'] = false;
+
+  }
 
       // Re-render the 'field_number_post' element.
       $number_post_html = $renderer->renderRoot($form['field_number_post']);
