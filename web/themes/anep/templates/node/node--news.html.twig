@@ -27,7 +27,7 @@
           {{ node.title.0.value|striptags|slice(0, 90) }}
         </a> </h3>
         <div class="post-body" >{{ node.body.value|striptags|slice(0, 140) }} ...</div>
-        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"> {{"Read more"|t}}  <i class="{% if cur_language == "ar" %}fas fa-long-arrow-alt-left{% else %}fas fa-long-arrow-alt-right{% endif %}"></i></a> </div>
+        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"> {{"Read more"|t}}  <i class="{% if cur_language == 'ar' %}fas fa-long-arrow-alt-left{% else %}fas fa-long-arrow-alt-right{% endif %}"></i></a> </div>
     </div>
   </div>
 
@@ -67,11 +67,11 @@
     <div class="post-content">
       <div class="post-meta">
           <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|format_date('custom', 'd-m-Y') }}  </span>
-        {<span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>}
+        {#<span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>#}
 
         </div>
       {{ title_prefix }}
-         <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
+         <h1{{ title_attributes.addClass('post-title') }} style="display:none;">{{ label }}</h1>
       {{ title_suffix }}
 
       {% if display_submitted %}

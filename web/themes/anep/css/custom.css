@@ -81,9 +81,13 @@
 [dir="rtl"] h1,[dir="rtl"]  h2,[dir="rtl"]  h3,[dir="rtl"]  h4,[dir="rtl"]  h5,[dir="rtl"]  h6,[dir="rtl"] .h1,[dir="rtl"]  .h2,[dir="rtl"]  .h3,[dir="rtl"]  .h4,[dir="rtl"]  .h5,[dir="rtl"]  .h6 {
   margin-bottom: 0.5rem;
   font-family: "cairo", sans-serif;
-  font-weight: 400;
-  line-height: 1.1;
-  color: #222429;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
+  color: #222429 !important;
+  text-align: right !important;
+}
+[dir="rtl"] .gsc-icon-box .highlight_content .desc p {
+	text-align: right !important;
 }
 [dir="rtl"] .navigation .gva_menu > li > a {
   letter-spacing: 0 !important;
