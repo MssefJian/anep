@@ -8,6 +8,7 @@
 use Drupal\Core\Template\Attribute;
 use Drupal\block\Entity\Block;
 use Drupal\Core\Url;
+use Drupal\views\ViewExecutable;
 
 $theme_path = \Drupal::service('extension.list.theme')->getPath('anep');
 
@@ -207,6 +208,11 @@ function anep_preprocess_html(&$variables) {
     $variables['preloader'] = 1;
   }else{
     $variables['preloader'] = 0;
+  }
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  if ($current_route == 'view.documents.page_1') {
+    // Attach your CSS file.
+    $variables['#attached']['library'][] = 'anep/documents';
   }
 }
 
@@ -413,4 +419,54 @@ function anep_page_attachments_alter(array &$attachments) {
     ],
     'style-logo',
   ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Add views unformatted template suggestions.
+ *
+ * @inheritdoc
+ */
+function anep_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view_unformatted__' . $variables['view']->id();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Add views fields template suggestions.
+ *
+ * @inheritdoc
+ */
+function anep_theme_suggestions_views_view_fields_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view_fields__' . $variables['view']->id();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Add views field template suggestions.
+ *
+ * @inheritdoc
+ */
+function anep_theme_suggestions_views_view_field_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view_field__' . $variables['view']->id() .'__' .$variables['field']->field;
+}
+
+function anep_preprocess_views_view_unformatted(&$variables) {
+  // Check if it's the view you want to target.
+  if (isset($variables['view']) && $variables['view'] instanceof ViewExecutable) {
+    // Check if the view has a name property.
+    $view_name = $variables['view']->storage->id();
+    // Replace 'your_view_name' with the machine name of your view.
+    if ($view_name == 'documents') {
+      // Loop through each result and get the field value.
+      foreach ($variables['rows'] as $id => $row) {
+        $row['content']['#row']->_entity->get('body')->value;
+        // Assuming 'field_name' is the field machine name.
+        // Do something with $field_value.
+      }
+    }
+  }
 }

@@ -1,0 +1,27 @@
+uuid: 5677ed90-3418-4dba-b589-626321cfd243
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.documents
+  module:
+    - file
+id: node.documents.field_file
+field_name: field_file
+entity_type: node
+bundle: documents
+label: File
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx'
+  max_filesize: ''
+  description_field: false
+field_type: file
