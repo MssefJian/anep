@@ -77,6 +77,9 @@
 .path-taxonomy .feed-icon {
   display: none !important;
 }
+.tpdfsize {
+  width:35px;
+}
 /* --------------- RTL ---------------------*/
 [dir="rtl"] h1,[dir="rtl"]  h2,[dir="rtl"]  h3,[dir="rtl"]  h4,[dir="rtl"]  h5,[dir="rtl"]  h6,[dir="rtl"] .h1,[dir="rtl"]  .h2,[dir="rtl"]  .h3,[dir="rtl"]  .h4,[dir="rtl"]  .h5,[dir="rtl"]  .h6 {
   margin-bottom: 0.5rem;

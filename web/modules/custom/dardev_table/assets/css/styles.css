@@ -40,9 +40,9 @@ table tbody tr:hover a {
 
 table th,
 table td {
-    padding: 0.4em;
+    padding: 10px 1px 10px 2px;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 table th {
