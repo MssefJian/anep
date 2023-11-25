@@ -1168,8 +1168,15 @@ header.header-2 .stuck .quick-side-icon a, header.header-2 .stuck .gva-search-re
 
 #footer {
   color: #fff;
-  background: url("../images/bg-footer.jpg") no-repeat center center #2C75A6;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
 }
+
 
 #footer a {
   color: #fff;
