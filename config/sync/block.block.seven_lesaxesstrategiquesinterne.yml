@@ -1,0 +1,24 @@
+uuid: bfe88f34-c291-4110-aafe-03a912fe45c2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_carousel
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_lesaxesstrategiquesinterne
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: md_carousel_interne_axis
+settings:
+  id: md_carousel_interne_axis
+  label: 'les axes stratégiques Interne'
+  label_display: '0'
+  provider: md_carousel
+visibility: {  }

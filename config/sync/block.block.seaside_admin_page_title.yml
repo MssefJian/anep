@@ -1,0 +1,20 @@
+uuid: e00aacf4-8a31-42fc-a20e-41091634782e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - seaside_admin
+_core:
+  default_config_hash: 6_hIzD0coD8HcanLB_ie2UOVtctxaPJhBWRlYRVTWTw
+id: seaside_admin_page_title
+theme: seaside_admin
+region: header
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

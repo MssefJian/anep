@@ -1,0 +1,26 @@
+uuid: 4dc4bbcf-fcde-4733-89e0-c19fcf00f77c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_representationsregionales
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:1725b625-f438-43c9-9238-c4fdb13a6873'
+settings:
+  id: 'block_content:1725b625-f438-43c9-9238-c4fdb13a6873'
+  label: 'Représentations régionales'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

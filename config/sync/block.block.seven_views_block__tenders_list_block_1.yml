@@ -1,0 +1,28 @@
+uuid: 240a8cbe-f992-4254-8ad8-5e45c1e1d61d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.tenders_list
+  module:
+    - gaviasthemer
+    - views
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_views_block__tenders_list_block_1
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:tenders_list-block_1'
+settings:
+  id: 'views_block:tenders_list-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

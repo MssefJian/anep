@@ -1,0 +1,25 @@
+uuid: 714a13dc-06ab-42a8-9246-13f2837ec727
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_customorganigrammeblock022
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: custom_organigramme_bloc01
+settings:
+  id: custom_organigramme_bloc01
+  label: 'Custom Organigramme Block 022'
+  label_display: visible
+  provider: md_manager
+  vocabulary_name: organigramme
+visibility: {  }

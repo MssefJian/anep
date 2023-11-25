@@ -1,0 +1,24 @@
+uuid: 558c1db2-384e-4663-952a-492b876cbcdd
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_customfootermenu
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: md_manager_custom_footer_menu
+settings:
+  id: md_manager_custom_footer_menu
+  label: 'Custom footer menu'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: f95640be-a9f8-4dc0-b69e-8304f872bcc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seaside_admin
+_core:
+  default_config_hash: EqBURnQugrvTgycl6NlQWDgYiU9aIwblQDm_r-gYEX0
+id: seaside_admin_sitebranding
+theme: seaside_admin
+region: content
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/login\r\n/user/register\r\n/user/password"
+    negate: false
+    context_mapping: {  }

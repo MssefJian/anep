@@ -1,0 +1,29 @@
+uuid: 94862c6d-9092-402c-ab7d-79c7a6a4efca
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.project
+  module:
+    - system
+    - views
+  theme:
+    - seven
+id: seven_views_block__project_block_1
+theme: seven
+region: header
+weight: -13
+provider: null
+plugin: 'views_block:project-block_1'
+settings:
+  id: 'views_block:project-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

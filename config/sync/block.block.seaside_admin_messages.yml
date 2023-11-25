@@ -1,0 +1,22 @@
+uuid: 8352ecb4-5bd6-4d90-952a-5ba656edd46e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seaside_admin
+_core:
+  default_config_hash: Qy5mIx7KKXCakcUke7R2_qTFzohlKrmyYl9IXrZSru8
+id: seaside_admin_messages
+theme: seaside_admin
+region: highlighted
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }
