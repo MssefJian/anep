@@ -186,6 +186,7 @@ documents:
   version: 1.0
   css:
     theme:
+      #https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css: { type: external }
       css/document.css: {}
   js:
     js/document.js: {}
