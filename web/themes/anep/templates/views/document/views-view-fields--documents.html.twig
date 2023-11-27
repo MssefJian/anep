@@ -38,7 +38,7 @@
 
           {% set link = fields.field_image.content|render|striptags|replace({' ': ''}) %}
           <div class="bk-cover"
-               style="background-image: url('http://interactivejoe.com/book-viewer/assets/images/bk_1-small.jpg')"></div>
+               style="background-image: url({{ link }})"></div>
 
         </div>
         <div class="bk-back"></div>
@@ -48,7 +48,7 @@
   </div>
   <div class="item-details">
     <h3 class="book-item_title">{{ fields.title.content }}</h3>
-    {{ fields.body.content }}
-    <a href="#" class="button ">Details</a>
+    <div>{{ fields.body.content }}</div>
+    {{ fields.field_file.content }}
   </div>
 

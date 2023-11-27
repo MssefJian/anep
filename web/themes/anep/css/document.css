@@ -11,20 +11,20 @@
 /*
  *  Typography
 */
-body,
-p,
-a,
-li {
+#grid p,
+#grid a,
+#grid li {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
 }
 
-a {
+.book-item_title a {
   color: #219e9a;
+  text-transform: uppercase;
 }
 
-h2,
-h3 {
+#grid h2,
+#grid h3 {
   margin-top: 6px;
   margin-bottom: 6px;
   font-size: 28px;
@@ -33,28 +33,28 @@ h3 {
   color: #313131;
 }
 
-h2 {
+#grid h2 {
   font-size: 28px;
 }
 
-h3 {
+#grid h3 {
   font-size: 24px;
 }
 
-h4 {
+#grid h4 {
   margin-bottom: 12px;
   font-size: 22px;
   line-height: 40px;
   color: rgba(49, 49, 49, 0.7);
 }
 
-p:not(.author) {
+#grid p:not(.author) {
   font-size: 15px;
   font-weight: 300;
   line-height: 1.4;
 }
 
-p.author {
+#grid p.author {
   margin-bottom: 10px;
   letter-spacing: -1px;
   font-weight: 400;
@@ -64,7 +64,7 @@ p.author {
 /*
  *  Button
 */
-a.button {
+#grid a.button {
   margin-bottom: 0;
   padding: 8px 14px;
   font-size: 14px;
@@ -72,38 +72,10 @@ a.button {
   border-radius: 3px;
   background-color: rgba(49, 49, 49, 0.5);
 }
-a.button:hover, a.button:focus {
+#grid a.button:hover, #grid a.button:focus {
   background-color: #219e9a;
 }
 
-/*
- *  Header
-*/
-.page-header {
-  position: relative;
-  margin-bottom: 55px;
-  width: 100%;
-  border-bottom: 1px solid #d2d6d5;
-  background-color: #fff;
-}
-
-.main-logo {
-  display: inline-block;
-  padding: 1em;
-  width: auto;
-}
-.main-logo a.logo {
-  display: block;
-  width: 150px;
-  height: 40px;
-  text-indent: -9999px;
-  background: url("http://interactivejoe.com/book-viewer/assets/images/logo.svg");
-  background-color: #fff;
-  transition: background-color 250ms ease-out;
-}
-.main-logo a.logo:hover, .main-logo a.logo:focus {
-  background-color: #ecf0f1;
-}
 
 .menu-search {
   float: right;
@@ -790,21 +762,4 @@ a.button:hover, a.button:focus {
 
 .overlay-details {
   display: none;
-}
-
-/*
- *  Footer
-*/
-#footer {
-  margin-top: 60px;
-  padding: 15px 0 20px;
-  border-top: 1px solid #fff;
-  background-color: rgba(49, 49, 49, 0.5);
-}
-#footer div,
-#footer a,
-#footer p {
-  color: #fff;
-  font-size: 12px;
-  text-align: center;
 }
