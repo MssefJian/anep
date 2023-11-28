@@ -70,10 +70,10 @@
   font-size: 14px;
   font-weight: 600;
   border-radius: 3px;
-  background-color: rgba(49, 49, 49, 0.5);
+  background-color: #e3e3e3;
 }
 #grid a.button:hover, #grid a.button:focus {
-  background-color: #219e9a;
+  background-color: #1477b6;
 }
 
 
@@ -558,7 +558,7 @@
 }
 .bk-img .bk-front > div,
 .bk-img .bk-left {
-  background-color: #219e9a;
+  background-color: #0d619e;
 }
 
 /*

@@ -78,24 +78,30 @@ final class CustomFooterMenuBlock extends BlockBase {
    * @return array
    *   An array representing the menu item and its children.
    */
-  protected function buildMenuWithChildren($menu_item, MenuLinkTreeInterface $menu_tree_service): array
-  {
+  protected function buildMenuWithChildren($menu_item, MenuLinkTreeInterface $menu_tree_service): array {
     $menu_tree_item = [
-      'title' => $menu_item->link->getTitle(),
-      'url' => $menu_item->link->getUrlObject()->toString(),
+        'title' => $menu_item->link->getTitle(),
+        'url' => $menu_item->link->getUrlObject()->toString(),
     ];
 
     if (!empty($menu_item->subtree)) {
-      $menu_tree_item['children'] = [];
-      foreach ($menu_item->subtree as $child_item) {
-        $child_tree_item = $this->buildMenuWithChildren($child_item, $menu_tree_service);
-        if (!empty($child_tree_item)) {
-          $menu_tree_item['children'][] = $child_tree_item;
+        $menu_tree_item['children'] = [];
+
+        // Sort the subtree by weight.
+        uasort($menu_item->subtree, function($a, $b) {
+            return $a->link->getWeight() - $b->link->getWeight();
+        });
+
+        foreach ($menu_item->subtree as $child_item) {
+            $child_tree_item = $this->buildMenuWithChildren($child_item, $menu_tree_service);
+            if (!empty($child_tree_item)) {
+                $menu_tree_item['children'][] = $child_tree_item;
+            }
         }
-      }
     }
 
     return $menu_tree_item;
-  }
+}
+
 
 }

@@ -187,7 +187,8 @@ text-align: right;
 #footer ul.menu > li {
   padding: 1px 0;
 }
-#footer {font-size: 16px;}
+#footer {font-size: 16px;color: #fff;
+  background: url("../images/bg-footer.jpg") no-repeat center center #2C75A6;}
 .copyright-inner h3 {
   color: #fff;
   font-size: 20px !important;
@@ -244,6 +245,9 @@ text-align: right;
   line-height: 1;
   font-family: 'Cairo';
   font-weight: bold;
+}
+[dir="rtl"] .button,[dir="rtl"]  .btn,[dir="rtl"]  .btn-white,[dir="rtl"]  .btn-theme,[dir="rtl"]  .btn-black,[dir="rtl"]  .btn-theme-second,[dir="rtl"] .more-link a,[dir="rtl"]  .btn-theme-submit {
+  letter-spacing: unset;
 }
 #Orgcontainer img {
   margin-left: -80px;
