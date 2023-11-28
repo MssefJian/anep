@@ -1,16 +1,17 @@
-uuid: 4913a281-8065-4727-ac65-4756d7fe0ff2
+uuid: dc1ddff8-424f-4fae-9a78-40569afd6384
 langcode: fr
 status: true
 dependencies:
   config:
-    - user.role.administrator
+    - node.type.announcement
+    - system.menu.admin
   module:
     - node
     - user
 _core:
   default_config_hash: 3ELwBpDb9lzqW5-daqjZYsC5lNcwbDS_i_-LKba12Lw
-id: content
-label: Contenu
+id: copie_de_contenu
+label: 'Les annonces'
 module: node
 description: 'Trouver et gérer le contenu.'
 tag: default
@@ -268,10 +269,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: role
+        type: perm
         options:
-          role:
-            administrator: administrator
+          perm: 'create announcement content'
       cache:
         type: tag
       empty:
@@ -338,9 +338,10 @@ display:
           entity_field: type
           plugin_id: bundle
           operator: in
-          value: {  }
+          value:
+            announcement: announcement
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: type_op
             label: 'Type de contenu'
@@ -356,8 +357,10 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              content_editor: '0'
               administrator: '0'
-            reduce: false
+              rh: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -593,29 +596,31 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
+  page_2:
+    id: page_2
+    display_title: Annonce
     display_plugin: page
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
-      path: admin/content/node
+      path: admin/content/annonce/node
       menu:
-        type: 'default tab'
-        title: Contenu
+        type: normal
+        title: Annonce
         description: ''
         weight: -10
+        expanded: true
         menu_name: admin
-        context: ''
+        parent: system.admin
+        context: '0'
       tab_options:
         type: normal
-        title: Contenu
+        title: Annonce
         description: 'Trouver et gérer le contenu'
         weight: -10
-        menu_name: admin
     cache_metadata:
       max-age: 0
       contexts:
@@ -625,5 +630,5 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags: {  }

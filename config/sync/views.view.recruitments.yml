@@ -110,7 +110,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Nombre de poste'
+          label: 'Nbr de poste'
           exclude: false
           alter:
             alter_text: false
@@ -366,7 +366,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: "Candidats convoqués pour passer l'épreuve écrite"
+          label: "Convocation à l'écrit"
           exclude: false
           alter:
             alter_text: true
@@ -428,7 +428,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: "Candidats convoqués pour passer l'entretien oral"
+          label: "Convocation à l'oral"
           exclude: false
           alter:
             alter_text: true
