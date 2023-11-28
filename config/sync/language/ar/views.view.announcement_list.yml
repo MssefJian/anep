@@ -13,7 +13,7 @@ display:
         field_interview_date:
           label: 'تاريخ المقابلة'
         field_accepted_to_oral_test:
-          label: 'المرشحون المدعوون لإجراء الإختبار الشفوي'
+          label: 'استدعاء للامتحان الشفوي'
         field_results:
           label: نتائج
         field_status:

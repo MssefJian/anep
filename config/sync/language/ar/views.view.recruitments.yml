@@ -13,9 +13,9 @@ display:
         field_competition_date:
           label: 'تاريخ المباراة'
         field_accepted_to_written_test:
-          label: 'المرشحون لإجراء الاختبار الكتابي'
+          label: 'استدعاء للامتحان الكتابي'
         field_accepted_to_oral_test:
-          label: 'المرشحون المدعوون لإجراء الإختبار الشفوي'
+          label: 'استدعاء للامتحان الشفوي'
         field_results:
           label: نتائج
         field_waiting_list:
