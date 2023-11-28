@@ -249,6 +249,9 @@ text-align: right;
 [dir="rtl"] .button,[dir="rtl"]  .btn,[dir="rtl"]  .btn-white,[dir="rtl"]  .btn-theme,[dir="rtl"]  .btn-black,[dir="rtl"]  .btn-theme-second,[dir="rtl"] .more-link a,[dir="rtl"]  .btn-theme-submit {
   letter-spacing: unset;
 }
+[dir="rtl"] .float-left {
+  float: right !important;
+}
 #Orgcontainer img {
   margin-left: -80px;
 }
