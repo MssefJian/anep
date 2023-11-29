@@ -1,17 +1,28 @@
-uuid: dc1ddff8-424f-4fae-9a78-40569afd6384
+uuid: 7e53658d-be4a-4866-906b-9f925168c246
 langcode: fr
 status: true
 dependencies:
   config:
-    - node.type.announcement
+    - node.type.article
+    - node.type.client
+    - node.type.company
+    - node.type.documents
+    - node.type.home_page_caroussel
+    - node.type.human_ressources
+    - node.type.news
+    - node.type.page
+    - node.type.project
+    - node.type.social_media
+    - node.type.tenders
+    - node.type.timeline
     - system.menu.admin
   module:
     - node
     - user
 _core:
   default_config_hash: 3ELwBpDb9lzqW5-daqjZYsC5lNcwbDS_i_-LKba12Lw
-id: copie_de_contenu
-label: 'Les annonces'
+id: communication
+label: Communication
 module: node
 description: 'Trouver et gérer le contenu.'
 tag: default
@@ -271,7 +282,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'create announcement content'
+          perm: 'create news content'
       cache:
         type: tag
       empty:
@@ -339,9 +350,20 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            announcement: announcement
+            news: news
+            company: company
+            tenders: tenders
+            article: article
+            client: client
+            documents: documents
+            home_page_caroussel: home_page_caroussel
+            page: page
+            project: project
+            human_ressources: human_ressources
+            social_media: social_media
+            timeline: timeline
           group: 1
-          exposed: false
+          exposed: true
           expose:
             operator_id: type_op
             label: 'Type de contenu'
@@ -360,7 +382,8 @@ display:
               content_editor: '0'
               administrator: '0'
               rh: '0'
-            reduce: true
+              communication: '0'
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -600,16 +623,16 @@ display:
       tags: {  }
   page_2:
     id: page_2
-    display_title: Annonce
+    display_title: Communication
     display_plugin: page
     position: 1
     display_options:
       display_description: ''
       display_extenders: {  }
-      path: admin/content/annonce/node
+      path: admin/content/communication/node
       menu:
         type: normal
-        title: Annonce
+        title: Communication
         description: ''
         weight: -98
         expanded: true

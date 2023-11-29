@@ -1,0 +1,127 @@
+uuid: e747c728-3463-4a16-898e-263ac1b9504b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.announcement
+    - node.type.article
+    - node.type.client
+    - node.type.company
+    - node.type.documents
+    - node.type.home_page_caroussel
+    - node.type.human_ressources
+    - node.type.news
+    - node.type.page
+    - node.type.project
+    - node.type.social_media
+    - node.type.tenders
+    - node.type.timeline
+  module:
+    - block_content
+    - content_translation
+    - contextual
+    - node
+    - system
+    - toolbar
+id: communication
+label: Communication
+weight: 5
+is_admin: null
+permissions:
+  - 'access block library'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'create article content'
+  - 'create client content'
+  - 'create company content'
+  - 'create documents content'
+  - 'create human_ressources content'
+  - 'create news content'
+  - 'create page content'
+  - 'create project content'
+  - 'create social_media content'
+  - 'create timeline content'
+  - 'delete announcement revisions'
+  - 'delete any article content'
+  - 'delete any client content'
+  - 'delete any company content'
+  - 'delete any documents content'
+  - 'delete any home_page_caroussel content'
+  - 'delete any human_ressources content'
+  - 'delete any news content'
+  - 'delete any page content'
+  - 'delete any project content'
+  - 'delete any social_media content'
+  - 'delete any timeline content'
+  - 'delete article revisions'
+  - 'delete client revisions'
+  - 'delete company revisions'
+  - 'delete documents revisions'
+  - 'delete home_page_caroussel revisions'
+  - 'delete human_ressources revisions'
+  - 'delete news revisions'
+  - 'delete own article content'
+  - 'delete own client content'
+  - 'delete own company content'
+  - 'delete own documents content'
+  - 'delete own home_page_caroussel content'
+  - 'delete own human_ressources content'
+  - 'delete own news content'
+  - 'delete own page content'
+  - 'delete own project content'
+  - 'delete own social_media content'
+  - 'delete own timeline content'
+  - 'delete page revisions'
+  - 'delete project revisions'
+  - 'delete social_media revisions'
+  - 'delete tenders revisions'
+  - 'delete timeline revisions'
+  - 'edit any article content'
+  - 'edit any client content'
+  - 'edit any company content'
+  - 'edit any documents content'
+  - 'edit any home_page_caroussel content'
+  - 'edit any human_ressources content'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit any project content'
+  - 'edit any social_media content'
+  - 'edit any timeline content'
+  - 'edit own article content'
+  - 'edit own client content'
+  - 'edit own company content'
+  - 'edit own documents content'
+  - 'edit own home_page_caroussel content'
+  - 'edit own human_ressources content'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own project content'
+  - 'edit own social_media content'
+  - 'edit own timeline content'
+  - 'revert article revisions'
+  - 'revert client revisions'
+  - 'revert company revisions'
+  - 'revert documents revisions'
+  - 'revert home_page_caroussel revisions'
+  - 'revert human_ressources revisions'
+  - 'revert news revisions'
+  - 'revert page revisions'
+  - 'revert project revisions'
+  - 'revert social_media revisions'
+  - 'revert timeline revisions'
+  - 'translate announcement node'
+  - 'view article revisions'
+  - 'view client revisions'
+  - 'view company revisions'
+  - 'view documents revisions'
+  - 'view home_page_caroussel revisions'
+  - 'view human_ressources revisions'
+  - 'view news revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view project revisions'
+  - 'view social_media revisions'
+  - 'view the administration theme'
+  - 'view timeline revisions'
