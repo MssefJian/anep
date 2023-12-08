@@ -1,0 +1,29 @@
+uuid: 1418bb0d-1a0a-43f0-ac85-1bd71b6691e9
+langcode: en
+status: false
+dependencies:
+  module:
+    - language
+    - system
+  theme:
+    - seven
+id: seven_mainpage_content
+theme: seven
+region: header
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr
+      ar: ar

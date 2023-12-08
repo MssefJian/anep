@@ -31,6 +31,7 @@
         "drupal/lang_dropdown": "^2.1",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
+        "drupal/rename_admin_paths": "^2.2@beta",
         "drupal/seaside_admin": "^2.0",
         "drupal/svg_image": "^3.0",
         "drupal/webform": "^6.2@beta",

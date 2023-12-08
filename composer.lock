@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2565eca4cd527822160e4d9d27aa854",
+    "content-hash": "29c36edc1f9b80b37c26136fecb1e843",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2654,6 +2654,66 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/rename_admin_paths",
+            "version": "2.2.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rename_admin_paths.git",
+                "reference": "8.x-2.2-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rename_admin_paths-8.x-2.2-beta1.zip",
+                "reference": "8.x-2.2-beta1",
+                "shasum": "6539896f3699d1a1ea05e181c657fefbd379ebe8"
+            },
+            "require": {
+                "drupal/core": ">=8.9",
+                "php": ">=7.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.2-beta1",
+                    "datestamp": "1686662937",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Apard",
+                    "homepage": "https://www.drupal.org/user/410831"
+                },
+                {
+                    "name": "rjjakes",
+                    "homepage": "https://www.drupal.org/user/3457245"
+                },
+                {
+                    "name": "slootjes",
+                    "homepage": "https://www.drupal.org/user/3516667"
+                }
+            ],
+            "description": "The purpose of this module is to secure drupal backend by renaming the admin paths.",
+            "homepage": "https://www.drupal.org/project/rename_admin_paths",
+            "keywords": [
+                "admin",
+                "guess",
+                "override",
+                "protect",
+                "security"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/rename_admin_paths"
             }
         },
         {
@@ -7747,6 +7807,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/rename_admin_paths": 10,
         "drupal/webform": 10
     },
     "prefer-stable": true,

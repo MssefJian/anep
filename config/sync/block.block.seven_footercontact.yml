@@ -1,0 +1,24 @@
+uuid: bea1b277-d211-47ee-b912-b7c3b859deda
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_footercontact
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: md_manager_footer_contact
+settings:
+  id: md_manager_footer_contact
+  label: 'Footer contact'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

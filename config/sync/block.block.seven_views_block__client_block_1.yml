@@ -1,0 +1,29 @@
+uuid: 4a23e37c-1797-4027-829c-1e79bfe1a168
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.client
+  module:
+    - system
+    - views
+  theme:
+    - seven
+id: seven_views_block__client_block_1
+theme: seven
+region: header
+weight: -15
+provider: null
+plugin: 'views_block:client-block_1'
+settings:
+  id: 'views_block:client-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '10'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

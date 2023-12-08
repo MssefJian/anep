@@ -1,0 +1,24 @@
+uuid: bbd67764-df56-4279-8b0c-e07218ef7cd6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_carousel
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_homepageaxis
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: md_carousel_home_page_axis
+settings:
+  id: md_carousel_home_page_axis
+  label: 'Home page axis'
+  label_display: '0'
+  provider: md_carousel
+visibility: {  }

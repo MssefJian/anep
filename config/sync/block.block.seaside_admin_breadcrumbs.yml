@@ -1,0 +1,22 @@
+uuid: 95ddaa27-6b42-4907-bb27-13690673cb1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seaside_admin
+_core:
+  default_config_hash: 1kLxQPsw--uv0EeETC7PbywGLV8HVtonpgKjHNBPw-c
+id: seaside_admin_breadcrumbs
+theme: seaside_admin
+region: header
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

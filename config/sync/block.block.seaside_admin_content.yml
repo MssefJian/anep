@@ -1,0 +1,22 @@
+uuid: adb2e5d7-433c-4ea8-9279-a374b5e57e3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seaside_admin
+_core:
+  default_config_hash: gthqUk0DIKBMFFUn4NXc7UaUPFG9gzln9D04bqzC9R8
+id: seaside_admin_content
+theme: seaside_admin
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

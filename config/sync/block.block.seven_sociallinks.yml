@@ -1,0 +1,24 @@
+uuid: dea59908-74ef-48a5-aec5-5982c1fd8465
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_sociallinks
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: md_manager_social_media
+settings:
+  id: md_manager_social_media
+  label: 'Social links'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

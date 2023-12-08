@@ -1,0 +1,30 @@
+uuid: 4df5104d-8f25-4e48-893a-310c22078ddf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - gaviasthemer
+    - webform
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_webform
+theme: seven
+region: header
+weight: -15
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: visible
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

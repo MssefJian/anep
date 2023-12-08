@@ -1,0 +1,24 @@
+uuid: 48f874ff-8dbb-407d-a148-a7b875ce09d5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - md_manager
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_topbarcontact
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: md_manager_topbar_contact
+settings:
+  id: md_manager_topbar_contact
+  label: 'Topbar contact'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

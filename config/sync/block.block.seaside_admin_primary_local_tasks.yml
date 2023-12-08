@@ -1,0 +1,22 @@
+uuid: 382cb9bd-6e49-484a-8b53-5f8920a6df6d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - seaside_admin
+_core:
+  default_config_hash: WoHcrYwSbmZAc2FVH9m7enpmeUeDX3eH7Xv-sIB8a98
+id: seaside_admin_primary_local_tasks
+theme: seaside_admin
+region: footer
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

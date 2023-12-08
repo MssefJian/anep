@@ -1,0 +1,25 @@
+uuid: d29b01b9-fcc9-48ca-a78d-4da48a167484
+langcode: fr
+status: true
+dependencies:
+  module:
+    - md_carousel
+    - system
+  theme:
+    - seven
+id: seven_homepageslider
+theme: seven
+region: header
+weight: -16
+provider: null
+plugin: md_carousel_home_page_slider
+settings:
+  id: md_carousel_home_page_slider
+  label: 'Home page slider'
+  label_display: '0'
+  provider: md_carousel
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

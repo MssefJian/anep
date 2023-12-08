@@ -1,0 +1,27 @@
+uuid: eda574e5-22e5-4d20-9bf8-de087bcce098
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - system
+  theme:
+    - seven
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seven_identitedusite
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Identité du site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }
