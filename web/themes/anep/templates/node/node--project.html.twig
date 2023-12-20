@@ -14,7 +14,7 @@
 
 {% if view_mode == 'teaser' %}
 
-  <div class="portfolio-v1">      
+  <div class="portfolio-v1">
     <div class="portfolio-content">
       <div class="portfolio-images">
         {{ content.field_image }}
@@ -23,14 +23,14 @@
       <div class="content-inner">
         <div class="portfolio-information">
           <div class="category">{{content.field_project_type}}</div>
-          <h2 class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h2>          
-        </div>    
+          <h2 class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h2>
+        </div>
       </div>
     </div>
   </div>
 
 {% elseif view_mode == 'teaser_5' %}
-<div class="portfolio-v1">      
+<div class="portfolio-v1">
   <div class="portfolio-content">
     <div class="portfolio-images">
       {{ content.field_image }}
@@ -39,15 +39,15 @@
     <div class="content-inner">
       <div class="portfolio-information">
         <div class="category">{{content.field_project_type}}</div>
-        <h2 class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h2>          
-      </div>    
+        <h2 class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h2>
+      </div>
     </div>
   </div>
 </div>
 {% elseif view_mode == 'teaser_2' %}
   {% set body %}{{content.body}}{% endset %}
 
- <div class="portfolio-v2">      
+ <div class="portfolio-v2">
     <div class="portfolio-content">
       <div class="portfolio-images">
         {{ content.field_image }}
@@ -61,14 +61,14 @@
             <div class="desc">{{ content.body }}</div>
             <div class="action"><a class="btn-inline" href="{{ url }}">{{'Read More'|t}}</a></div>
           </div>
-        </div>    
+        </div>
       </div>
     </div>
   </div>
 
 {% elseif view_mode == 'teaser_3' %}
     {% set body %}{{content.body}}{% endset %}
-    <div class="portfolio-v3">      
+    <div class="portfolio-v3">
     <div class="portfolio-content">
       <div class="portfolio-height"></div>
       <div class="content-inner">
@@ -80,13 +80,13 @@
             <div class="desc">{{ content.body }}</div>
             <div class="action"><a class="btn-theme" href="{{ url }}">{{'Read More'|t}}</a></div>
           </div>
-        </div>    
+        </div>
       </div>
     </div>
   </div>
 
 {% elseif view_mode == 'teaser_4' %}
-    <div class="portfolio-v4">      
+    <div class="portfolio-v4">
     <div class="portfolio-content">
       <div class="portfolio-images">
         {{ content.field_image }}
@@ -96,7 +96,7 @@
         <div class="portfolio-information">
           <h2 class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h2>
           <div class="category">{{content.field_project_type}}</div>
-        </div>    
+        </div>
       </div>
     </div>
   </div>
@@ -106,15 +106,15 @@
 {% set xcol = "col-md-12 col-sm-12 col-xs-12"  %}
 {% if informations %}
   {% set xcol = "col-md-6 col-sm-12 col-xs-12"  %}
-{% endif %} 
+{% endif %}
 <article{{ attributes.addClass(classes).addClass('node-detail') }}>
-  <div class="portfolio portfolio-single">    
-    
+  <div class="portfolio portfolio-single">
+
     <div class="row">
-      <div class="{{xcol}}"> 
+      <div class="{{xcol}}">
         <div class="post-thumbnail">
           {% if content.field_image %}
-            {{ content.field_image }} 
+            {{ content.field_image }}
           {% endif %}
         </div>
       </div>
@@ -123,20 +123,18 @@
         <div class="portfolio-informations">
           {{ informations|raw }}
         </div>
-      </div>  
+      </div>
       {% endif %}
-    </div> 
+    </div>
 
     <div class="post-content margin-top-40">
-      
+
       {{ title_prefix }}
          <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
-      {{ title_suffix }}         
-      
+      {{ title_suffix }}
+
       <div class="portfolio-meta">
         <div class="portfolio-categories">{{ content.field_project_type }}</div>
-        <div class="line"> - </div>
-        <div class="post-created"> {{date }} </div>
       </div>
 
       <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
