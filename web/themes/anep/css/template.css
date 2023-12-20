@@ -1016,7 +1016,12 @@ header.header-1 .header-main-inner .header-inner {
 }
 
 header.header-1 .header-main-inner .gva-offcanvas-mobile {
+  float: left;
+  margin-left: 5%;
+}
+[dir="rtl"] header.header-1 .header-main-inner .gva-offcanvas-mobile {
   float: right;
+  margin-right: 5%;
 }
 
 header.header-1 .menu--main {
