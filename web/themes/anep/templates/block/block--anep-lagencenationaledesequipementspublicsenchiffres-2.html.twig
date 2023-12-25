@@ -66,6 +66,7 @@
     {% set summary =value['#paragraph'].field_summary.getValue() %}
     {% if key >= '0' %}
       <div data-id="para-{{ key }}"
+         {% if key != 1 %}
            class="sub-tab {{ summary.0.value is empty ? 'empty' }} gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 "
            style="display: none">
         <div class="card">
@@ -73,6 +74,27 @@
             {{ summary.0.value|raw }}
           </div>
         </div>
+        {% else %}
+        class="sub-tab {{ summary.0.value is empty ? 'empty' }} gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 "style="display: none">
+        <div class="bb-container container py-5">
+          <div class="row row-wrapper">
+            <div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="column-inner bg-size-cover">
+                <div class="column-content-inner">
+                  <div class="clearfix"></div>
+                  <div>
+                    <div class="">
+                      {{ gva_drupal_block('anep_views_block__client_block_1') }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        {% endif %}
       </div>
     {% endif %}
   {% endfor %}
